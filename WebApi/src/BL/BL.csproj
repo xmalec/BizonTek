@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="MailKit" Version="3.4.3" />
+    <PackageReference Include="MimeKit" Version="3.4.3" />
+    <PackageReference Include="RazorEngineCore" Version="2022.8.1" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="2.1.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj" />
+  </ItemGroup>
+	<ItemGroup>
+		<Content Include="MediaLibrary/*/*.*">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+	
+</Project>
