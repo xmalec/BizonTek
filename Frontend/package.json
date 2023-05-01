@@ -21,7 +21,7 @@
 		"lint": "eslint \"./src/**/*.{ts,tsx}\" && prettier \"./src/**/*.{ts,tsx}\" --check",
 		"lint-fix": "eslint \"./src/**/*.{ts,tsx}\" --fix",
 		"prettier": "prettier \"./src/**/*.{ts,tsx}\" --write",
-		"sassWatchTemplate": "sass --watch src/styles/sass:template/styles/public"
+		"sass-watch": "sass --watch src/styles/sass:template/styles/public"
 	},
 	"browserslist": {
 		"production": [

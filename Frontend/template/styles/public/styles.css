@@ -1,0 +1,208 @@
+.h1 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 120%;
+  text-align: center;
+}
+
+.h2 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 115%;
+  /* or 32px */
+  letter-spacing: 0.02em;
+}
+
+.h3, body .main-page .container .content-footer .contact-button {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 115%;
+  /* identical to box height, or 28px */
+  letter-spacing: 0.02em;
+}
+
+.text-simple {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 135%;
+  /* or 24px */
+}
+
+.text-sm {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 135%;
+}
+
+.text-bold {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.text-button {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.text-button-sm {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.text-menu {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+}
+
+.input-inside {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.input-label {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+}
+
+.text, body .main-page .container .content-footer .bullet-point {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 135%;
+}
+
+.input-label-sm {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+}
+
+.text-board-date {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 135%;
+}
+
+.text-19 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 140%;
+}
+
+.text-board-toggle {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.shadow, body .main-page .container .content-footer .contact-button {
+  box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.15);
+}
+
+.shadow-bg {
+  box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-sm {
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-sm-menu {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+}
+body .main-page {
+  background: #001724;
+  height: 100vh;
+}
+body .main-page .container {
+  padding: 100px 200px 0 200px;
+}
+body .main-page .container .top-heading {
+  color: #b3f1d0;
+}
+body .main-page .container .content-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .main-page .container .content-footer .contact-button {
+  text-decoration: none;
+  color: white;
+  background-color: #2b7200;
+  width: auto;
+  padding: 8px 15px;
+  border-radius: 5px;
+  white-space: nowrap;
+  transition: transform ease-in-out 0.2s;
+}
+body .main-page .container .content-footer .contact-button:hover {
+  transform: scale(1.1);
+}
+body .main-page .container .content-footer .bullet-point::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #b3f1d0;
+  width: 50px;
+  height: 2px;
+}
+body .main-page .container .content-footer .bullet-point a,
+body .main-page .container .content-footer .bullet-point div,
+body .main-page .container .content-footer .bullet-point span {
+  color: #b3f1d0 !important;
+  transition: transform ease-in-out 0.2s;
+}
+body .main-page .container .content-footer .bullet-point a:hover,
+body .main-page .container .content-footer .bullet-point div:hover,
+body .main-page .container .content-footer .bullet-point span:hover {
+  transform: scale(1.1);
+}
+
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
