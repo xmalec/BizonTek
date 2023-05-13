@@ -1,0 +1,106 @@
+.h1 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 120%;
+}
+
+.h2 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 115%;
+  letter-spacing: 0.02em;
+}
+
+.h3, .btn.btn-contact, .btn {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 115%;
+  letter-spacing: 0.02em;
+}
+
+.text-sm {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 135%;
+}
+
+.text-bold {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.text, .btn.btn-sm {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 135%;
+}
+
+.shadow {
+  box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.15);
+}
+
+.shadow-bg {
+  box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-sm {
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-sm-menu {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+button,
+input[type=submit],
+input[type=reset] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+a {
+  color: inherit;
+  /* blue colors for links too */
+  text-decoration: inherit;
+  /* no underline */
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.btn.btn-sm {
+  padding: 7px 15px;
+}
+.btn.btn-contact {
+  background-color: #efbe40;
+  color: #001724;
+  width: auto;
+  white-space: nowrap;
+}
+.btn.btn-animated {
+  transition: transform ease-in-out 0.2s;
+}
+.btn.btn-animated:hover {
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=buttons.css.map */

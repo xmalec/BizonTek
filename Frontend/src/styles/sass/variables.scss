@@ -1,10 +1,21 @@
 //colors
-$bg-color: #001724;
-$primary-color: #2b7200;
-$primary-color-bright: #3fa401;
-$secondary-color: #2a7b7b;
+$bg-dark: #001724;
+$bg-dark-secondary: #012f3e;
+$bg-bright: #e7f3ea;
+//todo
+$bg-bright-secondary: red;
 
-$text-light: #b3f1d0;
+$primary-color: #efbe40;
+//same as primary color
+$tag-color: #efbe40;
+
+$text: #b3f1d0;
+//same as bg color
+$text-dark: #001724;
+
+//layout
+$layout-side-padding: 100px;
+$layout-max-width: 1200px;
 
 //breakpoints
 $screen-sm-min: 0px;

@@ -1,67 +1,159 @@
 @import "mixins";
-@import "typography";
-@import "variables";
-@import "effects";
+@import "scrollbar";
 
 body {
 	margin: 0;
+	.navigation {
+		@extend .text;
+		color: $text;
+		position: fixed;
+		width: calc(
+			min(100% - #{$layout-side-padding * 2}, #{$layout-max-width})
+		);
+		background-color: $bg-dark;
+		padding: 10px 0;
 
-	.main-page {
-		background: $bg-color;
-		height: 100vh;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		& > div {
+			display: flex;
+			align-items: center;
+		}
+		.title-part {
+			gap: 10px;
+		}
+		.menu {
+			gap: 30px;
+		}
 
-		.container {
-			padding: 100px 200px 0 200px;
-
-			.top-heading {
-				color: $text-light;
+		.logo {
+			max-width: 50px;
+			max-height: 50px;
+			overflow: hidden;
+			border-radius: 50px;
+			img {
+				width: 100%;
+				height: 100%;
 			}
+		}
+	}
+	.container {
+		background: $bg-dark;
+		min-height: 100vh;
+		padding: 0 $layout-side-padding;
+		& > div,
+		nav {
+			max-width: $layout-max-width;
+			margin: auto;
+		}
 
-			.content-footer {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				.contact-button {
-					text-decoration: none;
-					color: white;
-					background-color: $primary-color;
-					width: auto;
-					padding: 8px 15px;
-					border-radius: 5px;
-					white-space: nowrap;
-					transition: transform ease-in-out 0.2s;
-					@extend .h3;
-					@extend .shadow;
-
-					&:hover {
-						transform: scale(1.1);
+		.hp {
+			display: flex;
+			min-height: 100vh;
+			align-items: center;
+			.hp-grid {
+				color: $text;
+				display: grid;
+				grid-template-columns: repeat(5, 1fr);
+				grid-template-rows: auto auto auto;
+				grid-template-areas:
+					"header header . . ."
+					"logo logo text text text"
+					"footer footer footer footer footer";
+				column-gap: 20px;
+				row-gap: 40px;
+				.top-heading {
+					grid-area: header;
+					justify-self: center;
+				}
+				.content-logo {
+					grid-area: logo;
+					align-self: center;
+					justify-self: center;
+					max-width: 300px;
+					overflow: hidden;
+					border-radius: 50px;
+					img {
+						width: 100%;
+						height: 100%;
 					}
 				}
-				.bullet-point {
-					@extend .text;
-					&::after {
-						content: "";
-						display: inline-block;
-						vertical-align: middle;
-						background-color: $text-light;
-						width: 50px;
-						height: 2px;
+
+				.content-text {
+					grid-area: text;
+					color: $text;
+					display: flex;
+					flex-direction: column;
+					gap: 15px;
+					.socials {
+						display: flex;
+						gap: 15px;
 					}
-					a,
-					div,
-					span {
-						color: $text-light !important;
-						transition: transform ease-in-out 0.2s;
-						&:hover {
-							transform: scale(1.1);
+				}
+				.footer {
+					grid-area: footer;
+					display: flex;
+					gap: 10px;
+					margin-top: 30px;
+					justify-content: space-between;
+					align-items: center;
+					.contact-btn {
+						justify-self: end;
+					}
+
+					.contact-email {
+						@extend .text-sm;
+						flex: 1;
+						a {
+							&::before {
+								content: "––––––";
+								margin-right: 10px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.about {
+			height: 100vh;
+			.about-container {
+				padding: 10vh 0 5vh 0;
+				.timeline-frame {
+					border-radius: 25px;
+					overflow: hidden;
+					.timeline-frame-scroll {
+						background-color: $bg-dark-secondary;
+						overflow-y: scroll;
+						height: 85vh;
+						&::-webkit-scrollbar-track {
+							background: $bg-dark-secondary;
+						}
+						&::-webkit-scrollbar {
+							width: 8px;
+						}
+						.timeline-container {
+							height: 2000px;
 						}
 					}
 				}
 			}
 		}
 	}
-}
+	.appearance-toggle {
+		color: $text;
+		position: fixed;
+		top: 25px;
+		right: 30px;
+		@extend .text;
+	}
 
-a {
-	text-decoration: none;
+	a,
+	button {
+		transition: color ease-in-out 0.2s;
+		&:hover {
+			color: $primary-color;
+		}
+	}
 }
