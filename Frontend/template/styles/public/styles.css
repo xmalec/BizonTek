@@ -25,7 +25,7 @@
   letter-spacing: 0.02em;
 }
 
-.text-sm, body .container .hp .hp-grid .footer .contact-email {
+.text-sm, body .container .hp .hp-grid .contact-email {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -41,7 +41,7 @@
   line-height: 22px;
 }
 
-.text, body .appearance-toggle, body .navigation, .btn.btn-sm {
+.text, body .appearance-toggle, body nav .navigation, .btn.btn-sm {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -127,40 +127,73 @@ a {
 body {
   margin: 0;
 }
-body .navigation {
+body nav {
+  position: absolute;
+  top: -60px;
+  transition: top ease-in-out 0.2s;
+}
+@media (max-width: 849px) {
+  body nav {
+    top: 0;
+  }
+}
+body nav.show {
+  top: 0;
+}
+body nav .navigation {
   color: #b3f1d0;
   position: fixed;
-  width: calc( 			min(100% - 200px, 1200px) 		);
+  width: calc( 				min(100% - 150px, 1200px) 			);
   background-color: #001724;
   padding: 10px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-body .navigation > div {
+body nav .navigation .title-part {
+  gap: 10px;
   display: flex;
   align-items: center;
 }
-body .navigation .title-part {
-  gap: 10px;
-}
-body .navigation .menu {
+body nav .navigation .menu {
   gap: 30px;
+  display: flex;
+  align-items: center;
 }
-body .navigation .logo {
+body nav .navigation .menu .menu-items {
+  display: inherit;
+  gap: inherit;
+  align-items: inherit;
+  white-space: nowrap;
+}
+@media (max-width: 849px) {
+  body nav .navigation .menu .menu-items {
+    display: none;
+  }
+}
+body nav .navigation .menu .menu-bars {
+  padding: 2px 12px;
+  border: 1px solid #b3f1d0;
+}
+@media (min-width: 850px) {
+  body nav .navigation .menu .menu-bars {
+    display: none;
+  }
+}
+body nav .navigation .logo {
   max-width: 50px;
   max-height: 50px;
   overflow: hidden;
   border-radius: 50px;
 }
-body .navigation .logo img {
+body nav .navigation .logo img {
   width: 100%;
   height: 100%;
 }
 body .container {
   background: #001724;
   min-height: 100vh;
-  padding: 0 100px;
+  padding: 0 75px;
 }
 body .container > div,
 body .container nav {
@@ -175,21 +208,38 @@ body .container .hp {
 body .container .hp .hp-grid {
   color: #b3f1d0;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto auto auto;
-  grid-template-areas: "header header . . ." "logo logo text text text" "footer footer footer footer footer";
-  column-gap: 20px;
-  row-gap: 40px;
+}
+@media (min-width: 850px) {
+  body .container .hp .hp-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px repeat(4, auto) 100px;
+    grid-template-areas: "header . ." "logo text1 text1" "logo text2 text2" "logo text3 text3" "logo text4 text4" "email email button";
+    column-gap: 50px;
+    row-gap: 20px;
+  }
+}
+@media (max-width: 849px) {
+  body .container .hp .hp-grid {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 250px repeat(3, auto) 300px;
+    grid-template-areas: "text1 text1" "text2 text2" "text3 text3" "text4 email" "button button";
+    column-gap: 20px;
+    row-gap: 20px;
+  }
 }
 body .container .hp .hp-grid .top-heading {
   grid-area: header;
   justify-self: center;
 }
+@media (max-width: 849px) {
+  body .container .hp .hp-grid .top-heading {
+    display: none;
+  }
+}
 body .container .hp .hp-grid .content-logo {
   grid-area: logo;
   align-self: center;
   justify-self: center;
-  max-width: 300px;
   overflow: hidden;
   border-radius: 50px;
 }
@@ -197,34 +247,60 @@ body .container .hp .hp-grid .content-logo img {
   width: 100%;
   height: 100%;
 }
-body .container .hp .hp-grid .content-text {
-  grid-area: text;
-  color: #b3f1d0;
+@media (max-width: 849px) {
+  body .container .hp .hp-grid .content-logo {
+    display: none;
+  }
+}
+body .container .hp .hp-grid .name {
+  grid-area: text1;
   display: flex;
-  flex-direction: column;
   gap: 15px;
 }
-body .container .hp .hp-grid .content-text .socials {
+@media (max-width: 849px) {
+  body .container .hp .hp-grid .name {
+    align-self: end;
+  }
+}
+body .container .hp .hp-grid .profession {
+  grid-area: text2;
   display: flex;
   gap: 15px;
 }
-body .container .hp .hp-grid .footer {
-  grid-area: footer;
+body .container .hp .hp-grid .description {
+  grid-area: text3;
   display: flex;
-  gap: 10px;
-  margin-top: 30px;
-  justify-content: space-between;
-  align-items: center;
+  gap: 15px;
 }
-body .container .hp .hp-grid .footer .contact-btn {
+body .container .hp .hp-grid .socials {
+  grid-area: text4;
+  display: flex;
+  gap: 15px;
+}
+body .container .hp .hp-grid .contact-btn {
+  grid-area: button;
+  align-self: center;
   justify-self: end;
 }
-body .container .hp .hp-grid .footer .contact-email {
+@media (max-width: 849px) {
+  body .container .hp .hp-grid .contact-btn {
+    justify-self: center;
+  }
+}
+body .container .hp .hp-grid .contact-email {
+  grid-area: email;
+  align-self: center;
+  white-space: nowrap;
   flex: 1;
 }
-body .container .hp .hp-grid .footer .contact-email a::before {
+body .container .hp .hp-grid .contact-email a::before {
   content: "––––––";
   margin-right: 10px;
+}
+@media (max-width: 849px) {
+  body .container .hp .hp-grid .contact-email {
+    justify-self: end;
+  }
 }
 body .container .about {
   height: 100vh;

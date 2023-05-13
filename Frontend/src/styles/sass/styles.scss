@@ -3,38 +3,65 @@
 
 body {
 	margin: 0;
-	.navigation {
-		@extend .text;
-		color: $text;
-		position: fixed;
-		width: calc(
-			min(100% - #{$layout-side-padding * 2}, #{$layout-max-width})
-		);
-		background-color: $bg-dark;
-		padding: 10px 0;
+	nav {
+		position: absolute;
+		top: -60px;
+		transition: top ease-in-out 0.2s;
+		@include md {
+			top: 0;
+		}
+		&.show {
+			top: 0;
+		}
+		.navigation {
+			@extend .text;
+			color: $text;
+			position: fixed;
+			width: calc(
+				min(100% - #{$layout-side-padding * 2}, #{$layout-max-width})
+			);
+			background-color: $bg-dark;
+			padding: 10px 0;
 
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		& > div {
 			display: flex;
+			justify-content: space-between;
 			align-items: center;
-		}
-		.title-part {
-			gap: 10px;
-		}
-		.menu {
-			gap: 30px;
-		}
+			.title-part {
+				gap: 10px;
+				display: flex;
+				align-items: center;
+			}
+			.menu {
+				gap: 30px;
+				display: flex;
+				align-items: center;
+				.menu-items {
+					display: inherit;
+					gap: inherit;
+					align-items: inherit;
+					@include md {
+						display: none;
+					}
+					white-space: nowrap;
+				}
+				.menu-bars {
+					padding: 2px 12px;
+					border: 1px solid $text;
+					@include lg {
+						display: none;
+					}
+				}
+			}
 
-		.logo {
-			max-width: 50px;
-			max-height: 50px;
-			overflow: hidden;
-			border-radius: 50px;
-			img {
-				width: 100%;
-				height: 100%;
+			.logo {
+				max-width: 50px;
+				max-height: 50px;
+				overflow: hidden;
+				border-radius: 50px;
+				img {
+					width: 100%;
+					height: 100%;
+				}
 			}
 		}
 	}
@@ -55,62 +82,100 @@ body {
 			.hp-grid {
 				color: $text;
 				display: grid;
-				grid-template-columns: repeat(5, 1fr);
-				grid-template-rows: auto auto auto;
-				grid-template-areas:
-					"header header . . ."
-					"logo logo text text text"
-					"footer footer footer footer footer";
-				column-gap: 20px;
-				row-gap: 40px;
+				@include lg {
+					grid-template-columns: repeat(3, 1fr);
+					grid-template-rows: 100px repeat(4, auto) 100px;
+					grid-template-areas:
+						"header . ."
+						"logo text1 text1"
+						"logo text2 text2"
+						"logo text3 text3"
+						"logo text4 text4"
+						"email email button";
+					column-gap: 50px;
+					row-gap: 20px;
+				}
+				@include md {
+					grid-template-columns: repeat(2, auto);
+					grid-template-rows: 250px repeat(3, auto) 300px;
+					grid-template-areas:
+						"text1 text1"
+						"text2 text2"
+						"text3 text3"
+						"text4 email"
+						"button button";
+					column-gap: 20px;
+					row-gap: 20px;
+				}
 				.top-heading {
 					grid-area: header;
 					justify-self: center;
+					@include md {
+						display: none;
+					}
 				}
 				.content-logo {
 					grid-area: logo;
 					align-self: center;
 					justify-self: center;
-					max-width: 300px;
 					overflow: hidden;
 					border-radius: 50px;
 					img {
 						width: 100%;
 						height: 100%;
 					}
+					@include md {
+						display: none;
+					}
 				}
 
-				.content-text {
-					grid-area: text;
-					color: $text;
+				.name {
+					grid-area: text1;
 					display: flex;
-					flex-direction: column;
 					gap: 15px;
-					.socials {
-						display: flex;
-						gap: 15px;
+					@include md {
+						align-self: end;
 					}
 				}
-				.footer {
-					grid-area: footer;
+				.profession {
+					grid-area: text2;
 					display: flex;
-					gap: 10px;
-					margin-top: 30px;
-					justify-content: space-between;
-					align-items: center;
-					.contact-btn {
-						justify-self: end;
-					}
+					gap: 15px;
+				}
+				.description {
+					grid-area: text3;
+					display: flex;
+					gap: 15px;
+				}
+				.socials {
+					grid-area: text4;
+					display: flex;
+					gap: 15px;
+				}
 
-					.contact-email {
-						@extend .text-sm;
-						flex: 1;
-						a {
-							&::before {
-								content: "––––––";
-								margin-right: 10px;
-							}
+				.contact-btn {
+					grid-area: button;
+					align-self: center;
+					justify-self: end;
+					@include md {
+						justify-self: center;
+					}
+				}
+
+				.contact-email {
+					grid-area: email;
+					align-self: center;
+					white-space: nowrap;
+					@extend .text-sm;
+					flex: 1;
+					a {
+						&::before {
+							content: "––––––";
+							margin-right: 10px;
 						}
+					}
+					@include md {
+						justify-self: end;
 					}
 				}
 			}
