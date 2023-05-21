@@ -137,6 +137,9 @@ body.bright {
 body.bright .timeline-frame-scroll {
   background-color: #cce3d2 !important;
 }
+body.bright .background-image {
+  opacity: 0.1 !important;
+}
 body .container {
   min-height: 100vh;
   padding: 0 75px;
@@ -227,6 +230,8 @@ body .container .hp .background-image {
   right: 0;
   z-index: 1;
   height: 100vh;
+  opacity: 1;
+  transition: opacity ease-in-out 0.2s;
 }
 body .container .hp .background-image img {
   height: 100%;
@@ -356,6 +361,7 @@ body .container .about .about-container .timeline-frame .timeline-frame-scroll .
 }
 body .appearance-toggle {
   position: fixed;
+  z-index: 3;
   top: 22px;
   right: 30px;
 }
