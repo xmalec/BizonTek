@@ -109,7 +109,7 @@ a {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #001724;
+  background: inherit;
 }
 
 /* Handle */

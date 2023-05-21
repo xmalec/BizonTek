@@ -2,91 +2,129 @@
 @import "scrollbar";
 
 body {
-	margin: 0;
-	nav {
-		position: absolute;
-		top: -60px;
-		transition: top ease-in-out 0.2s;
-		@include md {
-			top: 0;
-		}
-		&.show {
-			top: 0;
-		}
-		.navigation {
-			@extend .text;
-			color: $text;
-			position: fixed;
-			width: calc(
-				min(100% - #{$layout-side-padding * 2}, #{$layout-max-width})
-			);
-			background-color: $bg-dark;
-			padding: 10px 0;
+	color: $text;
+	background-color: $bg-dark;
+	transition: background-color ease-in-out 0.2s;
 
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			.title-part {
-				gap: 10px;
-				display: flex;
-				align-items: center;
-			}
-			.menu {
-				gap: 30px;
-				display: flex;
-				align-items: center;
-				.menu-items {
-					display: inherit;
-					gap: inherit;
-					align-items: inherit;
-					@include md {
-						display: none;
-					}
-					white-space: nowrap;
-				}
-				.menu-bars {
-					padding: 2px 12px;
-					border: 1px solid $text;
-					@include lg {
-						display: none;
-					}
-				}
-			}
-
-			.logo {
-				max-width: 50px;
-				max-height: 50px;
-				overflow: hidden;
-				border-radius: 50px;
-				img {
-					width: 100%;
-					height: 100%;
-				}
-			}
+	&.bright {
+		color: $text-dark;
+		background-color: $bg-bright;
+		.timeline-frame-scroll {
+			background-color: $bg-bright-secondary !important;
 		}
 	}
+
+	margin: 0;
+
 	.container {
-		background: $bg-dark;
 		min-height: 100vh;
 		padding: 0 $layout-side-padding;
-		& > div,
-		nav {
+		background-color: inherit;
+		@include sm {
+			padding: 0 $layout-side-padding-sm;
+		}
+
+		& > div {
 			max-width: $layout-max-width;
 			margin: auto;
+		}
+
+		nav {
+			position: absolute;
+			top: -66px;
+			transition: top ease-in-out 0.2s;
+			z-index: 3;
+
+			background-color: inherit;
+			&.show {
+				top: 0;
+			}
+			.navigation {
+				@extend .text;
+				right: 50%;
+				transform: translate(50%);
+				position: fixed;
+				background-color: inherit;
+				padding: 10px 0;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: calc(
+					min(
+						100% - #{$layout-side-padding * 2},
+						#{$layout-max-width}
+					)
+				);
+				@include sm {
+					width: calc(
+						min(
+							100% - #{$layout-side-padding-sm * 2},
+							#{$layout-max-width}
+						)
+					);
+				}
+				.title-part {
+					gap: 10px;
+					display: flex;
+					align-items: center;
+				}
+				.menu {
+					gap: 30px;
+					display: flex;
+					align-items: center;
+					.menu-items {
+						display: inherit;
+						gap: inherit;
+						align-items: inherit;
+						@include sm-md {
+							display: none;
+						}
+						white-space: nowrap;
+					}
+					.menu-bars {
+						padding: 2px 12px;
+						border: 1px solid $text;
+						@include lg {
+							display: none;
+						}
+					}
+				}
+
+				.logo {
+					max-width: 50px;
+					max-height: 50px;
+					overflow: hidden;
+					border-radius: 50px;
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
 		}
 
 		.hp {
 			display: flex;
 			min-height: 100vh;
 			align-items: center;
+			.background-image {
+				position: absolute;
+				right: 0;
+				z-index: 1;
+				height: 100vh;
+				img {
+					height: 100%;
+				}
+			}
 			.hp-grid {
-				color: $text;
 				display: grid;
+				z-index: 2;
 				@include lg {
 					grid-template-columns: repeat(3, 1fr);
-					grid-template-rows: 100px repeat(4, auto) 100px;
+					grid-template-rows:
+						100px repeat(3, auto)
+						100px;
 					grid-template-areas:
-						"header . ."
 						"logo text1 text1"
 						"logo text2 text2"
 						"logo text3 text3"
@@ -95,9 +133,9 @@ body {
 					column-gap: 50px;
 					row-gap: 20px;
 				}
-				@include md {
+				@include sm-md {
+					margin-top: 80px;
 					grid-template-columns: repeat(2, auto);
-					grid-template-rows: 250px repeat(3, auto) 300px;
 					grid-template-areas:
 						"text1 text1"
 						"text2 text2"
@@ -110,7 +148,7 @@ body {
 				.top-heading {
 					grid-area: header;
 					justify-self: center;
-					@include md {
+					@include sm-md {
 						display: none;
 					}
 				}
@@ -120,11 +158,11 @@ body {
 					justify-self: center;
 					overflow: hidden;
 					border-radius: 50px;
+					max-height: 400px;
 					img {
 						width: 100%;
-						height: 100%;
 					}
-					@include md {
+					@include sm-md {
 						display: none;
 					}
 				}
@@ -133,7 +171,7 @@ body {
 					grid-area: text1;
 					display: flex;
 					gap: 15px;
-					@include md {
+					@include sm-md {
 						align-self: end;
 					}
 				}
@@ -149,6 +187,7 @@ body {
 				}
 				.socials {
 					grid-area: text4;
+					align-self: end;
 					display: flex;
 					gap: 15px;
 				}
@@ -157,7 +196,7 @@ body {
 					grid-area: button;
 					align-self: center;
 					justify-self: end;
-					@include md {
+					@include sm-md {
 						justify-self: center;
 					}
 				}
@@ -174,7 +213,7 @@ body {
 							margin-right: 10px;
 						}
 					}
-					@include md {
+					@include sm-md {
 						justify-self: end;
 					}
 				}
@@ -190,10 +229,11 @@ body {
 					overflow: hidden;
 					.timeline-frame-scroll {
 						background-color: $bg-dark-secondary;
+						transition: background-color ease-in-out 0.2s;
 						overflow-y: scroll;
 						height: 85vh;
 						&::-webkit-scrollbar-track {
-							background: $bg-dark-secondary;
+							background: inherit;
 						}
 						&::-webkit-scrollbar {
 							width: 8px;
@@ -207,9 +247,8 @@ body {
 		}
 	}
 	.appearance-toggle {
-		color: $text;
 		position: fixed;
-		top: 25px;
+		top: 22px;
 		right: 30px;
 		@extend .text;
 	}
@@ -218,7 +257,7 @@ body {
 	button {
 		transition: color ease-in-out 0.2s;
 		&:hover {
-			color: $primary-color;
+			color: $tag-color;
 		}
 	}
 }

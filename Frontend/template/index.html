@@ -43,18 +43,18 @@
 					</div>
 				</div>
 			</nav>
+			<div class="appearance-toggle">
+				<button onclick="toggleApperance()">
+					<i class="fal fa-sun"></i>
+				</button>
+			</div>
 			<div class="hp">
-				<div class="appearance-toggle">
-					<button><i class="fal fa-sun"></i></button>
+				<div class="background-image">
+					<img src="./img/logo_stroke.png" />
 				</div>
 				<div class="hp-grid">
-					<div class="top-heading">
-						<div class="h1">BizonTek</div>
-					</div>
-					<span></span>
-
 					<div class="content-logo">
-						<img src="./img/logo.png" />
+						<img src="./img/profile-image.jpg" />
 					</div>
 
 					<div class="h1 name">Jiří Malec</div>
@@ -82,7 +82,10 @@
 						>
 					</div>
 					<div class="contact-btn">
-						<button class="btn btn-contact btn-animated">
+						<button
+							id="main-button"
+							class="btn btn-contact btn-animated"
+						>
 							Napište mi!
 						</button>
 					</div>
@@ -99,4 +102,47 @@
 			</div>
 		</div>
 	</body>
+
+	<script>
+		function isElementInView(element, fullyInView) {
+			var pageTop =
+				window.pageYOffset || document.documentElement.scrollTop;
+			var pageBottom = pageTop + window.innerHeight;
+			var elementTop = element.offsetTop;
+			var elementBottom = elementTop + element.offsetHeight;
+
+			if (fullyInView === true) {
+				return pageTop < elementTop && pageBottom > elementBottom;
+			} else {
+				return elementTop <= pageBottom && elementBottom >= pageTop;
+			}
+		}
+
+		function onScroll(e) {
+			const contactButton = document.getElementById("main-button");
+			const menuItems = document.getElementsByTagName("nav")[0];
+			if (
+				menuItems != undefined &&
+				contactButton != undefined &&
+				!isElementInView(contactButton)
+			) {
+				if (!menuItems.classList.contains("show")) {
+					menuItems.classList.add("show");
+				}
+			} else if (menuItems.classList.contains("show")) {
+				menuItems.classList.remove("show");
+			}
+		}
+		function toggleApperance() {
+			console.log("here");
+			const body = document.getElementsByTagName("body")[0];
+			if (body.classList.contains("bright")) {
+				body.classList.remove("bright");
+			} else {
+				body.classList.add("bright");
+			}
+		}
+
+		document.addEventListener("scroll", onScroll);
+	</script>
 </html>

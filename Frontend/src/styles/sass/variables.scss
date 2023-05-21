@@ -3,7 +3,7 @@ $bg-dark: #001724;
 $bg-dark-secondary: #012f3e;
 $bg-bright: #e7f3ea;
 //todo
-$bg-bright-secondary: red;
+$bg-bright-secondary: #cce3d2;
 
 $primary-color: #efbe40;
 //same as primary color
@@ -15,8 +15,10 @@ $text-dark: #001724;
 
 //layout
 $layout-side-padding: 75px;
+$layout-side-padding-sm: 25px;
 $layout-max-width: 1200px;
 
 //breakpoints
-$screen-md-min: 0px;
+$screen-sm-min: 0px;
+$screen-md-min: 650px;
 $screen-lg-min: 850px;

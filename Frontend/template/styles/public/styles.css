@@ -41,7 +41,7 @@
   line-height: 22px;
 }
 
-.text, body .appearance-toggle, body nav .navigation, .btn.btn-sm {
+.text, body .appearance-toggle, body .container nav .navigation, .btn.btn-sm {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -110,7 +110,7 @@ a {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #001724;
+  background: inherit;
 }
 
 /* Handle */
@@ -125,103 +125,129 @@ a {
 }
 
 body {
+  color: #b3f1d0;
+  background-color: #001724;
+  transition: background-color ease-in-out 0.2s;
   margin: 0;
 }
-body nav {
-  position: absolute;
-  top: -60px;
-  transition: top ease-in-out 0.2s;
+body.bright {
+  color: #001724;
+  background-color: #e7f3ea;
 }
-@media (max-width: 849px) {
-  body nav {
-    top: 0;
+body.bright .timeline-frame-scroll {
+  background-color: #cce3d2 !important;
+}
+body .container {
+  min-height: 100vh;
+  padding: 0 75px;
+  background-color: inherit;
+}
+@media (max-width: 649px) {
+  body .container {
+    padding: 0 25px;
   }
 }
-body nav.show {
+body .container > div {
+  max-width: 1200px;
+  margin: auto;
+}
+body .container nav {
+  position: absolute;
+  top: -66px;
+  transition: top ease-in-out 0.2s;
+  z-index: 3;
+  background-color: inherit;
+}
+body .container nav.show {
   top: 0;
 }
-body nav .navigation {
-  color: #b3f1d0;
+body .container nav .navigation {
+  right: 50%;
+  transform: translate(50%);
   position: fixed;
-  width: calc( 				min(100% - 150px, 1200px) 			);
-  background-color: #001724;
+  background-color: inherit;
   padding: 10px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: calc( 					min( 						100% - 150px, 						1200px 					) 				);
 }
-body nav .navigation .title-part {
+@media (max-width: 649px) {
+  body .container nav .navigation {
+    width: calc( 						min( 							100% - 50px, 							1200px 						) 					);
+  }
+}
+body .container nav .navigation .title-part {
   gap: 10px;
   display: flex;
   align-items: center;
 }
-body nav .navigation .menu {
+body .container nav .navigation .menu {
   gap: 30px;
   display: flex;
   align-items: center;
 }
-body nav .navigation .menu .menu-items {
+body .container nav .navigation .menu .menu-items {
   display: inherit;
   gap: inherit;
   align-items: inherit;
   white-space: nowrap;
 }
 @media (max-width: 849px) {
-  body nav .navigation .menu .menu-items {
+  body .container nav .navigation .menu .menu-items {
     display: none;
   }
 }
-body nav .navigation .menu .menu-bars {
+body .container nav .navigation .menu .menu-bars {
   padding: 2px 12px;
   border: 1px solid #b3f1d0;
 }
 @media (min-width: 850px) {
-  body nav .navigation .menu .menu-bars {
+  body .container nav .navigation .menu .menu-bars {
     display: none;
   }
 }
-body nav .navigation .logo {
+body .container nav .navigation .logo {
   max-width: 50px;
   max-height: 50px;
   overflow: hidden;
   border-radius: 50px;
 }
-body nav .navigation .logo img {
+body .container nav .navigation .logo img {
   width: 100%;
   height: 100%;
-}
-body .container {
-  background: #001724;
-  min-height: 100vh;
-  padding: 0 75px;
-}
-body .container > div,
-body .container nav {
-  max-width: 1200px;
-  margin: auto;
 }
 body .container .hp {
   display: flex;
   min-height: 100vh;
   align-items: center;
 }
+body .container .hp .background-image {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  height: 100vh;
+}
+body .container .hp .background-image img {
+  height: 100%;
+}
 body .container .hp .hp-grid {
-  color: #b3f1d0;
   display: grid;
+  z-index: 2;
 }
 @media (min-width: 850px) {
   body .container .hp .hp-grid {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 100px repeat(4, auto) 100px;
-    grid-template-areas: "header . ." "logo text1 text1" "logo text2 text2" "logo text3 text3" "logo text4 text4" "email email button";
+    grid-template-rows: 100px repeat(3, auto) 100px;
+    grid-template-areas: "logo text1 text1" "logo text2 text2" "logo text3 text3" "logo text4 text4" "email email button";
     column-gap: 50px;
     row-gap: 20px;
   }
 }
 @media (max-width: 849px) {
   body .container .hp .hp-grid {
+    margin-top: 80px;
     grid-template-columns: repeat(2, auto);
-    grid-template-rows: 250px repeat(3, auto) 300px;
     grid-template-areas: "text1 text1" "text2 text2" "text3 text3" "text4 email" "button button";
     column-gap: 20px;
     row-gap: 20px;
@@ -242,10 +268,10 @@ body .container .hp .hp-grid .content-logo {
   justify-self: center;
   overflow: hidden;
   border-radius: 50px;
+  max-height: 400px;
 }
 body .container .hp .hp-grid .content-logo img {
   width: 100%;
-  height: 100%;
 }
 @media (max-width: 849px) {
   body .container .hp .hp-grid .content-logo {
@@ -274,6 +300,7 @@ body .container .hp .hp-grid .description {
 }
 body .container .hp .hp-grid .socials {
   grid-area: text4;
+  align-self: end;
   display: flex;
   gap: 15px;
 }
@@ -314,11 +341,12 @@ body .container .about .about-container .timeline-frame {
 }
 body .container .about .about-container .timeline-frame .timeline-frame-scroll {
   background-color: #012f3e;
+  transition: background-color ease-in-out 0.2s;
   overflow-y: scroll;
   height: 85vh;
 }
 body .container .about .about-container .timeline-frame .timeline-frame-scroll::-webkit-scrollbar-track {
-  background: #012f3e;
+  background: inherit;
 }
 body .container .about .about-container .timeline-frame .timeline-frame-scroll::-webkit-scrollbar {
   width: 8px;
@@ -327,9 +355,8 @@ body .container .about .about-container .timeline-frame .timeline-frame-scroll .
   height: 2000px;
 }
 body .appearance-toggle {
-  color: #b3f1d0;
   position: fixed;
-  top: 25px;
+  top: 22px;
   right: 30px;
 }
 body a,
