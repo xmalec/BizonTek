@@ -91,6 +91,16 @@ body {
 			z-index: 3;
 			&.hidden {
 				top: -70px;
+				.menu {
+					&.collapsed {
+						.menu-items {
+							max-height: 0 !important;
+							padding-top: 0 !important;
+							padding-bottom: 0 !important;
+							transition: initial !important;
+						}
+					}
+				}
 			}
 			&.fixed {
 				transition: top ease-in-out 0.2s;
@@ -142,6 +152,24 @@ body {
 					gap: 30px;
 					display: flex;
 					align-items: center;
+					.bars {
+						display: block;
+					}
+					.times {
+						display: none;
+					}
+					&.collapsed {
+						.menu-items {
+							padding-top: 10px;
+							max-height: 150px;
+						}
+						.bars {
+							display: none;
+						}
+						.times {
+							display: block;
+						}
+					}
 					.menu-items {
 						display: flex;
 						gap: inherit;
@@ -156,19 +184,22 @@ body {
 							max-height: 0;
 							padding-top: 0;
 							padding-bottom: 0;
+							border-radius: 0 0 10px 10px;
 							top: 70px;
 							left: 0;
 							gap: 15px;
 							width: 100%;
 							overflow: hidden;
-							border-radius: 25px;
 							transition: max-height ease-in-out 0.35s,
 								padding-top ease-in-out 0.35s,
 								padding-bottom ease-in-out 0.35s;
-							&.collapsed {
-								padding-top: 10px;
-								padding-bottom: 10px;
-								max-height: 150px;
+
+							&::after {
+								content: "";
+								display: block;
+								height: 5px;
+								width: 100%;
+								background-color: $tag-color;
 							}
 						}
 						white-space: nowrap;
@@ -183,7 +214,7 @@ body {
 					.menu-bars {
 						padding: 2px 12px;
 						border-width: 1px;
-
+						min-width: 44px;
 						@include lg {
 							display: none;
 						}
@@ -244,7 +275,7 @@ body {
 						"text3 text3"
 						"email text4"
 						"button button";
-					column-gap: 20px;
+					column-gap: 15px;
 					row-gap: 20px;
 				}
 				.top-heading {
@@ -292,6 +323,7 @@ body {
 					align-self: end;
 					display: flex;
 					gap: 15px;
+					font-size: 20px;
 					@include sm-md {
 						justify-self: end;
 					}
@@ -314,8 +346,14 @@ body {
 					flex: 1;
 					a {
 						&::before {
-							content: "–⁠–⁠–⁠–⁠–⁠–⁠–⁠–⁠";
+							content: "–⁠–⁠–⁠–⁠⁠–⁠–⁠⁠–⁠–⁠";
 							margin-right: 10px;
+						}
+						@include sm {
+							&::before {
+								content: "–⁠–⁠";
+								margin-right: 10px;
+							}
 						}
 					}
 				}

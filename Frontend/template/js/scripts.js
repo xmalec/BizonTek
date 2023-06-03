@@ -32,13 +32,11 @@ function manageNavigationBarOnScroll() {
 	const professionTitle = document.getElementById("title-profession");
 	const contactButton = document.getElementById("main-button");
 	const navigation = document.getElementsByTagName("nav")[0];
-	const itemsContainer = document.getElementById("menu-items-container");
 	if (
 		navigation != undefined &&
 		contactButton != undefined &&
 		nameTitle != undefined &&
-		professionTitle != undefined &&
-		itemsContainer != undefined
+		professionTitle != undefined
 	) {
 		if (isElementInView(nameTitle)) {
 			removeClass(navigation, "fixed");
@@ -73,7 +71,7 @@ function toggleApperance() {
 }
 
 function toggleMenuCollapse() {
-	const container = document.getElementById("menu-items-container");
+	const container = document.getElementById("menu-container");
 	if (container.classList.contains("collapsed")) {
 		container.classList.remove("collapsed");
 	} else {

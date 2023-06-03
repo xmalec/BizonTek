@@ -19,6 +19,13 @@
 	}
 }
 
+// Medium - large devices
+@mixin md-lg {
+	@media (min-width: #{$screen-md-min}) {
+		@content;
+	}
+}
+
 // Small - medium devices
 @mixin sm-md {
 	@media (max-width: #{$screen-lg-min - 1}) {

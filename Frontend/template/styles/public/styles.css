@@ -280,6 +280,12 @@ body .container nav {
 body .container nav.hidden {
   top: -70px;
 }
+body .container nav.hidden .menu.collapsed .menu-items {
+  max-height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  transition: initial !important;
+}
 body .container nav.fixed {
   transition: top ease-in-out 0.2s;
   background-color: inherit;
@@ -320,6 +326,22 @@ body .container nav .navigation .menu {
   display: flex;
   align-items: center;
 }
+body .container nav .navigation .menu .bars {
+  display: block;
+}
+body .container nav .navigation .menu .times {
+  display: none;
+}
+body .container nav .navigation .menu.collapsed .menu-items {
+  padding-top: 10px;
+  max-height: 150px;
+}
+body .container nav .navigation .menu.collapsed .bars {
+  display: none;
+}
+body .container nav .navigation .menu.collapsed .times {
+  display: block;
+}
 body .container nav .navigation .menu .menu-items {
   display: flex;
   gap: inherit;
@@ -336,18 +358,20 @@ body .container nav .navigation .menu .menu-items {
     max-height: 0;
     padding-top: 0;
     padding-bottom: 0;
+    border-radius: 0 0 10px 10px;
     top: 70px;
     left: 0;
     gap: 15px;
     width: 100%;
     overflow: hidden;
-    border-radius: 25px;
     transition: max-height ease-in-out 0.35s, padding-top ease-in-out 0.35s, padding-bottom ease-in-out 0.35s;
   }
-  body .container nav .navigation .menu .menu-items.collapsed {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    max-height: 150px;
+  body .container nav .navigation .menu .menu-items::after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: #efbe40;
   }
 }
 body .container nav .navigation .menu .appearance-toggle {
@@ -361,6 +385,7 @@ body .container nav .navigation .menu .appearance-toggle {
 body .container nav .navigation .menu .menu-bars {
   padding: 2px 12px;
   border-width: 1px;
+  min-width: 44px;
 }
 @media (min-width: 850px) {
   body .container nav .navigation .menu .menu-bars {
@@ -411,7 +436,7 @@ body .container .hp .hp-grid {
     margin-top: 80px;
     grid-template-columns: repeat(2, auto);
     grid-template-areas: "text1 text1" "text2 text2" "text3 text3" "email text4" "button button";
-    column-gap: 20px;
+    column-gap: 15px;
     row-gap: 20px;
   }
 }
@@ -465,6 +490,7 @@ body .container .hp .hp-grid .socials {
   align-self: end;
   display: flex;
   gap: 15px;
+  font-size: 20px;
 }
 @media (max-width: 849px) {
   body .container .hp .hp-grid .socials {
@@ -488,8 +514,14 @@ body .container .hp .hp-grid .contact-email {
   flex: 1;
 }
 body .container .hp .hp-grid .contact-email a::before {
-  content: "–⁠–⁠–⁠–⁠–⁠–⁠–⁠–⁠";
+  content: "–⁠–⁠–⁠–⁠⁠–⁠–⁠⁠–⁠–⁠";
   margin-right: 10px;
+}
+@media (max-width: 649px) {
+  body .container .hp .hp-grid .contact-email a::before {
+    content: "–⁠–⁠";
+    margin-right: 10px;
+  }
 }
 body .container .about {
   height: 100vh;
