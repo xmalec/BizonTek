@@ -37,7 +37,7 @@ a {
 	}
 
 	&.btn-animated {
-		transition: transform ease-in-out 0.2s;
+		transition: transform ease-in-out 0.2s, color ease-in-out 0.2s;
 		&:hover {
 			transform: scale(1.1);
 		}

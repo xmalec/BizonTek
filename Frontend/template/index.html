@@ -20,12 +20,15 @@
 						<button class="title">BizonTek</button>
 					</div>
 					<div class="menu">
-						<div>
-							<button class="menu-bars">
+						<div class="menu-bars-container">
+							<button
+								id="menu-bars-toggle"
+								class="menu-bars appearance-border"
+							>
 								<i class="fal fa-bars"></i>
 							</button>
 						</div>
-						<div class="menu-items">
+						<div id="menu-items-container" class="menu-items">
 							<div>
 								<button>O mně</button>
 							</div>
@@ -34,18 +37,72 @@
 							</div>
 							<div class="nav-contact-btn">
 								<button
-									class="btn btn-contact btn-sm btn-animated"
+									class="btn btn-contact btn-sm btn-animated appearance-color"
 								>
 									Napište mi!
 								</button>
 							</div>
 						</div>
+						<div class="appearance-toggle">
+							<button class="sun">
+								<i class="fal fa-sun"></i>
+							</button>
+							<button class="moon">
+								<i class="fal fa-moon"></i>
+							</button>
+						</div>
 					</div>
 				</div>
 			</nav>
-			<div class="appearance-toggle">
-				<button onclick="toggleApperance()">
+			<nav>
+				<div class="navigation">
+					<div class="title-part">
+						<div class="logo">
+							<img src="./img/logo.png" />
+						</div>
+						<button class="title">BizonTek</button>
+					</div>
+					<div class="menu">
+						<div class="menu-bars-container">
+							<button
+								id="menu-bars-toggle"
+								class="menu-bars appearance-border"
+							>
+								<i class="fal fa-bars"></i>
+							</button>
+						</div>
+						<div id="menu-items-container" class="menu-items">
+							<div>
+								<button>O mně</button>
+							</div>
+							<div>
+								<button>Co vytvářím</button>
+							</div>
+							<div class="nav-contact-btn">
+								<button
+									class="btn btn-contact btn-sm btn-animated appearance-color"
+								>
+									Napište mi!
+								</button>
+							</div>
+						</div>
+						<div class="appearance-toggle">
+							<button class="sun">
+								<i class="fal fa-sun"></i>
+							</button>
+							<button class="moon">
+								<i class="fal fa-moon"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<div class="appearance-toggle absolute">
+				<button class="sun">
 					<i class="fal fa-sun"></i>
+				</button>
+				<button class="moon">
+					<i class="fal fa-moon"></i>
 				</button>
 			</div>
 			<div class="hp">
@@ -57,8 +114,10 @@
 						<img src="./img/profile-image.jpg" />
 					</div>
 
-					<div class="h1 name">Jiří Malec</div>
-					<div class="h3 profession">Softwarový vývojář</div>
+					<div id="title-name" class="h1 name">Jiří Malec</div>
+					<div id="title-profession" class="h3 profession">
+						Softwarový vývojář
+					</div>
 					<div class="text description">
 						Lorem ipsum dolor sit amet, consectetuer adipiscing
 						elit. Donec quis nibh at felis congue commodo. Nulla
@@ -84,7 +143,7 @@
 					<div class="contact-btn">
 						<button
 							id="main-button"
-							class="btn btn-contact btn-animated"
+							class="btn btn-contact btn-animated appearance-color"
 						>
 							Napište mi!
 						</button>
@@ -95,54 +154,37 @@
 				<div class="about-container">
 					<div class="timeline-frame">
 						<div class="timeline-frame-scroll">
-							<div class="timeline-container"></div>
+							<div class="timeline-container">
+								<div class="line-container">
+									<div class="top-title">Současnost</div>
+									<div
+										class="triangle-up appearance-border-bottom"
+									></div>
+									<div class="line appearance-border">
+										<div
+											class="line-point appearance-bg-color"
+											id="y2022"
+										></div>
+										<div
+											class="line-point appearance-bg-color"
+											id="y2021"
+										></div>
+									</div>
+									<div
+										class="rhombus appearance-border"
+									></div>
+								</div>
+								<div class="events">
+									<div class="event">
+										<div class="event__name"></div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</body>
-
-	<script>
-		function isElementInView(element, fullyInView) {
-			var pageTop =
-				window.pageYOffset || document.documentElement.scrollTop;
-			var pageBottom = pageTop + window.innerHeight;
-			var elementTop = element.offsetTop;
-			var elementBottom = elementTop + element.offsetHeight;
-
-			if (fullyInView === true) {
-				return pageTop < elementTop && pageBottom > elementBottom;
-			} else {
-				return elementTop <= pageBottom && elementBottom >= pageTop;
-			}
-		}
-
-		function onScroll(e) {
-			const contactButton = document.getElementById("main-button");
-			const menuItems = document.getElementsByTagName("nav")[0];
-			if (
-				menuItems != undefined &&
-				contactButton != undefined &&
-				!isElementInView(contactButton)
-			) {
-				if (!menuItems.classList.contains("show")) {
-					menuItems.classList.add("show");
-				}
-			} else if (menuItems.classList.contains("show")) {
-				menuItems.classList.remove("show");
-			}
-		}
-		function toggleApperance() {
-			console.log("here");
-			const body = document.getElementsByTagName("body")[0];
-			if (body.classList.contains("bright")) {
-				body.classList.remove("bright");
-			} else {
-				body.classList.add("bright");
-			}
-		}
-
-		document.addEventListener("scroll", onScroll);
-	</script>
+	<script src="./js/scripts.js"></script>
 </html>

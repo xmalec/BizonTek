@@ -15,7 +15,7 @@
   letter-spacing: 0.02em;
 }
 
-.h3, .btn.btn-contact, .btn {
+.h3, .timeline-container .line-container .top-title, .btn.btn-contact, .btn {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -40,7 +40,7 @@
   line-height: 22px;
 }
 
-.text, .btn.btn-sm {
+.text, .timeline-container .line-container .line .line-point::after, .btn.btn-sm {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -123,4 +123,74 @@ a {
   background: #555;
 }
 
-/*# sourceMappingURL=scrollbar.css.map */
+.timeline-container {
+  padding: 25px 50px;
+}
+.timeline-container .line-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min-content;
+  height: 100%;
+}
+.timeline-container .line-container .top-title {
+  padding-bottom: 20px;
+}
+.timeline-container .line-container .triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom-width: 40px;
+}
+.timeline-container .line-container .rhombus {
+  border-width: calc(35.7px / 2);
+  transform: rotate(45deg);
+}
+.timeline-container .line-container .line {
+  height: inherit;
+  width: 0;
+  border-width: 5px;
+  position: relative;
+}
+.timeline-container .line-container .line .line-point {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+.timeline-container .line-container .line .line-point::before {
+  content: "";
+  height: 25px !important;
+  width: 25px !important;
+  background-color: #efbe40 !important;
+  position: absolute;
+  right: 50%;
+  transform: translate(50%, 0);
+}
+.timeline-container .line-container .line .line-point::after {
+  position: absolute;
+  right: 75px;
+}
+.timeline-container .line-container .line #y2022 {
+  top: 100px;
+}
+.timeline-container .line-container .line #y2022::after {
+  content: "2022";
+}
+.timeline-container .line-container .line #y2021 {
+  top: 300px;
+}
+.timeline-container .line-container .line #y2021::after {
+  content: "2021";
+}
+.timeline-container .line-container .circle, .timeline-container .line-container .line .line-point, .timeline-container .line-container .line .line-point::before {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=timeline.css.map */

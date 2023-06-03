@@ -1,0 +1,81 @@
+@import "mixins";
+@import "scrollbar";
+
+.timeline-container {
+	padding: 25px 50px;
+	.line-container {
+		.top-title {
+			@extend .h3;
+			padding-bottom: 20px;
+		}
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: min-content;
+		height: 100%;
+		.triangle-up {
+			width: 0;
+			height: 0;
+			border-left: 25px solid transparent;
+			border-right: 25px solid transparent;
+			border-bottom-width: 40px;
+		}
+
+		.rhombus {
+			border-width: calc(35.7px / 2);
+			transform: rotate(45deg);
+		}
+
+		.line {
+			height: inherit;
+			width: 0;
+			border-width: 5px;
+			position: relative;
+			.line-point {
+				display: flex;
+				gap: 20px;
+				align-items: center;
+				@extend .circle;
+				position: absolute;
+				top: 50%;
+				right: 50%;
+				transform: translate(50%, -50%);
+				&::before {
+					content: "";
+					@extend .circle;
+					height: 25px !important;
+					width: 25px !important;
+					background-color: $tag-color !important;
+					position: absolute;
+					right: 50%;
+					transform: translate(50%, 0);
+				}
+				&::after {
+					@extend .text;
+					position: absolute;
+					right: 75px;
+				}
+			}
+
+			#y2022 {
+				top: 100px;
+				&::after {
+					content: "2022";
+				}
+			}
+
+			#y2021 {
+				top: 300px;
+				&::after {
+					content: "2021";
+				}
+			}
+		}
+
+		.circle {
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+		}
+	}
+}

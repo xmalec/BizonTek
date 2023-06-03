@@ -1,7 +1,25 @@
-@import "mixins";
-@import "scrollbar";
+@import "timeline";
 
 body {
+	.appearance-border {
+		border-color: $text;
+		border-style: solid;
+		transition: border-color ease-in-out 0.2s, color ease-in-out 0.2s;
+	}
+	.appearance-border-bottom {
+		border-bottom-color: $text;
+		border-bottom-style: solid;
+		transition: border-bottom-color ease-in-out 0.2s;
+	}
+	.appearance-bg-color {
+		background-color: $text;
+		transition: background-color ease-in-out 0.2s;
+	}
+	.appearance-color {
+		color: $text-dark;
+		transition: color ease-in-out 0.2s;
+	}
+
 	color: $text;
 	background-color: $bg-dark;
 	transition: background-color ease-in-out 0.2s;
@@ -9,11 +27,40 @@ body {
 	&.bright {
 		color: $text-dark;
 		background-color: $bg-bright;
+		.appearance-border {
+			border-color: $text-dark;
+		}
+		.appearance-border-bottom {
+			border-bottom-color: $text-dark;
+		}
+		.appearance-bg-color {
+			background-color: $text-dark;
+		}
+		.appearance-color {
+			color: white;
+		}
 		.timeline-frame-scroll {
 			background-color: $bg-bright-secondary !important;
 		}
 		.background-image {
 			opacity: 0.1 !important;
+		}
+
+		.appearance-toggle {
+			.moon {
+				display: block;
+			}
+			.sun {
+				display: none;
+			}
+		}
+	}
+	.appearance-toggle {
+		.moon {
+			display: none;
+		}
+		.sun {
+			display: block;
 		}
 	}
 
@@ -34,23 +81,39 @@ body {
 
 		nav {
 			position: absolute;
-			top: -66px;
-			transition: top ease-in-out 0.2s;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			top: 0;
+			width: 100%;
+			right: 50%;
+			transform: translate(50%);
 			z-index: 3;
-
-			background-color: inherit;
-			&.show {
-				top: 0;
+			&.hidden {
+				top: -70px;
 			}
+			&.fixed {
+				transition: top ease-in-out 0.2s;
+				background-color: inherit;
+				transform: initial;
+				.navigation {
+					right: 50%;
+					transform: translate(50%);
+					position: fixed;
+					background-color: inherit;
+					.nav-contact-btn {
+						display: block;
+					}
+				}
+			}
+
 			.navigation {
 				@extend .text;
-				right: 50%;
-				transform: translate(50%);
-				position: fixed;
-				background-color: inherit;
+
 				padding: 10px 0;
 				display: flex;
 				justify-content: space-between;
+				background-color: transparent;
 				align-items: center;
 				width: calc(
 					min(
@@ -58,6 +121,10 @@ body {
 						#{$layout-max-width}
 					)
 				);
+				.nav-contact-btn {
+					display: none;
+				}
+
 				@include sm {
 					width: calc(
 						min(
@@ -76,17 +143,47 @@ body {
 					display: flex;
 					align-items: center;
 					.menu-items {
-						display: inherit;
+						display: flex;
 						gap: inherit;
 						align-items: inherit;
 						@include sm-md {
-							display: none;
+							display: flex;
+							position: absolute;
+
+							flex-direction: column;
+							justify-content: center;
+							background-color: $bg-dark-secondary;
+							max-height: 0;
+							padding-top: 0;
+							padding-bottom: 0;
+							top: 70px;
+							left: 0;
+							gap: 15px;
+							width: 100%;
+							overflow: hidden;
+							border-radius: 25px;
+							transition: max-height ease-in-out 0.35s,
+								padding-top ease-in-out 0.35s,
+								padding-bottom ease-in-out 0.35s;
+							&.collapsed {
+								padding-top: 10px;
+								padding-bottom: 10px;
+								max-height: 150px;
+							}
 						}
 						white-space: nowrap;
 					}
+					.appearance-toggle {
+						display: none;
+						@include sm {
+							display: block;
+						}
+					}
+
 					.menu-bars {
 						padding: 2px 12px;
-						border: 1px solid $text;
+						border-width: 1px;
+
 						@include lg {
 							display: none;
 						}
@@ -145,7 +242,7 @@ body {
 						"text1 text1"
 						"text2 text2"
 						"text3 text3"
-						"text4 email"
+						"email text4"
 						"button button";
 					column-gap: 20px;
 					row-gap: 20px;
@@ -195,6 +292,9 @@ body {
 					align-self: end;
 					display: flex;
 					gap: 15px;
+					@include sm-md {
+						justify-self: end;
+					}
 				}
 
 				.contact-btn {
@@ -214,12 +314,9 @@ body {
 					flex: 1;
 					a {
 						&::before {
-							content: "––––––";
+							content: "–⁠–⁠–⁠–⁠–⁠–⁠–⁠–⁠";
 							margin-right: 10px;
 						}
-					}
-					@include sm-md {
-						justify-self: end;
 					}
 				}
 			}
@@ -252,18 +349,24 @@ body {
 		}
 	}
 	.appearance-toggle {
-		position: fixed;
-		z-index: 3;
-		top: 22px;
-		right: 30px;
-		@extend .text;
+		&.absolute {
+			position: fixed;
+			z-index: 3;
+			top: 22px;
+			right: 30px;
+			@extend .text;
+			@include sm {
+				display: none;
+			}
+		}
 	}
 
 	a,
 	button {
-		transition: color ease-in-out 0.2s;
+		transition: color ease-in-out 0.2s, border-color ease-in-out 0.2s;
 		&:hover {
 			color: $tag-color;
+			border-color: $tag-color !important;
 		}
 	}
 }
