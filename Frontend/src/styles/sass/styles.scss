@@ -236,13 +236,14 @@ body {
 
 		.hp {
 			display: flex;
-			min-height: 100vh;
+			min-height: calc(min(100vh, 1200px));
 			align-items: center;
 			.background-image {
 				position: absolute;
 				right: 0;
 				z-index: 1;
-				height: 100vh;
+				height: 100%;
+				max-height: 1200px;
 				opacity: 1;
 				transition: opacity ease-in-out 0.2s;
 				img {

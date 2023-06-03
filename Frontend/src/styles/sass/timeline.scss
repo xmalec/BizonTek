@@ -3,10 +3,21 @@
 
 .timeline-container {
 	padding: 25px 50px;
+	@include sm {
+		padding: 25px 15px;
+	}
 	.line-container {
+		margin: auto;
+		@include sm-md {
+			margin: 0;
+			margin-left: auto;
+		}
 		.top-title {
 			@extend .h3;
 			padding-bottom: 20px;
+			@include sm-md {
+				font-size: 30px;
+			}
 		}
 		display: flex;
 		flex-direction: column;
@@ -53,7 +64,7 @@
 				&::after {
 					@extend .text;
 					position: absolute;
-					right: 75px;
+					left: 60px;
 				}
 			}
 
