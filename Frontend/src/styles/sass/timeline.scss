@@ -2,17 +2,18 @@
 @import "scrollbar";
 
 .timeline-container {
-	padding: 50px 75px;
-	@include sm-md {
-		padding: 25px 15px;
-	}
 	display: grid;
-	grid-template-columns: 1fr auto 1fr;
+	grid-template-columns: auto 1fr;
+	column-gap: 20px;
+	height: 1000px;
+	padding: 0 50px;
+	@include sm {
+		padding: 0 $layout-side-padding-sm;
+	}
 	.line-container {
 		grid-column-start: 2;
 		grid-column-end: 2;
 		grid-row-end: span 10;
-		margin: auto;
 		@include sm-md {
 			margin: 0;
 			margin-left: auto;
@@ -108,19 +109,32 @@
 	}
 
 	.event {
+		max-width: 500px;
 		grid-area: event;
+		height: fit-content;
+		row-gap: 10px;
+		border: 2px solid $text;
+		padding: 20px 30px;
+		border-radius: 20px;
 		@extend .text;
 		display: grid;
+		box-shadow: #000000a3 2px 2px;
 		grid-template-areas:
 			"name detail"
-			"description description"
-			"tags tags";
+			"tags tags"
+			"description description";
 		.event__name {
 			grid-area: name;
 			@extend .h3;
 		}
 		.event__detail {
 			grid-area: detail;
+			background-color: $bg-dark;
+			border: 2px solid $tag-color;
+			color: $tag-color;
+			border-radius: 20px;
+			width: fit-content;
+			justify-self: end;
 		}
 		.event__description {
 			grid-area: description;
@@ -131,10 +145,12 @@
 			display: flex;
 			flex-wrap: wrap;
 			.tag {
+				@extend .text-sm;
 				background-color: $tag-color;
 				color: $bg-dark;
 				border-radius: 20px;
-				padding: 15px 10px;
+				padding: 6px 12px;
+				box-shadow: #000000a3 2px 2px;
 			}
 		}
 	}

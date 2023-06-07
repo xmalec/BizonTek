@@ -25,7 +25,7 @@
   letter-spacing: 0.02em;
 }
 
-.text-sm, body .container .hp .hp-grid .contact-email {
+.text-sm, body .container .hp .hp-grid .contact-email, .timeline-container .event .event__tags .tag {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -125,20 +125,21 @@ a {
 }
 
 .timeline-container {
-  padding: 50px 75px;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: auto 1fr;
+  column-gap: 20px;
+  height: 1000px;
+  padding: 0 50px;
 }
-@media (max-width: 849px) {
+@media (max-width: 649px) {
   .timeline-container {
-    padding: 25px 15px;
+    padding: 0 25px;
   }
 }
 .timeline-container .line-container {
   grid-column-start: 2;
   grid-column-end: 2;
   grid-row-end: span 10;
-  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -234,15 +235,28 @@ a {
   }
 }
 .timeline-container .event {
+  max-width: 500px;
   grid-area: event;
+  height: fit-content;
+  row-gap: 10px;
+  border: 2px solid #b3f1d0;
+  padding: 20px 30px;
+  border-radius: 20px;
   display: grid;
-  grid-template-areas: "name detail" "description description" "tags tags";
+  box-shadow: #000000a3 2px 2px;
+  grid-template-areas: "name detail" "tags tags" "description description";
 }
 .timeline-container .event .event__name {
   grid-area: name;
 }
 .timeline-container .event .event__detail {
   grid-area: detail;
+  background-color: #001724;
+  border: 2px solid #efbe40;
+  color: #efbe40;
+  border-radius: 20px;
+  width: fit-content;
+  justify-self: end;
 }
 .timeline-container .event .event__description {
   grid-area: description;
@@ -257,7 +271,8 @@ a {
   background-color: #efbe40;
   color: #001724;
   border-radius: 20px;
-  padding: 15px 10px;
+  padding: 6px 12px;
+  box-shadow: #000000a3 2px 2px;
 }
 
 body {
@@ -596,7 +611,10 @@ body .container .hp .hp-grid .contact-email a::before {
   }
 }
 body .container .about {
+  padding: 50px 0;
   margin: 20px 75px;
+  max-width: 1200px;
+  width: calc( 				min(100% - 150px, 1200px) 			);
   background-color: #012f3e;
   transition: background-color ease-in-out 0.2s;
   border-radius: 25px;
@@ -604,6 +622,7 @@ body .container .about {
 @media (max-width: 849px) {
   body .container .about {
     margin: 20px 0;
+    width: 100%;
   }
 }
 body .container .about .timeline-container {

@@ -369,9 +369,15 @@ body {
 		}
 
 		.about {
+			padding: 50px 0;
 			margin: 20px $layout-side-padding;
+			max-width: $layout-max-width;
+			width: calc(
+				min(100% - #{$layout-side-padding * 2}, #{$layout-max-width})
+			);
 			@include sm-md {
 				margin: 20px 0;
+				width: 100%;
 			}
 			background-color: $bg-dark-secondary;
 			transition: background-color ease-in-out 0.2s;
