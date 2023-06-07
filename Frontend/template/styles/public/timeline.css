@@ -124,7 +124,7 @@ a {
 }
 
 .timeline-container {
-  padding: 25px 50px;
+  padding: 50px 75px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
 }

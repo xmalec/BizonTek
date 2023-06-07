@@ -27,6 +27,9 @@ body {
 	&.bright {
 		color: $text-dark;
 		background-color: $bg-bright;
+		.about {
+			background-color: $bg-bright-secondary !important;
+		}
 		.appearance-border {
 			border-color: $text-dark;
 		}
@@ -38,9 +41,6 @@ body {
 		}
 		.appearance-color {
 			color: white;
-		}
-		.timeline-frame-scroll {
-			background-color: $bg-bright-secondary !important;
 		}
 		.background-image {
 			opacity: 0.1 !important;
@@ -68,18 +68,23 @@ body {
 
 	.container {
 		min-height: 100vh;
-		padding: 0 $layout-side-padding;
 		background-color: inherit;
-		@include sm {
-			padding: 0 $layout-side-padding-sm;
-		}
-
-		& > div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.section {
+			padding: 0 $layout-side-padding;
+			@include sm {
+				padding: 0 $layout-side-padding-sm;
+			}
 			max-width: $layout-max-width;
-			margin: auto;
 		}
 
 		nav {
+			padding: 0 $layout-side-padding;
+			@include sm {
+				padding: 0 $layout-side-padding-sm;
+			}
 			position: absolute;
 			display: flex;
 			flex-direction: column;
@@ -364,28 +369,16 @@ body {
 		}
 
 		.about {
-			height: 100vh;
-			.about-container {
-				padding: 10vh 0 5vh 0;
-				.timeline-frame {
-					border-radius: 25px;
-					overflow: hidden;
-					.timeline-frame-scroll {
-						background-color: $bg-dark-secondary;
-						transition: background-color ease-in-out 0.2s;
-						overflow-y: scroll;
-						height: 85vh;
-						&::-webkit-scrollbar-track {
-							background: inherit;
-						}
-						&::-webkit-scrollbar {
-							width: 8px;
-						}
-						.timeline-container {
-							height: 2000px;
-						}
-					}
-				}
+			margin: 20px $layout-side-padding;
+			@include sm-md {
+				margin: 20px 0;
+			}
+			background-color: $bg-dark-secondary;
+			transition: background-color ease-in-out 0.2s;
+			border-radius: 25px;
+
+			.timeline-container {
+				height: 2000px;
 			}
 		}
 	}
