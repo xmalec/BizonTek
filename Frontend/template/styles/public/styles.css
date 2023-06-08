@@ -163,11 +163,11 @@ body .appearance-bg-color {
 body.bright .appearance-bg-color {
   background-color: #e7f3ea;
 }
-body .appearance-bg-color-secondary, body .container .about, body .timeline-container .event, .timeline-container body .event {
+body .appearance-bg-color-secondary, body .container .about, body .container nav .navigation .menu .menu-items, body .timeline-container .event, .timeline-container body .event {
   background-color: #012f3e;
   transition: background-color ease-in-out 0.2s;
 }
-body.bright .appearance-bg-color-secondary, body.bright .container .about, body.bright .timeline-container .event, .timeline-container body.bright .event {
+body.bright .appearance-bg-color-secondary, body.bright .container .about, body.bright .container nav .navigation .menu .menu-items, body.bright .timeline-container .event, .timeline-container body.bright .event {
   background-color: #cce3d2;
 }
 body .appearance-color-text-dark {
@@ -465,13 +465,17 @@ body .container nav .navigation .menu .menu-items {
   align-items: inherit;
   white-space: nowrap;
 }
+@media (min-width: 850px) {
+  body .container nav .navigation .menu .menu-items {
+    background-color: transparent;
+  }
+}
 @media (max-width: 849px) {
   body .container nav .navigation .menu .menu-items {
     display: flex;
     position: absolute;
     flex-direction: column;
     justify-content: center;
-    background-color: #012f3e;
     max-height: 0;
     padding-top: 0;
     padding-bottom: 0;
