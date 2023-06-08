@@ -1,10 +1,6 @@
 @import "appearance";
 
 body {
-	color: $text;
-	background-color: $bg-dark;
-	transition: background-color ease-in-out 0.2s;
-
 	margin: 0;
 
 	.container {

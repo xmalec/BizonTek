@@ -278,45 +278,50 @@ a {
   padding-top: 5px;
 }
 
+body {
+  color: #b3f1d0;
+  background-color: #001724;
+  transition: background-color ease-in-out 0.2s;
+}
+body.bright {
+  color: #001724;
+  background-color: #e7f3ea;
+}
 body .appearance-border {
   border-color: #b3f1d0;
   border-style: solid;
   transition: border-color ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+body.bright .appearance-border {
+  border-color: #001724;
 }
 body .appearance-border-bottom {
   border-bottom-color: #b3f1d0;
   border-bottom-style: solid;
   transition: border-bottom-color ease-in-out 0.2s;
 }
+body.bright .appearance-border-bottom {
+  border-bottom-color: #001724;
+}
 body .appearance-bg-color {
   background-color: #b3f1d0;
   transition: background-color ease-in-out 0.2s;
+}
+body.bright .appearance-bg-color {
+  background-color: #001724;
 }
 body .appearance-color {
   color: #001724;
   transition: color ease-in-out 0.2s;
 }
-body.bright {
-  color: #001724;
-  background-color: #e7f3ea;
-}
-body.bright .about {
-  background-color: #cce3d2 !important;
-}
-body.bright .appearance-border {
-  border-color: #001724;
-}
-body.bright .appearance-border-bottom {
-  border-bottom-color: #001724;
-}
-body.bright .appearance-bg-color {
-  background-color: #001724;
-}
-body.bright .appearance-color {
+body .bright .appearance-color {
   color: white;
 }
-body.bright .background-image {
-  opacity: 0.1 !important;
+body .appearance-toggle .moon {
+  display: none;
+}
+body .appearance-toggle .sun {
+  display: block;
 }
 body.bright .appearance-toggle .moon {
   display: block;
@@ -324,11 +329,11 @@ body.bright .appearance-toggle .moon {
 body.bright .appearance-toggle .sun {
   display: none;
 }
-body .appearance-toggle .moon {
-  display: none;
+body.bright .about {
+  background-color: #cce3d2 !important;
 }
-body .appearance-toggle .sun {
-  display: block;
+body.bright .background-image {
+  opacity: 0.1 !important;
 }
 
 /*# sourceMappingURL=appearance.css.map */
