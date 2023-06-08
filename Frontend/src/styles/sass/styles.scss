@@ -1,4 +1,4 @@
-@import "timeline";
+@import "contact";
 
 body {
 	margin: 0;
@@ -125,7 +125,7 @@ body {
 						align-items: inherit;
 						@extend .appearance-bg-color-secondary;
 						@include lg {
-							background-color: transparent;
+							background-color: transparent !important;
 						}
 						@include sm-md {
 							display: flex;
@@ -254,6 +254,9 @@ body {
 					img {
 						width: 100%;
 					}
+					@include sm-md {
+						justify-self: center;
+					}
 				}
 
 				.name {
@@ -262,12 +265,16 @@ body {
 					gap: 15px;
 					@include sm-md {
 						align-self: end;
+						justify-self: center;
 					}
 				}
 				.profession {
 					grid-area: text2;
 					display: flex;
 					gap: 15px;
+					@include sm-md {
+						justify-self: center;
+					}
 				}
 				.description {
 					grid-area: text3;
@@ -318,13 +325,13 @@ body {
 
 		.about {
 			padding: 50px 0;
-			margin: 20px $layout-side-padding;
+			margin: 20px $layout-side-padding 100px $layout-side-padding;
 			max-width: $layout-max-width;
 			width: calc(
 				min(100% - #{$layout-side-padding * 2}, #{$layout-max-width})
 			);
 			@include sm-md {
-				margin: 20px 0;
+				margin: 20px 0 100px 0;
 				width: 100%;
 			}
 			@extend .appearance-bg-color-secondary;

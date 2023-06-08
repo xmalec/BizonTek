@@ -40,19 +40,19 @@
   line-height: 135%;
 }
 
-.text-bold {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 22px;
-}
-
 .text, .btn.btn-sm {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
+  line-height: 135%;
+}
+
+.text-lg, .btn.btn-md {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
   line-height: 135%;
 }
 
@@ -88,6 +88,9 @@ a {
   border-radius: 5px;
 }
 .btn.btn-sm {
+  padding: 7px 15px;
+}
+.btn.btn-md {
   padding: 7px 15px;
 }
 .btn.btn-contact {
@@ -168,6 +171,13 @@ body .appearance-bg-color-secondary {
 }
 body.bright .appearance-bg-color-secondary {
   background-color: #cce3d2;
+}
+body .appearance-bg-color-contact {
+  background-color: #002337;
+  transition: background-color ease-in-out 0.2s;
+}
+body.bright .appearance-bg-color-contact {
+  background-color: #c1dad2;
 }
 body .appearance-color-text-dark {
   color: #001724;

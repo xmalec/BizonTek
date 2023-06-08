@@ -24,7 +24,8 @@
   letter-spacing: 0.02em;
 }
 
-.text-sm, .timeline-container .event .event__tags .tag {
+.text-sm, .form .form-control .form-checkbox, .form .form-control .input input,
+.form .form-control .input textarea, .timeline-container .event .event__tags .tag {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -32,7 +33,7 @@
   line-height: 135%;
 }
 
-.text-xs, .timeline-container .event .event__date {
+.text-xs, .form .form-control .error, .timeline-container .event .event__date {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -135,12 +136,12 @@ body.bright {
   color: #001724;
   background-color: #e7f3ea;
 }
-body .appearance-border-text, body .timeline-container .event, .timeline-container body .event {
+body .appearance-border-text, body .form .form-control .input, .form .form-control body .input, body .timeline-container .event, .timeline-container body .event {
   border-color: #b3f1d0;
   border-style: solid;
   transition: border-color ease-in-out 0.2s, color ease-in-out 0.2s;
 }
-body.bright .appearance-border-text, body.bright .timeline-container .event, .timeline-container body.bright .event {
+body.bright .appearance-border-text, body.bright .form .form-control .input, .form .form-control body.bright .input, body.bright .timeline-container .event, .timeline-container body.bright .event {
   border-color: #001724;
 }
 body .appearance-border-text-bottom {
@@ -360,4 +361,71 @@ body.bright .event__detail {
   padding-top: 5px;
 }
 
-/*# sourceMappingURL=timeline.css.map */
+.form .form-control {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.form .form-control .input {
+  height: 100%;
+  padding: 5px 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  background-color: white;
+}
+.form .form-control .input input,
+.form .form-control .input textarea {
+  width: 100%;
+  border: 0;
+  appearance: none;
+}
+.form .form-control .input input:focus,
+.form .form-control .input textarea:focus {
+  outline: none;
+}
+.form .form-control .input textarea {
+  resize: vertical;
+  min-height: 200px;
+}
+.form .form-control .form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.form .form-control .form-checkbox .input {
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+.form .form-control .form-checkbox .input input {
+  appearance: auto;
+  margin: 0;
+  height: 100%;
+}
+.form .form-control .form-checkbox label {
+  cursor: pointer;
+}
+.form .form-control .error {
+  padding: 2px 0 4px 0;
+  color: #ff5b5b;
+  opacity: 0;
+}
+.form .form-control.has-error .input {
+  border-color: #ff5b5b;
+}
+.form .form-control.has-error .error {
+  opacity: 1;
+}
+.form .form-control .submit-btn {
+  margin-top: 10px;
+  width: min-content;
+}
+@media (max-width: 849px) {
+  .form .form-control .submit-btn {
+    align-self: center;
+  }
+}
+
+/*# sourceMappingURL=form.css.map */

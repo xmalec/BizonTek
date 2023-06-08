@@ -28,6 +28,11 @@ a {
 		@extend .text;
 	}
 
+	&.btn-md {
+		padding: 7px 15px;
+		@extend .text-lg;
+	}
+
 	&.btn-contact {
 		background-color: $primary-color;
 		color: $text-dark;

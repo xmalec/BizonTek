@@ -40,19 +40,19 @@
   line-height: 135%;
 }
 
-.text-bold {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 22px;
-}
-
 .text, .btn.btn-sm {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
+  line-height: 135%;
+}
+
+.text-lg, .btn.btn-md {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
   line-height: 135%;
 }
 
@@ -88,6 +88,9 @@ a {
   border-radius: 5px;
 }
 .btn.btn-sm {
+  padding: 7px 15px;
+}
+.btn.btn-md {
   padding: 7px 15px;
 }
 .btn.btn-contact {

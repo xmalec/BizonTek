@@ -1,0 +1,78 @@
+@import "timeline";
+
+.form {
+	.form-control {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		.input {
+			height: 100%;
+			padding: 5px 20px;
+			@extend .appearance-border-text;
+			//border-color: $text;
+			border-width: 2px;
+			border-style: solid;
+			border-radius: 10px;
+			background-color: white;
+			input,
+			textarea {
+				width: 100%;
+				border: 0;
+				appearance: none;
+				@extend .text-sm;
+				&:focus {
+					outline: none;
+				}
+			}
+			textarea {
+				resize: vertical;
+				min-height: 200px;
+			}
+		}
+
+		.form-checkbox {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			@extend .text-sm;
+			.input {
+				padding: 0;
+				width: 20px;
+				height: 20px;
+				border-radius: 5px;
+				input {
+					appearance: auto;
+					margin: 0;
+					height: 100%;
+				}
+			}
+			label {
+				cursor: pointer;
+			}
+		}
+
+		.error {
+			padding: 2px 0 4px 0;
+			@extend .text-xs;
+			color: $error;
+			opacity: 0;
+		}
+
+		&.has-error {
+			.input {
+				border-color: $error;
+			}
+			.error {
+				opacity: 1;
+			}
+		}
+
+		.submit-btn {
+			margin-top: 10px;
+			width: min-content;
+			@include sm-md {
+				align-self: center;
+			}
+		}
+	}
+}

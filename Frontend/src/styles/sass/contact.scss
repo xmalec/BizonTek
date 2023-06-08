@@ -1,0 +1,78 @@
+@import "form";
+
+.contact {
+	@extend .appearance-bg-color-contact;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 75px 0;
+
+	.contact__container {
+		width: 100%;
+		display: grid;
+		grid-template-areas:
+			"title form"
+			"info form";
+		grid-template-columns: 1fr 1fr;
+		row-gap: 50px;
+		column-gap: 50px;
+		@include sm-md {
+			grid-template-areas:
+				"title"
+				"form"
+				"info";
+			grid-template-columns: 1fr;
+		}
+		.contact__title {
+			grid-area: title;
+			@extend .h2;
+			@include sm-md {
+				font-size: 35px;
+				text-align: center;
+			}
+		}
+		.contact__info-grid {
+			grid-area: info;
+			align-self: end;
+			@extend .text;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"name"
+				"cities"
+				"email"
+				"socials";
+			column-gap: 4px;
+			width: 100%;
+			.contact__name {
+				grid-area: name;
+			}
+			.contact__socials {
+				grid-area: socials;
+				@include sm-md {
+					justify-self: end;
+				}
+			}
+			.contact__cities {
+				grid-area: cities;
+			}
+			.contact__email {
+				grid-area: email;
+				@include sm-md {
+					justify-self: end;
+				}
+			}
+			@include sm-md {
+				grid-template-columns: 1fr 1fr;
+				grid-template-areas:
+					"name socials"
+					"cities email";
+			}
+		}
+		.contact__form {
+			grid-area: form;
+			justify-self: end;
+			width: 100%;
+		}
+	}
+}

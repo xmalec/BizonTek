@@ -6,7 +6,7 @@
 	grid-template-columns: [first-col] auto [sec-col] repeat(10, auto) [last-col];
 	grid-template-rows: [first-row] 10px repeat(200, 10px) 10px [last-row];
 	column-gap: 20px;
-	padding: 0 50px;
+	// padding: 0 50px;
 	@include sm-md {
 		display: flex;
 		flex-direction: column;

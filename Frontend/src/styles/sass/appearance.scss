@@ -52,6 +52,14 @@ body {
 		background-color: $bg-bright-secondary;
 	}
 
+	.appearance-bg-color-contact {
+		background-color: $bg-dark-contact;
+		transition: background-color ease-in-out 0.2s;
+	}
+	&.bright .appearance-bg-color-contact {
+		background-color: $bg-bright-contact;
+	}
+
 	.appearance-color-text-dark {
 		color: $text-dark;
 		transition: color ease-in-out 0.2s;

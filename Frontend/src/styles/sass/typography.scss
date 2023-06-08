@@ -44,18 +44,18 @@ $font-family: "Inter", sans-serif;
 	line-height: 135%;
 }
 
-.text-bold {
-	font-family: $font-family;
-	font-style: normal;
-	font-weight: 600;
-	font-size: 18px;
-	line-height: 22px;
-}
-
 .text {
 	font-family: $font-family;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 20px;
+	line-height: 135%;
+}
+
+.text-lg {
+	font-family: $font-family;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 25px;
 	line-height: 135%;
 }
