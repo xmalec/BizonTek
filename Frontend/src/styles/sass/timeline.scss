@@ -53,9 +53,7 @@
 			height: inherit;
 			width: 0;
 			border-width: 5px;
-			@include sm-md {
-				border-width: 3px;
-			}
+
 			position: relative;
 		}
 	}
@@ -122,9 +120,15 @@
 			"tags tags"
 			"description description";
 		border-width: 2px;
+		opacity: 0;
+		transition: opacity ease-in-out 0.5s, background-color ease-in-out 0.2s,
+			border-color ease-in-out 0.2s !important;
 		border-radius: 20px;
 		@extend .text;
 		@extend .shadow;
+		&.show {
+			opacity: 1;
+		}
 
 		.event__name {
 			grid-area: name;

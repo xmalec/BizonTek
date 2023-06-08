@@ -258,11 +258,6 @@ body.bright .event__detail {
   border-width: 5px;
   position: relative;
 }
-@media (max-width: 849px) {
-  .timeline-container .line-container .line {
-    border-width: 3px;
-  }
-}
 .timeline-container .circle, .timeline-container .line-point::before, .timeline-container .line-point {
   border-radius: 50%;
   height: 50px;
@@ -309,12 +304,17 @@ body.bright .event__detail {
   grid-column: 2/last-col;
   grid-template-areas: "name detail" "date detail" "tags tags" "description description";
   border-width: 2px;
+  opacity: 0;
+  transition: opacity ease-in-out 0.5s, background-color ease-in-out 0.2s, border-color ease-in-out 0.2s !important;
   border-radius: 20px;
 }
 @media (min-width: 850px) {
   .timeline-container .event {
     max-width: 500px;
   }
+}
+.timeline-container .event.show {
+  opacity: 1;
 }
 .timeline-container .event .event__name {
   grid-area: name;

@@ -1,14 +1,19 @@
-function isElementInView(element, fullyInView) {
-	var pageTop = window.pageYOffset || document.documentElement.scrollTop;
-	var pageBottom = pageTop + window.innerHeight;
-	var elementTop = element.offsetTop;
-	var elementBottom = elementTop + element.offsetHeight;
-
-	if (fullyInView === true) {
-		return pageTop < elementTop && pageBottom > elementBottom;
-	} else {
-		return elementTop <= pageBottom && elementBottom >= pageTop;
+function isElementInView(element, fullyInView = false) {
+	var bounding = element.getBoundingClientRect();
+	if (fullyInView) {
+		return (
+			bounding.top >= 0 &&
+			bounding.left >= 0 &&
+			bounding.right <= window.innerWidth &&
+			bounding.bottom <= window.innerHeight
+		);
 	}
+	return (
+		bounding.top >= 0 &&
+		bounding.left >= 0 &&
+		bounding.left <= window.innerWidth &&
+		bounding.top <= window.innerHeight
+	);
 }
 
 function hasClass(element, className) {
@@ -25,6 +30,16 @@ function addClass(element, className) {
 
 function removeClass(element, className) {
 	element.classList.remove(className);
+}
+
+function manageEventsOpacity() {
+	const events = document.getElementsByClassName("event");
+	for (let i = 0; i < events.length; i++) {
+		const event = events[i];
+		if (!hasClass(event, "show") && isElementInView(event)) {
+			addClass(event, "show");
+		}
+	}
 }
 
 function manageNavigationBarOnScroll() {
@@ -59,6 +74,7 @@ function manageNavigationBarOnScroll() {
 
 function onScroll(e) {
 	manageNavigationBarOnScroll();
+	manageEventsOpacity();
 }
 
 function toggleApperance() {
