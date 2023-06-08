@@ -57,11 +57,11 @@
 }
 
 .shadow {
-  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.15);
 }
 
 .shadow-sm {
-  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
 }
 
 button,
@@ -97,7 +97,7 @@ a {
   white-space: nowrap;
 }
 .btn.btn-animated {
-  transition: transform ease-in-out 0.2s, color ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s, color ease-in-out 0.2s, border-color ease-in-out 0.2s, background-color ease-in-out 0.2s;
 }
 .btn.btn-animated:hover {
   transform: scale(1.1);

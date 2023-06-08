@@ -1,4 +1,4 @@
-@import "appearance";
+@import "timeline";
 
 body {
 	margin: 0;
@@ -323,7 +323,7 @@ body {
 				margin: 20px 0;
 				width: 100%;
 			}
-			background-color: $bg-dark-secondary;
+			@extend .appearance-bg-color-secondary;
 			transition: background-color ease-in-out 0.2s;
 			border-radius: 25px;
 		}

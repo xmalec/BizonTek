@@ -1,5 +1,4 @@
-@import "mixins";
-@import "scrollbar";
+@import "appearance";
 
 .timeline-container {
 	position: relative;
@@ -110,7 +109,8 @@
 		@include lg {
 			max-width: 500px;
 		}
-		background-color: $bg-dark-secondary;
+		@extend .appearance-bg-color-secondary;
+		@extend .appearance-border-text;
 		position: relative;
 		height: fit-content;
 		padding: 20px 30px;
@@ -121,7 +121,7 @@
 			"date detail"
 			"tags tags"
 			"description description";
-		border: 2px solid $text;
+		border-width: 2px;
 		border-radius: 20px;
 		@extend .text;
 		@extend .shadow;

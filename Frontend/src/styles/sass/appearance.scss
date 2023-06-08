@@ -1,4 +1,5 @@
-@import "timeline";
+@import "mixins";
+@import "scrollbar";
 
 body {
 	color: $text;
@@ -9,38 +10,54 @@ body {
 		background-color: $bg-bright;
 	}
 
-	.appearance-border {
+	.appearance-border-text {
 		border-color: $text;
 		border-style: solid;
 		transition: border-color ease-in-out 0.2s, color ease-in-out 0.2s;
 	}
-	&.bright .appearance-border {
+	&.bright .appearance-border-text {
 		border-color: $text-dark;
 	}
 
-	.appearance-border-bottom {
+	.appearance-border-text-bottom {
 		border-bottom-color: $text;
 		border-bottom-style: solid;
 		transition: border-bottom-color ease-in-out 0.2s;
 	}
-	&.bright .appearance-border-bottom {
+	&.bright .appearance-border-text-bottom {
 		border-bottom-color: $text-dark;
 	}
 
-	.appearance-bg-color {
+	.appearance-bg-color-text {
 		background-color: $text;
 		transition: background-color ease-in-out 0.2s;
 	}
-	&.bright .appearance-bg-color {
+	&.bright .appearance-bg-color-text {
 		background-color: $text-dark;
 	}
 
-	.appearance-color {
+	.appearance-bg-color {
+		background-color: $bg-dark;
+		transition: background-color ease-in-out 0.2s;
+	}
+	&.bright .appearance-bg-color {
+		background-color: $bg-bright;
+	}
+
+	.appearance-bg-color-secondary {
+		background-color: $bg-dark-secondary;
+		transition: background-color ease-in-out 0.2s;
+	}
+	&.bright .appearance-bg-color-secondary {
+		background-color: $bg-bright-secondary;
+	}
+
+	.appearance-color-text-dark {
 		color: $text-dark;
 		transition: color ease-in-out 0.2s;
 	}
-	.bright .appearance-color {
-		color: white;
+	&.bright .appearance-color-text-dark {
+		color: black;
 	}
 
 	.appearance-toggle {
@@ -59,14 +76,14 @@ body {
 			display: none;
 		}
 	}
-
 	&.bright {
-		.about {
-			background-color: $bg-bright-secondary !important;
-		}
-
 		.background-image {
 			opacity: 0.1 !important;
+		}
+		.event__detail {
+			background-color: $bg-bright !important;
+			border-color: $text-dark !important;
+			color: $text-dark !important;
 		}
 	}
 }
