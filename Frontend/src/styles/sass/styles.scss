@@ -1,68 +1,9 @@
-@import "timeline";
+@import "appearance";
 
 body {
-	.appearance-border {
-		border-color: $text;
-		border-style: solid;
-		transition: border-color ease-in-out 0.2s, color ease-in-out 0.2s;
-	}
-	.appearance-border-bottom {
-		border-bottom-color: $text;
-		border-bottom-style: solid;
-		transition: border-bottom-color ease-in-out 0.2s;
-	}
-	.appearance-bg-color {
-		background-color: $text;
-		transition: background-color ease-in-out 0.2s;
-	}
-	.appearance-color {
-		color: $text-dark;
-		transition: color ease-in-out 0.2s;
-	}
-
 	color: $text;
 	background-color: $bg-dark;
 	transition: background-color ease-in-out 0.2s;
-
-	&.bright {
-		color: $text-dark;
-		background-color: $bg-bright;
-		.about {
-			background-color: $bg-bright-secondary !important;
-		}
-		.appearance-border {
-			border-color: $text-dark;
-		}
-		.appearance-border-bottom {
-			border-bottom-color: $text-dark;
-		}
-		.appearance-bg-color {
-			background-color: $text-dark;
-		}
-		.appearance-color {
-			color: white;
-		}
-		.background-image {
-			opacity: 0.1 !important;
-		}
-
-		.appearance-toggle {
-			.moon {
-				display: block;
-			}
-			.sun {
-				display: none;
-			}
-		}
-	}
-	.appearance-toggle {
-		.moon {
-			display: none;
-		}
-		.sun {
-			display: block;
-		}
-	}
 
 	margin: 0;
 

@@ -2,33 +2,40 @@
 @import "scrollbar";
 
 .timeline-container {
+	position: relative;
 	display: grid;
 	grid-template-columns: [first-col] auto [sec-col] repeat(10, auto) [last-col];
+	grid-template-rows: [first-row] 10px repeat(200, 10px) 10px [last-row];
 	column-gap: 20px;
-	height: 1000px;
 	padding: 0 50px;
-	grid-template-rows: [first-row] 10px repeat(99, 10px) 10px [last-row];
+	@include sm-md {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		align-items: center;
+		> div:nth-child(2) {
+			margin-top: 120px;
+		}
+		> div:last-child {
+			margin-bottom: 100px;
+		}
+	}
 	@include sm {
 		padding: 0 $layout-side-padding-sm;
 	}
 	.line-container {
 		grid-row: first-row / last-row;
-		@include sm-md {
-			margin: 0;
-			margin-left: auto;
-		}
+		grid-column: first-col;
 		.top-title {
 			@extend .h3;
 			padding-bottom: 20px;
-			@include sm-md {
-				font-size: 18px;
-				font-weight: 500;
-			}
+		}
+		@include sm-md {
+			position: absolute;
 		}
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: min-content;
 		height: 100%;
 		.triangle-up {
 			width: 0;
@@ -51,64 +58,60 @@
 				border-width: 3px;
 			}
 			position: relative;
-			.line-point {
-				display: flex;
-				gap: 20px;
-				align-items: center;
-				@extend .circle;
-				position: absolute;
-				top: 50%;
-				right: 50%;
-				transform: translate(50%, -50%);
-				&::before {
-					content: "";
-					@extend .circle;
-					height: 50% !important;
-					width: 50% !important;
-					background-color: $tag-color !important;
-					position: absolute;
-					right: 50%;
-					transform: translate(50%, 0);
-				}
-				&::after {
-					@extend .text;
-					position: absolute;
-					left: 60px;
-					@include sm-md {
-						left: 40px;
-						font-size: 15px;
-					}
-				}
-			}
-
-			#y2022 {
-				top: 100px;
-				&::after {
-					content: "2022";
-				}
-			}
-
-			#y2021 {
-				top: 300px;
-				&::after {
-					content: "2021";
-				}
-			}
 		}
+	}
 
-		.circle {
-			border-radius: 50%;
-			height: 50px;
-			width: 50px;
-			@include sm-md {
-				height: 30px;
-				width: 30px;
-			}
+	.circle {
+		border-radius: 50%;
+		height: 50px;
+		width: 50px;
+	}
+
+	.line-point {
+		grid-column: first-col;
+		position: relative;
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		@extend .circle;
+		top: 50%;
+		justify-self: center;
+		&::before {
+			content: "";
+			@extend .circle;
+			height: 50% !important;
+			width: 50% !important;
+			background-color: $tag-color !important;
+			right: 50%;
+			transform: translate(50%, 0);
+		}
+		&::after {
+			@extend .text;
+			position: absolute;
+			left: 60px;
+		}
+	}
+
+	#y-2022 {
+		grid-row: 40;
+		&::after {
+			content: "2022";
+		}
+	}
+
+	#y-2021 {
+		grid-row: 80;
+		&::after {
+			content: "2021";
 		}
 	}
 
 	.event {
-		max-width: 500px;
+		@include lg {
+			max-width: 500px;
+		}
+		background-color: $bg-dark-secondary;
+		position: relative;
 		height: fit-content;
 		padding: 20px 30px;
 		display: grid;
