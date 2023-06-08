@@ -3,17 +3,16 @@
 
 .timeline-container {
 	display: grid;
-	grid-template-columns: auto 1fr;
+	grid-template-columns: [first-col] auto [sec-col] repeat(10, auto) [last-col];
 	column-gap: 20px;
 	height: 1000px;
 	padding: 0 50px;
+	grid-template-rows: [first-row] 10px repeat(99, 10px) 10px [last-row];
 	@include sm {
 		padding: 0 $layout-side-padding-sm;
 	}
 	.line-container {
-		grid-column-start: 2;
-		grid-column-end: 2;
-		grid-row-end: span 10;
+		grid-row: first-row / last-row;
 		@include sm-md {
 			margin: 0;
 			margin-left: auto;
@@ -110,19 +109,20 @@
 
 	.event {
 		max-width: 500px;
-		grid-area: event;
 		height: fit-content;
-		row-gap: 10px;
-		border: 2px solid $text;
 		padding: 20px 30px;
-		border-radius: 20px;
-		@extend .text;
 		display: grid;
-		box-shadow: #000000a3 2px 2px;
+		grid-column: 2 / last-col;
 		grid-template-areas:
 			"name detail"
+			"date detail"
 			"tags tags"
 			"description description";
+		border: 2px solid $text;
+		border-radius: 20px;
+		@extend .text;
+		@extend .shadow;
+
 		.event__name {
 			grid-area: name;
 			@extend .h3;
@@ -134,24 +134,33 @@
 			color: $tag-color;
 			border-radius: 20px;
 			width: fit-content;
+			height: fit-content;
 			justify-self: end;
+			align-self: center;
 		}
 		.event__description {
 			grid-area: description;
+			padding-top: 10px;
 		}
 		.event__tags {
 			grid-area: tags;
 			gap: 10px;
 			display: flex;
 			flex-wrap: wrap;
+			padding-top: 10px;
 			.tag {
-				@extend .text-sm;
 				background-color: $tag-color;
 				color: $bg-dark;
 				border-radius: 20px;
 				padding: 6px 12px;
-				box-shadow: #000000a3 2px 2px;
+				@extend .text-sm;
+				@extend .shadow-sm;
 			}
+		}
+		.event__date {
+			grid-area: date;
+			padding-top: 5px;
+			@extend .text-xs;
 		}
 	}
 }

@@ -32,6 +32,14 @@
   line-height: 135%;
 }
 
+.text-xs, .timeline-container .event .event__date {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 135%;
+}
+
 .text-bold {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -48,20 +56,12 @@
   line-height: 135%;
 }
 
-.shadow {
-  box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.15);
+.shadow, .timeline-container .event {
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
 }
 
-.shadow-bg {
-  box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.05);
-}
-
-.shadow-sm {
-  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.05);
-}
-
-.shadow-sm-menu {
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+.shadow-sm, .timeline-container .event .event__tags .tag {
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
 }
 
 button,
@@ -125,10 +125,11 @@ a {
 
 .timeline-container {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: [first-col] auto [sec-col] repeat(10, auto) [last-col];
   column-gap: 20px;
   height: 1000px;
   padding: 0 50px;
+  grid-template-rows: [first-row] 10px repeat(99, 10px) 10px [last-row];
 }
 @media (max-width: 649px) {
   .timeline-container {
@@ -136,9 +137,7 @@ a {
   }
 }
 .timeline-container .line-container {
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-end: span 10;
+  grid-row: first-row/last-row;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -235,15 +234,13 @@ a {
 }
 .timeline-container .event {
   max-width: 500px;
-  grid-area: event;
   height: fit-content;
-  row-gap: 10px;
-  border: 2px solid #b3f1d0;
   padding: 20px 30px;
-  border-radius: 20px;
   display: grid;
-  box-shadow: #000000a3 2px 2px;
-  grid-template-areas: "name detail" "tags tags" "description description";
+  grid-column: 2/last-col;
+  grid-template-areas: "name detail" "date detail" "tags tags" "description description";
+  border: 2px solid #b3f1d0;
+  border-radius: 20px;
 }
 .timeline-container .event .event__name {
   grid-area: name;
@@ -255,23 +252,30 @@ a {
   color: #efbe40;
   border-radius: 20px;
   width: fit-content;
+  height: fit-content;
   justify-self: end;
+  align-self: center;
 }
 .timeline-container .event .event__description {
   grid-area: description;
+  padding-top: 10px;
 }
 .timeline-container .event .event__tags {
   grid-area: tags;
   gap: 10px;
   display: flex;
   flex-wrap: wrap;
+  padding-top: 10px;
 }
 .timeline-container .event .event__tags .tag {
   background-color: #efbe40;
   color: #001724;
   border-radius: 20px;
   padding: 6px 12px;
-  box-shadow: #000000a3 2px 2px;
+}
+.timeline-container .event .event__date {
+  grid-area: date;
+  padding-top: 5px;
 }
 
 /*# sourceMappingURL=timeline.css.map */

@@ -111,7 +111,9 @@ body {
 				transition: top ease-in-out 0.2s;
 				background-color: inherit;
 				transform: initial;
-				.navigation {
+				.navigation-container {
+					.navigation {
+					}
 					right: 50%;
 					transform: translate(50%);
 					position: fixed;
@@ -121,7 +123,11 @@ body {
 					}
 				}
 			}
-
+			.navigation-container {
+				display: flex;
+				justify-content: center;
+				width: 100%;
+			}
 			.navigation {
 				@extend .text;
 
@@ -130,6 +136,7 @@ body {
 				justify-content: space-between;
 				background-color: transparent;
 				align-items: center;
+				max-width: $layout-max-width;
 				width: calc(
 					min(
 						100% - #{$layout-side-padding * 2},
@@ -382,10 +389,6 @@ body {
 			background-color: $bg-dark-secondary;
 			transition: background-color ease-in-out 0.2s;
 			border-radius: 25px;
-
-			.timeline-container {
-				height: 2000px;
-			}
 		}
 	}
 	.appearance-toggle {

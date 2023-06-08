@@ -36,6 +36,14 @@ $font-family: "Inter", sans-serif;
 	line-height: 135%;
 }
 
+.text-xs {
+	font-family: $font-family;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 135%;
+}
+
 .text-bold {
 	font-family: $font-family;
 	font-style: normal;

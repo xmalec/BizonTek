@@ -32,6 +32,14 @@
   line-height: 135%;
 }
 
+.text-xs {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 135%;
+}
+
 .text-bold {
   font-family: "Inter", sans-serif;
   font-style: normal;

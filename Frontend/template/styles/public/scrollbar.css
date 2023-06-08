@@ -32,6 +32,14 @@
   line-height: 135%;
 }
 
+.text-xs {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 135%;
+}
+
 .text-bold {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -49,19 +57,11 @@
 }
 
 .shadow {
-  box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.15);
-}
-
-.shadow-bg {
-  box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
 }
 
 .shadow-sm {
-  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.05);
-}
-
-.shadow-sm-menu {
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
 }
 
 button,
