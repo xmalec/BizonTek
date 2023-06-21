@@ -464,6 +464,7 @@ body.bright .event__detail {
   grid-template-columns: 1fr;
   grid-template-areas: "name" "cities" "email" "socials";
   column-gap: 4px;
+  row-gap: 3px;
   width: 100%;
 }
 .contact .contact__container .contact__info-grid .contact__name {
@@ -472,7 +473,7 @@ body.bright .event__detail {
 .contact .contact__container .contact__info-grid .contact__socials {
   grid-area: socials;
 }
-@media (max-width: 849px) {
+@media (max-width: 849px) and (min-width: 650px) {
   .contact .contact__container .contact__info-grid .contact__socials {
     justify-self: end;
   }
@@ -483,15 +484,26 @@ body.bright .event__detail {
 .contact .contact__container .contact__info-grid .contact__email {
   grid-area: email;
 }
-@media (max-width: 849px) {
+@media (max-width: 849px) and (min-width: 650px) {
   .contact .contact__container .contact__info-grid .contact__email {
     justify-self: end;
   }
 }
-@media (max-width: 849px) {
+@media (max-width: 849px) and (min-width: 650px) {
   .contact .contact__container .contact__info-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "name socials" "cities email";
+  }
+}
+@media (max-width: 649px) {
+  .contact .contact__container .contact__info-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "name" "cities" "email" "socials";
+  }
+  .contact .contact__container .contact__info-grid span,
+.contact .contact__container .contact__info-grid div,
+.contact .contact__container .contact__info-grid a {
+    justify-self: center;
   }
 }
 .contact .contact__container .contact__form {

@@ -18,7 +18,6 @@ body {
 		}
 
 		nav {
-			padding: 0 $layout-side-padding;
 			@include sm {
 				padding: 0 $layout-side-padding-sm;
 			}
@@ -220,7 +219,7 @@ body {
 					column-gap: 50px;
 					row-gap: 20px;
 				}
-				@include sm-md {
+				@include md {
 					margin-top: 80px;
 					grid-template-columns: repeat(2, auto);
 					grid-template-rows:
@@ -233,6 +232,23 @@ body {
 						"text3 text3"
 						"email text4"
 						"button button";
+					column-gap: 15px;
+					row-gap: 20px;
+				}
+				@include sm {
+					margin-top: 80px;
+					grid-template-columns: 1fr;
+					grid-template-rows:
+						repeat(6, auto)
+						150px;
+					grid-template-areas:
+						"text1"
+						"text2"
+						"logo"
+						"text3"
+						"email"
+						"text4"
+						"button";
 					column-gap: 15px;
 					row-gap: 20px;
 				}
@@ -249,10 +265,12 @@ body {
 					overflow: hidden;
 					border-radius: 50px;
 					max-height: 400px;
-					min-width: 300px;
 					max-width: 500px;
 					img {
 						width: 100%;
+					}
+					@include lg {
+						min-width: 300px;
 					}
 					@include sm-md {
 						justify-self: center;
@@ -263,15 +281,20 @@ body {
 					grid-area: text1;
 					display: flex;
 					gap: 15px;
+					text-align: center;
 					@include sm-md {
 						align-self: end;
 						justify-self: center;
+					}
+					@include sm {
+						font-size: 50px;
 					}
 				}
 				.profession {
 					grid-area: text2;
 					display: flex;
 					gap: 15px;
+					text-align: center;
 					@include sm-md {
 						justify-self: center;
 					}
@@ -284,10 +307,8 @@ body {
 				.socials {
 					grid-area: text4;
 					align-self: end;
-					display: flex;
-					gap: 15px;
-					font-size: 20px;
-					@include sm-md {
+
+					@include md {
 						justify-self: end;
 					}
 				}
@@ -314,8 +335,8 @@ body {
 						}
 						@include sm {
 							&::before {
-								content: "–⁠–⁠";
-								margin-right: 10px;
+								content: "⁠";
+								margin-right: 0;
 							}
 						}
 					}
@@ -350,6 +371,17 @@ body {
 				display: none;
 			}
 		}
+	}
+
+	.socials {
+		display: flex;
+		gap: 15px;
+		font-size: 20px;
+		align-items: center;
+	}
+
+	.color-transition {
+		transition: color ease-in-out 0.2s, border-color ease-in-out 0.2s;
 	}
 
 	a,

@@ -465,6 +465,7 @@ body.bright .event__detail {
   grid-template-columns: 1fr;
   grid-template-areas: "name" "cities" "email" "socials";
   column-gap: 4px;
+  row-gap: 3px;
   width: 100%;
 }
 .contact .contact__container .contact__info-grid .contact__name {
@@ -473,7 +474,7 @@ body.bright .event__detail {
 .contact .contact__container .contact__info-grid .contact__socials {
   grid-area: socials;
 }
-@media (max-width: 849px) {
+@media (max-width: 849px) and (min-width: 650px) {
   .contact .contact__container .contact__info-grid .contact__socials {
     justify-self: end;
   }
@@ -484,15 +485,26 @@ body.bright .event__detail {
 .contact .contact__container .contact__info-grid .contact__email {
   grid-area: email;
 }
-@media (max-width: 849px) {
+@media (max-width: 849px) and (min-width: 650px) {
   .contact .contact__container .contact__info-grid .contact__email {
     justify-self: end;
   }
 }
-@media (max-width: 849px) {
+@media (max-width: 849px) and (min-width: 650px) {
   .contact .contact__container .contact__info-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "name socials" "cities email";
+  }
+}
+@media (max-width: 649px) {
+  .contact .contact__container .contact__info-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "name" "cities" "email" "socials";
+  }
+  .contact .contact__container .contact__info-grid span,
+.contact .contact__container .contact__info-grid div,
+.contact .contact__container .contact__info-grid a {
+    justify-self: center;
   }
 }
 .contact .contact__container .contact__form {
@@ -521,7 +533,6 @@ body .container .section {
   }
 }
 body .container nav {
-  padding: 0 75px;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -702,12 +713,22 @@ body .container .hp .hp-grid {
     row-gap: 20px;
   }
 }
-@media (max-width: 849px) {
+@media (max-width: 849px) and (min-width: 650px) {
   body .container .hp .hp-grid {
     margin-top: 80px;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(5, auto) 150px;
     grid-template-areas: "text1 text1" "text2 text2" "logo logo" "text3 text3" "email text4" "button button";
+    column-gap: 15px;
+    row-gap: 20px;
+  }
+}
+@media (max-width: 649px) {
+  body .container .hp .hp-grid {
+    margin-top: 80px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto) 150px;
+    grid-template-areas: "text1" "text2" "logo" "text3" "email" "text4" "button";
     column-gap: 15px;
     row-gap: 20px;
   }
@@ -727,11 +748,15 @@ body .container .hp .hp-grid .content-logo {
   overflow: hidden;
   border-radius: 50px;
   max-height: 400px;
-  min-width: 300px;
   max-width: 500px;
 }
 body .container .hp .hp-grid .content-logo img {
   width: 100%;
+}
+@media (min-width: 850px) {
+  body .container .hp .hp-grid .content-logo {
+    min-width: 300px;
+  }
 }
 @media (max-width: 849px) {
   body .container .hp .hp-grid .content-logo {
@@ -742,6 +767,7 @@ body .container .hp .hp-grid .name {
   grid-area: text1;
   display: flex;
   gap: 15px;
+  text-align: center;
 }
 @media (max-width: 849px) {
   body .container .hp .hp-grid .name {
@@ -749,10 +775,16 @@ body .container .hp .hp-grid .name {
     justify-self: center;
   }
 }
+@media (max-width: 649px) {
+  body .container .hp .hp-grid .name {
+    font-size: 50px;
+  }
+}
 body .container .hp .hp-grid .profession {
   grid-area: text2;
   display: flex;
   gap: 15px;
+  text-align: center;
 }
 @media (max-width: 849px) {
   body .container .hp .hp-grid .profession {
@@ -767,11 +799,8 @@ body .container .hp .hp-grid .description {
 body .container .hp .hp-grid .socials {
   grid-area: text4;
   align-self: end;
-  display: flex;
-  gap: 15px;
-  font-size: 20px;
 }
-@media (max-width: 849px) {
+@media (max-width: 849px) and (min-width: 650px) {
   body .container .hp .hp-grid .socials {
     justify-self: end;
   }
@@ -798,8 +827,8 @@ body .container .hp .hp-grid .contact-email a::before {
 }
 @media (max-width: 649px) {
   body .container .hp .hp-grid .contact-email a::before {
-    content: "–⁠–⁠";
-    margin-right: 10px;
+    content: "⁠";
+    margin-right: 0;
   }
 }
 body .container .about {
@@ -826,6 +855,15 @@ body .appearance-toggle.absolute {
   body .appearance-toggle.absolute {
     display: none;
   }
+}
+body .socials {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+  align-items: center;
+}
+body .color-transition {
+  transition: color ease-in-out 0.2s, border-color ease-in-out 0.2s;
 }
 body a,
 body button {

@@ -43,13 +43,14 @@
 				"email"
 				"socials";
 			column-gap: 4px;
+			row-gap: 3px;
 			width: 100%;
 			.contact__name {
 				grid-area: name;
 			}
 			.contact__socials {
 				grid-area: socials;
-				@include sm-md {
+				@include md {
 					justify-self: end;
 				}
 			}
@@ -58,15 +59,29 @@
 			}
 			.contact__email {
 				grid-area: email;
-				@include sm-md {
+				@include md {
 					justify-self: end;
 				}
 			}
-			@include sm-md {
+			@include md {
 				grid-template-columns: 1fr 1fr;
 				grid-template-areas:
 					"name socials"
 					"cities email";
+			}
+
+			@include sm {
+				grid-template-columns: 1fr;
+				grid-template-areas:
+					"name"
+					"cities"
+					"email"
+					"socials";
+				span,
+				div,
+				a {
+					justify-self: center;
+				}
 			}
 		}
 		.contact__form {
