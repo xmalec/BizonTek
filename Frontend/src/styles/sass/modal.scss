@@ -1,0 +1,46 @@
+@import "contact";
+
+html.fixed {
+	overflow-y: hidden;
+}
+
+.modal {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	max-height: 100vh;
+	overflow-y: auto;
+	background-color: $bg-dark;
+	z-index: 10;
+	display: flex;
+	transform: scale(0);
+	@include sm-md {
+		flex-direction: column;
+	}
+	&.show {
+		transform: scale(1);
+		transition: all 0.2s ease-in-out;
+	}
+
+	.modal__close-button {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		border-radius: 50%;
+		color: $bg-dark;
+	}
+
+	.modal__img {
+		flex: 2;
+		overflow: hidden;
+		min-height: 50%;
+		img {
+			width: 100%;
+		}
+	}
+
+	.modal__body {
+		flex: 3;
+		margin: 50px auto;
+	}
+}

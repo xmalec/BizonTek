@@ -44,6 +44,16 @@ body {
 		background-color: $bg-bright;
 	}
 
+	.appearance-bg-color-reverse {
+		background-color: $bg-bright;
+		color: $bg-dark;
+		transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+	}
+	&.bright .appearance-bg-color-reverse {
+		background-color: $bg-dark;
+		color: $bg-bright;
+	}
+
 	.appearance-bg-color-secondary {
 		background-color: $bg-dark-secondary;
 		transition: background-color ease-in-out 0.2s;

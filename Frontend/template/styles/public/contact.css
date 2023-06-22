@@ -166,6 +166,15 @@ body .appearance-bg-color {
 body.bright .appearance-bg-color {
   background-color: #e7f3ea;
 }
+body .appearance-bg-color-reverse {
+  background-color: #e7f3ea;
+  color: #001724;
+  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+body.bright .appearance-bg-color-reverse {
+  background-color: #001724;
+  color: #e7f3ea;
+}
 body .appearance-bg-color-secondary, body .timeline-container .event, .timeline-container body .event {
   background-color: #012f3e;
   transition: background-color ease-in-out 0.2s;
@@ -212,7 +221,7 @@ body.bright .event__detail {
   position: relative;
   display: grid;
   grid-template-columns: [first-col] auto [sec-col] repeat(10, auto) [last-col];
-  grid-template-rows: [first-row] 10px repeat(200, 10px) 10px [last-row];
+  grid-template-rows: [first-row] 10px repeat(120, 10px) 10px [last-row];
   column-gap: 20px;
 }
 @media (max-width: 849px) {

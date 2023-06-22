@@ -11,6 +11,29 @@
 	</head>
 	<body>
 		<div class="container">
+			<div class="event-detail modal appearance-bg-color">
+				<button
+					onclick="hideEventDetail()"
+					type="button"
+					class="modal__close-button btn btn-sm shadow appearance-bg-color-reverse"
+				>
+					<i class="fas fa-times"></i>
+				</button>
+				<div class="modal__img">
+					<img src="./../public/img/labclub2.png" />
+				</div>
+				<div class="modal__body section">
+					<span class="h1">Labclub</span>
+					<p class="text-lg">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing
+						elit. Donec quis nibh at felis congue commodo. Nulla
+						pulvinar eleifend sem. Nulla non lectus sed nisl
+						molestie malesuada. Aenean vel massa quis mauris
+						vehicula lacinia. Etiam dui sem, fermentum vitae,
+						sagittis id, malesuada in, quam. Pellentesque sapien.
+					</p>
+				</div>
+			</div>
 			<nav>
 				<div class="navigation-container">
 					<div class="navigation">
@@ -98,7 +121,7 @@
 							<i class="fab fa-github fa-lg"></i>
 						</a>
 						<a
-							href="./../src/files/cv.pdf"
+							href="./../public/files/cv.pdf"
 							download
 							target="_blank"
 						>
@@ -139,7 +162,10 @@
 					<div class="event" style="grid-row: 30">
 						<div class="event__name">LabClub</div>
 						<div class="event__date">léto 2020</div>
-						<button class="event__detail btn btn-sm btn-animated">
+						<button
+							class="event__detail btn btn-sm btn-animated"
+							onclick="showEventDetail()"
+						>
 							Více
 						</button>
 						<div class="event__description">
@@ -160,10 +186,13 @@
 						class="line-point appearance-bg-color-text"
 						id="y-2021"
 					></div>
-					<div class="event" style="grid-row: 130">
+					<div class="event" style="grid-row: 80">
 						<div class="event__name">LabClub</div>
 						<div class="event__date">léto 2020</div>
-						<button class="event__detail btn btn-sm btn-animated">
+						<button
+							class="event__detail btn btn-sm btn-animated"
+							onclick="showEventDetail()"
+						>
 							Více
 						</button>
 						<div class="event__description">
@@ -257,7 +286,7 @@
 								<i class="fab fa-github"></i>
 							</a>
 							<a
-								href="./../src/files/cv.pdf"
+								href="./../public/files/cv.pdf"
 								download
 								target="_blank"
 							>

@@ -112,6 +112,18 @@ function onDocumentLoad() {
 	document.addEventListener("scroll", onScroll);
 	initApperanceToggle();
 	initMenuToggle();
+	showEventDetail();
+}
+
+function showEventDetail() {
+	console.log("here");
+	document.getElementsByTagName("html")[0].classList.add("fixed");
+	document.getElementsByClassName("event-detail")[0].classList.add("show");
+}
+
+function hideEventDetail() {
+	document.getElementsByTagName("html")[0].classList.remove("fixed");
+	document.getElementsByClassName("event-detail")[0].classList.remove("show");
 }
 
 onDocumentLoad();
