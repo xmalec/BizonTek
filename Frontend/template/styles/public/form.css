@@ -25,7 +25,7 @@
 }
 
 .text-sm, .form .form-control .form-checkbox, .form .form-control .input input,
-.form .form-control .input textarea, .timeline-container .event .event__tags .tag {
+.form .form-control .input textarea {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -49,7 +49,7 @@
   line-height: 135%;
 }
 
-.text-lg, .btn.btn-md {
+.text-xl, .btn.btn-md {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -57,11 +57,19 @@
   line-height: 135%;
 }
 
+.text-xxl {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 135%;
+}
+
 .shadow, .timeline-container .event {
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.15);
 }
 
-.shadow-sm, .timeline-container .event .event__tags .tag {
+.shadow-sm {
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -240,7 +248,7 @@ body.bright .event__detail {
 }
 @media (max-width: 649px) {
   .timeline-container {
-    padding: 0 25px;
+    padding: 0 20px;
   }
 }
 .timeline-container .line-container {
@@ -331,11 +339,21 @@ body.bright .event__detail {
     max-width: 500px;
   }
 }
+@media (max-width: 649px) {
+  .timeline-container .event {
+    padding: 10px 15px;
+  }
+}
 .timeline-container .event.show {
   opacity: 1;
 }
 .timeline-container .event .event__name {
   grid-area: name;
+}
+@media (max-width: 649px) {
+  .timeline-container .event .event__name {
+    font-size: 30px;
+  }
 }
 .timeline-container .event .event__detail {
   grid-area: detail;
@@ -351,19 +369,6 @@ body.bright .event__detail {
 .timeline-container .event .event__description {
   grid-area: description;
   padding-top: 10px;
-}
-.timeline-container .event .event__tags {
-  grid-area: tags;
-  gap: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 10px;
-}
-.timeline-container .event .event__tags .tag {
-  background-color: #efbe40;
-  color: #001724;
-  border-radius: 20px;
-  padding: 6px 12px;
 }
 .timeline-container .event .event__date {
   grid-area: date;
@@ -395,7 +400,7 @@ body.bright .event__detail {
 }
 .form .form-control .input textarea {
   resize: vertical;
-  min-height: 200px;
+  min-height: 250px;
 }
 .form .form-control .form-checkbox {
   display: flex;

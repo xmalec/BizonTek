@@ -48,11 +48,19 @@
   line-height: 135%;
 }
 
-.text-lg {
+.text-xl {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 25px;
+  line-height: 135%;
+}
+
+.text-xxl {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
   line-height: 135%;
 }
 
