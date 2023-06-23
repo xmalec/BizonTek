@@ -112,6 +112,9 @@
 		position: relative;
 		height: fit-content;
 		padding: 20px 30px;
+		@include sm {
+			padding: 10px 15px;
+		}
 		display: grid;
 		grid-column: 2 / last-col;
 		grid-template-areas:
@@ -133,6 +136,9 @@
 		.event__name {
 			grid-area: name;
 			@extend .h3;
+			@include sm {
+				font-size: 30px;
+			}
 		}
 		.event__detail {
 			grid-area: detail;
@@ -149,21 +155,7 @@
 			grid-area: description;
 			padding-top: 10px;
 		}
-		.event__tags {
-			grid-area: tags;
-			gap: 10px;
-			display: flex;
-			flex-wrap: wrap;
-			padding-top: 10px;
-			.tag {
-				background-color: $tag-color;
-				color: $bg-dark;
-				border-radius: 20px;
-				padding: 6px 12px;
-				@extend .text-sm;
-				@extend .shadow-sm;
-			}
-		}
+
 		.event__date {
 			grid-area: date;
 			padding-top: 5px;

@@ -12,26 +12,34 @@
 	<body>
 		<div class="container">
 			<div class="event-detail modal appearance-bg-color">
-				<button
-					onclick="hideEventDetail()"
-					type="button"
-					class="modal__close-button btn btn-sm shadow appearance-bg-color-reverse"
-				>
-					<i class="fas fa-times"></i>
-				</button>
-				<div class="modal__img">
-					<img src="./../public/img/labclub2.png" />
-				</div>
-				<div class="modal__body section">
-					<span class="h1">Labclub</span>
-					<p class="text-lg">
-						Lorem ipsum dolor sit amet, consectetuer adipiscing
-						elit. Donec quis nibh at felis congue commodo. Nulla
-						pulvinar eleifend sem. Nulla non lectus sed nisl
-						molestie malesuada. Aenean vel massa quis mauris
-						vehicula lacinia. Etiam dui sem, fermentum vitae,
-						sagittis id, malesuada in, quam. Pellentesque sapien.
-					</p>
+				<div class="modal__container">
+					<button
+						onclick="hideEventDetail()"
+						type="button"
+						class="modal__close-button btn btn-sm shadow appearance-bg-color-reverse"
+					>
+						<i class="fas fa-times"></i>
+					</button>
+					<div class="modal__img">
+						<img src="./../public/img/labclub2.png" />
+					</div>
+					<div class="modal__body section">
+						<span class="h1">Labclub</span>
+						<div class="event__tags">
+							<div class="tag">JAVA</div>
+							<div class="tag">Bakalářská práce</div>
+							<div class="tag">MySQL</div>
+						</div>
+						<p class="text-xl">
+							Lorem ipsum dolor sit amet, consectetuer adipiscing
+							elit. Donec quis nibh at felis congue commodo. Nulla
+							pulvinar eleifend sem. Nulla non lectus sed nisl
+							molestie malesuada. Aenean vel massa quis mauris
+							vehicula lacinia. Etiam dui sem, fermentum vitae,
+							sagittis id, malesuada in, quam. Pellentesque
+							sapien.
+						</p>
+					</div>
 				</div>
 			</div>
 			<nav>
@@ -125,7 +133,7 @@
 							download
 							target="_blank"
 						>
-							<span class="text-lg">CV</span>
+							<span class="text-xxl">CV</span>
 						</a>
 					</div>
 

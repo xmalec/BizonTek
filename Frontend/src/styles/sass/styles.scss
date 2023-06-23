@@ -392,4 +392,19 @@ body {
 			border-color: $tag-color !important;
 		}
 	}
+	.event__tags {
+		grid-area: tags;
+		gap: 10px;
+		display: flex;
+		flex-wrap: wrap;
+		padding-top: 10px;
+		.tag {
+			background-color: $tag-color;
+			color: $bg-dark;
+			border-radius: 20px;
+			padding: 6px 12px;
+			@extend .text-sm;
+			@extend .shadow-sm;
+		}
+	}
 }
