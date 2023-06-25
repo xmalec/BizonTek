@@ -112,7 +112,7 @@ function onDocumentLoad() {
 	document.addEventListener("scroll", onScroll);
 	initApperanceToggle();
 	initMenuToggle();
-	showEventDetail();
+	//showEventDetail();
 }
 
 function showEventDetail() {
