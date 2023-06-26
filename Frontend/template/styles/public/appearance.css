@@ -189,6 +189,25 @@ body .appearance-bg-color-secondary {
 body.bright .appearance-bg-color-secondary {
   background-color: #cce3d2;
 }
+body .appearance-services-box {
+  border-width: 1px;
+  border-color: #b3f1d0;
+}
+body .appearance-services-box:hover, body .appearance-services-box:active {
+  background-color: #012f3e;
+  border-color: #012f3e;
+}
+body.bright .appearance-services-box {
+  border-width: 3px;
+  border-color: #012f3e;
+}
+body.bright .appearance-services-box:hover, body.bright .appearance-services-box:active {
+  background-color: #cce3d2;
+  border-color: #cce3d2;
+}
+body.bright .appearance-services-box .services__box_text {
+  font-weight: 600 !important;
+}
 body .appearance-bg-color-contact {
   background-color: #002337;
   transition: background-color ease-in-out 0.2s;

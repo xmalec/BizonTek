@@ -24,8 +24,7 @@
   letter-spacing: 0.02em;
 }
 
-.text-sm, .form .form-control .form-checkbox, .form .form-control .input input,
-.form .form-control .input textarea {
+.text-sm, .form .form-control .form-checkbox {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -41,7 +40,8 @@
   line-height: 135%;
 }
 
-.text, .timeline-container .event, .timeline-container .line-point::after, .btn.btn-sm {
+.text, .form .form-control .input input,
+.form .form-control .input textarea, .timeline-container .event, .timeline-container .line-point::after, .btn.btn-sm {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -189,6 +189,25 @@ body .appearance-bg-color-secondary, body .timeline-container .event, .timeline-
 }
 body.bright .appearance-bg-color-secondary, body.bright .timeline-container .event, .timeline-container body.bright .event {
   background-color: #cce3d2;
+}
+body .appearance-services-box {
+  border-width: 1px;
+  border-color: #b3f1d0;
+}
+body .appearance-services-box:hover, body .appearance-services-box:active {
+  background-color: #012f3e;
+  border-color: #012f3e;
+}
+body.bright .appearance-services-box {
+  border-width: 3px;
+  border-color: #012f3e;
+}
+body.bright .appearance-services-box:hover, body.bright .appearance-services-box:active {
+  background-color: #cce3d2;
+  border-color: #cce3d2;
+}
+body.bright .appearance-services-box .services__box_text {
+  font-weight: 600 !important;
 }
 body .appearance-bg-color-contact {
   background-color: #002337;
@@ -422,7 +441,7 @@ body.bright .event__detail {
   cursor: pointer;
 }
 .form .form-control .error {
-  padding: 2px 0 4px 0;
+  padding: 1px 0 3px 5px;
   color: #ff5b5b;
   opacity: 0;
 }
@@ -440,6 +459,11 @@ body.bright .event__detail {
   .form .form-control .submit-btn {
     align-self: center;
   }
+}
+
+.bright .error {
+  font-weight: 500 !important;
+  color: #ff0c0c !important;
 }
 
 /*# sourceMappingURL=form.css.map */

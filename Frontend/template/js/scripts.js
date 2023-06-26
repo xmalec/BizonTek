@@ -116,7 +116,6 @@ function onDocumentLoad() {
 }
 
 function showEventDetail() {
-	console.log("here");
 	document.getElementsByTagName("html")[0].classList.add("fixed");
 	document.getElementsByClassName("event-detail")[0].classList.add("show");
 }

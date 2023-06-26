@@ -19,7 +19,7 @@
 				width: 100%;
 				border: 0;
 				appearance: none;
-				@extend .text-sm;
+				@extend .text;
 				&:focus {
 					outline: none;
 				}
@@ -52,7 +52,7 @@
 		}
 
 		.error {
-			padding: 2px 0 4px 0;
+			padding: 1px 0 3px 5px;
 			@extend .text-xs;
 			color: $error;
 			opacity: 0;
@@ -75,4 +75,9 @@
 			}
 		}
 	}
+}
+
+.bright .error {
+	font-weight: 500 !important;
+	color: $error-bright !important;
 }

@@ -70,7 +70,7 @@
 									<button>O mně</button>
 								</div>
 								<div>
-									<button>Co vytvářím</button>
+									<button>Co nabízím</button>
 								</div>
 								<div class="nav-contact-btn">
 									<button
@@ -221,14 +221,105 @@
 			</div>
 			<div class="services section">
 				<div class="services__grid">
-					<div class="services__title h2">Vytvářím</div>
-					<div class="services__box">Rezervační systémy</div>
-					<div class="services__box">Rezervační systémy</div>
-					<div class="services__box">Rezervační systémy</div>
-					<div class="services__box">Rezervační systémy</div>
-					<div class="services__box">Rezervační systémy</div>
-					<div class="services__box">Rezervační systémy</div>
-					<div class="services__box">Rezervační systémy</div>
+					<div class="services__title h2">Nabízím</div>
+					<div
+						class="services__box appearance-services-box"
+						onclick="showEventDetail()"
+					>
+						<div class="services__box_img">
+							<img
+								src="./../public/img/services/web-application.png"
+							/>
+						</div>
+						<div class="services__box_glass">
+							<i class="far fa-search"></i>
+						</div>
+						<span class="services__box_text">Webové aplikace</span>
+					</div>
+					<div
+						class="services__box appearance-services-box"
+						onclick="showEventDetail()"
+					>
+						<div class="services__box_img">
+							<img src="./../public/img/services/ecommerce.jpg" />
+						</div>
+						<div class="services__box_glass">
+							<i class="far fa-search"></i>
+						</div>
+						<span class="services__box_text"
+							>E-commerce weby (CRM)</span
+						>
+					</div>
+					<div
+						class="services__box appearance-services-box"
+						onclick="showEventDetail()"
+					>
+						<div class="services__box_img">
+							<img src="./../public/img/services/cms.png" />
+						</div>
+						<div class="services__box_glass">
+							<i class="far fa-search"></i>
+						</div>
+						<span class="services__box_text"
+							>Systémy pro správu obsahu (CMS)</span
+						>
+					</div>
+					<div
+						class="services__box appearance-services-box"
+						onclick="showEventDetail()"
+					>
+						<div class="services__box_img">
+							<img
+								src="./../public/img/services/reservation-system.png"
+							/>
+						</div>
+						<div class="services__box_glass">
+							<i class="far fa-search"></i>
+						</div>
+						<span class="services__box_text"
+							>Systémy pro rezervace a objednávky</span
+						>
+					</div>
+					<div
+						class="services__box appearance-services-box"
+						onclick="showEventDetail()"
+					>
+						<div class="services__box_img">
+							<img
+								src="./../public/img/services/reservation-system.png"
+							/>
+						</div>
+						<div class="services__box_glass">
+							<i class="far fa-search"></i>
+						</div>
+						<span class="services__box_text"
+							>Aplikace v reálném čase</span
+						>
+					</div>
+					<div
+						class="services__box appearance-services-box"
+						onclick="showEventDetail()"
+					>
+						<div class="services__box_img">
+							<img src="./../public/img/services/api.png" />
+						</div>
+						<div class="services__box_glass">
+							<i class="far fa-search"></i>
+						</div>
+						<span class="services__box_text">Vývoj API</span>
+					</div>
+					<div
+						class="services__box appearance-services-box"
+						onclick="showEventDetail()"
+					>
+						<div class="services__box_img">
+							<img src="./../public/img/services/mobile.jpg" />
+						</div>
+						<div class="services__box_glass">
+							<i class="far fa-search"></i>
+						</div>
+						<span class="services__box_text">Mobilní aplikace</span>
+					</div>
 				</div>
 			</div>
 			<div class="contact">
@@ -239,7 +330,7 @@
 					</div>
 					<div class="contact__form">
 						<form class="form">
-							<div class="form-control">
+							<div class="form-control has-error">
 								<div class="input">
 									<input
 										placeholder="Jméno a příjmení"
@@ -275,6 +366,7 @@
 											id="input-consent"
 											type="checkbox"
 										/>
+										<span class="checkmark"></span>
 									</div>
 									<label for="input-consent">
 										Souhlasím se zpracováním osobních údajů

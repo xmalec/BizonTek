@@ -62,6 +62,29 @@ body {
 		background-color: $bg-bright-secondary;
 	}
 
+	.appearance-services-box {
+		border-width: 1px;
+		border-color: $text;
+		&:hover,
+		&:active {
+			background-color: $bg-dark-secondary;
+			border-color: $bg-dark-secondary;
+		}
+	}
+
+	&.bright .appearance-services-box {
+		border-width: 3px;
+		border-color: $bg-dark-secondary;
+		&:hover,
+		&:active {
+			background-color: $bg-bright-secondary;
+			border-color: $bg-bright-secondary;
+		}
+		.services__box_text {
+			font-weight: 600 !important;
+		}
+	}
+
 	.appearance-bg-color-contact {
 		background-color: $bg-dark-contact;
 		transition: background-color ease-in-out 0.2s;
