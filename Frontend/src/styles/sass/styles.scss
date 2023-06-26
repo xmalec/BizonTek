@@ -21,29 +21,7 @@ body {
 			@include sm {
 				padding: 0 $layout-side-padding-sm;
 			}
-			position: absolute;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			top: 0;
-			width: 100%;
-			right: 50%;
-			transform: translate(50%);
-			z-index: 3;
-			&.hidden {
-				top: -70px;
-				.menu {
-					&.collapsed {
-						.menu-items {
-							max-height: 0 !important;
-							padding-top: 0 !important;
-							padding-bottom: 0 !important;
-							transition: initial !important;
-						}
-					}
-				}
-			}
-			&.fixed {
+			@include sm-md {
 				transition: top ease-in-out 0.2s;
 				background-color: inherit;
 				transform: initial;
@@ -59,6 +37,48 @@ body {
 					}
 				}
 			}
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			top: 0;
+			width: 100%;
+			right: 50%;
+			transform: translate(50%);
+			z-index: 3;
+
+			@include lg {
+				&.hidden {
+					top: -70px;
+					.menu {
+						&.collapsed {
+							.menu-items {
+								max-height: 0 !important;
+								padding-top: 0 !important;
+								padding-bottom: 0 !important;
+								transition: initial !important;
+							}
+						}
+					}
+				}
+				&.fixed {
+					transition: top ease-in-out 0.2s;
+					background-color: inherit;
+					transform: initial;
+					.navigation-container {
+						.navigation {
+						}
+						right: 50%;
+						transform: translate(50%);
+						position: fixed;
+						background-color: inherit;
+						.nav-contact-btn {
+							display: block;
+						}
+					}
+				}
+			}
+
 			.navigation-container {
 				display: flex;
 				justify-content: center;

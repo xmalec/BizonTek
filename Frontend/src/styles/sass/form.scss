@@ -5,12 +5,11 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		.input {
+		.input-wrapper {
 			height: 100%;
 			padding: 5px 20px;
 			@extend .appearance-border-text;
-			//border-color: $text;
-			border-width: 2px;
+			border-width: 3px;
 			border-style: solid;
 			border-radius: 10px;
 			background-color: white;
@@ -35,15 +34,39 @@
 			align-items: center;
 			gap: 10px;
 			@extend .text-sm;
-			.input {
+			.input-wrapper {
 				padding: 0;
-				width: 20px;
-				height: 20px;
 				border-radius: 5px;
 				input {
 					appearance: auto;
+					-webkit-appearance: none;
+					height: 25px;
+					width: 25px;
 					margin: 0;
-					height: 100%;
+					cursor: pointer;
+					background-color: $bg-bright;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					transition: all ease-in-out 0.2s;
+					&:after {
+						content: "\f00c";
+						font-family: "Font Awesome 5 Pro";
+						font-weight: 900;
+						font-size: 20px;
+						color: $bg-dark-contact;
+						transition: all ease-in-out 0.2s;
+						opacity: 0;
+					}
+					&:hover {
+						background-color: $gray;
+					}
+					&:checked {
+						background-color: $text;
+					}
+					&:checked:after {
+						opacity: 1;
+					}
 				}
 			}
 			label {
@@ -59,7 +82,7 @@
 		}
 
 		&.has-error {
-			.input {
+			.input-wrapper {
 				border-color: $error;
 			}
 			.error {
@@ -80,4 +103,13 @@
 .bright .error {
 	font-weight: 500 !important;
 	color: $error-bright !important;
+}
+
+.bright .form-checkbox input {
+	&:checked {
+		background-color: $bg-dark-secondary !important;
+	}
+	&:after {
+		color: $bg-bright-contact !important;
+	}
 }

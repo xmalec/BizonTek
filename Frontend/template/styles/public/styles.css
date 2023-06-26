@@ -41,8 +41,8 @@
   line-height: 135%;
 }
 
-.text, body .appearance-toggle.absolute, body .container nav .navigation, .contact .contact__container .contact__info-grid, .form .form-control .input input,
-.form .form-control .input textarea, .timeline-container .event, .timeline-container .line-point::after, .btn.btn-sm {
+.text, body .appearance-toggle.absolute, body .container nav .navigation, .contact .contact__container .contact__info-grid, .form .form-control .input-wrapper input,
+.form .form-control .input-wrapper textarea, .timeline-container .event, .timeline-container .line-point::after, .btn.btn-sm {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -145,12 +145,12 @@ body.bright {
   color: #001724;
   background-color: #e7f3ea;
 }
-body .appearance-border-text, body .form .form-control .input, .form .form-control body .input, body .timeline-container .event, .timeline-container body .event {
+body .appearance-border-text, body .form .form-control .input-wrapper, .form .form-control body .input-wrapper, body .timeline-container .event, .timeline-container body .event {
   border-color: #b3f1d0;
   border-style: solid;
   transition: border-color ease-in-out 0.2s, color ease-in-out 0.2s;
 }
-body.bright .appearance-border-text, body.bright .form .form-control .input, .form .form-control body.bright .input, body.bright .timeline-container .event, .timeline-container body.bright .event {
+body.bright .appearance-border-text, body.bright .form .form-control .input-wrapper, .form .form-control body.bright .input-wrapper, body.bright .timeline-container .event, .timeline-container body.bright .event {
   border-color: #001724;
 }
 body .appearance-border-text-bottom {
@@ -400,25 +400,25 @@ body.bright .event__detail {
   flex-direction: column;
   width: 100%;
 }
-.form .form-control .input {
+.form .form-control .input-wrapper {
   height: 100%;
   padding: 5px 20px;
-  border-width: 2px;
+  border-width: 3px;
   border-style: solid;
   border-radius: 10px;
   background-color: white;
 }
-.form .form-control .input input,
-.form .form-control .input textarea {
+.form .form-control .input-wrapper input,
+.form .form-control .input-wrapper textarea {
   width: 100%;
   border: 0;
   appearance: none;
 }
-.form .form-control .input input:focus,
-.form .form-control .input textarea:focus {
+.form .form-control .input-wrapper input:focus,
+.form .form-control .input-wrapper textarea:focus {
   outline: none;
 }
-.form .form-control .input textarea {
+.form .form-control .input-wrapper textarea {
   resize: vertical;
   min-height: 250px;
 }
@@ -427,16 +427,40 @@ body.bright .event__detail {
   align-items: center;
   gap: 10px;
 }
-.form .form-control .form-checkbox .input {
+.form .form-control .form-checkbox .input-wrapper {
   padding: 0;
-  width: 20px;
-  height: 20px;
   border-radius: 5px;
 }
-.form .form-control .form-checkbox .input input {
+.form .form-control .form-checkbox .input-wrapper input {
   appearance: auto;
+  -webkit-appearance: none;
+  height: 25px;
+  width: 25px;
   margin: 0;
-  height: 100%;
+  cursor: pointer;
+  background-color: #e7f3ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 0.2s;
+}
+.form .form-control .form-checkbox .input-wrapper input:after {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+  font-size: 20px;
+  color: #002337;
+  transition: all ease-in-out 0.2s;
+  opacity: 0;
+}
+.form .form-control .form-checkbox .input-wrapper input:hover {
+  background-color: #dcdcdc;
+}
+.form .form-control .form-checkbox .input-wrapper input:checked {
+  background-color: #b3f1d0;
+}
+.form .form-control .form-checkbox .input-wrapper input:checked:after {
+  opacity: 1;
 }
 .form .form-control .form-checkbox label {
   cursor: pointer;
@@ -446,7 +470,7 @@ body.bright .event__detail {
   color: #ff5b5b;
   opacity: 0;
 }
-.form .form-control.has-error .input {
+.form .form-control.has-error .input-wrapper {
   border-color: #ff5b5b;
 }
 .form .form-control.has-error .error {
@@ -465,6 +489,13 @@ body.bright .event__detail {
 .bright .error {
   font-weight: 500 !important;
   color: #ff0c0c !important;
+}
+
+.bright .form-checkbox input:checked {
+  background-color: #012f3e !important;
+}
+.bright .form-checkbox input:after {
+  color: #c1dad2 !important;
 }
 
 .contact {
@@ -732,28 +763,46 @@ body .container nav {
     padding: 0 20px;
   }
 }
-body .container nav.hidden {
-  top: -70px;
+@media (max-width: 849px) {
+  body .container nav {
+    transition: top ease-in-out 0.2s;
+    background-color: inherit;
+    transform: initial;
+  }
+  body .container nav .navigation-container {
+    right: 50%;
+    transform: translate(50%);
+    position: fixed;
+    background-color: inherit;
+  }
+  body .container nav .navigation-container .nav-contact-btn {
+    display: block;
+  }
 }
-body .container nav.hidden .menu.collapsed .menu-items {
-  max-height: 0 !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  transition: initial !important;
-}
-body .container nav.fixed {
-  transition: top ease-in-out 0.2s;
-  background-color: inherit;
-  transform: initial;
-}
-body .container nav.fixed .navigation-container {
-  right: 50%;
-  transform: translate(50%);
-  position: fixed;
-  background-color: inherit;
-}
-body .container nav.fixed .navigation-container .nav-contact-btn {
-  display: block;
+@media (min-width: 850px) {
+  body .container nav.hidden {
+    top: -70px;
+  }
+  body .container nav.hidden .menu.collapsed .menu-items {
+    max-height: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    transition: initial !important;
+  }
+  body .container nav.fixed {
+    transition: top ease-in-out 0.2s;
+    background-color: inherit;
+    transform: initial;
+  }
+  body .container nav.fixed .navigation-container {
+    right: 50%;
+    transform: translate(50%);
+    position: fixed;
+    background-color: inherit;
+  }
+  body .container nav.fixed .navigation-container .nav-contact-btn {
+    display: block;
+  }
 }
 body .container nav .navigation-container {
   display: flex;
