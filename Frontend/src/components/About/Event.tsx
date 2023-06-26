@@ -9,6 +9,7 @@ type Props = {
 const AboutEvent: FC<Props> = ({ event }) => {
 	const [modalState, setModalState] = useState(Mode.HIDE);
 	const showModal = useCallback(() => {
+		document.getElementsByTagName("html")[0].classList.add("fixed");
 		setModalState(Mode.SHOW);
 	}, []);
 	const listStylus = {
@@ -18,7 +19,12 @@ const AboutEvent: FC<Props> = ({ event }) => {
 		<>
 			<Modal
 				model={event}
-				onClose={() => setModalState(Mode.HIDE)}
+				onClose={() => {
+					setModalState(Mode.HIDE);
+					document
+						.getElementsByTagName("html")[0]
+						.classList.remove("fixed");
+				}}
 				mode={modalState}
 			/>
 			<div className="event" style={listStylus}>
@@ -30,18 +36,13 @@ const AboutEvent: FC<Props> = ({ event }) => {
 				>
 					Více
 				</button>
-				<div className="event__description">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-					Mauris dolor felis, sagittis at, luctus sed, aliquam non,
-					tellus. Phasellus enim erat, vestibulum vel, aliquam a,
-					posuere eu, velit. Etiam dictum tincidunt diam. Maecenas
-					libero. Morbi leo mi, nonummy eget tristique non, rhoncus
-					non leo.
-				</div>
+				<div className="event__description">{event.description}</div>
 				<div className="event__tags">
-					<div className="tag">JAVA</div>
-					<div className="tag">Bakalářská práce</div>
-					<div className="tag">MySQL</div>
+					{event.tags.map((tag, idx) => (
+						<div key={idx} className="tag">
+							{tag}
+						</div>
+					))}
 				</div>
 			</div>
 		</>
