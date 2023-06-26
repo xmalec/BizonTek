@@ -427,4 +427,24 @@ body {
 			@extend .shadow-sm;
 		}
 	}
+
+	.mask {
+		background-color: $bg-dark;
+		transition: opacity ease-in-out 0.5s, z-index step-end 0.5s;
+		opacity: 1;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 20;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 80px;
+		&.hide {
+			opacity: 0;
+			z-index: -1;
+		}
+	}
 }

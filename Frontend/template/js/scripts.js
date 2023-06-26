@@ -108,10 +108,17 @@ function initMenuToggle() {
 		.addEventListener("click", toggleMenuCollapse);
 }
 
+function hideMask() {
+	setTimeout(() => {
+		document.getElementById("loading-mask").classList.add("hide");
+	}, 500);
+}
+
 function onDocumentLoad() {
 	document.addEventListener("scroll", onScroll);
 	initApperanceToggle();
 	initMenuToggle();
+	hideMask();
 	//showEventDetail();
 }
 

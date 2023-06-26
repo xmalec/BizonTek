@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Form } from "react-final-form";
 import { useNavigate } from "react-router-dom";
 
-import { register } from "../hooks/useFetchData";
 import {
 	composeValidators,
 	phoneNumber,
@@ -17,7 +16,7 @@ const RegistrationForm = () => {
 		<Form
 			onSubmit={async (values) => {
 				try {
-					await register(values);
+					//await register(values);
 					navigate("/");
 				} catch (error) {
 					if (error instanceof Error) setSubmitError(error?.message);

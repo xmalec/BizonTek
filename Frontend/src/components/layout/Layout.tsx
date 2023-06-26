@@ -1,12 +1,16 @@
+import About from "./About";
+import HomePage from "./HomePage";
+import LoadingMask from "./LoadingMask";
 import Navigation from "./Navigation";
-import Routing from "./Routing";
 
 const Layout = () => (
 	<>
-		<Navigation />
-		<main>
-			<Routing />
-		</main>
+		<LoadingMask />
+		<div className="container">
+			<Navigation />
+			<HomePage />
+			<About />
+		</div>
 	</>
 );
 
