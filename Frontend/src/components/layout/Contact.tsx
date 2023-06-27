@@ -1,56 +1,100 @@
-const HomePage = () => {
+const Contact = () => {
 	return (
-		<div className="hp section">
-			<div className="background-image">
-				<img src="./img/logo_stroke.png" />
-			</div>
-			<div className="hp-grid">
-				<div className="content-logo">
-					<img src="./img/profile-image.jpg" />
+		<div className="contact">
+			<div className="contact__container section">
+				<div className="contact__title">
+					Máte zájem o aplikaci na míru nebo se jen chcete na něco
+					zeptat?
 				</div>
+				<div className="contact__form">
+					<form className="form">
+						<div className="form-control has-error">
+							<div className="input-wrapper">
+								<input
+									placeholder="Jméno a příjmení"
+									autoComplete="name"
+								/>
+							</div>
+							<span className="error">Prosím vyplňte jméno</span>
+						</div>
+						<div className="form-control">
+							<div className="input-wrapper">
+								<input
+									placeholder="E-mail"
+									autoComplete="email"
+								/>
+							</div>
+							<span className="error">Prosím vyplňte e-mail</span>
+						</div>
+						<div className="form-control">
+							<div className="input-wrapper">
+								<textarea
+									placeholder="Obsah zprávy"
+									rows={10}
+								></textarea>
+							</div>
+							<span className="error">
+								Prosím vyplňte tělo zprávy
+							</span>
+						</div>
+						<div className="form-control">
+							<div className="form-checkbox">
+								<div className="input-wrapper">
+									<input id="input-consent" type="checkbox" />
+									<span className="checkmark"></span>
+								</div>
+								<label htmlFor="input-consent">
+									Souhlasím se zpracováním osobních údajů
+								</label>
+							</div>
 
-				<div id="title-name" className="h1 name">
-					Jiří Malec
+							<span className="error">
+								Je nutné potvrdit souhlas
+							</span>
+						</div>
+						<div className="form-control">
+							<button
+								type="submit"
+								className="btn btn-contact submit-btn btn-md btn-animated"
+							>
+								Odeslat
+							</button>
+						</div>
+					</form>
 				</div>
-				<div id="title-profession" className="h3 profession">
-					Softwarový vývojář
-				</div>
-				<div className="text description">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-					Donec quis nibh at felis congue commodo. Nulla pulvinar
-					eleifend sem. Nulla non lectus sed nisl molestie malesuada.
-					Aenean vel massa quis mauris vehicula lacinia. Etiam dui
-					sem, fermentum vitae, sagittis id, malesuada in, quam.
-					Pellentesque sapien.
-				</div>
-				<div className="socials">
-					<a href="#">
-						<i className="fab fa-linkedin fa-lg"></i>
-					</a>
-					<a href="#">
-						<i className="fab fa-github fa-lg"></i>
-					</a>
-					<a href="./../public/files/cv.pdf" download target="_blank">
-						<span className="text-xxl">CV</span>
-					</a>
-				</div>
+				<div className="contact__info-grid">
+					<span className="contact__name color-transition">
+						Jiří Malec
+					</span>
+					<div className="socials contact__socials">
+						<a href="#">
+							<i className="fab fa-linkedin"></i>
+						</a>
+						<a href="#">
+							<i className="fab fa-github"></i>
+						</a>
+						<a
+							href="./../public/files/cv.pdf"
+							download
+							target="_blank"
+						>
+							<span className="text">CV</span>
+						</a>
+					</div>
 
-				<div className="contact-email">
-					<a href="mailto:jiri.malec@bizontek.cz" type="button">
+					<span className="contact__cities color-transition">
+						Brno, Jihlava
+					</span>
+					<a
+						className="contact__email"
+						href="mailto:jiri.malec@bizontek.cz"
+					>
 						jiri.malec@bizontek.cz
 					</a>
-				</div>
-				<div className="contact-btn">
-					<button
-						id="main-button"
-						className="btn btn-contact btn-animated appearance-color-text-dark"
-					>
-						Napište mi!
-					</button>
 				</div>
 			</div>
 		</div>
 	);
 };
 
-export default HomePage;
+export default Contact;

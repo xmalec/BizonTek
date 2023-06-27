@@ -1,6 +1,6 @@
 import { FC, useCallback, useState } from "react";
 import { ServiceModel } from "../../utils/Types";
-import Modal, { Mode } from "../layout/Modal";
+import Modal, { Mode } from "../Shared/Modal";
 
 type Props = {
 	model: ServiceModel;
@@ -29,7 +29,7 @@ const ServiceBox: FC<Props> = ({ model }) => {
 				onClick={showModal}
 			>
 				<div className="services__box_img">
-					<img src="./../public/img/services/web-application.png" />
+					<img src={`/img/services/${model.thumbnail}`} />
 				</div>
 				<div className="services__box_glass">
 					<i className="far fa-search"></i>

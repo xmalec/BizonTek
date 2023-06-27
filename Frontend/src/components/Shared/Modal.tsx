@@ -27,9 +27,11 @@ const Modal: FC<Props> = ({ mode, onClose, model }) => {
 				>
 					<i className="fas fa-times"></i>
 				</button>
-				<div className="modal__img">
-					<img src="./../public/img/labclub2.png" />
-				</div>
+				{model.images && model.images?.length > 0 && (
+					<div className="modal__img">
+						<img src="/img/labclub2.png" />
+					</div>
+				)}
 				<div className="modal__body section">
 					<span className="h1">{model.title}</span>
 
