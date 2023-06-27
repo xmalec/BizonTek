@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import useFirestoreCollection from "../../hooks/useFirestoreCollection";
 import { EventModel } from "../../utils/Types";
 import AboutEvent from "../About/Event";
 
@@ -14,6 +16,12 @@ const About = () => {
 				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Etiam dictum tincidunt diam. Maecenas libero. Morbi leo mi, nonummy eget tristique non, rhoncus non leo.",
 		},
 	];
+	const storeEvents = useFirestoreCollection("events");
+
+	useEffect(() => {
+		console.log(storeEvents);
+	}, [storeEvents.loading]);
+
 	return (
 		<div className="about">
 			<div className="timeline-container section">
