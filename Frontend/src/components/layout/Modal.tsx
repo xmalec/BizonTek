@@ -32,13 +32,16 @@ const Modal: FC<Props> = ({ mode, onClose, model }) => {
 				</div>
 				<div className="modal__body section">
 					<span className="h1">{model.title}</span>
-					<div className="event__tags">
-						{model.tags.map((tag, idx) => (
-							<div key={idx} className="tag">
-								{tag}
-							</div>
-						))}
-					</div>
+
+					{model.tags && (
+						<div className="event__tags">
+							{model.tags.map((tag, idx) => (
+								<div key={idx} className="tag">
+									{tag}
+								</div>
+							))}
+						</div>
+					)}
 					<p className="text-xl">{model.description}</p>
 				</div>
 			</div>

@@ -37,13 +37,15 @@ const AboutEvent: FC<Props> = ({ event }) => {
 					Více
 				</button>
 				<div className="event__description">{event.description}</div>
-				<div className="event__tags">
-					{event.tags.map((tag, idx) => (
-						<div key={idx} className="tag">
-							{tag}
-						</div>
-					))}
-				</div>
+				{event.tags && (
+					<div className="event__tags">
+						{event.tags.map((tag, idx) => (
+							<div key={idx} className="tag">
+								{tag}
+							</div>
+						))}
+					</div>
+				)}
 			</div>
 		</>
 	);

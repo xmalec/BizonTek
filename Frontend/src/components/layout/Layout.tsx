@@ -3,6 +3,7 @@ import HomePage from "./HomePage";
 import LoadingMask from "./LoadingMask";
 import Navigation from "./Navigation";
 import { onDocumentLoad } from "../../scripts";
+import Services from "./Services";
 
 const Layout = () => {
 	onDocumentLoad();
@@ -13,6 +14,7 @@ const Layout = () => {
 				<Navigation />
 				<HomePage />
 				<About />
+				<Services />
 			</div>
 		</>
 	);
