@@ -87,10 +87,8 @@ input[type=reset] {
 }
 
 a {
-  color: inherit;
-  /* blue colors for links too */
-  text-decoration: inherit;
-  /* no underline */
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
 }
 
 .btn {
@@ -295,7 +293,7 @@ body.bright .event__detail {
   border-bottom-width: 40px;
 }
 .timeline-container .line-container .rhombus {
-  border-width: calc(35.7px / 2);
+  border-width: 17.85px;
   transform: rotate(45deg);
 }
 .timeline-container .line-container .line {
@@ -420,7 +418,7 @@ body.bright .event__detail {
 }
 .form .form-control .input-wrapper textarea {
   resize: vertical;
-  min-height: 250px;
+  min-height: 300px;
 }
 .form .form-control .form-checkbox {
   display: flex;
@@ -466,15 +464,18 @@ body.bright .event__detail {
   cursor: pointer;
 }
 .form .form-control .error {
-  padding: 1px 0 3px 5px;
+  padding: 4px 0 8px 0;
   color: #ff5b5b;
   opacity: 0;
+  max-height: 0;
+  transition: max-height ease-in-out 0.2s;
 }
 .form .form-control.has-error .input-wrapper {
   border-color: #ff5b5b;
 }
 .form .form-control.has-error .error {
   opacity: 1;
+  max-height: 50px;
 }
 .form .form-control .submit-btn {
   margin-top: 10px;
@@ -540,11 +541,11 @@ body.bright .event__detail {
 .contact .contact__container .contact__info-grid .contact__name {
   grid-area: name;
 }
-.contact .contact__container .contact__info-grid .contact__socials {
+.contact .contact__container .contact__info-grid .socials {
   grid-area: socials;
 }
 @media (max-width: 849px) and (min-width: 650px) {
-  .contact .contact__container .contact__info-grid .contact__socials {
+  .contact .contact__container .contact__info-grid .socials {
     justify-self: end;
   }
 }
@@ -571,8 +572,8 @@ body.bright .event__detail {
     grid-template-areas: "name" "cities" "email" "socials";
   }
   .contact .contact__container .contact__info-grid span,
-.contact .contact__container .contact__info-grid div,
-.contact .contact__container .contact__info-grid a {
+  .contact .contact__container .contact__info-grid div,
+  .contact .contact__container .contact__info-grid a {
     justify-self: center;
   }
 }
@@ -591,6 +592,8 @@ html.fixed {
   width: 100%;
   height: 100%;
   z-index: 10;
+  top: 0;
+  left: 0;
   transform: scale(0);
 }
 .modal.show {
@@ -635,7 +638,7 @@ html.fixed {
 .services {
   margin: 20px 75px 100px 75px;
   max-width: 1200px;
-  width: calc(min(100% - 150px, 1200px));
+  width: min(100% - 150px, 1200px);
 }
 @media (max-width: 849px) {
   .services {
@@ -644,7 +647,7 @@ html.fixed {
 }
 @media (max-width: 649px) {
   .services {
-    width: calc( 			min(100% - 40px, 1200px) 		);
+    width: min(100% - 40px, 1200px);
   }
 }
 .services .services__grid {
@@ -733,7 +736,6 @@ body {
 }
 body .container {
   min-height: 100vh;
-  background-color: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -816,14 +818,20 @@ body .container nav .navigation {
   background-color: transparent;
   align-items: center;
   max-width: 1200px;
-  width: calc( 					min( 						100% - 150px, 						1200px 					) 				);
+  width: min(
+						100% - 150px,
+						1200px
+					);
 }
 body .container nav .navigation .nav-contact-btn {
   display: none;
 }
 @media (max-width: 649px) {
   body .container nav .navigation {
-    width: calc( 						min( 							100% - 40px, 							1200px 						) 					);
+    width: min(
+							100% - 40px,
+							1200px
+						);
   }
 }
 body .container nav .navigation .title-part {
@@ -918,7 +926,7 @@ body .container nav .navigation .logo img {
 }
 body .container .hp {
   display: flex;
-  min-height: calc(min(100vh, 1200px));
+  min-height: min(100vh, 1200px);
   align-items: center;
 }
 body .container .hp .background-image {
@@ -1032,6 +1040,10 @@ body .container .hp .hp-grid .description {
 body .container .hp .hp-grid .socials {
   grid-area: text4;
   align-self: end;
+  font-size: 30px;
+}
+body .container .hp .hp-grid .socials span {
+  font-size: 30px;
 }
 @media (max-width: 849px) and (min-width: 650px) {
   body .container .hp .hp-grid .socials {
@@ -1068,7 +1080,7 @@ body .container .about {
   padding: 50px 0;
   margin: 20px 75px 100px 75px;
   max-width: 1200px;
-  width: calc( 				min(100% - 150px, 1200px) 			);
+  width: min(100% - 150px, 1200px);
   transition: background-color ease-in-out 0.2s;
   border-radius: 25px;
 }
@@ -1138,6 +1150,16 @@ body .mask {
 body .mask.hide {
   opacity: 0;
   z-index: -1;
+}
+body .about,
+body .services,
+body .contact,
+body .hp {
+  position: relative;
+}
+body .link-anchor {
+  position: absolute;
+  top: -70px;
 }
 
 /*# sourceMappingURL=styles.css.map */

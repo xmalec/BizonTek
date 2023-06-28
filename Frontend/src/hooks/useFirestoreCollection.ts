@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
-import { getFirestore, collection, onSnapshot } from "firebase/firestore";
+import {
+	getFirestore,
+	collection,
+	onSnapshot,
+	addDoc
+} from "firebase/firestore";
 import { initializeFirebase } from "../utils/firebase";
 
 const useFirestoreCollection = (collectionName: string) => {
@@ -31,7 +36,17 @@ const useFirestoreCollection = (collectionName: string) => {
 		return () => unsubscribe();
 	}, [collectionName]);
 
-	return { data, loading };
+	const save = async (values: object) => {
+		try {
+			const db = getFirestore();
+			const collectionRef = collection(db, collectionName);
+			await addDoc(collectionRef, values);
+		} catch (error) {
+			console.error("Error saving lead:", error);
+		}
+	};
+
+	return [data, loading, save] as const;
 };
 
 export default useFirestoreCollection;

@@ -1,6 +1,10 @@
+import ContactButton from "../Shared/ContactButton";
+import Socials from "../Shared/Socials";
+
 const HomePage = () => {
 	return (
 		<div className="hp section">
+			<span className="link-anchor" id="section-hp"></span>
 			<div className="background-image">
 				<img src="img/layout/logo_stroke.png" />
 			</div>
@@ -23,30 +27,15 @@ const HomePage = () => {
 					sem, fermentum vitae, sagittis id, malesuada in, quam.
 					Pellentesque sapien.
 				</div>
-				<div className="socials">
-					<a href="#">
-						<i className="fab fa-linkedin fa-lg"></i>
-					</a>
-					<a href="#">
-						<i className="fab fa-github fa-lg"></i>
-					</a>
-					<a href="./../public/files/cv.pdf" download target="_blank">
-						<span className="text-xxl">CV</span>
-					</a>
-				</div>
+				<Socials />
 
 				<div className="contact-email">
 					<a href="mailto:jiri.malec@bizontek.cz" type="button">
 						jiri.malec@bizontek.cz
 					</a>
 				</div>
-				<div className="contact-btn">
-					<button
-						id="main-button"
-						className="btn btn-contact btn-animated appearance-color-text-dark"
-					>
-						Napište mi!
-					</button>
+				<div className="contact-btn" id="main-button">
+					<ContactButton />
 				</div>
 			</div>
 		</div>

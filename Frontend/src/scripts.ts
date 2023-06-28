@@ -77,15 +77,6 @@ function onScroll(e: Event) {
 	manageEventsOpacity();
 }
 
-function toggleApperance() {
-	const body = document.getElementsByTagName("body")[0];
-	if (body.classList.contains("bright")) {
-		body.classList.remove("bright");
-	} else {
-		body.classList.add("bright");
-	}
-}
-
 function toggleMenuCollapse() {
 	const container = document.getElementById("menu-container");
 	if (container != undefined) {
@@ -94,13 +85,6 @@ function toggleMenuCollapse() {
 		} else {
 			container.classList.add("collapsed");
 		}
-	}
-}
-
-function initApperanceToggle() {
-	const toggles = document.getElementsByClassName("appearance-toggle");
-	for (let i = 0; i < toggles.length; i++) {
-		toggles[i].addEventListener("click", toggleApperance);
 	}
 }
 
@@ -122,8 +106,9 @@ function hideMask() {
 
 export function onDocumentLoad() {
 	document.addEventListener("scroll", onScroll);
-	initApperanceToggle();
 	initMenuToggle();
 	hideMask();
+	console.log("finish");
+
 	//showEventDetail();
 }

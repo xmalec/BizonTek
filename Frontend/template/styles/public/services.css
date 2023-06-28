@@ -86,10 +86,8 @@ input[type=reset] {
 }
 
 a {
-  color: inherit;
-  /* blue colors for links too */
-  text-decoration: inherit;
-  /* no underline */
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
 }
 
 .btn {
@@ -294,7 +292,7 @@ body.bright .event__detail {
   border-bottom-width: 40px;
 }
 .timeline-container .line-container .rhombus {
-  border-width: calc(35.7px / 2);
+  border-width: 17.85px;
   transform: rotate(45deg);
 }
 .timeline-container .line-container .line {
@@ -419,7 +417,7 @@ body.bright .event__detail {
 }
 .form .form-control .input-wrapper textarea {
   resize: vertical;
-  min-height: 250px;
+  min-height: 300px;
 }
 .form .form-control .form-checkbox {
   display: flex;
@@ -465,15 +463,18 @@ body.bright .event__detail {
   cursor: pointer;
 }
 .form .form-control .error {
-  padding: 1px 0 3px 5px;
+  padding: 4px 0 8px 0;
   color: #ff5b5b;
   opacity: 0;
+  max-height: 0;
+  transition: max-height ease-in-out 0.2s;
 }
 .form .form-control.has-error .input-wrapper {
   border-color: #ff5b5b;
 }
 .form .form-control.has-error .error {
   opacity: 1;
+  max-height: 50px;
 }
 .form .form-control .submit-btn {
   margin-top: 10px;
@@ -539,11 +540,11 @@ body.bright .event__detail {
 .contact .contact__container .contact__info-grid .contact__name {
   grid-area: name;
 }
-.contact .contact__container .contact__info-grid .contact__socials {
+.contact .contact__container .contact__info-grid .socials {
   grid-area: socials;
 }
 @media (max-width: 849px) and (min-width: 650px) {
-  .contact .contact__container .contact__info-grid .contact__socials {
+  .contact .contact__container .contact__info-grid .socials {
     justify-self: end;
   }
 }
@@ -570,8 +571,8 @@ body.bright .event__detail {
     grid-template-areas: "name" "cities" "email" "socials";
   }
   .contact .contact__container .contact__info-grid span,
-.contact .contact__container .contact__info-grid div,
-.contact .contact__container .contact__info-grid a {
+  .contact .contact__container .contact__info-grid div,
+  .contact .contact__container .contact__info-grid a {
     justify-self: center;
   }
 }
@@ -590,6 +591,8 @@ html.fixed {
   width: 100%;
   height: 100%;
   z-index: 10;
+  top: 0;
+  left: 0;
   transform: scale(0);
 }
 .modal.show {
@@ -634,7 +637,7 @@ html.fixed {
 .services {
   margin: 20px 75px 100px 75px;
   max-width: 1200px;
-  width: calc(min(100% - 150px, 1200px));
+  width: min(100% - 150px, 1200px);
 }
 @media (max-width: 849px) {
   .services {
@@ -643,7 +646,7 @@ html.fixed {
 }
 @media (max-width: 649px) {
   .services {
-    width: calc( 			min(100% - 40px, 1200px) 		);
+    width: min(100% - 40px, 1200px);
   }
 }
 .services .services__grid {

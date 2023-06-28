@@ -16,14 +16,11 @@ const About = () => {
 				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Etiam dictum tincidunt diam. Maecenas libero. Morbi leo mi, nonummy eget tristique non, rhoncus non leo.",
 		},
 	];
-	const storeEvents = useFirestoreCollection("events");
-
-	useEffect(() => {
-		console.log(storeEvents);
-	}, [storeEvents.loading]);
+	const [storeEvents, loading] = useFirestoreCollection("events");
 
 	return (
 		<div className="about">
+			<span className="link-anchor" id="section-about"></span>
 			<div className="timeline-container section">
 				<div className="line-container">
 					<div className="top-title">Současnost</div>

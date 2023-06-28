@@ -5,6 +5,7 @@ import Navigation from "./Navigation";
 import { onDocumentLoad } from "../../scripts";
 import Services from "./Services";
 import Contact from "./Contact";
+import AppearanceToggle from "../Shared/AppearanceToggle";
 
 const Layout = () => {
 	onDocumentLoad();
@@ -13,6 +14,7 @@ const Layout = () => {
 			<LoadingMask />
 			<div className="container appearance-bg-color">
 				<Navigation />
+				<AppearanceToggle isAbsolute={true} />
 				<HomePage />
 				<About />
 				<Services />

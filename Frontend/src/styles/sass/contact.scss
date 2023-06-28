@@ -48,7 +48,7 @@
 			.contact__name {
 				grid-area: name;
 			}
-			.contact__socials {
+			.socials {
 				grid-area: socials;
 				@include md {
 					justify-self: end;

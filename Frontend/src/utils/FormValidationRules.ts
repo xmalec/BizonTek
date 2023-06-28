@@ -1,7 +1,11 @@
 import { FieldValidator } from "final-form";
 
 export const required: FieldValidator<string> = (value?: string) =>
-	value ? undefined : "Required";
+	value ? undefined : "Prosím vyplňte";
+
+export const checked: FieldValidator<boolean> = (value?: boolean) => {
+	return value ? undefined : "Prosím potvrďte";
+};
 
 export const phoneNumber: FieldValidator<string> = (value?: string) =>
 	!value || /[^a-z]/.test(value) ? undefined : "Not a phone number!";

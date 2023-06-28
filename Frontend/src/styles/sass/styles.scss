@@ -326,7 +326,10 @@ body {
 				.socials {
 					grid-area: text4;
 					align-self: end;
-
+					font-size: 30px;
+					span {
+						font-size: 30px;
+					}
 					@include md {
 						justify-self: end;
 					}
@@ -445,5 +448,18 @@ body {
 			opacity: 0;
 			z-index: -1;
 		}
+	}
+
+	.about,
+	.services,
+	.contact,
+	.hp {
+		position: relative;
+	}
+
+	.link-anchor {
+		position: absolute;
+		top: -70px;
+		//left: 0;
 	}
 }

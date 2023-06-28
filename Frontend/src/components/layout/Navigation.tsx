@@ -1,4 +1,19 @@
+import { useCallback } from "react";
+import { PageHelper } from "../../utils/PageHelper";
+import AppearanceToggle from "../Shared/AppearanceToggle";
+import ContactButton from "../Shared/ContactButton";
+
 const Navigation = () => {
+	const onBarsClick = useCallback(() => {
+		const container = document.getElementById("menu-container");
+		if (container != undefined) {
+			if (container.classList.contains("collapsed")) {
+				container.classList.remove("collapsed");
+			} else {
+				container.classList.add("collapsed");
+			}
+		}
+	}, []);
 	return (
 		<nav>
 			<div className="navigation-container">
@@ -7,13 +22,21 @@ const Navigation = () => {
 						<div className="logo">
 							<img src="/img/layout/logo.png" />
 						</div>
-						<button className="title">BizonTek</button>
+						<button
+							className="title"
+							onClick={() =>
+								PageHelper.handleClickScroll("section-hp")
+							}
+						>
+							BizonTek
+						</button>
 					</div>
 					<div className="menu" id="menu-container">
 						<div className="menu-bars-container">
 							<button
 								id="menu-bars-toggle"
 								className="menu-bars appearance-border-text"
+								onClick={onBarsClick}
 							>
 								<span className="bars">
 									<i className="fal fa-bars"></i>
@@ -25,25 +48,32 @@ const Navigation = () => {
 						</div>
 						<div className="menu-items">
 							<div>
-								<button>O mně</button>
-							</div>
-							<div>
-								<button>Co nabízím</button>
-							</div>
-							<div className="nav-contact-btn">
-								<button className="btn btn-contact btn-sm btn-animated appearance-color-text-dark">
-									Napište mi!
+								<button
+									onClick={() =>
+										PageHelper.handleClickScroll(
+											"section-about"
+										)
+									}
+								>
+									O mně
 								</button>
 							</div>
+							<div>
+								<button
+									onClick={() =>
+										PageHelper.handleClickScroll(
+											"section-services"
+										)
+									}
+								>
+									Co nabízím
+								</button>
+							</div>
+							<div className="nav-contact-btn">
+								<ContactButton isSmall={true} />
+							</div>
 						</div>
-						<div className="appearance-toggle">
-							<button className="sun">
-								<i className="fal fa-sun"></i>
-							</button>
-							<button className="moon">
-								<i className="fal fa-moon"></i>
-							</button>
-						</div>
+						<AppearanceToggle />
 					</div>
 				</div>
 			</div>
