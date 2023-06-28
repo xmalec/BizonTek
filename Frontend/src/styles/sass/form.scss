@@ -85,7 +85,7 @@
 
 		&.has-error {
 			.input-wrapper {
-				border-color: $error;
+				border-color: $error !important;
 			}
 			.error {
 				opacity: 1;

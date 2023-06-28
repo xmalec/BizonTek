@@ -470,7 +470,7 @@ body.bright .event__detail {
   transition: max-height ease-in-out 0.2s;
 }
 .form .form-control.has-error .input-wrapper {
-  border-color: #ff5b5b;
+  border-color: #ff5b5b !important;
 }
 .form .form-control.has-error .error {
   opacity: 1;
