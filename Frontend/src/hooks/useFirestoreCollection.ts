@@ -3,7 +3,7 @@ import {
 	getFirestore,
 	collection,
 	onSnapshot,
-	addDoc
+	addDoc,
 } from "firebase/firestore";
 import { initializeFirebase } from "../utils/firebase";
 
