@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import useFirestoreCollection from "../../hooks/useFirestoreCollection";
 import { EventModel } from "../../utils/Types";
-import AboutEvent from "../About/Event";
+import AboutEvent from "./Event";
 
 const About = () => {
 	const events: EventModel[] = [

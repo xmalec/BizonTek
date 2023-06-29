@@ -1,6 +1,6 @@
 import useFirestoreCollection from "../../hooks/useFirestoreCollection";
 import { ServiceModel } from "../../utils/Types";
-import ServiceBox from "../Services/ServiceBox";
+import ServiceBox from "./ServiceBox";
 
 const Services = () => {
 	const [services, loading] = useFirestoreCollection("services");

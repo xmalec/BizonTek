@@ -98,8 +98,10 @@ body {
 						#{$layout-max-width}
 					)
 				);
-				.nav-contact-btn {
-					display: none;
+				@include lg {
+					.nav-contact-btn {
+						display: none;
+					}
 				}
 
 				@include sm {

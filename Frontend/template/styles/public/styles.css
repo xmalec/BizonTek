@@ -417,7 +417,7 @@ body.bright .event__detail {
   outline: none;
 }
 .form .form-control .input-wrapper textarea {
-  resize: vertical;
+  resize: none;
   min-height: 300px;
 }
 .form .form-control .form-checkbox {
@@ -581,6 +581,14 @@ body.bright .event__detail {
   grid-area: form;
   justify-self: end;
   width: 100%;
+  max-height: 620px;
+  transition: max-height ease-in-out 0.5s, opacity ease-in-out 0.5s;
+  opacity: 1;
+}
+.contact .contact__container .contact__form.hide {
+  max-height: 0;
+  opacity: 0;
+  overflow-y: hidden;
 }
 .contact .contact__container .contact__thank-you {
   grid-area: form;
@@ -588,20 +596,62 @@ body.bright .event__detail {
   color: #001724;
   width: 100%;
   height: 100%;
-  border-radius: 25px;
+  border-radius: 5px;
   display: flex;
+  position: relative;
+  transform: scale(0);
+  transform-origin: 0 100%;
+  transition: transform ease-in-out 0.5s;
+}
+@media (max-width: 849px) {
+  .contact .contact__container .contact__thank-you {
+    transform-origin: 50% 100%;
+  }
+}
+.contact .contact__container .contact__thank-you.show {
+  transform: scale(1);
 }
 .contact .contact__container .contact__thank-you .contact__thank-you_container {
   padding: 40px 50px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
+  width: 100%;
+  display: grid;
+  justify-content: space-around;
+  align-items: center;
+  grid-template-columns: 1fr auto;
+  column-gap: 10px;
+  row-gap: 20px;
+  grid-template-areas: "title title" "text icon";
+}
+@media (max-width: 649px) {
+  .contact .contact__container .contact__thank-you .contact__thank-you_container {
+    padding: 20px 25px;
+  }
+}
+@media (max-width: 649px) {
+  .contact .contact__container .contact__thank-you .contact__thank-you_container {
+    grid-template-areas: "title icon" "text text";
+  }
+}
+.contact .contact__container .contact__thank-you .contact__thank-you_container .thank-you__title {
+  grid-area: title;
+}
+@media (max-width: 649px) {
+  .contact .contact__container .contact__thank-you .contact__thank-you_container .thank-you__title {
+    font-size: 35px;
+  }
+}
+.contact .contact__container .contact__thank-you .contact__thank-you_container .thank-you__text {
+  grid-area: text;
+}
+@media (max-width: 649px) {
+  .contact .contact__container .contact__thank-you .contact__thank-you_container .thank-you__text {
+    font-size: 25px;
+  }
 }
 .contact .contact__container .contact__thank-you .contact__thank-you_container .thank-you__icon {
-  position: absolute;
-  font-size: 100px;
-  bottom: 100px;
-  right: 0px;
+  grid-area: icon;
+  justify-self: end;
+  font-size: 30px;
 }
 
 html.fixed {
@@ -844,8 +894,10 @@ body .container nav .navigation {
 						1200px
 					);
 }
-body .container nav .navigation .nav-contact-btn {
-  display: none;
+@media (min-width: 850px) {
+  body .container nav .navigation .nav-contact-btn {
+    display: none;
+  }
 }
 @media (max-width: 649px) {
   body .container nav .navigation {

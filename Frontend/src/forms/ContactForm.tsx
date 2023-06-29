@@ -5,12 +5,22 @@ import { checked, required } from "../utils/FormValidationRules";
 import TextInput from "./components/TextInput";
 import CheckboxInput from "./components/CheckboxInput";
 import { useContactForm } from "../hooks/useContactForm";
+import ThankYou from "../components/Contact/ThankYou";
+
+export enum Mode {
+	Form,
+	ThankYou,
+}
 
 const ContactForm: FC = () => {
-	const [onSubmit, focusOnErrors] = useContactForm();
+	const [onSubmit, focusOnErrors, mode] = useContactForm();
 	return (
 		<>
-			<div className="contact__form">
+			<div
+				className={`contact__form ${
+					mode == Mode.ThankYou ? "hide" : ""
+				}`}
+			>
 				<Form
 					onSubmit={onSubmit}
 					decorators={[focusOnErrors]}
@@ -54,6 +64,21 @@ const ContactForm: FC = () => {
 						);
 					}}
 				/>
+			</div>
+			<div
+				className={`contact__thank-you ${
+					mode == Mode.ThankYou ? "show" : ""
+				}`}
+			>
+				<div className="contact__thank-you_container">
+					<div className="h2 thank-you__title">Díky za zprávu!</div>
+					<div className="text-xxl thank-you__text">
+						Brzo se Vám ozvu.
+					</div>
+					<div className="thank-you__icon">
+						<i className="fas fa-check-circle"></i>
+					</div>
+				</div>
 			</div>
 		</>
 	);

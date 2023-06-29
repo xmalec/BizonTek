@@ -416,7 +416,7 @@ body.bright .event__detail {
   outline: none;
 }
 .form .form-control .input-wrapper textarea {
-  resize: vertical;
+  resize: none;
   min-height: 300px;
 }
 .form .form-control .form-checkbox {
