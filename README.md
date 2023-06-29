@@ -13,3 +13,5 @@ https://www.figma.com/file/hCPscxS55HRrbqnbrkKTGT/BizonTek?node-id=0-1&t=lH06Wjw
 - consent text
 - all texts
 - CV
+- favicon, metadata
+- loading mask
