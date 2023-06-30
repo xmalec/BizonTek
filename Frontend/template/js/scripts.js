@@ -42,6 +42,18 @@ function manageEventsOpacity() {
 	}
 }
 
+function manageScrollTop() {
+	const nameTitle = document.getElementById("title-name");
+	const scrollTopBtn = document.getElementById("scroll-top-btn");
+	if (nameTitle != undefined && scrollTopBtn != undefined) {
+		if (isElementInView(nameTitle)) {
+			addClass(scrollTopBtn, "hide");
+		} else {
+			removeClass(scrollTopBtn, "hide");
+		}
+	}
+}
+
 function manageNavigationBarOnScroll() {
 	const nameTitle = document.getElementById("title-name");
 	const professionTitle = document.getElementById("title-profession");
@@ -75,6 +87,7 @@ function manageNavigationBarOnScroll() {
 function onScroll(e) {
 	manageNavigationBarOnScroll();
 	manageEventsOpacity();
+	manageScrollTop();
 }
 
 function toggleApperance() {

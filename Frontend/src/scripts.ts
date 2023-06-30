@@ -72,9 +72,22 @@ function manageNavigationBarOnScroll() {
 	}
 }
 
+function manageScrollTop() {
+	const nameTitle = document.getElementById("title-name");
+	const scrollTopBtn = document.getElementById("scroll-top-btn");
+	if (nameTitle != undefined && scrollTopBtn != undefined) {
+		if (isElementInView(nameTitle)) {
+			addClass(scrollTopBtn, "hide");
+		} else {
+			removeClass(scrollTopBtn, "hide");
+		}
+	}
+}
+
 function onScroll(e: Event) {
 	manageNavigationBarOnScroll();
 	manageEventsOpacity();
+	manageScrollTop();
 }
 
 function toggleMenuCollapse() {

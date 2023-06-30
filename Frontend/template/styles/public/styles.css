@@ -1234,5 +1234,36 @@ body .link-anchor {
   position: absolute;
   top: -70px;
 }
+body .scroll-top {
+  position: fixed;
+  color: #012f3e;
+  background-color: rgba(239, 190, 64, 0.8);
+  border-radius: 5px;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 40px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  transition: bottom ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+body .scroll-top.hide {
+  bottom: -40px;
+}
+body .scroll-top:hover {
+  color: #b3f1d0;
+}
+@media (max-width: 849px) {
+  body .scroll-top {
+    bottom: 13px;
+    right: 13px;
+    width: 35px;
+    height: 35px;
+    font-size: 23px;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

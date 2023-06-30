@@ -464,4 +464,34 @@ body {
 		top: -70px;
 		//left: 0;
 	}
+
+	.scroll-top {
+		position: fixed;
+		color: $bg-dark-secondary;
+		background-color: rgba($tag-color, 0.8);
+		border-radius: 5px;
+		z-index: 11;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		bottom: 40px;
+		right: 30px;
+		width: 40px;
+		height: 40px;
+		font-size: 25px;
+		transition: bottom ease-in-out 0.2s, color ease-in-out 0.2s;
+		&.hide {
+			bottom: -40px;
+		}
+		&:hover {
+			color: $text;
+		}
+		@include sm-md {
+			bottom: 13px;
+			right: 13px;
+			width: 35px;
+			height: 35px;
+			font-size: 23px;
+		}
+	}
 }
