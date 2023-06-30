@@ -95,19 +95,9 @@ function initMenuToggle() {
 	}
 }
 
-function hideMask() {
-	setTimeout(() => {
-		const mask = document.getElementById("loading-mask");
-		if (mask != undefined) {
-			mask.classList.add("hide");
-		}
-	}, 500);
-}
-
 export function onDocumentLoad() {
 	document.addEventListener("scroll", onScroll);
 	initMenuToggle();
-	hideMask();
 	console.log("finish");
 
 	//showEventDetail();

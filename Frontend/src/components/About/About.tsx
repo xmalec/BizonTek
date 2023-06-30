@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import useFirestoreCollection from "../../hooks/useFirestoreCollection";
 import { EventModel } from "../../utils/Types";
 import AboutEvent from "./Event";
+import { useEvents } from "../../hooks/useDataLoadProvider";
 
 const About = () => {
 	const events: EventModel[] = [
@@ -16,7 +17,7 @@ const About = () => {
 				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Etiam dictum tincidunt diam. Maecenas libero. Morbi leo mi, nonummy eget tristique non, rhoncus non leo.",
 		},
 	];
-	const [storeEvents, loading] = useFirestoreCollection("events");
+	const storeEvents = useEvents();
 
 	return (
 		<div className="about">

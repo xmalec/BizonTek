@@ -6,11 +6,12 @@ import { onDocumentLoad } from "../../scripts";
 import Services from "../Services/Services";
 import Contact from "../Contact/Contact";
 import AppearanceToggle from "../Shared/AppearanceToggle";
+import { DataLoadProvider } from "../../hooks/useDataLoadProvider";
 
 const Layout = () => {
 	onDocumentLoad();
 	return (
-		<>
+		<DataLoadProvider>
 			<LoadingMask />
 			<div className="container appearance-bg-color">
 				<Navigation />
@@ -20,7 +21,7 @@ const Layout = () => {
 				<Services />
 				<Contact />
 			</div>
-		</>
+		</DataLoadProvider>
 	);
 };
 

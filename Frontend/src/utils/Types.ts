@@ -24,3 +24,13 @@ export type LeadFormContact = {
 	email: string;
 	content: string;
 };
+
+export type DataSet = {
+	events?: DataLoad;
+	services?: DataLoad;
+};
+
+export type DataLoad = {
+	data?: object[];
+	loading: boolean;
+};

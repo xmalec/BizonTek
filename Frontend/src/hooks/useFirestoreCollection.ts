@@ -3,7 +3,7 @@ import {
 	getFirestore,
 	collection,
 	onSnapshot,
-	addDoc,
+	addDoc
 } from "firebase/firestore";
 import { initializeFirebase } from "../utils/firebase";
 
@@ -46,7 +46,7 @@ const useFirestoreCollection = (collectionName: string) => {
 		}
 	};
 
-	return [data, loading, save] as const;
+	return [{ data, loading }, save] as const;
 };
 
 export default useFirestoreCollection;
