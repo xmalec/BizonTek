@@ -470,7 +470,10 @@ body {
 		color: $bg-dark-secondary;
 		background-color: rgba($tag-color, 0.8);
 		border-radius: 5px;
-		z-index: 11;
+		border-width: 2px;
+		border-style: solid;
+		border-color: none;
+		z-index: 9;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -479,12 +482,13 @@ body {
 		width: 40px;
 		height: 40px;
 		font-size: 25px;
-		transition: bottom ease-in-out 0.2s, color ease-in-out 0.2s;
+		transition: all ease-in-out 0.2s;
 		&.hide {
 			bottom: -40px;
 		}
 		&:hover {
-			color: $text;
+			border-color: $tag-color;
+			background-color: $bg-dark;
 		}
 		@include sm-md {
 			bottom: 13px;

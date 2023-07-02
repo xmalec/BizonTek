@@ -51,5 +51,24 @@ html.fixed {
 	.modal__body {
 		flex: 3;
 		margin: 50px auto;
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+
+		.modal__body_title {
+			@extend .h1;
+
+			@include sm-md {
+				font-size: 35px;
+			}
+		}
+
+		.modal__body_text {
+			@extend .text-xl;
+
+			@include sm-md {
+				font-size: 22px;
+			}
+		}
 	}
 }

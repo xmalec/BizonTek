@@ -48,10 +48,17 @@ const ContactForm: FC = () => {
 								></TextInput>
 								<CheckboxInput
 									name="consent"
-									label="Souhlasím se zpracováním osobních
-									údajů"
 									validate={checked}
-								></CheckboxInput>
+								>
+									Souhlasím se{" "}
+									<a
+										href="/files/consent.pdf"
+										target="_blank"
+									>
+										{" "}
+										zpracováním osobních údajů
+									</a>
+								</CheckboxInput>
 								<div className="form-control">
 									<button
 										type="submit"

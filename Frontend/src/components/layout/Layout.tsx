@@ -12,8 +12,7 @@ import ScrollTopButton from "./ScrollTopButton";
 const Layout = () => {
 	onDocumentLoad();
 	return (
-		<DataLoadProvider>
-			<LoadingMask />
+		<>
 			<ScrollTopButton />
 			<div className="container appearance-bg-color">
 				<Navigation />
@@ -23,7 +22,7 @@ const Layout = () => {
 				<Services />
 				<Contact />
 			</div>
-		</DataLoadProvider>
+		</>
 	);
 };
 

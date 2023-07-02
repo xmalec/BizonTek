@@ -33,7 +33,7 @@ const Modal: FC<Props> = ({ mode, onClose, model }) => {
 					</div>
 				)}
 				<div className="modal__body section">
-					<span className="h1">{model.title}</span>
+					<span className="modal__body_title">{model.title}</span>
 
 					{model.tags && (
 						<div className="event__tags">
@@ -44,7 +44,12 @@ const Modal: FC<Props> = ({ mode, onClose, model }) => {
 							))}
 						</div>
 					)}
-					<p className="text-xl">{model.description}</p>
+					<p
+						className="modal__body_text"
+						dangerouslySetInnerHTML={{
+							__html: model.description ?? "",
+						}}
+					></p>
 				</div>
 			</div>
 		</div>

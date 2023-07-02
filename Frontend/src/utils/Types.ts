@@ -1,7 +1,7 @@
 export type ModalModel = {
 	title: string;
-	date?: string;
-	description: string;
+	dateString?: string;
+	description?: string;
 	tags?: string[];
 	images?: string[];
 };
@@ -9,12 +9,14 @@ export type ModalModel = {
 export type EventModel = {
 	id: string;
 	intro: string;
+	date: Date;
 } & ModalModel;
 
 export type ServiceModel = {
 	id: string;
 	thumbnail: string;
 	order: number;
+	disabled?: boolean;
 } & ModalModel;
 
 export type LeadFormContact = {

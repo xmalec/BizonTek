@@ -97,6 +97,11 @@
 				opacity: 0;
 				overflow-y: hidden;
 			}
+			label {
+				a {
+					text-decoration: underline;
+				}
+			}
 		}
 		.contact__thank-you {
 			grid-area: form;

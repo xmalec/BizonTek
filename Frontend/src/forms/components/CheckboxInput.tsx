@@ -1,14 +1,14 @@
 import { FieldValidator } from "final-form";
+import { PropsWithChildren } from "react";
 import { Field, useField } from "react-final-form";
 
 type Props = {
 	name: string;
 	validate?: FieldValidator<boolean>;
 	id?: string;
-	label?: string;
-};
+} & PropsWithChildren;
 
-const CheckboxInput = ({ name, validate, label, id }: Props) => {
+const CheckboxInput = ({ name, validate, id, children }: Props) => {
 	const { input, meta } = useField(name, {
 		subscription: {
 			value: true,
@@ -34,7 +34,7 @@ const CheckboxInput = ({ name, validate, label, id }: Props) => {
 						/>
 						<span className="checkmark"></span>
 					</div>
-					<label htmlFor={id}>{label}</label>
+					<label htmlFor={id}>{children}</label>
 				</div>
 
 				<span className="error">

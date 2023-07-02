@@ -3,43 +3,57 @@ import useFirestoreCollection from "../../hooks/useFirestoreCollection";
 import { EventModel } from "../../utils/Types";
 import AboutEvent from "./Event";
 import { useEvents } from "../../hooks/useDataLoadProvider";
+import { EventModels } from "../../data/EventsData";
 
 const About = () => {
-	const events: EventModel[] = [
-		{
-			images: [],
-			tags: ["JAVA", "SBAPR"],
-			id: "1",
-			title: "LabClub",
-			date: "léto 2020",
-			intro: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Etiam dictum tincidunt diam. Maecenas libero. Morbi leo mi, nonummy eget tristique non, rhoncus non leo.",
-			description:
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Etiam dictum tincidunt diam. Maecenas libero. Morbi leo mi, nonummy eget tristique non, rhoncus non leo.",
-		},
-	];
-	const storeEvents = useEvents();
-
+	const events = EventModels;
+	const maxRows = 120;
+	const containerStyles = {
+		gridTemplateRows: `[first-row] 50px repeat(${maxRows}, auto) 50px [last-row]`,
+	};
+	const years = [2020, 2021, 2022, 2023, 2024];
+	let row = 30;
 	return (
 		<div className="about">
 			<span className="link-anchor" id="section-about"></span>
-			<div className="timeline-container section">
+			<div className="timeline-container section" style={containerStyles}>
 				<div className="line-container">
 					<div className="top-title">Současnost</div>
 					<div className="triangle-up appearance-border-text-bottom"></div>
 					<div className="line appearance-border-text"></div>
 					<div className="rhombus appearance-border-text"></div>
 				</div>
-				<div
-					className="line-point appearance-bg-color-text"
-					id="y-2022"
-				></div>
-
-				<AboutEvent event={events[0]} />
-				<div
-					className="line-point appearance-bg-color-text"
-					id="y-2021"
-				></div>
-				<AboutEvent event={events[0]} />
+				{years
+					.sort((n1: number, n2: number) => n2 - n1)
+					.map((year, key) => {
+						const yearEvents = events.filter(
+							(e) => e.date.getFullYear() === year
+						);
+						row = row + 1;
+						return (
+							<>
+								{yearEvents.map((e, eKey) => {
+									row = row + 1;
+									return (
+										<AboutEvent
+											event={e}
+											key={eKey}
+											row={row}
+										/>
+									);
+								})}
+								<div
+									className="line-point appearance-bg-color-text"
+									id="y-2022"
+									data-year={year}
+									style={{
+										gridRow: `${row}`,
+									}}
+									key={key}
+								></div>
+							</>
+						);
+					})}
 			</div>
 		</div>
 	);
