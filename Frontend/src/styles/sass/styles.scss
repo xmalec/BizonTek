@@ -429,6 +429,10 @@ body {
 			padding: 6px 12px;
 			@extend .text-sm;
 			@extend .shadow-sm;
+			@include sm {
+				padding: 4px 8px;
+				font-size: 16px;
+			}
 		}
 	}
 

@@ -9,7 +9,7 @@ const About = () => {
 	const events = EventModels;
 	const maxRows = 120;
 	const containerStyles = {
-		gridTemplateRows: `[first-row] 50px repeat(${maxRows}, auto) 50px [last-row]`,
+		gridTemplateRows: `[first-row] 50px 50px repeat(${maxRows}, auto) 50px 50px [last-row]`,
 	};
 	const years = [2020, 2021, 2022, 2023, 2024];
 	let row = 30;
@@ -35,11 +35,13 @@ const About = () => {
 								{yearEvents.map((e, eKey) => {
 									row = row + 1;
 									return (
-										<AboutEvent
-											event={e}
-											key={eKey}
-											row={row}
-										/>
+										<>
+											<AboutEvent
+												event={e}
+												key={eKey}
+												row={row}
+											/>
+										</>
 									);
 								})}
 								<div
@@ -47,7 +49,7 @@ const About = () => {
 									id="y-2022"
 									data-year={year}
 									style={{
-										gridRow: `${row}`,
+										gridRow: `${row + 1}`,
 									}}
 									key={key}
 								></div>

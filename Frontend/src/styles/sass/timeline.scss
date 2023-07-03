@@ -92,7 +92,7 @@
 	.event-container {
 		width: 100%;
 		@include lg {
-			max-width: 500px;
+			margin-bottom: 20px;
 		}
 		grid-column: 2 / last-col;
 		.event {

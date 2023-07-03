@@ -44,9 +44,10 @@ const AboutEvent: FC<Props> = ({ event, row }) => {
 							Více
 						</button>
 					)}
-					<div className="event__description">
-						{event.description}
-					</div>
+					<div
+						className="event__description"
+						dangerouslySetInnerHTML={{ __html: event.intro }}
+					></div>
 					{event.tags && (
 						<div className="event__tags">
 							{event.tags.map((tag, idx) => (

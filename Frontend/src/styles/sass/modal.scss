@@ -54,7 +54,9 @@ html.fixed {
 		display: flex;
 		flex-direction: column;
 		gap: 5px;
-
+		a {
+			text-decoration: underline;
+		}
 		.modal__body_title {
 			@extend .h1;
 
