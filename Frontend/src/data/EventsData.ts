@@ -11,7 +11,7 @@ export const EventModels: EventModel[] = [
 		intro: `TODO`,
 		images: [],
 		date: new Date("2022-01-05"),
-		dateString: "2022 - současnost"
+		dateString: "2022 - současnost",
 	},
 	{
 		id: "optimal",
@@ -21,7 +21,7 @@ export const EventModels: EventModel[] = [
 		intro: `TODO`,
 		images: [],
 		date: new Date("2021-01-05"),
-		dateString: "2021/2022"
+		dateString: "2021/2022",
 	},
 	{
 		images: [],
@@ -59,7 +59,7 @@ export const EventModels: EventModel[] = [
 				Možnost vytvoření více scénářů (rozšíření vzniklo v období koronakrize)
 			</li>
 		</ul>`,
-		date: new Date("2020-07-21")
+		date: new Date("2020-07-21"),
 	},
 	{
 		images: [],
@@ -68,7 +68,7 @@ export const EventModels: EventModel[] = [
 		title: "Bakalářský titul",
 		dateString: "červen 2021",
 		intro: "Získaný v oboru Aplikovaná informatika na Fakultě informatiky Masarykovi univerzity.",
-		date: new Date("2021-06-27")
+		date: new Date("2021-06-27"),
 	},
 	{
 		images: [],
@@ -80,7 +80,7 @@ export const EventModels: EventModel[] = [
 		description: `V rámci programu Erasmus jsem jeden semestr studoval v hlavním městě Slovinska.${newLine}
 		Název fakulty: University of Ljubljana, Faculty of Computer and Information Science. ${newLine}
 		V rámci výuky jsem prošel předměty pro datové zpracování textu, strojového zpracování obrazu, analýzu algoritmů a základy umělé inteligence. Vše probíhalo v angličtině.`,
-		date: new Date("2021-06-27")
+		date: new Date("2020-11-15"),
 	},
 	{
 		images: [],
@@ -90,7 +90,7 @@ export const EventModels: EventModel[] = [
 		dateString: "léto 2023",
 		intro: `TODO`,
 		description: `TODO`,
-		date: new Date("2023-08-30")
+		date: new Date("2023-08-30"),
 	},
 	{
 		images: [],
@@ -99,6 +99,6 @@ export const EventModels: EventModel[] = [
 		title: "Inženýrský titul",
 		dateString: "únor 2024",
 		intro: "Získaný v oboru Softwarové inženýrství na Fakultě informatiky Masarykovi univerzity.",
-		date: new Date("2024-02-10")
-	}
+		date: new Date("2024-02-10"),
+	},
 ];
