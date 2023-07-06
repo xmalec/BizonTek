@@ -80,7 +80,7 @@ export const EventModels: EventModel[] = [
 		description: `V rámci programu Erasmus jsem jeden semestr studoval v hlavním městě Slovinska.${newLine}
 		Název fakulty: University of Ljubljana, Faculty of Computer and Information Science. ${newLine}
 		V rámci výuky jsem prošel předměty pro datové zpracování textu, strojového zpracování obrazu, analýzu algoritmů a základy umělé inteligence. Vše probíhalo v angličtině.`,
-		date: new Date("2021-06-27")
+		date: new Date("2020-11-15")
 	},
 	{
 		images: [],

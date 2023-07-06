@@ -4,7 +4,7 @@
 	position: relative;
 	display: grid;
 	grid-template-columns: [first-col] auto [sec-col] repeat(10, auto) [last-col];
-	grid-template-rows: [first-row] repeat(120, auto) [last-row];
+	grid-template-rows: [first-row] 50px 50px repeat(200, auto) 50px 50px [last-row];
 	column-gap: 20px;
 	// padding: 0 50px;
 	@include sm-md {
