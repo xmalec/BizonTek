@@ -94,11 +94,21 @@ export const EventModels: EventModel[] = [
 	},
 	{
 		images: [],
-		tags: ["FI MUNI", "Ing."],
-		id: "ING",
-		title: "Inženýrský titul",
-		dateString: "únor 2024",
-		intro: "Získaný v oboru Softwarové inženýrství na Fakultě informatiky Masarykovi univerzity.",
-		date: new Date("2024-02-10")
+		tags: [".NET", "React", "Labyrinth Brno"],
+		id: "labnet",
+		title: "IT Partner ve společnosti Bosch Diesel",
+		dateString: "2018 - 2020",
+		intro: `TODO`,
+		description: `TODO`,
+		date: new Date("2018-08-30")
 	}
+	// {
+	// 	images: [],
+	// 	tags: ["FI MUNI", "Ing."],
+	// 	id: "ING",
+	// 	title: "Inženýrský titul",
+	// 	dateString: "únor 2024",
+	// 	intro: "Získaný v oboru Softwarové inženýrství na Fakultě informatiky Masarykovi univerzity.",
+	// 	date: new Date("2024-02-10")
+	// }
 ];
