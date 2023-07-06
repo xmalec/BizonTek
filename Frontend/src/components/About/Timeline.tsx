@@ -24,31 +24,34 @@ const Timeline = () => {
 						.filter((e) => e.date.getFullYear() === year)
 						.reverse();
 					row = row + 1;
-					return (
-						<>
-							{yearEvents.map((e, eKey) => {
-								row = row + 1;
-								return (
-									<>
-										<AboutEvent
-											event={e}
-											key={eKey}
-											row={row}
-										/>
-									</>
-								);
-							})}
-							<div
-								className="line-point appearance-bg-color-text"
-								id="y-2022"
-								data-year={year}
-								style={{
-									gridRow: `${row + 1}`,
-								}}
-								key={key}
-							></div>
-						</>
-					);
+					if (yearEvents.length > 0) {
+						return (
+							<>
+								{yearEvents.map((e, eKey) => {
+									row = row + 1;
+									return (
+										<>
+											<AboutEvent
+												event={e}
+												key={eKey}
+												row={row}
+											/>
+										</>
+									);
+								})}
+								<div
+									className="line-point appearance-bg-color-text"
+									id="y-2022"
+									data-year={year}
+									style={{
+										gridRow: `${row + 1}`,
+									}}
+									key={key}
+								></div>
+							</>
+						);
+					}
+					return <></>;
 				})}
 		</>
 	);
