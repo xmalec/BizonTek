@@ -27,29 +27,31 @@ const Modal: FC<Props> = ({ mode, onClose, model }) => {
 				>
 					<i className="fas fa-times"></i>
 				</button>
-				{model.images && model.images?.length > 0 && (
-					<div className="modal__img">
-						<img src="/img/labclub2.png" />
-					</div>
-				)}
-				<div className="modal__body section">
-					<span className="modal__body_title">{model.title}</span>
+				<div className="modal__body-container">
+					<div className="modal__body section">
+						<span className="modal__body_title">{model.title}</span>
 
-					{model.tags && (
-						<div className="event__tags">
-							{model.tags.map((tag, idx) => (
-								<div key={idx} className="tag">
-									{tag}
-								</div>
-							))}
+						{model.tags && (
+							<div className="event__tags">
+								{model.tags.map((tag, idx) => (
+									<div key={idx} className="tag">
+										{tag}
+									</div>
+								))}
+							</div>
+						)}
+						<p
+							className="modal__body_text"
+							dangerouslySetInnerHTML={{
+								__html: model.description ?? "",
+							}}
+						></p>
+					</div>
+					{model.images && model.images?.length > 0 && (
+						<div className="modal__img">
+							<img src={model.images[0]} />
 						</div>
 					)}
-					<p
-						className="modal__body_text"
-						dangerouslySetInnerHTML={{
-							__html: model.description ?? "",
-						}}
-					></p>
 				</div>
 			</div>
 		</div>

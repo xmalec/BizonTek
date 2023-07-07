@@ -1,7 +1,7 @@
 import { EventModel } from "../utils/Types";
 
 const newLine = "</br></br>";
-const labclubFolder = "/events/labclub";
+const labclubFolder = "/img/events/labclub";
 
 export const EventModels: EventModel[] = [
 	{
@@ -10,7 +10,7 @@ export const EventModels: EventModel[] = [
 		tags: [".NET", "MVC", "Kentico", "CI/CD", "vue.js"],
 		description: `Jako fullstack`,
 		intro: `TODO`,
-		images: [],
+		//images: ["/img/events/bluesoft/logo.webp"],
 		date: new Date("2022-01-05"),
 		dateString: "2022 - současnost"
 	},
@@ -18,32 +18,32 @@ export const EventModels: EventModel[] = [
 		id: "optimal",
 		title: "Optimal Program",
 		tags: ["PHP", "Nette", "Optimal Program", "Full stack"],
-		description: `Během této cenné zkušenosti jsem měl skvělou příležitost pracovat na široké škále komplexních a rozmanitých projektů, které se odehrávaly v rámci malého, týmového prostředí. Jako <b>full stack</b> vývojář jsem byl plně zapojen do všech klíčových fází projektů, ať už se jednalo o sběr požadavků, návrh, implementaci, testování, nasazení či údržbu.
+		//images: ["/img/events/optimal/logo.svg"],
+		description: `Během této cenné zkušenosti jsem měl příležitost pracovat na široké škále komplexních a rozmanitých projektů, které se odehrávaly v rámci malého, týmového prostředí. Jako <b>full stack</b> vývojář jsem byl plně zapojen do všech klíčových fází projektů, ať už se jednalo o sběr požadavků, návrh, implementaci, testování, nasazení či údržbu.
 		${newLine}
 		Naše hlavní zaměření spočívalo výhradně v webových aplikacích, které byly nesmírně různorodé. Spolupracoval jsem na vývoji informačních systémů, rezervačních platforem, redakčních systémů, e-shopů a také aplikací určených pro elektronické testování. Tato široká paleta projektů mi umožnila rozvinout své dovednosti a získat přehled o různých oblastech webového vývoje.
 		${newLine}
 		Naše primární programovací platforma byla <b>PHP</b>, přičemž jsme využívali český <b>Nette framework</b>, který se ukázal jako skvělý nástroj pro efektivní a bezpečný vývoj.
 		${newLine}Odkaz na <a href="http://www.optimal-program.cz" target="_blank">webové stránky</a>`,
 		intro: `Během této cenné zkušenosti jsem měl skvělou příležitost pracovat na široké škále komplexních a rozmanitých projektů, které se odehrávaly v rámci malého, týmového prostředí.`,
-		images: [],
 		date: new Date("2021-01-05"),
 		dateString: "2021/2022"
 	},
+	// {
+	// 	images: [],
+	// 	tags: [".NET", "React", "Labyrinth Brno", "Azure Cognitive Search"],
+	// 	id: "labnet",
+	// 	title: "LabNet",
+	// 	dateString: "léto 2023",
+	// 	intro: `TODO`,
+	// 	description: `
+	// 	Labnet představuje druhou aplikaci, kterou jsem vytvořil pro soukromou školu <b>Labyrinth</b>. Tato aplikace slouží jako rodičovský portál a funguje jako nástěnka, kde rodiče a přátelé školy mohou nabízet nebo hledat různé služby.
+	// 	${newLine}Pro implementaci této aplikace jsem využil <b>API</b> napsané v <b>.NET frameworku</b>, zatímco frontend byl postaven na platformě <b>React</b>. Pro splnění požadavků na rychlé a přesné fulltextové vyhledávání byla v aplikaci integrována služba <b>Azure Cognitive Search</b>.
+	// 	${newLine} Design aplikace byl navrhnut <a href="https://bronislavmusil.com/cs" target="_blank">Bronislavem Musilem</a>`,
+	// 	date: new Date("2023-08-30")
+	// },
 	{
-		images: [],
-		tags: [".NET", "React", "Labyrinth Brno", "Azure Cognitive Search"],
-		id: "labnet",
-		title: "LabNet",
-		dateString: "léto 2023",
-		intro: `TODO`,
-		description: `
-		Labnet představuje druhou aplikaci, kterou jsem vytvořil pro soukromou školu <b>Labyrinth</b>. Tato aplikace slouží jako rodičovský portál a funguje jako nástěnka, kde rodiče a přátelé školy mohou nabízet nebo hledat různé služby.
-		${newLine}Pro implementaci této aplikace jsem využil <b>API</b> napsané v <b>.NET frameworku</b>, zatímco frontend byl postaven na platformě <b>React</b>. Pro splnění požadavků na rychlé a přesné fulltextové vyhledávání byla v aplikaci integrována služba <b>Azure Cognitive Search</b>.
-		${newLine} Design aplikace byl kompletně navrhnut <a href="https://bronislavmusil.com/cs" target="_blank">Bronislavem Musilem</a>`,
-		date: new Date("2023-08-30")
-	},
-	{
-		images: [`${labclubFolder}/labclub`],
+		images: [`${labclubFolder}/labclub2.png`],
 		tags: ["JAVA", "Bakalářská práce", "Labyrinth Brno"],
 		id: "labclub",
 		title: "LabClub",
@@ -103,13 +103,13 @@ export const EventModels: EventModel[] = [
 	},
 	{
 		images: [],
-		tags: ["Zahraniční pobyt", "Ljubljana"],
+		tags: ["Zahraniční pobyt", "Erasmus", "Ljubljana"],
 		id: "sbabr",
-		title: "Erasmus",
+		title: "Studijní pobyt v zahraničí",
 		dateString: "podzim 2020",
-		intro: `V rámci mé účasti v programu Erasmus jsem strávil jeden semestr studiem v hlavním městě Slovinska.`,
+		intro: `V rámci mé účasti v programu <b>Erasmus</b> jsem strávil jeden semestr studiem v hlavním městě Slovinska.`,
 		description: `
-		V rámci mé účasti v programu Erasmus jsem strávil jeden semestr studiem v hlavním městě Slovinska. Byl jsem zapsán na <b>University of Ljubljana, Faculty of Computer and Information Science</b>.${newLine} Během tohoto semestru jsem se věnoval různým předmětům, které se zaměřovaly na oblasti jako datová analýza, zpracování obrazu pomocí strojového učení, analýza algoritmů a základy umělé inteligence. Veškerá výuka probíhala v <b>angličtině</b>.`,
+		V rámci mé účasti v programu <b>Erasmus</b> jsem strávil jeden semestr studiem v hlavním městě Slovinska. Byl jsem zapsán na <b>University of Ljubljana, Faculty of Computer and Information Science</b>.${newLine} Během tohoto semestru jsem se věnoval různým předmětům, které se zaměřovaly na oblasti jako datová analýza, zpracování obrazu pomocí strojového učení, analýza algoritmů a základy umělé inteligence. Veškerá výuka probíhala v <b>angličtině</b>.`,
 		date: new Date("2020-11-15")
 	},
 	{
