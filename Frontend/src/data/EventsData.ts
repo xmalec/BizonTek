@@ -8,8 +8,29 @@ export const EventModels: EventModel[] = [
 		id: "bluesoft",
 		title: "Bluesoft",
 		tags: [".NET", "MVC", "Kentico", "CI/CD", "vue.js"],
-		description: `Jako fullstack`,
-		intro: `TODO`,
+		description: `Bluesoft je středně velká společnost, která dodává projekty postavené kolem produktu Kentico. Ve firmě pracuji jako backend vývojář. ${newLine}
+		Kentico se řadí mezi přední DXP (digital experience platform) na trhu. ${newLine}
+		Při vývoji pracujeme s .NET MVC, MSSQL, LINQ, Razor Pages. Do projektu často integrujeme služby od Azure. ${newLine}
+		Mezi přední klienty firmy Blusoft se řadí:
+		<ul>
+		<li>SAZKA a.s.</li>
+		<li>E.ON</li>
+		<li>Škoda Auto a.s.</li>
+		<li>ORLEN Benzina</li>
+		<li>Carlsberg</li>
+		<li>Asahi</li>
+		<li>Walmark</li>
+		</ul>
+		Já jsem se osobně podílel například na projektech:
+		<ul>
+		<li><a href="https://louda.skoda-auto.cz/" target="_blank">Škoda Dealers</a></li>
+		<li><a href="https://skoda-kariera.cz/" target="_blank">Škoda Kariéra</a></li>
+		<li>Škoda Edu</li>
+		<li>Škoda e-Mobilita</li>
+		<li>B2B objednávkový portál pro Carlsberg a Asahi</li>
+		</ul>
+		Odkaz na <a href="https://www.bluesoft.cz/" target="_blank">webové stránky</a>`,
+		intro: `Bluesoft je středně velká společnost, která dodává projekty postavené kolem produktu Kentico. Ve firmě pracuji jako backend vývojář.`,
 		//images: ["/img/events/bluesoft/logo.webp"],
 		date: new Date("2022-01-05"),
 		dateString: "2022 - současnost"
@@ -19,13 +40,13 @@ export const EventModels: EventModel[] = [
 		title: "Optimal Program",
 		tags: ["PHP", "Nette", "Optimal Program", "Full stack"],
 		//images: ["/img/events/optimal/logo.svg"],
-		description: `Během této cenné zkušenosti jsem měl příležitost pracovat na široké škále komplexních a rozmanitých projektů, které se odehrávaly v rámci malého, týmového prostředí. Jako <b>full stack</b> vývojář jsem byl plně zapojen do všech klíčových fází projektů, ať už se jednalo o sběr požadavků, návrh, implementaci, testování, nasazení či údržbu.
+		description: `Během této zkušenosti jsem měl příležitost pracovat na široké škále komplexních a rozmanitých projektů, které se odehrávaly v rámci malého, týmového prostředí. Jako <b>full stack</b> vývojář jsem byl plně zapojen do všech klíčových fází projektů, ať už se jednalo o sběr požadavků, návrh, implementaci, testování, nasazení či údržbu.
 		${newLine}
 		Naše hlavní zaměření spočívalo výhradně v webových aplikacích, které byly nesmírně různorodé. Spolupracoval jsem na vývoji informačních systémů, rezervačních platforem, redakčních systémů, e-shopů a také aplikací určených pro elektronické testování. Tato široká paleta projektů mi umožnila rozvinout své dovednosti a získat přehled o různých oblastech webového vývoje.
 		${newLine}
 		Naše primární programovací platforma byla <b>PHP</b>, přičemž jsme využívali český <b>Nette framework</b>, který se ukázal jako skvělý nástroj pro efektivní a bezpečný vývoj.
 		${newLine}Odkaz na <a href="http://www.optimal-program.cz" target="_blank">webové stránky</a>`,
-		intro: `Během této cenné zkušenosti jsem měl skvělou příležitost pracovat na široké škále komplexních a rozmanitých projektů, které se odehrávaly v rámci malého, týmového prostředí.`,
+		intro: `Během této zkušenosti jsem měl příležitost pracovat na široké škále komplexních a rozmanitých projektů, které se odehrávaly v rámci malého, týmového prostředí.`,
 		date: new Date("2021-01-05"),
 		dateString: "2021/2022"
 	},
