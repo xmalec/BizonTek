@@ -20,18 +20,6 @@ const AboutEvent: FC<Props> = ({ event, row }) => {
 		event.description !== undefined && event.description.length > 0;
 	return (
 		<>
-			{showModal && (
-				<Modal
-					model={event}
-					onClose={() => {
-						setModalState(Mode.HIDE);
-						document
-							.getElementsByTagName("html")[0]
-							.classList.remove("fixed");
-					}}
-					mode={modalState}
-				/>
-			)}
 			<div className="event-container" style={listStylus}>
 				<div className="event">
 					<div className="event__name">{event.title}</div>
@@ -59,6 +47,18 @@ const AboutEvent: FC<Props> = ({ event, row }) => {
 					)}
 				</div>
 			</div>
+			{showModal && (
+				<Modal
+					model={event}
+					onClose={() => {
+						setModalState(Mode.HIDE);
+						document
+							.getElementsByTagName("html")[0]
+							.classList.remove("fixed");
+					}}
+					mode={modalState}
+				/>
+			)}
 		</>
 	);
 };

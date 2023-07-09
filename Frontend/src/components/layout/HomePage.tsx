@@ -20,12 +20,12 @@ const HomePage = () => {
 					Softwarový vývojář
 				</div>
 				<div className="text description">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-					Donec quis nibh at felis congue commodo. Nulla pulvinar
-					eleifend sem. Nulla non lectus sed nisl molestie malesuada.
-					Aenean vel massa quis mauris vehicula lacinia. Etiam dui
-					sem, fermentum vitae, sagittis id, malesuada in, quam.
-					Pellentesque sapien.
+					Ahoj a vítejte na mém webu! Jsem Jiří Malec a jsem
+					softwarový vývojář. Těším se, že vám mohu představit své
+					dovednosti a nabídnout své služby. Pokud vás zaujmu a máte
+					zájem o spolupráci, neváhejte mi napsat. Rád se s vámi
+					sejdu, abychom mohli diskutovat o vašich potřebách a
+					případně se domluvit na společném projektu.
 				</div>
 				<Socials />
 
