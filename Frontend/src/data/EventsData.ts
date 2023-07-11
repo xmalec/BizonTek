@@ -33,7 +33,7 @@ export const EventModels: EventModel[] = [
 		intro: `Bluesoft je středně velká společnost, která dodává projekty postavené kolem produktu Kentico. Ve firmě pracuji jako backend vývojář.`,
 		//images: ["/img/events/bluesoft/logo.webp"],
 		date: new Date("2022-01-05"),
-		dateString: "2022 - současnost"
+		dateString: "2022 - současnost",
 	},
 	{
 		id: "optimal",
@@ -48,7 +48,7 @@ export const EventModels: EventModel[] = [
 		${newLine}Odkaz na <a href="http://www.optimal-program.cz" target="_blank">webové stránky</a>`,
 		intro: `Během této zkušenosti jsem měl příležitost pracovat na široké škále komplexních a rozmanitých projektů, které se odehrávaly v rámci malého, týmového prostředí.`,
 		date: new Date("2021-01-05"),
-		dateString: "2021/2022"
+		dateString: "2021/2022",
 	},
 	// {
 	// 	images: [],
@@ -99,7 +99,7 @@ export const EventModels: EventModel[] = [
 				Možnost vytvoření více scénářů (rozšíření vzniklo v období koronakrize)
 			</li>
 		</ul>`,
-		date: new Date("2020-07-21")
+		date: new Date("2020-07-21"),
 	},
 	{
 		images: [],
@@ -120,7 +120,7 @@ export const EventModels: EventModel[] = [
 		<li>Základy počítačových sítí</li>
 		<li>Technická znalost počítačové techniky</li>
 		</ul>`,
-		date: new Date("2021-06-27")
+		date: new Date("2021-06-27"),
 	},
 	{
 		images: [],
@@ -131,7 +131,7 @@ export const EventModels: EventModel[] = [
 		intro: `V rámci mé účasti v programu <b>Erasmus</b> jsem strávil jeden semestr studiem v hlavním městě Slovinska.`,
 		description: `
 		V rámci mé účasti v programu <b>Erasmus</b> jsem strávil jeden semestr studiem v hlavním městě Slovinska. Byl jsem zapsán na <b>University of Ljubljana, Faculty of Computer and Information Science</b>.${newLine} Během tohoto semestru jsem se věnoval různým předmětům, které se zaměřovaly na oblasti jako datová analýza, zpracování obrazu pomocí strojového učení, analýza algoritmů a základy umělé inteligence. Veškerá výuka probíhala v <b>angličtině</b>.`,
-		date: new Date("2020-11-15")
+		date: new Date("2020-11-15"),
 	},
 	{
 		images: [],
@@ -142,8 +142,8 @@ export const EventModels: EventModel[] = [
 		intro: `Během mé první pracovní stáže v oblasti informačních technologií jsem působil jako IT Partner ve Facility Management oddělení společnosti <b>Bosch Diesel</b> v Jihlavě.`,
 		description: `
 		Během mé první pracovní stáže v oblasti informačních technologií jsem působil jako IT Partner ve Facility Management oddělení společnosti <b>Bosch Diesel</b> v Jihlavě.${newLine}Mým úkolem bylo zajistit správné přiřazení rolí a přístupů pro kolegy, spravovat IT vybavení a implementovat různé <b>VBA makra</b> k optimalizaci procesů. Tato pozice mi umožnila získat hlubší povědomí o fungování oddělení v rámci většího podniku.`,
-		date: new Date("2018-08-30")
-	}
+		date: new Date("2018-08-30"),
+	},
 	// {
 	// 	images: [],
 	// 	tags: ["FI MUNI", "Ing."],

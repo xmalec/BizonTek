@@ -111,7 +111,6 @@ function initMenuToggle() {
 export function onDocumentLoad() {
 	document.addEventListener("scroll", onScroll);
 	initMenuToggle();
-	console.log("finish");
 
 	//showEventDetail();
 }

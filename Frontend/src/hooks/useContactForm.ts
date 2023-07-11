@@ -10,7 +10,28 @@ export const useContactForm = () => {
 	const onSubmit = useCallback(async (values: object) => {
 		save(values);
 		setMode(Mode.ThankYou);
+		//sendEmail(values);
 	}, []);
 
 	return [onSubmit, focusOnErrors, mode] as const;
+};
+
+const sendEmail = async (values: object) => {
+	try {
+		const response = await fetch("send-email.php", {
+			method: "POST",
+			body: JSON.stringify(values),
+			headers: {
+				"Content-Type": "application/json"
+			}
+		});
+
+		if (response.ok) {
+			console.log("Email sent successfully.");
+		} else {
+			console.error("Failed to send email.");
+		}
+	} catch (error) {
+		console.error("Error occurred:", error);
+	}
 };

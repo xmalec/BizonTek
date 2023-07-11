@@ -8,7 +8,6 @@ const Timeline = () => {
 	const events = EventModels.sort(
 		(x, y) => x.date.getTime() - y.date.getTime()
 	);
-	console.log(events);
 
 	const years = range(
 		events[0].date.getFullYear(),
@@ -33,7 +32,7 @@ const Timeline = () => {
 										<>
 											<AboutEvent
 												event={e}
-												key={eKey}
+												key={`aboutEvent__${key}_${eKey}`}
 												row={row}
 											/>
 										</>
@@ -46,7 +45,7 @@ const Timeline = () => {
 									style={{
 										gridRow: `${row + 1}`,
 									}}
-									key={key}
+									key={`line-point__${key}`}
 								></div>
 							</>
 						);
