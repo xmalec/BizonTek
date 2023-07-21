@@ -10,7 +10,7 @@ export const useContactForm = () => {
 	const onSubmit = useCallback(async (values: object) => {
 		save(values);
 		setMode(Mode.ThankYou);
-		//sendEmail(values);
+		sendEmail(values);
 	}, []);
 
 	return [onSubmit, focusOnErrors, mode] as const;
@@ -18,7 +18,7 @@ export const useContactForm = () => {
 
 const sendEmail = async (values: object) => {
 	try {
-		const response = await fetch("send-email.php", {
+		const response = await fetch("php/send-email.php", {
 			method: "POST",
 			body: JSON.stringify(values),
 			headers: {
