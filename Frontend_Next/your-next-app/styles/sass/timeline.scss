@@ -1,0 +1,156 @@
+@import "appearance";
+
+.timeline-container {
+	position: relative;
+	display: grid;
+	grid-template-columns: [first-col] auto [sec-col] repeat(10, auto) [last-col];
+	grid-template-rows: [first-row] 50px 50px repeat(200, auto) 50px 50px [last-row];
+	column-gap: 20px;
+	// padding: 0 50px;
+	@include sm-md {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		align-items: center;
+		> div:nth-child(2) {
+			margin-top: 120px;
+		}
+		> div:last-child {
+			margin-bottom: 100px;
+		}
+	}
+	@include sm {
+		padding: 0 $layout-side-padding-sm;
+	}
+	.line-container {
+		grid-row: first-row / last-row;
+		grid-column: first-col;
+		.top-title {
+			@extend .h3;
+			padding-bottom: 20px;
+		}
+		@include sm-md {
+			position: absolute;
+		}
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+		.triangle-up {
+			width: 0;
+			height: 0;
+			border-left: 25px solid transparent;
+			border-right: 25px solid transparent;
+			border-bottom-width: 40px;
+		}
+
+		.rhombus {
+			border-width: calc(35.7px / 2);
+			transform: rotate(45deg);
+		}
+
+		.line {
+			height: inherit;
+			width: 0;
+			border-width: 5px;
+
+			position: relative;
+		}
+	}
+
+	.circle {
+		border-radius: 50%;
+		height: 50px;
+		width: 50px;
+	}
+
+	.line-point {
+		grid-column: first-col;
+		position: relative;
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		@extend .circle;
+		top: 50%;
+		justify-self: center;
+		&::before {
+			content: "";
+			@extend .circle;
+			height: 50% !important;
+			width: 50% !important;
+			background-color: $tag-color !important;
+			right: 50%;
+			transform: translate(50%, 0);
+		}
+		&::after {
+			@extend .text;
+			position: absolute;
+			left: 60px;
+			content: attr(data-year);
+		}
+	}
+	.event-container {
+		width: 100%;
+		@include lg {
+			margin-bottom: 20px;
+		}
+		grid-column: 2 / last-col;
+		.event {
+			//width: 90%;
+			@extend .appearance-bg-color-secondary;
+			@extend .appearance-border-text;
+			position: relative;
+			height: fit-content;
+			padding: 20px 30px;
+			@include sm {
+				padding: 10px 15px;
+			}
+			display: grid;
+			column-gap: 8px;
+			grid-template-areas:
+				"name detail"
+				"date detail"
+				"tags tags"
+				"description description";
+			border-width: 2px;
+			opacity: 0;
+			transition: opacity ease-in-out 0.5s,
+				background-color ease-in-out 0.2s, border-color ease-in-out 0.2s !important;
+			border-radius: 20px;
+			@extend .text;
+			@extend .shadow;
+			&.show {
+				opacity: 1;
+			}
+
+			.event__name {
+				grid-area: name;
+				@extend .h3;
+				@include sm {
+					font-size: 30px;
+				}
+			}
+			.event__detail {
+				grid-area: detail;
+				background-color: $bg-dark;
+				border: 2px solid $tag-color;
+				color: $tag-color;
+				border-radius: 20px;
+				width: fit-content;
+				height: fit-content;
+				justify-self: end;
+				align-self: center;
+			}
+			.event__description {
+				grid-area: description;
+				padding-top: 10px;
+			}
+
+			.event__date {
+				grid-area: date;
+				padding-top: 5px;
+				@extend .text-xs;
+			}
+		}
+	}
+}

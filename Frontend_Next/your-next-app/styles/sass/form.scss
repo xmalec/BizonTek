@@ -1,0 +1,118 @@
+@import "timeline";
+
+.form {
+	.form-control {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		.input-wrapper {
+			height: 100%;
+			padding: 5px 20px;
+			@extend .appearance-border-text;
+			border-width: 3px;
+			border-style: solid;
+			border-radius: 10px;
+			background-color: white;
+			input,
+			textarea {
+				width: 100%;
+				border: 0;
+				appearance: none;
+				@extend .text;
+				&:focus {
+					outline: none;
+				}
+			}
+			textarea {
+				resize: none;
+				min-height: 300px;
+			}
+		}
+
+		.form-checkbox {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			@extend .text-sm;
+			.input-wrapper {
+				padding: 0;
+				border-radius: 5px;
+				input {
+					appearance: auto;
+					-webkit-appearance: none;
+					height: 25px;
+					width: 25px;
+					margin: 0;
+					cursor: pointer;
+					background-color: $bg-bright;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					transition: all ease-in-out 0.2s;
+					&:after {
+						content: "\f00c";
+						font-family: "Font Awesome 5 Pro";
+						font-weight: 900;
+						font-size: 20px;
+						color: $bg-dark-contact;
+						transition: all ease-in-out 0.2s;
+						opacity: 0;
+					}
+					&:hover {
+						background-color: $gray;
+					}
+					&:checked {
+						background-color: $text;
+					}
+					&:checked:after {
+						opacity: 1;
+					}
+				}
+			}
+			label {
+				cursor: pointer;
+			}
+		}
+
+		.error {
+			padding: 4px 0 8px 0;
+			@extend .text-xs;
+			color: $error;
+			opacity: 0;
+			max-height: 0;
+			transition: max-height ease-in-out 0.2s;
+		}
+
+		&.has-error {
+			.input-wrapper {
+				border-color: $error !important;
+			}
+			.error {
+				opacity: 1;
+				max-height: 50px;
+			}
+		}
+
+		.submit-btn {
+			margin-top: 10px;
+			width: min-content;
+			@include sm-md {
+				align-self: center;
+			}
+		}
+	}
+}
+
+.bright .error {
+	font-weight: 500 !important;
+	color: $error-bright !important;
+}
+
+.bright .form-checkbox input {
+	&:checked {
+		background-color: $bg-dark-secondary !important;
+	}
+	&:after {
+		color: $bg-bright-contact !important;
+	}
+}

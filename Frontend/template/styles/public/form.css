@@ -15,7 +15,7 @@
   letter-spacing: 0.02em;
 }
 
-.h3, .timeline-container .event .event__name, .timeline-container .line-container .top-title, .btn.btn-contact, .btn {
+.h3, .timeline-container .event-container .event .event__name, .timeline-container .line-container .top-title, .btn.btn-contact, .btn {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -32,7 +32,7 @@
   line-height: 135%;
 }
 
-.text-xs, .form .form-control .error, .timeline-container .event .event__date {
+.text-xs, .form .form-control .error, .timeline-container .event-container .event .event__date {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -41,7 +41,7 @@
 }
 
 .text, .form .form-control .input-wrapper input,
-.form .form-control .input-wrapper textarea, .timeline-container .event, .timeline-container .line-point::after, .btn.btn-sm {
+.form .form-control .input-wrapper textarea, .timeline-container .event-container .event, .timeline-container .line-point::after, .btn.btn-sm {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -65,7 +65,7 @@
   line-height: 135%;
 }
 
-.shadow, .timeline-container .event {
+.shadow, .timeline-container .event-container .event {
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.15);
 }
 
@@ -140,14 +140,14 @@ body {
 }
 body.bright {
   color: #001724;
-  background-color: #e7f3ea;
+  background-color: #ebf3ec;
 }
-body .appearance-border-text, body .form .form-control .input-wrapper, .form .form-control body .input-wrapper, body .timeline-container .event, .timeline-container body .event {
+body .appearance-border-text, body .form .form-control .input-wrapper, .form .form-control body .input-wrapper, body .timeline-container .event-container .event, .timeline-container .event-container body .event {
   border-color: #b3f1d0;
   border-style: solid;
   transition: border-color ease-in-out 0.2s, color ease-in-out 0.2s;
 }
-body.bright .appearance-border-text, body.bright .form .form-control .input-wrapper, .form .form-control body.bright .input-wrapper, body.bright .timeline-container .event, .timeline-container body.bright .event {
+body.bright .appearance-border-text, body.bright .form .form-control .input-wrapper, .form .form-control body.bright .input-wrapper, body.bright .timeline-container .event-container .event, .timeline-container .event-container body.bright .event {
   border-color: #001724;
 }
 body .appearance-border-text-bottom {
@@ -170,23 +170,23 @@ body .appearance-bg-color {
   transition: background-color ease-in-out 0.2s;
 }
 body.bright .appearance-bg-color {
-  background-color: #e7f3ea;
+  background-color: #ebf3ec;
 }
 body .appearance-bg-color-reverse {
-  background-color: #e7f3ea;
+  background-color: #ebf3ec;
   color: #001724;
   transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
 }
 body.bright .appearance-bg-color-reverse {
   background-color: #001724;
-  color: #e7f3ea;
+  color: #ebf3ec;
 }
-body .appearance-bg-color-secondary, body .timeline-container .event, .timeline-container body .event {
+body .appearance-bg-color-secondary, body .timeline-container .event-container .event, .timeline-container .event-container body .event {
   background-color: #012f3e;
   transition: background-color ease-in-out 0.2s;
 }
-body.bright .appearance-bg-color-secondary, body.bright .timeline-container .event, .timeline-container body.bright .event {
-  background-color: #cce3d2;
+body.bright .appearance-bg-color-secondary, body.bright .timeline-container .event-container .event, .timeline-container .event-container body.bright .event {
+  background-color: #deeedf;
 }
 body .appearance-services-box {
   border-width: 1px;
@@ -201,8 +201,8 @@ body.bright .appearance-services-box {
   border-color: #012f3e;
 }
 body.bright .appearance-services-box:hover, body.bright .appearance-services-box:active {
-  background-color: #cce3d2;
-  border-color: #cce3d2;
+  background-color: #deeedf;
+  border-color: #deeedf;
 }
 body.bright .appearance-services-box .services__box_text {
   font-weight: 600 !important;
@@ -212,7 +212,7 @@ body .appearance-bg-color-contact {
   transition: background-color ease-in-out 0.2s;
 }
 body.bright .appearance-bg-color-contact {
-  background-color: #c1dad2;
+  background-color: #ccebc8;
 }
 body .appearance-color-text-dark {
   color: #001724;
@@ -237,7 +237,7 @@ body.bright .background-image {
   opacity: 0.1 !important;
 }
 body.bright .event__detail {
-  background-color: #e7f3ea !important;
+  background-color: #ebf3ec !important;
   border-color: #001724 !important;
   color: #001724 !important;
 }
@@ -246,7 +246,7 @@ body.bright .event__detail {
   position: relative;
   display: grid;
   grid-template-columns: [first-col] auto [sec-col] repeat(10, auto) [last-col];
-  grid-template-rows: [first-row] 10px repeat(120, 10px) 10px [last-row];
+  grid-template-rows: [first-row] 50px 50px repeat(200, auto) 50px 50px [last-row];
   column-gap: 20px;
 }
 @media (max-width: 849px) {
@@ -326,53 +326,46 @@ body.bright .event__detail {
 .timeline-container .line-point::after {
   position: absolute;
   left: 60px;
+  content: attr(data-year);
 }
-.timeline-container #y-2022 {
-  grid-row: 40;
+.timeline-container .event-container {
+  width: 100%;
+  grid-column: 2/last-col;
 }
-.timeline-container #y-2022::after {
-  content: "2022";
+@media (min-width: 850px) {
+  .timeline-container .event-container {
+    margin-bottom: 20px;
+  }
 }
-.timeline-container #y-2021 {
-  grid-row: 80;
-}
-.timeline-container #y-2021::after {
-  content: "2021";
-}
-.timeline-container .event {
+.timeline-container .event-container .event {
   position: relative;
   height: fit-content;
   padding: 20px 30px;
   display: grid;
-  grid-column: 2/last-col;
+  column-gap: 8px;
   grid-template-areas: "name detail" "date detail" "tags tags" "description description";
   border-width: 2px;
   opacity: 0;
   transition: opacity ease-in-out 0.5s, background-color ease-in-out 0.2s, border-color ease-in-out 0.2s !important;
   border-radius: 20px;
 }
-@media (min-width: 850px) {
-  .timeline-container .event {
-    max-width: 500px;
-  }
-}
 @media (max-width: 649px) {
-  .timeline-container .event {
+  .timeline-container .event-container .event {
     padding: 10px 15px;
   }
 }
-.timeline-container .event.show {
+.timeline-container .event-container .event.show {
   opacity: 1;
 }
-.timeline-container .event .event__name {
+.timeline-container .event-container .event .event__name {
   grid-area: name;
 }
 @media (max-width: 649px) {
-  .timeline-container .event .event__name {
+  .timeline-container .event-container .event .event__name {
     font-size: 30px;
   }
 }
-.timeline-container .event .event__detail {
+.timeline-container .event-container .event .event__detail {
   grid-area: detail;
   background-color: #001724;
   border: 2px solid #efbe40;
@@ -383,11 +376,11 @@ body.bright .event__detail {
   justify-self: end;
   align-self: center;
 }
-.timeline-container .event .event__description {
+.timeline-container .event-container .event .event__description {
   grid-area: description;
   padding-top: 10px;
 }
-.timeline-container .event .event__date {
+.timeline-container .event-container .event .event__date {
   grid-area: date;
   padding-top: 5px;
 }
@@ -435,7 +428,7 @@ body.bright .event__detail {
   width: 25px;
   margin: 0;
   cursor: pointer;
-  background-color: #e7f3ea;
+  background-color: #ebf3ec;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -495,7 +488,7 @@ body.bright .event__detail {
   background-color: #012f3e !important;
 }
 .bright .form-checkbox input:after {
-  color: #c1dad2 !important;
+  color: #ccebc8 !important;
 }
 
 /*# sourceMappingURL=form.css.map */

@@ -1,0 +1,165 @@
+@import "form";
+
+.contact {
+	@extend .appearance-bg-color-contact;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 75px 0;
+
+	.contact__container {
+		width: 100%;
+		display: grid;
+		grid-template-areas:
+			"title form"
+			"info form";
+		grid-template-columns: 1fr 1fr;
+		row-gap: 50px;
+		column-gap: 50px;
+		@include sm-md {
+			grid-template-areas:
+				"title"
+				"form"
+				"info";
+			grid-template-columns: 1fr;
+		}
+		.contact__title {
+			grid-area: title;
+			@extend .h2;
+			@include sm-md {
+				font-size: 35px;
+				text-align: center;
+			}
+		}
+		.contact__info-grid {
+			grid-area: info;
+			align-self: end;
+			@extend .text;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"name"
+				"cities"
+				"email"
+				"socials";
+			column-gap: 4px;
+			row-gap: 3px;
+			width: 100%;
+			.contact__name {
+				grid-area: name;
+			}
+			.socials {
+				grid-area: socials;
+				@include md {
+					justify-self: end;
+				}
+			}
+			.contact__cities {
+				grid-area: cities;
+			}
+			.contact__email {
+				grid-area: email;
+				@include md {
+					justify-self: end;
+				}
+			}
+			@include md {
+				grid-template-columns: 1fr 1fr;
+				grid-template-areas:
+					"name socials"
+					"cities email";
+			}
+
+			@include sm {
+				grid-template-columns: 1fr;
+				grid-template-areas:
+					"name"
+					"cities"
+					"email"
+					"socials";
+				span,
+				div,
+				a {
+					justify-self: center;
+				}
+			}
+		}
+		.contact__form {
+			grid-area: form;
+			justify-self: end;
+			width: 100%;
+			max-height: 620px;
+
+			transition: max-height ease-in-out 0.5s, opacity ease-in-out 0.5s;
+			opacity: 1;
+			&.hide {
+				max-height: 0;
+				opacity: 0;
+				overflow-y: hidden;
+			}
+			label {
+				a {
+					text-decoration: underline;
+				}
+			}
+		}
+		.contact__thank-you {
+			grid-area: form;
+			background-color: $tag-color;
+			color: $bg-dark;
+			width: 100%;
+			height: 100%;
+			border-radius: 5px;
+			display: flex;
+			position: relative;
+			transform: scale(0);
+			transform-origin: 0 100%;
+			@include sm-md {
+				transform-origin: 50% 100%;
+			}
+			transition: transform ease-in-out 0.5s;
+			&.show {
+				transform: scale(1);
+			}
+
+			.contact__thank-you_container {
+				padding: 40px 50px;
+				@include sm {
+					padding: 20px 25px;
+				}
+				width: 100%;
+				display: grid;
+				justify-content: space-around;
+				align-items: center;
+				grid-template-columns: 1fr auto;
+				column-gap: 10px;
+				row-gap: 20px;
+				grid-template-areas:
+					"title title"
+					"text icon";
+				@include sm {
+					grid-template-areas:
+						"title icon"
+						"text text";
+				}
+				.thank-you__title {
+					grid-area: title;
+					@include sm {
+						font-size: 35px;
+					}
+				}
+				.thank-you__text {
+					grid-area: text;
+					@include sm {
+						font-size: 25px;
+					}
+				}
+				.thank-you__icon {
+					grid-area: icon;
+					justify-self: end;
+					font-size: 30px;
+				}
+			}
+		}
+	}
+}

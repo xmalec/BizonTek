@@ -85,10 +85,8 @@ input[type=reset] {
 }
 
 a {
-  color: inherit;
-  /* blue colors for links too */
-  text-decoration: inherit;
-  /* no underline */
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
 }
 
 .btn {
@@ -141,7 +139,7 @@ body {
 }
 body.bright {
   color: #001724;
-  background-color: #e7f3ea;
+  background-color: #ebf3ec;
 }
 body .appearance-border-text {
   border-color: #b3f1d0;
@@ -171,23 +169,23 @@ body .appearance-bg-color {
   transition: background-color ease-in-out 0.2s;
 }
 body.bright .appearance-bg-color {
-  background-color: #e7f3ea;
+  background-color: #ebf3ec;
 }
 body .appearance-bg-color-reverse {
-  background-color: #e7f3ea;
+  background-color: #ebf3ec;
   color: #001724;
   transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
 }
 body.bright .appearance-bg-color-reverse {
   background-color: #001724;
-  color: #e7f3ea;
+  color: #ebf3ec;
 }
 body .appearance-bg-color-secondary {
   background-color: #012f3e;
   transition: background-color ease-in-out 0.2s;
 }
 body.bright .appearance-bg-color-secondary {
-  background-color: #cce3d2;
+  background-color: #deeedf;
 }
 body .appearance-services-box {
   border-width: 1px;
@@ -202,8 +200,8 @@ body.bright .appearance-services-box {
   border-color: #012f3e;
 }
 body.bright .appearance-services-box:hover, body.bright .appearance-services-box:active {
-  background-color: #cce3d2;
-  border-color: #cce3d2;
+  background-color: #deeedf;
+  border-color: #deeedf;
 }
 body.bright .appearance-services-box .services__box_text {
   font-weight: 600 !important;
@@ -213,7 +211,7 @@ body .appearance-bg-color-contact {
   transition: background-color ease-in-out 0.2s;
 }
 body.bright .appearance-bg-color-contact {
-  background-color: #c1dad2;
+  background-color: #ccebc8;
 }
 body .appearance-color-text-dark {
   color: #001724;
@@ -238,7 +236,7 @@ body.bright .background-image {
   opacity: 0.1 !important;
 }
 body.bright .event__detail {
-  background-color: #e7f3ea !important;
+  background-color: #ebf3ec !important;
   border-color: #001724 !important;
   color: #001724 !important;
 }

@@ -1,0 +1,51 @@
+@import "typography";
+@import "variables";
+@import "effects";
+
+button,
+input[type="submit"],
+input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+a {
+	color: inherit; /* blue colors for links too */
+	text-decoration: inherit; /* no underline */
+}
+
+.btn {
+	padding: 10px 20px;
+	border-radius: 5px;
+	@extend .h3;
+	&.btn-sm {
+		padding: 7px 15px;
+		@extend .text;
+	}
+
+	&.btn-md {
+		padding: 7px 15px;
+		@extend .text-xl;
+	}
+
+	&.btn-contact {
+		background-color: $primary-color;
+		color: $text-dark;
+		width: auto;
+		@extend .h3;
+		white-space: nowrap;
+	}
+
+	&.btn-animated {
+		transition: transform ease-in-out 0.2s, color ease-in-out 0.2s,
+			border-color ease-in-out 0.2s, background-color ease-in-out 0.2s;
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}

@@ -1,0 +1,95 @@
+@import "modal";
+.services {
+	margin: 20px $layout-side-padding 100px $layout-side-padding;
+	max-width: $layout-max-width;
+	width: calc(min(100% - #{$layout-side-padding * 2}, #{$layout-max-width}));
+	@include sm-md {
+		margin: 20px 0 100px 0;
+	}
+	@include sm {
+		width: calc(
+			min(100% - #{$layout-side-padding-sm * 2}, #{$layout-max-width})
+		);
+	}
+	.services__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+		@include sm {
+			grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+			gap: 10px;
+		}
+
+		.services__title {
+			text-align: center;
+
+			@include sm {
+				font-size: 25px;
+			}
+		}
+		.services__box {
+			position: relative;
+
+			border-radius: 20px;
+			border-style: solid;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			padding: 100% 10px 0 10px;
+			cursor: pointer;
+			transition: all ease-in-out 0.2s;
+			overflow: hidden;
+			&:hover,
+			&:active {
+				.services__box_img {
+					opacity: 0;
+				}
+				.services__box_glass {
+					opacity: 1;
+				}
+			}
+
+			.services__box_text {
+				@extend .text-xl;
+				@include sm {
+					font-size: 18px;
+				}
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 95%;
+			}
+
+			.services__box_img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				opacity: 0.15;
+				transition: opacity ease-in-out 0.2s;
+				background-color: $bg-bright;
+				img {
+					height: 100%;
+				}
+			}
+
+			.services__box_glass {
+				position: absolute;
+				top: 12px;
+				right: 10px;
+				opacity: 0;
+				transition: opacity ease-in-out 0.2s;
+				@include lg {
+					font-size: 22px;
+				}
+				@include sm-md {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
