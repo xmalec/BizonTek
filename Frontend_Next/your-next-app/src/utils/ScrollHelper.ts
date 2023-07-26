@@ -1,3 +1,4 @@
+import { doc } from "firebase/firestore";
 
 const isElementInView = (element: Element, fullyInView = false) => {
 	const bounding = element.getBoundingClientRect();
@@ -65,23 +66,33 @@ const manageNavigationBarOnScroll = (document: Document) => {
 }
 
 
-export class PageHelper {
-	static handleClickScroll = (id: string) => {
-		const element = document.getElementById(id);
-		if (element) {
-			// 👇 Will scroll smoothly to the top of the next section
-			element.scrollIntoView({ behavior: "smooth" });
-			const container = document.getElementById("menu-container");
-			if (container != undefined) {
-				if (container.classList.contains("collapsed")) {
-					container.classList.remove("collapsed");
-				}
-			}
+function manageScrollTop(document: Document) {
+	const nameTitle = document.getElementById("title-name");
+	const scrollTopBtn = document.getElementById("scroll-top-btn");
+	if (nameTitle != undefined && scrollTopBtn != undefined) {
+		if (isElementInView(nameTitle)) {
+			addClass(scrollTopBtn, "hide");
+		} else {
+			removeClass(scrollTopBtn, "hide");
 		}
-	};
-
-	static scrollUp = () => {
-		this.handleClickScroll("section-hp");
-	};
+	}
 }
 
+
+function manageEventsOpacity(document: Document) {
+	const events = document.getElementsByClassName("event");
+	for (let i = 0; i < events.length; i++) {
+		const event = events[i];
+		if (!hasClass(event, "show") && isElementInView(event)) {
+			addClass(event, "show");
+		}
+	}
+}
+
+export class ScrollHelper {
+	static onScroll = () => {
+		manageNavigationBarOnScroll(document);
+		manageEventsOpacity(document);
+		manageScrollTop(document);
+	}
+}

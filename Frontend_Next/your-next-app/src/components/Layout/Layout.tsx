@@ -1,13 +1,19 @@
 import About from "../About/About";
 import HomePage from "./HomePage";
 import Navigation from "./Navigation";
-import { onDocumentLoad } from "../../../js/scripts";
 import Services from "../Services/Services";
 import Contact from "../Contact/Contact";
 import AppearanceToggle from "../Shared/AppearanceToggle";
 import ScrollTopButton from "./ScrollTopButton";
+import { useEffect } from "react";
+import { ScrollHelper } from "../../utils/ScrollHelper";
+
 const Layout = () => {
-  //onDocumentLoad();
+  //console.log(document);
+  useEffect(() => {
+    document.addEventListener("scroll", ScrollHelper.onScroll);
+  }, []);
+
   return (
     <>
       <ScrollTopButton />
