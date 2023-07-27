@@ -7,11 +7,7 @@ https://www.figma.com/file/hCPscxS55HRrbqnbrkKTGT/BizonTek?node-id=0-1&t=lH06Wjw
 
 ## TODO
 
-- setup Google Analytics - views, setup datalayers, metadata
-- emailjs - send notification on contact form fill
-- fill texts into resource strings
-- consent text
-- all texts
+- all texts - vyšperkovat
+- cookie lišta
 - CV
-- favicon, metadata
-- loading mask
+- setup Google Analytics - views, setup datalayers, metadata
