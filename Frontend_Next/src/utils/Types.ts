@@ -8,7 +8,6 @@ export type ModalModel = {
 
 export type EventModel = {
 	id: string;
-	intro: string;
 	date: Date;
 } & ModalModel;
 

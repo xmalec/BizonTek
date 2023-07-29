@@ -1,504 +1,498 @@
 @import "services";
 
 body {
-	margin: 0;
+  margin: 0;
 
-	.container {
-		min-height: 100vh;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		.section {
-			padding: 0 $layout-side-padding;
-			@include sm {
-				padding: 0 $layout-side-padding-sm;
-			}
-			max-width: $layout-max-width;
-		}
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .section {
+      padding: 0 $layout-side-padding;
+      @include sm {
+        padding: 0 $layout-side-padding-sm;
+      }
+      max-width: $layout-max-width;
+    }
 
-		nav {
-			@include sm {
-				padding: 0 $layout-side-padding-sm;
-			}
-			@include sm-md {
-				transition: top ease-in-out 0.2s;
-				background-color: inherit;
-				transform: initial;
-				.navigation-container {
-					.navigation {
-					}
-					right: 50%;
-					transform: translate(50%);
-					position: fixed;
-					background-color: inherit;
-					.nav-contact-btn {
-						display: block;
-					}
-				}
-			}
-			position: absolute;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			top: 0;
-			width: 100%;
-			right: 50%;
-			transform: translate(50%);
-			z-index: 3;
+    nav {
+      @include sm {
+        padding: 0 $layout-side-padding-sm;
+      }
+      @include sm-md {
+        transition: top ease-in-out 0.2s;
+        background-color: inherit;
+        transform: initial;
+        .navigation-container {
+          .navigation {
+          }
+          right: 50%;
+          transform: translate(50%);
+          position: fixed;
+          background-color: inherit;
+          .nav-contact-btn {
+            display: block;
+          }
+        }
+      }
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      top: 0;
+      width: 100%;
+      right: 50%;
+      transform: translate(50%);
+      z-index: 3;
 
-			@include lg {
-				&.hidden {
-					top: -70px;
-					.menu {
-						&.collapsed {
-							.menu-items {
-								max-height: 0 !important;
-								padding-top: 0 !important;
-								padding-bottom: 0 !important;
-								transition: initial !important;
-							}
-						}
-					}
-				}
-				&.fixed {
-					transition: top ease-in-out 0.2s;
-					background-color: inherit;
-					transform: initial;
-					.navigation-container {
-						.navigation {
-						}
-						right: 50%;
-						transform: translate(50%);
-						position: fixed;
-						background-color: inherit;
-						.nav-contact-btn {
-							display: block;
-						}
-					}
-				}
-			}
+      @include lg {
+        &.hidden {
+          top: -70px;
+          .menu {
+            &.collapsed {
+              .menu-items {
+                max-height: 0 !important;
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+                transition: initial !important;
+              }
+            }
+          }
+        }
+        &.fixed {
+          transition: top ease-in-out 0.2s;
+          background-color: inherit;
+          transform: initial;
+          .navigation-container {
+            .navigation {
+            }
+            right: 50%;
+            transform: translate(50%);
+            position: fixed;
+            background-color: inherit;
+            .nav-contact-btn {
+              display: block;
+            }
+          }
+        }
+      }
 
-			.navigation-container {
-				display: flex;
-				justify-content: center;
-				width: 100%;
-			}
-			.navigation {
-				@extend .text;
+      .navigation-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+      .navigation {
+        @extend .text;
 
-				padding: 10px 0;
-				display: flex;
-				justify-content: space-between;
-				background-color: transparent;
-				align-items: center;
-				max-width: $layout-max-width;
-				width: calc(
-					min(
-						100% - #{$layout-side-padding * 2},
-						#{$layout-max-width}
-					)
-				);
-				@include lg {
-					.nav-contact-btn {
-						display: none;
-					}
-				}
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        background-color: transparent;
+        align-items: center;
+        max-width: $layout-max-width;
+        width: calc(
+          min(100% - #{$layout-side-padding * 2}, #{$layout-max-width})
+        );
+        @include lg {
+          .nav-contact-btn {
+            display: none;
+          }
+        }
 
-				@include sm {
-					width: calc(
-						min(
-							100% - #{$layout-side-padding-sm * 2},
-							#{$layout-max-width}
-						)
-					);
-				}
-				.title-part {
-					gap: 10px;
-					display: flex;
-					align-items: center;
-				}
-				.menu {
-					gap: 30px;
-					display: flex;
-					align-items: center;
-					.bars {
-						display: block;
-					}
-					.times {
-						display: none;
-					}
-					&.collapsed {
-						.menu-items {
-							padding-top: 10px;
-							max-height: 150px;
-						}
-						.bars {
-							display: none;
-						}
-						.times {
-							display: block;
-						}
-					}
-					.menu-items {
-						display: flex;
-						gap: inherit;
-						align-items: inherit;
-						@extend .appearance-bg-color-secondary;
-						@include lg {
-							background-color: transparent !important;
-						}
-						@include sm-md {
-							display: flex;
-							position: absolute;
+        @include sm {
+          width: calc(
+            min(100% - #{$layout-side-padding-sm * 2}, #{$layout-max-width})
+          );
+        }
+        .title-part {
+          gap: 10px;
+          display: flex;
+          align-items: center;
+        }
+        .menu {
+          gap: 30px;
+          display: flex;
+          align-items: center;
+          .bars {
+            display: block;
+          }
+          .times {
+            display: none;
+          }
+          &.collapsed {
+            .menu-items {
+              padding-top: 10px;
+              max-height: 150px;
+            }
+            .bars {
+              display: none;
+            }
+            .times {
+              display: block;
+            }
+          }
+          .menu-items {
+            display: flex;
+            gap: inherit;
+            align-items: inherit;
+            @extend .appearance-bg-color-secondary;
+            @include lg {
+              background-color: transparent !important;
+            }
+            @include sm-md {
+              display: flex;
+              position: absolute;
 
-							flex-direction: column;
-							justify-content: center;
+              flex-direction: column;
+              justify-content: center;
 
-							max-height: 0;
-							padding-top: 0;
-							padding-bottom: 0;
-							border-radius: 0 0 10px 10px;
-							top: 70px;
-							left: 0;
-							gap: 15px;
-							width: 100%;
-							overflow: hidden;
-							transition: max-height ease-in-out 0.35s,
-								padding-top ease-in-out 0.35s,
-								padding-bottom ease-in-out 0.35s;
+              max-height: 0;
+              padding-top: 0;
+              padding-bottom: 0;
+              border-radius: 0 0 10px 10px;
+              top: 70px;
+              left: 0;
+              gap: 15px;
+              width: 100%;
+              overflow: hidden;
+              transition: max-height ease-in-out 0.35s,
+                padding-top ease-in-out 0.35s, padding-bottom ease-in-out 0.35s;
 
-							&::after {
-								content: "";
-								display: block;
-								height: 5px;
-								width: 100%;
-								background-color: $tag-color;
-							}
-						}
-						white-space: nowrap;
-					}
-					.appearance-toggle {
-						display: none;
-						@include sm {
-							display: block;
-						}
-					}
+              &::after {
+                content: "";
+                display: block;
+                height: 5px;
+                width: 100%;
+                background-color: $tag-color;
+              }
+            }
+            white-space: nowrap;
+          }
+          .appearance-toggle {
+            display: none;
+            @include sm {
+              display: block;
+            }
+          }
 
-					.menu-bars {
-						padding: 2px 12px;
-						border-width: 1px;
-						min-width: 44px;
-						@include lg {
-							display: none;
-						}
-					}
-				}
+          .menu-bars {
+            padding: 2px 12px;
+            border-width: 1px;
+            min-width: 44px;
+            @include lg {
+              display: none;
+            }
+          }
+        }
 
-				.logo {
-					width: 50px;
-					height: 50px;
-					overflow: hidden;
-					border-radius: 15px;
-					img {
-						width: 100%;
-						height: 100%;
-					}
-				}
-			}
-		}
+        .logo {
+          width: 50px;
+          height: 50px;
+          overflow: hidden;
+          border-radius: 15px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
 
-		.hp {
-			display: flex;
-			min-height: calc(min(100vh, 1200px));
-			align-items: center;
-			.background-image {
-				position: absolute;
-				right: 0;
-				z-index: 1;
-				height: 100%;
-				max-height: 1200px;
-				opacity: 1;
-				transition: opacity ease-in-out 0.2s;
-				img {
-					height: 100%;
-				}
-			}
-			.hp-grid {
-				display: grid;
-				z-index: 2;
-				@include lg {
-					grid-template-columns: repeat(3, 1fr);
-					grid-template-rows:
-						100px repeat(3, auto)
-						100px;
-					grid-template-areas:
-						"logo text1 text1"
-						"logo text2 text2"
-						"logo text3 text3"
-						"logo text4 text4"
-						"email email button";
-					column-gap: 50px;
-					row-gap: 20px;
-				}
-				@include md {
-					margin-top: 80px;
-					grid-template-columns: repeat(2, auto);
-					grid-template-rows:
-						repeat(5, auto)
-						150px;
-					grid-template-areas:
-						"text1 text1"
-						"text2 text2"
-						"logo logo"
-						"text3 text3"
-						"email text4"
-						"button button";
-					column-gap: 15px;
-					row-gap: 20px;
-				}
-				@include sm {
-					margin-top: 80px;
-					grid-template-columns: 1fr;
-					grid-template-rows:
-						repeat(6, auto)
-						150px;
-					grid-template-areas:
-						"text1"
-						"text2"
-						"logo"
-						"text3"
-						"email"
-						"text4"
-						"button";
-					column-gap: 15px;
-					row-gap: 20px;
-				}
-				.top-heading {
-					grid-area: header;
-					justify-self: center;
-					@include sm-md {
-						display: none;
-					}
-				}
-				.content-logo {
-					grid-area: logo;
-					align-self: center;
-					overflow: hidden;
-					border-radius: 50px;
-					max-height: 400px;
-					max-width: 500px;
-					img {
-						width: 100%;
-					}
-					@include lg {
-						min-width: 300px;
-					}
-					@include sm-md {
-						justify-self: center;
-					}
-				}
+    .hp {
+      display: flex;
+      min-height: calc(min(100vh, 1200px));
+      align-items: center;
+      .background-image {
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        height: 100%;
+        max-height: 1200px;
+        opacity: 1;
+        transition: opacity ease-in-out 0.2s;
+        img {
+          height: 100%;
+        }
+      }
+      .hp-grid {
+        display: grid;
+        z-index: 2;
+        @include lg {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows:
+            100px repeat(3, auto)
+            100px;
+          grid-template-areas:
+            "logo text1 text1"
+            "logo text2 text2"
+            "logo text3 text3"
+            "logo text4 text4"
+            "email email button";
+          column-gap: 50px;
+          row-gap: 20px;
+        }
+        @include md {
+          margin-top: 80px;
+          grid-template-columns: repeat(2, auto);
+          grid-template-rows:
+            repeat(5, auto)
+            150px;
+          grid-template-areas:
+            "text1 text1"
+            "text2 text2"
+            "logo logo"
+            "text3 text3"
+            "email text4"
+            "button button";
+          column-gap: 15px;
+          row-gap: 20px;
+        }
+        @include sm {
+          margin-top: 80px;
+          grid-template-columns: 1fr;
+          grid-template-rows:
+            repeat(6, auto)
+            150px;
+          grid-template-areas:
+            "text1"
+            "text2"
+            "logo"
+            "text3"
+            "email"
+            "text4"
+            "button";
+          column-gap: 15px;
+          row-gap: 20px;
+        }
+        .top-heading {
+          grid-area: header;
+          justify-self: center;
+          @include sm-md {
+            display: none;
+          }
+        }
+        .content-logo {
+          grid-area: logo;
+          align-self: center;
+          overflow: hidden;
+          border-radius: 50px;
+          max-height: 400px;
+          max-width: 500px;
+          img {
+            width: 100%;
+          }
+          @include lg {
+            min-width: 300px;
+          }
+          @include sm-md {
+            justify-self: center;
+          }
+        }
 
-				.name {
-					grid-area: text1;
-					display: flex;
-					gap: 15px;
-					text-align: center;
-					@include sm-md {
-						align-self: end;
-						justify-self: center;
-					}
-					@include sm {
-						font-size: 50px;
-					}
-				}
-				.profession {
-					grid-area: text2;
-					display: flex;
-					gap: 15px;
-					text-align: center;
-					@include sm-md {
-						justify-self: center;
-					}
-				}
-				.description {
-					grid-area: text3;
-					display: flex;
-					gap: 15px;
-				}
-				.socials {
-					grid-area: text4;
-					align-self: end;
-					font-size: 30px;
-					span {
-						font-size: 30px;
-					}
-					@include md {
-						justify-self: end;
-					}
-				}
+        .name {
+          grid-area: text1;
+          display: flex;
+          gap: 15px;
+          text-align: center;
+          @include sm-md {
+            align-self: end;
+            justify-self: center;
+          }
+          @include sm {
+            font-size: 50px;
+          }
+        }
+        .profession {
+          grid-area: text2;
+          display: flex;
+          gap: 15px;
+          text-align: center;
+          @include sm-md {
+            justify-self: center;
+          }
+        }
+        .description {
+          grid-area: text3;
+          .more-button {
+            cursor: pointer;
+          }
+        }
+        .socials {
+          grid-area: text4;
+          align-self: end;
+          font-size: 30px;
+          span {
+            font-size: 30px;
+          }
+          @include md {
+            justify-self: end;
+          }
+        }
 
-				.contact-btn {
-					grid-area: button;
-					align-self: center;
-					justify-self: end;
-					@include sm-md {
-						justify-self: center;
-					}
-				}
+        .contact-btn {
+          grid-area: button;
+          align-self: center;
+          justify-self: end;
+          @include sm-md {
+            justify-self: center;
+          }
+        }
 
-				.contact-email {
-					grid-area: email;
-					align-self: center;
-					white-space: nowrap;
-					@extend .text-sm;
-					flex: 1;
-					a {
-						&::before {
-							content: "–⁠–⁠–⁠–⁠⁠–⁠–⁠⁠–⁠–⁠";
-							margin-right: 10px;
-						}
-						@include sm {
-							&::before {
-								content: "⁠";
-								margin-right: 0;
-							}
-						}
-					}
-				}
-			}
-		}
+        .contact-email {
+          grid-area: email;
+          align-self: center;
+          white-space: nowrap;
+          @extend .text-sm;
+          flex: 1;
+          a {
+            &::before {
+              content: "–⁠–⁠–⁠–⁠⁠–⁠–⁠⁠–⁠–⁠";
+              margin-right: 10px;
+            }
+            @include sm {
+              &::before {
+                content: "⁠";
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
 
-		.about {
-			padding: 50px 0;
-			margin: 20px $layout-side-padding 100px $layout-side-padding;
-			max-width: $layout-max-width;
-			width: calc(
-				min(100% - #{$layout-side-padding * 2}, #{$layout-max-width})
-			);
-			@include sm-md {
-				margin: 20px 0 100px 0;
-				width: 100%;
-			}
-			@extend .appearance-bg-color-secondary;
-			transition: background-color ease-in-out 0.2s;
-			border-radius: 25px;
-		}
-	}
-	.appearance-toggle {
-		&.absolute {
-			position: fixed;
-			z-index: 3;
-			top: 22px;
-			right: 30px;
-			@extend .text;
-			@include sm {
-				display: none;
-			}
-		}
-	}
+    .about {
+      padding: 50px 0;
+      margin: 20px $layout-side-padding 100px $layout-side-padding;
+      max-width: $layout-max-width;
+      width: calc(
+        min(100% - #{$layout-side-padding * 2}, #{$layout-max-width})
+      );
+      @include sm-md {
+        margin: 20px 0 100px 0;
+        width: 100%;
+      }
+      @extend .appearance-bg-color-secondary;
+      transition: background-color ease-in-out 0.2s;
+      border-radius: 25px;
+    }
+  }
+  .appearance-toggle {
+    &.absolute {
+      position: fixed;
+      z-index: 3;
+      top: 22px;
+      right: 30px;
+      @extend .text;
+      @include sm {
+        display: none;
+      }
+    }
+  }
 
-	.socials {
-		display: flex;
-		gap: 15px;
-		font-size: 20px;
-		align-items: center;
-	}
+  .socials {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+    align-items: center;
+  }
 
-	.color-transition {
-		transition: color ease-in-out 0.2s, border-color ease-in-out 0.2s;
-	}
+  .color-transition {
+    transition: color ease-in-out 0.2s, border-color ease-in-out 0.2s;
+  }
 
-	a,
-	button {
-		transition: color ease-in-out 0.2s, border-color ease-in-out 0.2s;
-		&:hover {
-			color: $tag-color;
-			border-color: $tag-color !important;
-		}
-	}
-	.event__tags {
-		grid-area: tags;
-		gap: 10px;
-		display: flex;
-		flex-wrap: wrap;
-		padding-top: 10px;
-		.tag {
-			background-color: $tag-color;
-			color: $bg-dark;
-			border-radius: 20px;
-			padding: 6px 12px;
-			@extend .text-sm;
-			@extend .shadow-sm;
-			@include sm {
-				padding: 4px 8px;
-				font-size: 16px;
-			}
-		}
-	}
+  a,
+  button {
+    transition: color ease-in-out 0.2s, border-color ease-in-out 0.2s;
+    &:hover {
+      color: $tag-color;
+      border-color: $tag-color !important;
+    }
+  }
+  .event__tags {
+    grid-area: tags;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    .tag {
+      background-color: $tag-color;
+      color: $bg-dark;
+      border-radius: 20px;
+      padding: 6px 12px;
+      @extend .text-sm;
+      @extend .shadow-sm;
+      @include sm {
+        padding: 4px 8px;
+        font-size: 16px;
+      }
+    }
+  }
 
-	.mask {
-		background-color: $bg-dark;
-		transition: opacity ease-in-out 0.5s, z-index step-end 0.5s;
-		opacity: 1;
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		z-index: 20;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: 80px;
-		&.hide {
-			opacity: 0;
-			z-index: -1;
-		}
-	}
+  .mask {
+    background-color: $bg-dark;
+    transition: opacity ease-in-out 0.5s, z-index step-end 0.5s;
+    opacity: 1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    &.hide {
+      opacity: 0;
+      z-index: -1;
+    }
+  }
 
-	.about,
-	.services,
-	.contact,
-	.hp {
-		position: relative;
-	}
+  .about,
+  .services,
+  .contact,
+  .hp {
+    position: relative;
+  }
 
-	.link-anchor {
-		position: absolute;
-		top: -70px;
-		//left: 0;
-	}
+  .link-anchor {
+    position: absolute;
+    top: -70px;
+    //left: 0;
+  }
 
-	.scroll-top {
-		position: fixed;
-		color: $bg-dark-secondary;
-		background-color: rgba($tag-color, 0.8);
-		border-radius: 5px;
-		border-width: 2px;
-		border-style: solid;
-		z-index: 9;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		bottom: 40px;
-		right: 30px;
-		width: 40px;
-		height: 40px;
-		font-size: 25px;
-		transition: all ease-in-out 0.2s;
-		&.hide {
-			bottom: -40px;
-		}
-		&:hover {
-			border-color: $tag-color;
-			background-color: $bg-dark;
-		}
-		@include sm-md {
-			bottom: 13px;
-			right: 13px;
-			width: 35px;
-			height: 35px;
-			font-size: 23px;
-		}
-	}
+  .scroll-top {
+    position: fixed;
+    color: $bg-dark-secondary;
+    background-color: rgba($tag-color, 0.8);
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 40px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    transition: all ease-in-out 0.2s;
+    &.hide {
+      bottom: -40px;
+    }
+    &:hover {
+      border-color: $tag-color;
+      background-color: $bg-dark;
+    }
+    @include sm-md {
+      bottom: 13px;
+      right: 13px;
+      width: 35px;
+      height: 35px;
+      font-size: 23px;
+    }
+  }
 }

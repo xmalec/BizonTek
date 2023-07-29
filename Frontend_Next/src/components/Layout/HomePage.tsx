@@ -1,3 +1,4 @@
+import { PageHelper } from "../../utils/PageHelper";
 import ContactButton from "../Shared/ContactButton";
 import Socials from "../Shared/Socials";
 
@@ -20,11 +21,17 @@ const HomePage = () => {
           Softwarový vývojář
         </div>
         <div className="text description">
-          Ahoj a vítejte na mém webu! Jsem Jiří Malec a jsem softwarový vývojář.
-          Těším se, že vám mohu představit své dovednosti a nabídnout své
-          služby. Pokud vás zaujmu a máte zájem o spolupráci, neváhejte mi
-          napsat. Rád se s vámi sejdu, abychom mohli diskutovat o vašich
-          potřebách a případně se domluvit na společném projektu.
+          Zdravím a vítejte na mém webu! Jmenuji se <b>Jiří Malec</b> a
+          vystupuji pod doménou <b>BizonTek</b>. Zde na webu bych se Vám chtěl
+          představit a nabídnou mé služby coby softwarového vývojáře.
+          Specializuji se především na webové aplikace, portály, komerční a
+          informační systémy.{" "}
+          <b
+            className="more-button"
+            onClick={() => PageHelper.handleClickScroll("section-services")}
+          >
+            Zvládnu toho ale mnohem více!
+          </b>
         </div>
         <Socials />
 

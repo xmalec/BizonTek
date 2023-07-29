@@ -8,20 +8,12 @@ export const EventModels: EventModel[] = [
 		id: "bluesoft",
 		title: "Bluesoft",
 		tags: [".NET", "MVC", "Kentico", "CI/CD", "vue.js"],
-		description: `Bluesoft je středně velká společnost, která dodává projekty postavené kolem produktu Kentico. Ve firmě pracuji jako backend vývojář. ${newLine}
-		Kentico se řadí mezi přední DXP (digital experience platform) na trhu. ${newLine}
-		Při vývoji pracujeme s .NET MVC, MSSQL, LINQ, Razor Pages. Do projektu často integrujeme služby od Azure. ${newLine}
-		Mezi přední klienty firmy Blusoft se řadí:
-		<ul>
-		<li>SAZKA a.s.</li>
-		<li>E.ON</li>
-		<li>Škoda Auto a.s.</li>
-		<li>ORLEN Benzina</li>
-		<li>Carlsberg</li>
-		<li>Asahi</li>
-		<li>Walmark</li>
-		</ul>
-		Já jsem se osobně podílel například na projektech:
+		description: `V této firmě v současnosti pracuji jako <b>backend vývojář</b> na částečný úvazek. Během studia jsem zde absolvoval prácovní stáž.   ${newLine}
+		<b>Bluesoft</b> je středně velká společnost, která dodává projekty postavené kolem produktu <b>Kentico</b>, 
+		které se řadí mezi přední DXP (digital experience platform) na trhu. ${newLine}
+		Při vývoji se setkám s technologiemi <b>.NET MVC, MSSQL, LINQ, Razor Pages</b>. Do projektu často integrujeme služby od <b>Azure</b> nebo <b>Google Analytics</b> Pro řízení a správu projektů pracujeme s nástrojem <b>Jira</b>.${newLine}
+		Mezi přední klienty firmy Blusoft se řadí společnosti SAZKA a.s., E.ON, ORLEN Benzina a další.
+		Já jsem se osobně podílel na projektech:
 		<ul>
 		<li><a href="https://louda.skoda-auto.cz/" target="_blank">Škoda Dealers</a></li>
 		<li><a href="https://skoda-kariera.cz/" target="_blank">Škoda Kariéra</a></li>
@@ -30,7 +22,6 @@ export const EventModels: EventModel[] = [
 		<li>B2B objednávkový portál pro Carlsberg a Asahi</li>
 		</ul>
 		Odkaz na <a href="https://www.bluesoft.cz/" target="_blank">webové stránky</a>`,
-		intro: `Bluesoft je středně velká společnost, která dodává projekty postavené kolem produktu Kentico. Ve firmě pracuji jako backend vývojář.`,
 		//images: ["/img/events/bluesoft/logo.webp"],
 		date: new Date("2022-01-05"),
 		dateString: "2022 - současnost",
@@ -40,13 +31,12 @@ export const EventModels: EventModel[] = [
 		title: "Optimal Program",
 		tags: ["PHP", "Nette", "Optimal Program", "Full stack"],
 		//images: ["/img/events/optimal/logo.svg"],
-		description: `Během této zkušenosti jsem měl příležitost pracovat na široké škále komplexních a rozmanitých projektů, které se odehrávaly v rámci malého, týmového prostředí. Jako <b>full stack</b> vývojář jsem byl plně zapojen do všech klíčových fází projektů, ať už se jednalo o sběr požadavků, návrh, implementaci, testování, nasazení či údržbu.
+		description: `V této firmě jsem měl příležitost pracovat na široké škále komplexních a rozmanitých projektů, které se odehrávaly v rámci malého, týmového prostředí. Jako <b>full stack</b> vývojář jsem byl plně zapojen do všech klíčových fází projektů, ať už se jednalo o sběr požadavků, návrh, implementaci, testování, nasazení či údržbu.
 		${newLine}
-		Naše hlavní zaměření spočívalo výhradně v webových aplikacích, které byly nesmírně různorodé. Spolupracoval jsem na vývoji informačních systémů, rezervačních platforem, redakčních systémů, e-shopů a také aplikací určených pro elektronické testování. Tato široká paleta projektů mi umožnila rozvinout své dovednosti a získat přehled o různých oblastech webového vývoje.
+		Hlavní zaměření spočívalo ve webových aplikacích. Spolupracoval jsem na vývoji informačních systémů, rezervačních platforem, redakčních systémů, e-shopů a také aplikací určených pro elektronické testování. Tato široká paleta projektů mi především umožnila rozvinout své dovednosti v oblasti návrhu řešení pro různorodé byznysy a získat přehled o různých oblastech webového vývoje.
 		${newLine}
-		Naše primární programovací platforma byla <b>PHP</b>, přičemž jsme využívali český <b>Nette framework</b>, který se ukázal jako skvělý nástroj pro efektivní a bezpečný vývoj.
+		Naše primární programovací platforma byla <b>PHP</b>, přičemž jsme využívali český <b>Nette framework</b>.
 		${newLine}Odkaz na <a href="http://www.optimal-program.cz" target="_blank">webové stránky</a>`,
-		intro: `Během této zkušenosti jsem měl příležitost pracovat na široké škále komplexních a rozmanitých projektů, které se odehrávaly v rámci malého, týmového prostředí.`,
 		date: new Date("2021-01-05"),
 		dateString: "2021/2022",
 	},
@@ -69,8 +59,7 @@ export const EventModels: EventModel[] = [
 		id: "labclub",
 		title: "LabClub",
 		dateString: "léto 2020",
-		intro: `Labclub je můj první samostaný projekt, který je aktivně využíván do dnešního dne. Jedná se o webovou aplikaci spravující mimo-výukové aktivity soukromé školy Labyrinth v Brně. `,
-		description: `Labclub je můj první samostaný projekt, který je aktivně využíván do dnešního dne. Jedná se o webovou aplikaci spravující mimo-výukové aktivity soukromé školy <b>Labyrinth</b> v Brně. Aplikace je napsána v programovacím jazyce <b>Java</b> s využitím frameworku <b>Spring</b>. Jako databázový systém jsem použil <b>MySQL</b>.${newLine}
+		description: `Labclub je můj první samostaný ostrý projekt a je ativně využíván do dnešního dne. Jedná se o webovou aplikaci spravující mimo-výukové aktivity soukromé školy <b>Labyrinth</b> v Brně. Aplikace je napsána v programovacím jazyce <b>Java</b> s využitím frameworku <b>Spring</b>. Jako databázový systém jsem použil <b>MySQL</b>.${newLine}
 		Aplikaci jsem vypracoval v rámci <b>bakalářské práce</b>. Závěrečná práce je k dispozici <a href="https://is.muni.cz/th/fo39c/" target="__blank">ZDE</a>.${newLine}
 		Seznam hlavních případů užití:
 		<ul>
@@ -107,18 +96,16 @@ export const EventModels: EventModel[] = [
 		id: "sbabr",
 		title: "Bakalářský titul",
 		dateString: "červen 2021",
-		intro: "Získaný v oboru Aplikovaná informatika na Fakultě informatiky Masarykovi univerzity.",
 		description: `Získaný v oboru Aplikovaná informatika na Fakultě informatiky Masarykovi univerzity. ${newLine}
-		V rámci studia jsem absolvoval předměty zabívající se:
+		V rámci studia jsem úspěšně absolvoval předměty specializující se:
 		<ul>
-		<li>Programování: Python, C, C++, C#, Java, Prolog, Haskel</li>
-		<li>Návrhové vzory aplikace, UML</li>
-		<li>Databázové systémy: Dotazy, příkazy, joiny, agregační funkce</li>
-		<li>Operační systémy: Správa systémů MS Windows, Unix</li>
-		<li>Algoritmizace: Řadící a prohledávací algoritmy, automaty a gramatiky, vyčíslitelnost a složitost</li>
+		<li>Programováním: Python, C, C++, C#, Java, Prolog, Haskel</li>
+		<li>Návrhovými vzory aplikace, UML</li>
+		<li>Databázovými systémy: Dotazy, příkazy, joiny, agregační funkce</li>
+		<li>Operačními systémy: Správa systémů MS Windows, Unix</li>
+		<li>Algoritmizací: Řadící a prohledávací algoritmy, automaty a gramatiky, vyčíslitelnost a složitost</li>
 		<li>Základy umělé inteligence</li>
 		<li>Základy počítačových sítí</li>
-		<li>Technická znalost počítačové techniky</li>
 		</ul>`,
 		date: new Date("2021-06-27"),
 	},
@@ -128,9 +115,8 @@ export const EventModels: EventModel[] = [
 		id: "sbabr",
 		title: "Studijní pobyt v zahraničí",
 		dateString: "podzim 2020",
-		intro: `V rámci mé účasti v programu <b>Erasmus</b> jsem strávil jeden semestr studiem v hlavním městě Slovinska.`,
 		description: `
-		V rámci mé účasti v programu <b>Erasmus</b> jsem strávil jeden semestr studiem v hlavním městě Slovinska. Byl jsem zapsán na <b>University of Ljubljana, Faculty of Computer and Information Science</b>.${newLine} Během tohoto semestru jsem se věnoval různým předmětům, které se zaměřovaly na oblasti jako datová analýza, zpracování obrazu pomocí strojového učení, analýza algoritmů a základy umělé inteligence. Veškerá výuka probíhala v <b>angličtině</b>.`,
+		V rámci účasti v programu <b>Erasmus</b> jsem strávil jeden semestr studiem v hlavním městě Slovinska. Byl jsem zapsán na <b>University of Ljubljana, Faculty of Computer and Information Science</b>.${newLine} Během tohoto semestru jsem absolvoval předměty, které se zaměřovaly na oblasti jako datová analýza, zpracování obrazu pomocí strojového učení, analýza algoritmů a základy umělé inteligence.`,
 		date: new Date("2020-11-15"),
 	},
 	{
@@ -139,9 +125,8 @@ export const EventModels: EventModel[] = [
 		id: "bosch",
 		title: "IT Partner ve společnosti Bosch",
 		dateString: "2018 - 2020",
-		intro: `Během mé první pracovní stáže v oblasti informačních technologií jsem působil jako IT Partner ve Facility Management oddělení společnosti <b>Bosch Diesel</b> v Jihlavě.`,
 		description: `
-		Během mé první pracovní stáže v oblasti informačních technologií jsem působil jako IT Partner ve Facility Management oddělení společnosti <b>Bosch Diesel</b> v Jihlavě.${newLine}Mým úkolem bylo zajistit správné přiřazení rolí a přístupů pro kolegy, spravovat IT vybavení a implementovat různé <b>VBA makra</b> k optimalizaci procesů. Tato pozice mi umožnila získat hlubší povědomí o fungování oddělení v rámci většího podniku.`,
+		Během mé první pracovní stáže v oblasti informačních technologií jsem působil jako IT Partner ve Facility Management oddělení společnosti <b>Bosch Diesel</b> v Jihlavě.${newLine}Mým úkolem bylo zajistit hladký chod informačních systémů v kanceláři. Vytvářel jsem a spravoval tickety pro správné přiřazení rolí pro kolegy a instalaci potřebných programů. Dále jsem zajišťoval správnou integraci jednotlivých procedur různých informačních politik firmy. Spravoval jsem IT vybavení a zodpovídal jsem za jeho pravidelnou výměnu. Také jsem implementoval různé <b>VBA makra</b> k optimalizaci procesů v kanceláři. Tato pozice mi umožnila získat hlubší povědomí o fungování oddělení v rámci většího podniku.`,
 		date: new Date("2018-08-30"),
 	},
 	// {

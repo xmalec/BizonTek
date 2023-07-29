@@ -13,7 +13,7 @@ export default function Home() {
         <meta name="author" content="Jiří Malec" />
         <meta
           name="description"
-          content="BizonTek | Jiří Malec. Vývoj moderního softwaru na míru."
+          content="Jiří Malec | BizonTek - Vývoj softwaru na míru pro webové aplikace, portály, informační systémy a e-shopy. Kontaktujte mě!"
         />
         <link rel="shortcut icon" href="./favicon.ico" />
         <link rel="icon" type="image/png" href="./logo512.png" />
@@ -27,14 +27,14 @@ export default function Home() {
         <meta property="og:title" content="BizonTek | Jiří Malec" />
         <meta
           property="og:description"
-          content="BizonTek | Jiří Malec. Vývoj moderního softwaru na míru."
+          content="Jiří Malec | BizonTek - Vývoj softwaru na míru pro webové aplikace, portály, informační systémy a e-shopy. Kontaktujte mě!"
         />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.bizontek.cz/" />
         <meta property="twitter:title" content="BizonTek | Jiří Malec" />
         <meta
           property="twitter:description"
-          content="BizonTek | Jiří Malec. Vývoj moderního softwaru na míru."
+          content="Jiří Malec | BizonTek - Vývoj softwaru na míru pro webové aplikace, portály, informační systémy a e-shopy. Kontaktujte mě!"
         />
         <meta
           property="twitter:image"
