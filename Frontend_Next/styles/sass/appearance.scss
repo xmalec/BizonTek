@@ -117,6 +117,10 @@ body {
       display: none;
     }
   }
+  .cookiebar-wrapper {
+    transition: background-color ease-in-out 0.2s;
+  }
+
   &.bright {
     .background-image {
       opacity: 0.1 !important;
@@ -125,6 +129,10 @@ body {
       background-color: $bg-bright !important;
       border-color: $text-dark !important;
       color: $text-dark !important;
+    }
+
+    .cookiebar-wrapper {
+      background-color: #f5f5f5;
     }
   }
 }

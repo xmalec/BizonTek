@@ -7,6 +7,7 @@ import AppearanceToggle from "../Shared/AppearanceToggle";
 import ScrollTopButton from "./ScrollTopButton";
 import { useEffect } from "react";
 import { ScrollHelper } from "../../utils/ScrollHelper";
+import CookieBar from "./CookieBar";
 
 const Layout = () => {
   //console.log(document);
@@ -24,6 +25,7 @@ const Layout = () => {
         <About />
         <Services />
         <Contact />
+        <CookieBar />
       </div>
     </>
   );

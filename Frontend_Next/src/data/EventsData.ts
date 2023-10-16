@@ -31,7 +31,7 @@ export const EventModels: EventModel[] = [
     id: "optimal",
     title: "Optimal Program",
     tags: ["PHP", "Nette", "Optimal Program", "Full stack"],
-    images: ["/img/events/optimal/logo.svg"],
+    // images: ["/img/events/optimal/logo.svg"],
     description: `V této firmě jsem měl příležitost pracovat na široké škále komplexních a rozmanitých projektů, které se odehrávaly v rámci malého, týmového prostředí. Jako <b>full stack</b> vývojář jsem byl plně zapojen do všech klíčových fází projektů, ať už se jednalo o sběr požadavků, návrh, implementaci, testování, nasazení či údržbu.
 		${newLine}
 		Hlavní zaměření spočívalo ve webových aplikacích. Spolupracoval jsem na vývoji informačních systémů, rezervačních platforem, redakčních systémů, e-shopů a také aplikací určených pro elektronické testování. Tato široká paleta projektů mi především umožnila rozvinout své dovednosti v oblasti návrhu řešení pro různorodé byznysy a získat přehled o různých oblastech webového vývoje.

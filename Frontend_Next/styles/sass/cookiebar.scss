@@ -1,0 +1,61 @@
+@import "services";
+.cookiebar-wrapper {
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  background-color: $bg-dark-contact;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  box-shadow: 1px -15px 15px rgba(0, 0, 0, 0.15);
+  .cookiebar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 30px;
+    max-width: $layout-max-width;
+    width: calc(min(100% - #{$layout-side-padding * 2}, #{$layout-max-width}));
+    @include sm {
+      width: calc(
+        min(100% - #{$layout-side-padding-sm * 2}, #{$layout-max-width})
+      );
+    }
+    margin: 20px 0px;
+    @include sm-md {
+      flex-direction: column;
+      align-items: start;
+      row-gap: 20px;
+    }
+    .cookiebar-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 20px;
+      #cookiebar-title {
+        @extend .text;
+      }
+      #cookiebar-description {
+        @extend .text-xs;
+      }
+    }
+    .cookiebar-actions {
+      display: flex;
+      flex-direction: row;
+      column-gap: 30px;
+      align-items: center;
+      @include sm {
+        flex-direction: column;
+        width: 100%;
+        row-gap: 15px;
+      }
+      #cookiebar-settings-btn {
+        @extend .text-xs;
+        white-space: nowrap;
+        text-decoration: underline;
+      }
+      #cookiebar-allow-all-btn {
+        height: fit-content;
+      }
+    }
+  }
+}
