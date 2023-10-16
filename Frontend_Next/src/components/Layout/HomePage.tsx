@@ -21,17 +21,13 @@ const HomePage = () => {
           Softwarový vývojář
         </div>
         <div className="text description">
-          Zdravím a vítejte na mém webu! Jmenuji se <b>Jiří Malec</b> a
-          vystupuji pod doménou <b>BizonTek</b>. Zde na webu bych se Vám chtěl
-          představit a nabídnou mé služby coby softwarového vývojáře.
-          Specializuji se především na webové aplikace, portály, komerční a
-          informační systémy.{" "}
-          <b
-            className="more-button"
-            onClick={() => PageHelper.handleClickScroll("section-services")}
-          >
-            Zvládnu toho ale mnohem více!
-          </b>
+          Vítejte na mém webu! Jmenuji se <b>Jiří Malec</b> a zde na webu bych
+          Vám chtěl představit mé dovednosti a nabídnou mé služby coby
+          softwarového fullstack vývojáře. Dovedu implementovat různé portály,
+          komerční, informační či rezervační systémy a to ve formě webové nebo
+          mobilní aplikace. Jsem otevřený zajímavým projektům a novým výzvám.{" "}
+          <br />
+          Pokud byste měli zájem o mé služby, budu moc rád, když se mi ozvete.
         </div>
         <Socials />
 
