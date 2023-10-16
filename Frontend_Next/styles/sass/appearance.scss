@@ -2,129 +2,129 @@
 @import "scrollbar";
 
 body {
-	color: $text;
-	background-color: $bg-dark;
-	transition: background-color ease-in-out 0.2s;
-	&.bright {
-		color: $text-dark;
-		background-color: $bg-bright;
-	}
+  color: $text;
+  background-color: $bg-dark;
+  transition: background-color ease-in-out 0.2s;
+  &.bright {
+    color: $text-dark;
+    background-color: $bg-bright;
+  }
 
-	.appearance-border-text {
-		border-color: $text;
-		border-style: solid;
-		transition: border-color ease-in-out 0.2s, color ease-in-out 0.2s;
-	}
-	&.bright .appearance-border-text {
-		border-color: $text-dark;
-	}
+  .appearance-border-text {
+    border-color: $text;
+    border-style: solid;
+    transition: border-color ease-in-out 0.2s, color ease-in-out 0.2s;
+  }
+  &.bright .appearance-border-text {
+    border-color: $text-dark;
+  }
 
-	.appearance-border-text-bottom {
-		border-bottom-color: $text;
-		border-bottom-style: solid;
-		transition: border-bottom-color ease-in-out 0.2s;
-	}
-	&.bright .appearance-border-text-bottom {
-		border-bottom-color: $text-dark;
-	}
+  .appearance-border-text-bottom {
+    border-bottom-color: $text;
+    border-bottom-style: solid;
+    transition: border-bottom-color ease-in-out 0.2s;
+  }
+  &.bright .appearance-border-text-bottom {
+    border-bottom-color: $text-dark;
+  }
 
-	.appearance-bg-color-text {
-		background-color: $text;
-		transition: background-color ease-in-out 0.2s;
-	}
-	&.bright .appearance-bg-color-text {
-		background-color: $text-dark;
-	}
+  .appearance-bg-color-text {
+    background-color: $text;
+    transition: background-color ease-in-out 0.2s;
+  }
+  &.bright .appearance-bg-color-text {
+    background-color: $text-dark;
+  }
 
-	.appearance-bg-color {
-		background-color: $bg-dark;
-		transition: background-color ease-in-out 0.2s;
-	}
-	&.bright .appearance-bg-color {
-		background-color: $bg-bright;
-	}
+  .appearance-bg-color {
+    background-color: $bg-dark;
+    transition: background-color ease-in-out 0.2s;
+  }
+  &.bright .appearance-bg-color {
+    background-color: $bg-bright;
+  }
 
-	.appearance-bg-color-reverse {
-		background-color: $bg-bright;
-		color: $bg-dark;
-		transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
-	}
-	&.bright .appearance-bg-color-reverse {
-		background-color: $bg-dark;
-		color: $bg-bright;
-	}
+  .appearance-bg-color-reverse {
+    background-color: $bg-bright;
+    color: $bg-dark;
+    transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+  }
+  &.bright .appearance-bg-color-reverse {
+    background-color: $bg-dark;
+    color: $bg-bright;
+  }
 
-	.appearance-bg-color-secondary {
-		background-color: $bg-dark-secondary;
-		transition: background-color ease-in-out 0.2s;
-	}
-	&.bright .appearance-bg-color-secondary {
-		background-color: $bg-bright-secondary;
-	}
+  .appearance-bg-color-secondary {
+    background-color: $bg-dark-secondary;
+    transition: background-color ease-in-out 0.2s;
+  }
+  &.bright .appearance-bg-color-secondary {
+    background-color: $bg-bright-secondary;
+  }
 
-	.appearance-services-box {
-		border-width: 1px;
-		border-color: $text;
-		&:hover,
-		&:active {
-			background-color: $bg-dark-secondary;
-			border-color: $bg-dark-secondary;
-		}
-	}
+  .appearance-services-box {
+    border-width: 2px;
+    border-color: $text;
+    &:hover,
+    &:active {
+      background-color: $bg-dark-secondary;
+      border-color: $bg-dark-secondary;
+    }
+  }
 
-	&.bright .appearance-services-box {
-		border-width: 3px;
-		border-color: $bg-dark-secondary;
-		&:hover,
-		&:active {
-			background-color: $bg-bright-secondary;
-			border-color: $bg-bright-secondary;
-		}
-		.services__box_text {
-			font-weight: 600 !important;
-		}
-	}
+  &.bright .appearance-services-box {
+    border-width: 3px;
+    border-color: $bg-dark-secondary;
+    &:hover,
+    &:active {
+      background-color: $bg-bright-secondary;
+      border-color: $bg-bright-secondary;
+    }
+    .services__box_text {
+      font-weight: 600 !important;
+    }
+  }
 
-	.appearance-bg-color-contact {
-		background-color: $bg-dark-contact;
-		transition: background-color ease-in-out 0.2s;
-	}
-	&.bright .appearance-bg-color-contact {
-		background-color: $bg-bright-contact;
-	}
+  .appearance-bg-color-contact {
+    background-color: $bg-dark-contact;
+    transition: background-color ease-in-out 0.2s;
+  }
+  &.bright .appearance-bg-color-contact {
+    background-color: $bg-bright-contact;
+  }
 
-	.appearance-color-text-dark {
-		color: $text-dark;
-		transition: color ease-in-out 0.2s;
-	}
-	&.bright .appearance-color-text-dark {
-		color: black;
-	}
+  .appearance-color-text-dark {
+    color: $text-dark;
+    transition: color ease-in-out 0.2s;
+  }
+  &.bright .appearance-color-text-dark {
+    color: black;
+  }
 
-	.appearance-toggle {
-		.moon {
-			display: none;
-		}
-		.sun {
-			display: block;
-		}
-	}
-	&.bright .appearance-toggle {
-		.moon {
-			display: block;
-		}
-		.sun {
-			display: none;
-		}
-	}
-	&.bright {
-		.background-image {
-			opacity: 0.1 !important;
-		}
-		.event__detail {
-			background-color: $bg-bright !important;
-			border-color: $text-dark !important;
-			color: $text-dark !important;
-		}
-	}
+  .appearance-toggle {
+    .moon {
+      display: none;
+    }
+    .sun {
+      display: block;
+    }
+  }
+  &.bright .appearance-toggle {
+    .moon {
+      display: block;
+    }
+    .sun {
+      display: none;
+    }
+  }
+  &.bright {
+    .background-image {
+      opacity: 0.1 !important;
+    }
+    .event__detail {
+      background-color: $bg-bright !important;
+      border-color: $text-dark !important;
+      color: $text-dark !important;
+    }
+  }
 }

@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint-fix": "eslint \"./src/**/*.{ts,tsx}\" --fix",
+    "prettier": "prettier \"./src/**/*.{ts,tsx}\" --write"
   },
   "dependencies": {
     "final-form": "^4.20.9",
@@ -24,6 +26,13 @@
     "@types/react": "18.2.15",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",
-    "typescript": "5.1.6"
+    "typescript": "5.1.6",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "prettier": "^2.8.3"
   }
 }

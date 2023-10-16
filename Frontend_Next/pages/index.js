@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-css-tags */
 import Head from "next/head";
 import Layout from "../src/components/Layout/Layout";
 import GA4 from "../src/components/Layout/GA4";
