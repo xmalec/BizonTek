@@ -1,5 +1,6 @@
 import { FC, useState } from "react";
 import { EventModel, ModalModel } from "../../utils/Types";
+import ModalGallery from "../Modal/ModalGallery";
 
 type Props = {
   mode: Mode;
@@ -49,7 +50,8 @@ const Modal: FC<Props> = ({ mode, onClose, model }) => {
           </div>
           {model.images && model.images?.length > 0 && (
             <div className="modal__img">
-              <img src={model.images[0]} alt="Obrázek modálu" />
+              <ModalGallery images={model.images} />
+              {/* <img src={model.images[0]} alt="Obrázek modálu" /> */}
             </div>
           )}
         </div>

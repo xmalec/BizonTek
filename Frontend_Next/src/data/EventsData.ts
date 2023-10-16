@@ -2,6 +2,7 @@ import { EventModel } from "../utils/Types";
 
 const newLine = "</br></br>";
 const labclubFolder = "./img/events/labclub";
+const labnetFolder = "./img/events/labnet";
 
 export const EventModels: EventModel[] = [
   {
@@ -30,7 +31,7 @@ export const EventModels: EventModel[] = [
     id: "optimal",
     title: "Optimal Program",
     tags: ["PHP", "Nette", "Optimal Program", "Full stack"],
-    //images: ["/img/events/optimal/logo.svg"],
+    images: ["/img/events/optimal/logo.svg"],
     description: `V této firmě jsem měl příležitost pracovat na široké škále komplexních a rozmanitých projektů, které se odehrávaly v rámci malého, týmového prostředí. Jako <b>full stack</b> vývojář jsem byl plně zapojen do všech klíčových fází projektů, ať už se jednalo o sběr požadavků, návrh, implementaci, testování, nasazení či údržbu.
 		${newLine}
 		Hlavní zaměření spočívalo ve webových aplikacích. Spolupracoval jsem na vývoji informačních systémů, rezervačních platforem, redakčních systémů, e-shopů a také aplikací určených pro elektronické testování. Tato široká paleta projektů mi především umožnila rozvinout své dovednosti v oblasti návrhu řešení pro různorodé byznysy a získat přehled o různých oblastech webového vývoje.
@@ -41,19 +42,28 @@ export const EventModels: EventModel[] = [
     dateString: "2021/2022",
   },
   {
-    images: [],
     tags: [".NET", "React", "Labyrinth Brno", "Azure Cognitive Search"],
     id: "labnet",
+    images: [
+      `${labnetFolder}/labnet2.png`,
+      `${labnetFolder}/labnet1.png`,
+      `${labnetFolder}/labnet3.png`,
+    ],
     title: "LabNet",
     dateString: "léto 2023",
     description: `
   	Labnet představuje druhou aplikaci, kterou jsem vytvořil pro soukromou školu <b>Labyrinth</b>. Tato aplikace slouží jako rodičovský portál a jako nástěnka, kde rodiče a přátelé školy mohou nabízet nebo naopak poptávat různé služby.
   	${newLine}Pro implementaci této aplikace jsem využil <b>API</b> napsané v <b>ASP.NET</b>, zatímco frontend byl postaven na platformě <b>React</b>. Pro splnění požadavků na rychlé a přesné fulltextové vyhledávání byla v aplikaci integrována služba <b>Azure Cognitive Search</b>.
-  	${newLine} Design aplikace byl navrhnut <a href="https://bronislavmusil.com/cs" target="_blank">Bronislavem Musilem</a>`,
+  	${newLine} Design aplikace byl navrhnut <a href="https://bronislavmusil.com/cs" target="_blank">Bronislavem Musilem</a>
+    ${newLine} Link: <a href="https://www.labyrinthnet.cz" target="_blank">www.labyrinthnet.cz</a>`,
     date: new Date("2023-08-30"),
   },
   {
-    images: [`${labclubFolder}/labclub2.png`],
+    images: [
+      `${labclubFolder}/labclub2.png`,
+      `${labclubFolder}/labclub1.png`,
+      `${labclubFolder}/labclub3.png`,
+    ],
     tags: ["JAVA", "Bakalářská práce", "Labyrinth Brno"],
     id: "labclub",
     title: "LabClub",
@@ -86,7 +96,8 @@ export const EventModels: EventModel[] = [
 			<li>
 				Možnost vytvoření více scénářů (rozšíření vzniklo v období koronakrize)
 			</li>
-		</ul>`,
+		</ul>
+    Link: <a href="https://www.labclub.cz" target="_blank">www.labclub.cz</a>`,
     date: new Date("2020-07-21"),
   },
   {
