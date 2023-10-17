@@ -1,6 +1,7 @@
 import { FC, useCallback, useState } from "react";
 import { EventModel } from "../../utils/Types";
-import Modal, { Mode } from "../Shared/Modal";
+import Modal, { Mode } from "../Modal/Modal";
+import { useModal } from "../../hooks/useModal";
 
 type Props = {
   event: EventModel;
@@ -14,11 +15,10 @@ const getIntro = (event: EventModel) => {
 };
 
 const AboutEvent: FC<Props> = ({ event, row }) => {
-  const [modalState, setModalState] = useState(Mode.HIDE);
-  const onShowModal = useCallback(() => {
-    document.getElementsByTagName("html")[0].classList.add("fixed");
-    setModalState(Mode.SHOW);
-  }, []);
+  const [onShowModal, onCloseModal, modalState] = useModal(
+    event.title,
+    "Event"
+  );
   const listStylus = {
     gridRow: `${row}`,
   };
@@ -54,14 +54,7 @@ const AboutEvent: FC<Props> = ({ event, row }) => {
         </div>
       </div>
       {showModal && (
-        <Modal
-          model={event}
-          onClose={() => {
-            setModalState(Mode.HIDE);
-            document.getElementsByTagName("html")[0].classList.remove("fixed");
-          }}
-          mode={modalState}
-        />
+        <Modal model={event} onClose={onCloseModal} mode={modalState} />
       )}
     </>
   );

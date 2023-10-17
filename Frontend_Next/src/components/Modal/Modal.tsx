@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { EventModel, ModalModel } from "../../utils/Types";
-import ModalGallery from "../Modal/ModalGallery";
+import ModalGallery from "./ModalGallery";
 
 type Props = {
   mode: Mode;
@@ -41,12 +41,12 @@ const Modal: FC<Props> = ({ mode, onClose, model }) => {
                 ))}
               </div>
             )}
-            <p
+            <span
               className="modal__body_text"
               dangerouslySetInnerHTML={{
                 __html: model.description ?? "",
               }}
-            ></p>
+            ></span>
           </div>
           {model.images && model.images?.length > 0 && (
             <div className="modal__img">

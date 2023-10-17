@@ -118,7 +118,7 @@ body {
     }
   }
   .cookiebar-wrapper {
-    transition: background-color ease-in-out 0.2s;
+    transition: background-color ease-in-out 0.2s, transform ease-in-out 0.5s;
   }
 
   &.bright {

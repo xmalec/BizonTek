@@ -3,7 +3,7 @@ import Socials from "../Shared/Socials";
 
 const Contact = () => {
   return (
-    <div className="contact" id="section-contact">
+    <div className="contact">
       <span className="link-anchor" id="section-contact"></span>
       <div className="contact__container section">
         <div className="contact__title">

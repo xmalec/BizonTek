@@ -1,4 +1,4 @@
-import { doc } from "firebase/firestore";
+import GAHelper from "./GAHelper";
 
 const isElementInView = (element: Element, fullyInView = false) => {
   const bounding = element.getBoundingClientRect();
@@ -86,10 +86,32 @@ function manageEventsOpacity(document: Document) {
   }
 }
 
+function registerDataLayer(document: Document) {
+  var sections = [
+    { name: "ABOUT", id: "section-about" },
+    { name: "SERVICES", id: "section-services" },
+    { name: "CONTACT", id: "section-contact" },
+  ];
+  const activeSectionClass = "active-section";
+  sections.forEach((section) => {
+    const element = document.getElementById(section.id);
+    if (!hasClass(element, activeSectionClass) && isElementInView(element)) {
+      GAHelper.sendScrollEvent(section.name);
+      addClass(element, activeSectionClass);
+    } else if (
+      hasClass(element, activeSectionClass) &&
+      !isElementInView(element)
+    ) {
+      removeClass(element, activeSectionClass);
+    }
+  });
+}
+
 export class ScrollHelper {
   static onScroll = () => {
     manageNavigationBarOnScroll(document);
     manageEventsOpacity(document);
     manageScrollTop(document);
+    registerDataLayer(document);
   };
 }

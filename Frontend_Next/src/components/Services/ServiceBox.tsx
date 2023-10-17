@@ -1,30 +1,23 @@
 import { FC, useCallback, useState } from "react";
 import { ServiceModel } from "../../utils/Types";
-import Modal, { Mode } from "../Shared/Modal";
+import Modal, { Mode } from "../Modal/Modal";
+import { useModal } from "../../hooks/useModal";
 
 type Props = {
   model: ServiceModel;
 };
 
 const ServiceBox: FC<Props> = ({ model }) => {
-  const [modalState, setModalState] = useState(Mode.HIDE);
-  const showModal = useCallback(() => {
-    document.getElementsByTagName("html")[0].classList.add("fixed");
-    setModalState(Mode.SHOW);
-  }, []);
+  const [onShowModal, onCloseModal, modalState] = useModal(
+    model.title,
+    "Service"
+  );
   return (
     <>
-      <Modal
-        model={model}
-        onClose={() => {
-          setModalState(Mode.HIDE);
-          document.getElementsByTagName("html")[0].classList.remove("fixed");
-        }}
-        mode={modalState}
-      />
+      <Modal model={model} onClose={onCloseModal} mode={modalState} />
       <div
         className="services__box appearance-services-box"
-        onClick={showModal}
+        onClick={onShowModal}
       >
         <div className="services__box_img">
           <img

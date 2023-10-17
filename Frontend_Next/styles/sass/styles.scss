@@ -215,6 +215,11 @@ body {
         img {
           height: 100%;
         }
+        @include sm-md {
+          left: 0;
+          width: 100vw;
+          overflow: hidden;
+        }
       }
       .hp-grid {
         display: grid;
