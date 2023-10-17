@@ -23,8 +23,8 @@ const CookieBar = () => {
               <strong>Na tomto webu používáme cookies</strong>
             </div>
             <div id="cookiebar-description">
-              Kliknutím na tlačítko "Přijmout vše" nám dáváte souhlas ke
-              zpracování všech námi používaných souborů cookie, které nám
+              Kliknutím na tlačítko &quot;Přijmout vše&quot; nám dáváte souhlas
+              ke zpracování všech námi používaných souborů cookie, které nám
               pomáhají zejména s fungováním webových stránek, analýzou využití
               dat a s našimi marketingovými aktivitami.
               {/* <a>zjistit vice</a> */}
