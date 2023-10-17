@@ -1,14 +1,7 @@
-# BizonTek
-Public porfolio
-
-
-
-[Figma](https://www.figma.com/file/hCPscxS55HRrbqnbrkKTGT/BizonTek?node-id=0-1&t=lH06WjwFYGRt3o30-0)
-
-
 # BizonTek | Portfolio Websites
 
 [BizonTek Websites](https://www.bizontek.cz) serves as a showcase of my work.
+[Figma](https://www.figma.com/file/hCPscxS55HRrbqnbrkKTGT/BizonTek?node-id=0-1&t=lH06WjwFYGRt3o30-0)
 
 ## Table of Contents
 - [About Next.js](#about-nextjs)
