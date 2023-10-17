@@ -27,5 +27,5 @@
    ```bash
    npm run dev
 
-3. **Project is running at [localhost:3000](localhost:3000)**
+4. **Project is running at [localhost:3000](localhost:3000)**
    
