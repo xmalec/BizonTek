@@ -20,6 +20,11 @@ const Navigation = () => {
         <div className="navigation">
           <div className="title-part">
             <div className="logo">
+              <img
+                className="logo-dark"
+                src="./img/layout/logo_dark.png"
+                alt="Logo"
+              />
               <img src="./img/layout/logo.png" alt="Logo" />
             </div>
             <button

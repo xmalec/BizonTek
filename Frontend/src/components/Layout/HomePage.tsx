@@ -7,7 +7,7 @@ const HomePage = () => {
     <div className="hp section">
       <span className="link-anchor" id="section-hp"></span>
       <div className="background-image">
-        <img src="./img/layout/logo_stroke.png" alt="Logo" />
+        {/* <img src="./img/layout/logo_stroke.png" alt="Logo" /> */}
       </div>
       <div className="hp-grid">
         <div className="content-logo">
@@ -15,10 +15,10 @@ const HomePage = () => {
         </div>
 
         <div id="title-name" className="h1 name">
-          Jiří Malec
+          Ing. Jiří Malec
         </div>
         <div id="title-profession" className="h3 profession">
-          Softwarový vývojář
+          Softwarový inženýr
         </div>
         <div className="text description">
           Vítejte na mém webu! Jmenuji se <b>Jiří Malec</b> a zde na webu bych

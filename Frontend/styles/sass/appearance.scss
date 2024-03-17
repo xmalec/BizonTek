@@ -10,6 +10,10 @@ body {
     background-color: $bg-bright;
   }
 
+  &.bright .logo-dark {
+    opacity: 1 !important;
+  }
+
   .appearance-border-text {
     border-color: $text;
     border-style: solid;

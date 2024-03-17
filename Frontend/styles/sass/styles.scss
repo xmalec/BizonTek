@@ -192,6 +192,11 @@ body {
           height: 50px;
           overflow: hidden;
           border-radius: 15px;
+          position: relative;
+          .logo-dark {
+            position: absolute;
+            opacity: 0;
+          }
           img {
             width: 100%;
             height: 100%;
