@@ -354,7 +354,7 @@ body {
           grid-area: email;
           align-self: center;
           white-space: nowrap;
-          @extend .text-sm;
+          @extend .text;
           flex: 1;
           a {
             &::before {

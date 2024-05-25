@@ -3,8 +3,13 @@ export type ModalModel = {
   dateString?: string;
   description?: string;
   tags?: string[];
-  images?: string[];
+  images?: ImageModel[];
 };
+
+export type ImageModel = {
+  url: string;
+  alt: string;
+}
 
 export type EventModel = {
   id: string;

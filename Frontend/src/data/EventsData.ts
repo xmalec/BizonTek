@@ -45,9 +45,18 @@ export const EventModels: EventModel[] = [
     tags: [".NET", "React", "Labyrinth Brno", "Azure Cognitive Search"],
     id: "labnet",
     images: [
-      `${labnetFolder}/labnet2.png`,
-      `${labnetFolder}/labnet1.png`,
-      `${labnetFolder}/labnet3.png`,
+      {
+        url: `${labnetFolder}/labnet2.png`,
+        alt: 'Fulltextový vyhledávač'
+      },
+      {
+        url: `${labnetFolder}/labnet1.png`,
+        alt: 'Detail uživatele'
+      },
+      {
+        url: `${labnetFolder}/labnet3.png`,
+        alt: 'Nástěnka'
+      }
     ],
     title: "LabNet",
     dateString: "léto 2023",
@@ -60,9 +69,18 @@ export const EventModels: EventModel[] = [
   },
   {
     images: [
-      `${labclubFolder}/labclub2.png`,
-      `${labclubFolder}/labclub1.png`,
-      `${labclubFolder}/labclub3.png`,
+      {
+        url: `${labclubFolder}/labclub2.png`,
+        alt: 'Ukázka aplikace – Výpis studentů'
+      },
+      {
+        url: `${labclubFolder}/labclub1.png`,
+        alt: 'Ukázka aplikace – Výpis kroužků'
+      },
+      {
+        url: `${labclubFolder}/labclub3.png`,
+        alt: 'Mobilní design'
+      }
     ],
     tags: ["JAVA", "Bakalářská práce", "Labyrinth Brno"],
     id: "labclub",

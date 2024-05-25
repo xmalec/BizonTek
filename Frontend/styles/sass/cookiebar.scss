@@ -2,12 +2,12 @@
 .cookiebar-wrapper {
   width: 100%;
   position: fixed;
-  bottom: 0;
+  bottom: 0px;
   background-color: $bg-dark-contact;
   z-index: 2;
   display: flex;
   justify-content: center;
-  box-shadow: 1px -15px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px -15px 15px rgba(0, 0, 0, 0.15);
   transform: translateY(100%);
   &.show {
     transform: translateY(0px);

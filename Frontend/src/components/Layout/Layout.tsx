@@ -13,6 +13,7 @@ const Layout = () => {
   //console.log(document);
   useEffect(() => {
     document.addEventListener("scroll", ScrollHelper.onScroll);
+    ScrollHelper.onScroll();
   }, []);
 
   return (
