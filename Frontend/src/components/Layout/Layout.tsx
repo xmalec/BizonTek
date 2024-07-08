@@ -8,6 +8,7 @@ import ScrollTopButton from "./ScrollTopButton";
 import { useEffect } from "react";
 import { ScrollHelper } from "../../utils/ScrollHelper";
 import CookieBar from "./CookieBar";
+import ServicesCarousel from "../ServicesCarousel/ServicesCarousel";
 
 const Layout = () => {
   //console.log(document);
@@ -24,7 +25,7 @@ const Layout = () => {
         <AppearanceToggle isAbsolute={true} />
         <HomePage />
         <About />
-        <Services />
+        <ServicesCarousel />
         <Contact />
         <CookieBar />
       </div>

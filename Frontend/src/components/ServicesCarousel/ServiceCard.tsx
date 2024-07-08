@@ -21,10 +21,7 @@ const ServiceCard: FC<Props> = ({ model }) => {
   return (
     <>
       <Modal model={model} onClose={onCloseModal} mode={modalState} />
-      <div
-        className="crossroad{% if item.bg %} crossroad--bg{% endif %} js-toggle-parent"
-        data-breakpoint="1000px"
-      >
+      <div className="crossroad js-toggle-parent" data-breakpoint="1000px">
         <button
           type="button"
           className="more-btn js-toggle-btn u-hide@lg"
