@@ -7,6 +7,12 @@ type Props = {
   model: ServiceModel;
 };
 
+const getIntro = (event: ServiceModel) => {
+  const maxLength = 200;
+  const idx = event.description.lastIndexOf(".", maxLength);
+  return event.description.substring(0, idx + 1);
+};
+
 const ServiceBox: FC<Props> = ({ model }) => {
   const [onShowModal, onCloseModal, modalState] = useModal(
     model.title,
@@ -25,10 +31,17 @@ const ServiceBox: FC<Props> = ({ model }) => {
             alt="Thumbnail služby"
           />
         </div>
+        <div className="services__box_overlay"></div>
         <div className="services__box_glass">
           <i className="far fa-search"></i>
         </div>
-        <span className="services__box_text">{model.title}</span>
+        <div className="services__box_text_container">
+          <div className="services__box_title">{model.title}</div>
+          <div
+            className="services__box_description"
+            dangerouslySetInnerHTML={{ __html: getIntro(model) }}
+          ></div>
+        </div>
       </div>
     </>
   );

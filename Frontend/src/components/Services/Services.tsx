@@ -9,8 +9,8 @@ const Services = () => {
   return (
     <div className="services section">
       <span className="link-anchor" id="section-services"></span>
+      <div className="services__title h2">Nabízím</div>
       <div className="services__grid">
-        <div className="services__title h2">Nabízím</div>
         {services != undefined &&
           services
             .map((x) => x as ServiceModel)

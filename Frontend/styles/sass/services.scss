@@ -38,31 +38,40 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 100% 10px 0 10px;
+      padding: 150% 10px 0 10px;
       cursor: pointer;
       transition: all ease-in-out 0.2s;
       overflow: hidden;
       &:hover,
       &:active {
         .services__box_img {
-          opacity: 0.2;
+          opacity: 0;
         }
         .services__box_glass {
           opacity: 1;
         }
+        .services__box_text_container {
+          top: calc(10%);
+        }
       }
 
-      .services__box_text {
-        @extend .text-xl;
-        font-size: 28px;
-        @include sm {
-          font-size: 18px;
-        }
+      .services__box_text_container {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 95%;
+        top: calc(100% - 100px);
+        padding: 10px;
+        transition: top ease-in-out 0.2s;
+
+        .services__box_title {
+          height: 100px;
+          @extend .text-xl;
+          font-size: 28px;
+          @include sm {
+            font-size: 18px;
+          }
+        }
+        .services__box_description {
+          @extend .text;
+        }
       }
 
       .services__box_img {
@@ -70,12 +79,25 @@
         top: 0;
         left: 0;
         height: 100%;
-        opacity: 0;
+        //opacity: 0;
         transition: opacity ease-in-out 0.2s;
         background-color: $bg-bright;
         img {
           height: 100%;
         }
+      }
+
+      .services__box_overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(
+          to top,
+          rgba($bg-dark, 1),
+          rgba($bg-dark, 0)
+        );
+        height: 50%;
+        width: 100%;
       }
 
       .services__box_glass {
