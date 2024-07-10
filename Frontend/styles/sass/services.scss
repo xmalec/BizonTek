@@ -11,6 +11,12 @@
       min(100% - #{$layout-side-padding-sm * 2}, #{$layout-max-width})
     );
   }
+  .services__title {
+    padding-bottom: 25px;
+    @include sm {
+      font-size: 25px;
+    }
+  }
   .services__grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
@@ -22,13 +28,6 @@
       gap: 10px;
     }
 
-    .services__title {
-      text-align: center;
-
-      @include sm {
-        font-size: 25px;
-      }
-    }
     .services__box {
       position: relative;
 
@@ -37,7 +36,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
+
       padding: 150% 10px 0 10px;
       cursor: pointer;
       transition: all ease-in-out 0.2s;
@@ -47,30 +46,35 @@
         .services__box_img {
           opacity: 0;
         }
-        .services__box_glass {
-          opacity: 1;
-        }
         .services__box_text_container {
           top: calc(10%);
+          .services__box_description {
+            opacity: 1;
+          }
         }
       }
 
       .services__box_text_container {
         position: absolute;
-        top: calc(100% - 100px);
-        padding: 10px;
+        top: calc(100% - 90px);
+        padding: 0 15px;
         transition: top ease-in-out 0.2s;
+        height: 100%;
 
         .services__box_title {
-          height: 100px;
+          padding-bottom: 25px;
+
           @extend .text-xl;
           font-size: 28px;
           @include sm {
-            font-size: 18px;
+            font-size: 22px;
           }
         }
         .services__box_description {
+          opacity: 0;
           @extend .text;
+          height: 100%;
+          overflow: hidden;
         }
       }
 
@@ -102,8 +106,13 @@
 
       .services__box_glass {
         position: absolute;
-        top: 12px;
-        right: 10px;
+        top: 0px;
+        right: 0px;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: end;
+        align-items: start;
         opacity: 0;
         transition: opacity ease-in-out 0.2s;
         @include lg {
@@ -111,6 +120,14 @@
         }
         @include sm-md {
           opacity: 1;
+        }
+        background-image: radial-gradient(
+          circle at top right,
+          rgba($bg-dark, 1) 0%,
+          rgba($bg-dark, 0) 60%
+        );
+        i {
+          padding: 20px;
         }
       }
     }
