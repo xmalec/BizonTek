@@ -7,7 +7,7 @@ export const ServiceModels: ServiceModel[] = [
     id: "web-app",
     title: "Webové aplikace",
     order: 0,
-    thumbnail: "web-application.png",
+    thumbnail: "web-application.jfif",
     tags: [".NET", "MVC", "MSSQL", "React", "Git", "CI/CD"],
     description: `Jako fullstack vývojář se specializuji na vývoj webových aplikací, které jsou šité na míru potřebám mých klientů. Při spolupráci dbám na kvalitní a rychlou podporu.${newLine}
         Zahájení projektu doprovází návrh aplikace a zaznamenání zadání pomocí <b>UML</b> (Unified Modeling Language). Následně se navrhne design aplikace. Po zpracování všech připomínek se začne se samotným vývojem. Během vývoje se může vytvořit testovací prostředí (tzv. <b>UAT</b>), pomoci kterého klient získá přehled o aktuálním stavu aplikace a případně se může podílet na testování jednotlivých částí aplikace.
@@ -66,7 +66,7 @@ export const ServiceModels: ServiceModel[] = [
     id: "hosting",
     title: "Spolehlivý hosting",
     order: 6,
-    thumbnail: "hosting.png",
+    thumbnail: "hosting.jfif",
     tags: ["VPS", "Docker", "Azure", "Windows Server", "IIS"],
     description:
       "Pro hostování webových aplikací používám <b>Linuxový VPS</b> (Virtual Private Server), který mi umožňuje mít plnou kontrolu nad konfigurací a správou serveru. Pro izolaci aplikací využívám Docker kontejnerů, což mi umožňuje jednoduchou správu a nasazení aplikací. </br></br> Pokud máte zájem o nasazení své aplikace ve vlastním prostředí, například pomocí <b>Dockeru</b>, <b>Kubernetes</b>, <b>App Service od Azure</b> nebo <b>IIS</b> (Internet Information Services), mohu se o to také postarat. Nastavení a konfigurace těchto prostředí jsou mi dobře známé, a proto vám mohu pomoci s nasazením vaší aplikace do vybraného prostředí a zajistit, aby vše fungovalo hladce.",
