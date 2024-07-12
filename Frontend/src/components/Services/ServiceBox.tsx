@@ -20,11 +20,15 @@ const ServiceBox: FC<Props> = ({ model }) => {
   );
   return (
     <>
-      <Modal model={model} onClose={onCloseModal} mode={modalState} />
       <div
         className="services__box appearance-services-box"
-        onClick={onShowModal}
+        onClick={() => onShowModal(modalState)}
       >
+        <Modal
+          model={model}
+          onClose={() => onCloseModal(modalState)}
+          mode={modalState}
+        />
         <div className="services__box_img">
           <img
             src={`./img/services/${model.thumbnail}`}

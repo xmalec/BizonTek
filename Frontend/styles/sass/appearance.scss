@@ -23,6 +23,18 @@ body {
     border-color: $text-dark;
   }
 
+  &.bright .services__box_overlay {
+    background-image: linear-gradient(
+      to top,
+      rgba($bg-bright-contact, 1),
+      rgba($bg-bright-contact, 0)
+    ) !important;
+  }
+
+  &.bright .services__box_title {
+    font-weight: 500 !important;
+  }
+
   .appearance-border-text-bottom {
     border-bottom-color: $text;
     border-bottom-style: solid;
