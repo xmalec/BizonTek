@@ -44,7 +44,7 @@ export const ServiceModels: ServiceModel[] = [
     thumbnail: "hosting.jpg",
     tags: ["VPS", "Docker", "Azure", "Windows Server", "IIS"],
     description:
-      "Pro hostování webových aplikací používám <b>Linuxový VPS</b> (Virtual Private Server), který mi umožňuje mít plnou kontrolu nad konfigurací a správou serveru. Pro izolaci aplikací využívám Docker kontejnerů, což mi umožňuje jednoduchou správu a nasazení aplikací. </br></br> Pokud máte zájem o nasazení své aplikace ve vlastním prostředí, například pomocí <b>Dockeru</b>, <b>Kubernetes</b>, <b>App Service od Azure</b> nebo <b>IIS</b> (Internet Information Services), mohu se o to také postarat. Nastavení a konfigurace těchto prostředí jsou mi dobře známé, a proto vám mohu pomoci s nasazením vaší aplikace do vybraného prostředí a zajistit, aby vše fungovalo hladce.",
+      `V rámci společné spolupráce nabízím i hostování vašich aplikací. Postarám se o všechny záležistosti spojené se zabezpečeným a spolehlivých provozem systému. Součástí správy je i možnost nastavení e-mailového serveru nebo zajištění vlastní domény s důvěryhodným SSL certifikátem.${newLine}Pro hostování webových aplikací používám <b>virtuální servery</b> s operačním systémem <b>Windows Server</b>.${newLine}Pokud máte zájem o nasazení své aplikace ve vlastním prostředí, technologie jako <b>Docker</b>, <b>Kubernetes</b>, <b>App Service od Azure</b> nebo <b>IIS</b> (Internet Information Services) jsou mi dobře známé.`,
   },
   // {
   //   id: "reservation-systems",

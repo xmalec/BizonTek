@@ -33,7 +33,7 @@ const AboutEvent: FC<Props> = ({ event, row }) => {
           {showModal && (
             <button
               className="event__detail btn btn-sm btn-animated"
-              onClick={onShowModal}
+              onClick={() => onShowModal(modalState)}
             >
               Více
             </button>
@@ -54,7 +54,11 @@ const AboutEvent: FC<Props> = ({ event, row }) => {
         </div>
       </div>
       {showModal && (
-        <Modal model={event} onClose={onCloseModal} mode={modalState} />
+        <Modal
+          model={event}
+          onClose={() => onCloseModal(modalState)}
+          mode={modalState}
+        />
       )}
     </>
   );

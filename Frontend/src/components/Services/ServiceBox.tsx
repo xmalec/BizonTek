@@ -8,9 +8,12 @@ type Props = {
 };
 
 const getIntro = (event: ServiceModel) => {
-  const maxLength = 200;
-  const idx = event.description.lastIndexOf(".", maxLength);
-  return event.description.substring(0, idx + 1);
+  const maxLength = 250;
+  const idx = event.description.lastIndexOf(" ", maxLength);
+  if (idx < event.description.length - 1) {
+    return event.description.substring(0, idx) + "...";
+  }
+  return event.description;
 };
 
 const ServiceBox: FC<Props> = ({ model }) => {
