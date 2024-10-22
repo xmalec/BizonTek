@@ -1,0 +1,47 @@
+name: Deploy
+
+on: workflow_dispatch
+
+env:
+  NODE_VERSION: '20'        # Set the Node.js version
+  DOTNET_VERSION: '8.0.x'    # Set the .NET version
+
+jobs:
+  deploy:
+    name: Deploy app
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Frontend build
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install npm dependencies
+        run: npm install
+        working-directory: ./Frontend
+  
+      - name: Build frontend using Gulp
+        run: gulp
+        working-directory: ./Frontend
+
+      # Backend build
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Restore .NET dependencies
+        run: dotnet restore ./Backend/src/Web.csproj
+
+      - name: Deploy using publish profile
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 1
+          max_attempts: 3
+          command: dotnet publish ./Backend/src/Web.csproj --configuration Release /p:PublishProfile=./Backend/src/Properties/PublishProfiles/webdeploy.pubxml /p:Password=${{ secrets.DEPLOY_PASSWORD }}
+        
