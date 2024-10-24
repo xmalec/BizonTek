@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Web.Models;
+using Web.Services;
 
 namespace Web.Controllers
 {
@@ -7,21 +8,21 @@ namespace Web.Controllers
     [ApiController]
     public class ContactController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult Get()
+        private readonly IEmailService emailService;
+
+        public ContactController(IEmailService emailService)
         {
-            return Ok("Contact Controller");
+            this.emailService = emailService;
         }
 
         [HttpPost]
-        public IActionResult SendEmail([FromBody] ContactFormModel contact)
+        public async Task<IActionResult> SendEmail([FromBody] ContactFormModel contact)
         {
             if (contact == null)
             {
                 return BadRequest();
             }
-
-            // Save contact to database
+            await emailService.SendNewContactInfo(contact);
             return Ok();
         }
     }

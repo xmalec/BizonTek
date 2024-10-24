@@ -9,6 +9,7 @@ export const useContactForm = () => {
   const [mode, setMode] = useState(Mode.Form);
   const onSubmit = useCallback(
     async (values: object) => {
+      values["createdDate"] = new Date().toISOString();
       save(values);
       setMode(Mode.ThankYou);
       sendEmail(values);
@@ -21,7 +22,7 @@ export const useContactForm = () => {
 
 const sendEmail = async (values: object) => {
   try {
-    const response = await fetch("php/send-email.php", {
+    const response = await fetch("api/contact", {
       method: "POST",
       body: JSON.stringify(values),
       headers: {
