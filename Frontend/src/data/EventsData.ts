@@ -46,15 +46,15 @@ export const EventModels: EventModel[] = [
     id: "labnet",
     images: [
       {
-        url: `${labnetFolder}/labnet2.png`,
+        url: `${labnetFolder}/labnet2.webp`,
         alt: 'Fulltextový vyhledávač'
       },
       {
-        url: `${labnetFolder}/labnet1.png`,
+        url: `${labnetFolder}/labnet1.webp`,
         alt: 'Detail uživatele'
       },
       {
-        url: `${labnetFolder}/labnet3.png`,
+        url: `${labnetFolder}/labnet3.webp`,
         alt: 'Nástěnka'
       }
     ],
@@ -70,15 +70,15 @@ export const EventModels: EventModel[] = [
   {
     images: [
       {
-        url: `${labclubFolder}/labclub2.png`,
+        url: `${labclubFolder}/labclub2.webp`,
         alt: 'Ukázka aplikace – Výpis studentů'
       },
       {
-        url: `${labclubFolder}/labclub1.png`,
+        url: `${labclubFolder}/labclub1.webp`,
         alt: 'Ukázka aplikace – Výpis kroužků'
       },
       {
-        url: `${labclubFolder}/labclub3.png`,
+        url: `${labclubFolder}/labclub3.webp`,
         alt: 'Mobilní design'
       }
     ],

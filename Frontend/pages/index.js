@@ -21,7 +21,7 @@ export default function Home() {
 
         <meta
           property="og:image"
-          content="https://www.bizontek.cz/img/metadata/image.jpg"
+          content="https://www.bizontek.cz/img/metadata/image.webp"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.bizontek.cz/" />
@@ -39,7 +39,7 @@ export default function Home() {
         />
         <meta
           property="twitter:image"
-          content="https://www.bizontek.cz/img/metadata/image.jpg"
+          content="https://www.bizontek.cz/img/metadata/image.webp"
         />
         <meta name="theme-color" content="#efbe40" />
 

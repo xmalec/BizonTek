@@ -22,10 +22,10 @@ const Navigation = () => {
             <div className="logo">
               <img
                 className="logo-dark"
-                src="./img/layout/logo_dark.png"
+                src="./img/layout/logo_dark.webp"
                 alt="Logo"
               />
-              <img src="./img/layout/logo.png" alt="Logo" />
+              <img src="./img/layout/logo.webp" alt="Logo" />
             </div>
             <button
               className="title"

@@ -7,11 +7,11 @@ const HomePage = () => {
     <div className="hp section">
       <span className="link-anchor" id="section-hp"></span>
       <div className="background-image">
-        {/* <img src="./img/layout/logo_stroke.png" alt="Logo" /> */}
+        {/* <img src="./img/layout/logo_stroke.webp" alt="Logo" /> */}
       </div>
       <div className="hp-grid">
         <div className="content-logo">
-          <img src="./img/layout/profile-image.jpg" alt="Profilový obrázek" />
+          <img src="./img/layout/profile-image.webp" alt="Profilový obrázek" />
         </div>
 
         <div id="title-name" className="h1 name">
