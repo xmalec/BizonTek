@@ -1,6 +1,6 @@
-import { FC, useCallback, useState } from "react";
+import { FC } from "react";
 import { EventModel } from "../../utils/Types";
-import Modal, { Mode } from "../Modal/Modal";
+import Modal from "../Modal/Modal";
 import { useModal } from "../../hooks/useModal";
 
 type Props = {

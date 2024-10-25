@@ -22,10 +22,10 @@ const Navigation = () => {
             <div className="logo">
               <img
                 className="logo-dark"
-                src="./img/layout/logo_dark.webp"
+                src="./img/layout/logo_dark.webp" fetchPriority="high" 
                 alt="Logo"
               />
-              <img src="./img/layout/logo.webp" alt="Logo" />
+              <img src="./img/layout/logo.webp" alt="Logo" fetchPriority="high" />
             </div>
             <button
               className="title"

@@ -17,7 +17,7 @@ export default function Home() {
           content="Jiří Malec | BizonTek - Vývoj softwaru na míru pro webové aplikace, portály, informační systémy a e-shopy. Kontaktujte mě!"
         />
         <link rel="shortcut icon" href="./favicon.ico" />
-        <link rel="icon" type="image/png" href="./logo512.png" />
+        <link rel="icon" type="image/png" href="./logo512.webp" />
 
         <meta
           property="og:image"

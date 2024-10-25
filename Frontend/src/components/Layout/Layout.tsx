@@ -10,7 +10,6 @@ import { ScrollHelper } from "../../utils/ScrollHelper";
 import CookieBar from "./CookieBar";
 
 const Layout = () => {
-  //console.log(document);
   useEffect(() => {
     document.addEventListener("scroll", ScrollHelper.onScroll);
     ScrollHelper.onScroll();

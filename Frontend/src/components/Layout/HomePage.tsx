@@ -11,7 +11,7 @@ const HomePage = () => {
       </div>
       <div className="hp-grid">
         <div className="content-logo">
-          <img src="./img/layout/profile-image.webp" alt="Profilový obrázek" />
+          <img src="./img/layout/profile-image.webp" alt="Profilový obrázek" fetchPriority="high" />
         </div>
 
         <div id="title-name" className="h1 name">

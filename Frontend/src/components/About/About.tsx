@@ -1,9 +1,3 @@
-import { useEffect } from "react";
-import useFirestoreCollection from "../../hooks/useFirestoreCollection";
-import { EventModel } from "../../utils/Types";
-import AboutEvent from "./Event";
-import { useEvents } from "../../hooks/useDataLoadProvider";
-import { EventModels } from "../../data/EventsData";
 import Timeline from "./Timeline";
 
 const About = () => {

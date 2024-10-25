@@ -36,6 +36,7 @@ const ServiceBox: FC<Props> = ({ model }) => {
           <img
             src={`./img/services/${model.thumbnail}`}
             alt="Thumbnail služby"
+            loading="lazy"
           />
         </div>
         <div className="services__box_overlay"></div>
