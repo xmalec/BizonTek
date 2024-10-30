@@ -2,6 +2,8 @@ import { useCallback } from "react";
 import { PageHelper } from "../../utils/PageHelper";
 import AppearanceToggle from "../Shared/AppearanceToggle";
 import ContactButton from "../Shared/ContactButton";
+import SvgIcon from "../Shared/SvgIcon";
+import { Icons } from "../../utils/Icons";
 
 const Navigation = () => {
   const onBarsClick = useCallback(() => {
@@ -42,10 +44,12 @@ const Navigation = () => {
                 onClick={onBarsClick}
               >
                 <span className="bars">
-                  <i className="fal fa-bars"></i>
+                  <SvgIcon name={Icons.Bars} />
+                  {/* <i className="fal fa-bars"></i> */}
                 </span>
                 <span className="times">
-                  <i className="fal fa-times"></i>
+                  <SvgIcon name={Icons.Times} />
+                  {/* <i className="fal fa-times"></i> */}
                 </span>
               </button>
             </div>
