@@ -33,7 +33,7 @@
 		}
 		.contact__info-grid {
 			grid-area: info;
-			align-self: end;
+			align-self: flex-end;
 			@extend .text;
 			display: grid;
 			grid-template-columns: 1fr;
@@ -51,7 +51,7 @@
 			.socials {
 				grid-area: socials;
 				@include md {
-					justify-self: end;
+					justify-self: flex-end;
 				}
 			}
 			.contact__cities {
@@ -60,7 +60,7 @@
 			.contact__email {
 				grid-area: email;
 				@include md {
-					justify-self: end;
+					justify-self: flex-end;
 				}
 			}
 			@include md {
@@ -86,7 +86,7 @@
 		}
 		.contact__form {
 			grid-area: form;
-			justify-self: end;
+			justify-self: flex-end;
 			width: 100%;
 			max-height: 620px;
 
@@ -156,7 +156,7 @@
 				}
 				.thank-you__icon {
 					grid-area: icon;
-					justify-self: end;
+					justify-self: flex-end;
 					font-size: 30px;
 				}
 			}

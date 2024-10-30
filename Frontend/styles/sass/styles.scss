@@ -308,7 +308,7 @@ body {
           gap: 15px;
           text-align: center;
           @include sm-md {
-            align-self: end;
+            align-self: flex-end;
             justify-self: center;
           }
           @include sm {
@@ -332,20 +332,20 @@ body {
         }
         .socials {
           grid-area: text4;
-          align-self: end;
+          align-self: flex-end;
           font-size: 30px;
           span {
             font-size: 30px;
           }
           @include md {
-            justify-self: end;
+            justify-self:flex-end;
           }
         }
 
         .contact-btn {
           grid-area: button;
           align-self: center;
-          justify-self: end;
+          justify-self: flex-end;
           @include sm-md {
             justify-self: center;
           }
