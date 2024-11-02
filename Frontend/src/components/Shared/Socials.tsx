@@ -1,5 +1,7 @@
 import { FC, useCallback, useState } from "react";
 import GAHelper from "../../utils/GAHelper";
+import { Icons } from "../../utils/Icons";
+import SvgIcon from "./SvgIcon";
 
 const Socials = () => {
   const onClick = useCallback((action: string) => {
@@ -13,7 +15,9 @@ const Socials = () => {
         rel="noreferrer"
         onClick={() => onClick("LinkedIn")}
       >
-        <i className="fab fa-linkedin"></i>
+        <SvgIcon name={Icons.LinkedIn} size={26} className="icon-dark" />
+        <SvgIcon name={Icons.LinkedIn_Light} size={26} className="icon-bright" />
+        {/* <i className="fab fa-linkedin"></i> */}
       </a>
       <a
         href="https://github.com/xmalec"
@@ -21,14 +25,18 @@ const Socials = () => {
         rel="noreferrer"
         onClick={() => onClick("GitHub")}
       >
-        <i className="fab fa-github"></i>
+        <SvgIcon name={Icons.GitHub} size={26} className="icon-dark" />
+        <SvgIcon name={Icons.GitHub_Light} size={26} className="icon-bright" />
+        {/* <i className="fab fa-github"></i> */}
       </a>
       <a
         href="/files/cv_jiri_malec.pdf"
         target="_blank"
         onClick={() => onClick("CV")}
       >
-        <span className="text-xl">CV</span>
+        <SvgIcon name={Icons.CV} size={24} className="icon-dark" />
+        <SvgIcon name={Icons.CV_Light} size={24} className="icon-bright" />
+        {/* <span className="text-xl">CV</span> */}
       </a>
     </div>
   );

@@ -1,6 +1,8 @@
 import { FC, useState } from "react";
 import { EventModel, ModalModel } from "../../utils/Types";
 import ModalGallery from "./ModalGallery";
+import SvgIcon from "../Shared/SvgIcon";
+import { Icons } from "../../utils/Icons";
 
 type Props = {
   mode: Mode;
@@ -26,7 +28,8 @@ const Modal: FC<Props> = ({ mode, onClose, model }) => {
           type="button"
           className="modal__close-button btn btn-sm shadow appearance-bg-color-reverse"
         >
-          <i className="fas fa-times"></i>
+          <SvgIcon name={Icons.Times} />
+          {/* <i className="fas fa-times"></i> */}
         </button>
         <div className="modal__body-container">
           <div className="modal__body section">

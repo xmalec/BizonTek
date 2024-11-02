@@ -1,5 +1,6 @@
 import AboutEvent from "./Event";
 import { EventModels } from "../../data/EventsData";
+import React from "react";
 
 const Timeline = () => {
   let row = 3;
@@ -25,17 +26,17 @@ const Timeline = () => {
           row = row + 1;
           if (yearEvents.length > 0) {
             return (
-              <>
+              <React.Fragment key={key}>
                 {yearEvents.map((e, eKey) => {
                   row = row + 1;
                   return (
-                    <>
+                    <React.Fragment key={`${key}_${eKey}`}>
                       <AboutEvent
                         event={e}
                         key={`aboutEvent__${key}_${eKey}`}
                         row={row}
                       />
-                    </>
+                    </React.Fragment>
                   );
                 })}
                 <div
@@ -47,10 +48,10 @@ const Timeline = () => {
                   }}
                   key={`line-point__${key}`}
                 ></div>
-              </>
+              </React.Fragment>
             );
           }
-          return <></>;
+          return <React.Fragment key={key}></React.Fragment>;
         })}
     </>
   );

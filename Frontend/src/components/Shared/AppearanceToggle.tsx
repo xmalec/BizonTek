@@ -1,5 +1,7 @@
 import { FC, useCallback } from "react";
 import GAHelper from "../../utils/GAHelper";
+import { Icons } from "../../utils/Icons";
+import SvgIcon from "./SvgIcon";
 
 type Props = {
   isAbsolute?: boolean;
@@ -22,10 +24,12 @@ const AppearanceToggle: FC<Props> = ({ isAbsolute = false }) => {
       onClick={onClick}
     >
       <button className="sun">
-        <i className="fal fa-sun"></i>
+      <SvgIcon name={Icons.Sun} />
+        {/* <i className="fal fa-sun"></i> */}
       </button>
       <button className="moon">
-        <i className="fal fa-moon"></i>
+      <SvgIcon name={Icons.Moon} />
+        {/* <i className="fal fa-moon"></i> */}
       </button>
     </div>
   );

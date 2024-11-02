@@ -2,6 +2,8 @@ import { FC, useCallback, useState } from "react";
 import { ServiceModel } from "../../utils/Types";
 import Modal, { Mode } from "../Modal/Modal";
 import { useModal } from "../../hooks/useModal";
+import { Icons } from "../../utils/Icons";
+import SvgIcon from "../Shared/SvgIcon";
 
 type Props = {
   model: ServiceModel;
@@ -41,7 +43,8 @@ const ServiceBox: FC<Props> = ({ model }) => {
         </div>
         <div className="services__box_overlay"></div>
         <div className="services__box_glass">
-          <i className="far fa-search"></i>
+        <SvgIcon name={Icons.Search} />
+          {/* <i className="far fa-search"></i> */}
         </div>
         <div className="services__box_text_container">
           <div className="services__box_title">{model.title}</div>

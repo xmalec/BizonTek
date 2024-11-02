@@ -6,6 +6,8 @@ import TextInput from "./components/TextInput";
 import CheckboxInput from "./components/CheckboxInput";
 import { useContactForm } from "../hooks/useContactForm";
 import ThankYou from "../components/Contact/ThankYou";
+import { Icons } from "../utils/Icons";
+import SvgIcon from "../components/Shared/SvgIcon";
 
 export enum Mode {
   Form,
@@ -69,7 +71,8 @@ const ContactForm: FC = () => {
           <div className="h2 thank-you__title">Díky za zprávu!</div>
           <div className="text-xxl thank-you__text">Brzo se Vám ozvu.</div>
           <div className="thank-you__icon">
-            <i className="fas fa-check-circle"></i>
+            <SvgIcon name={Icons.Check} />
+            {/* <i className="fas fa-check-circle"></i> */}
           </div>
         </div>
       </div>
