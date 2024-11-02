@@ -1,4 +1,3 @@
-import { PageHelper } from "../../utils/PageHelper";
 import ContactButton from "../Shared/ContactButton";
 import Socials from "../Shared/Socials";
 
@@ -11,7 +10,7 @@ const HomePage = () => {
       </div>
       <div className="hp-grid">
         <div className="content-logo">
-          <img src="./img/layout/profile-image.webp" alt="Profilový obrázek" fetchPriority="high" />
+          <img src="./img/layout/profile-image.webp" alt="Profilový obrázek" fetchpriority="high" />
         </div>
 
         <div id="title-name" className="h1 name">

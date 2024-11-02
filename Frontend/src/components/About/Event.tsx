@@ -1,7 +1,7 @@
-import { FC } from "react";
 import { EventModel } from "../../utils/Types";
 import Modal from "../Modal/Modal";
 import { useModal } from "../../hooks/useModal";
+import { FC } from "react";
 
 type Props = {
   event: EventModel;

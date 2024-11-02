@@ -7,7 +7,7 @@ const ThankYou = () => (
       <div className="h2 thank-you__title">Díky za zprávu!</div>
       <div className="text-xxl thank-you__text">Brzo se Vám ozvu.</div>
       <div className="thank-you__icon">
-      <SvgIcon name={Icons.Check} />
+        <SvgIcon name={Icons.Check} size={5} />
         {/* <i className="fas fa-check-circle"></i> */}
       </div>
     </div>

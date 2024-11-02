@@ -44,7 +44,6 @@ export default function Home() {
         <meta name="theme-color" content="#efbe40" />
 
         <link rel="manifest" href="manifest.json" />
-        <link rel="stylesheet" href="./styles/fontawesome/css/all.css" />
         <title>BizonTek | Jiří Malec</title>
       </Head>
       <GA4 />
