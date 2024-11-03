@@ -31,7 +31,7 @@ const HomePage = () => {
         <Socials />
 
         <div className="contact-email">
-          <a href="mailto:jiri.malec@bizontek.cz" type="button">
+          <a href="mailto:jiri.malec@bizontek.cz" type="button" aria-label="Napsat e-mail">
             jiri.malec@bizontek.cz
           </a>
         </div>

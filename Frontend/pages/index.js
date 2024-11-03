@@ -2,8 +2,12 @@
 import Head from "next/head";
 import Layout from "../src/components/Layout/Layout";
 import GA4 from "../src/components/Layout/GA4";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    this.document.documentElement.lang = "cs";
+  }, []);
   return (
     <>
       <Head>

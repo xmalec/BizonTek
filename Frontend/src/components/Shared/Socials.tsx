@@ -17,6 +17,7 @@ const Socials:FC<Props> = ({isSmall = false}) => {
         href="https://www.linkedin.com/in/jiri-malec/"
         target="_blank"
         rel="noreferrer"
+        aria-label="Můj LinkedIn profil"
         onClick={() => onClick("LinkedIn")}
       >
         <SvgIcon name={Icons.LinkedIn} size={isSmall ? 24 : 27} className="icon-dark" />
@@ -26,6 +27,7 @@ const Socials:FC<Props> = ({isSmall = false}) => {
         href="https://github.com/xmalec"
         target="_blank"
         rel="noreferrer"
+        aria-label="Můj GitHub profil"
         onClick={() => onClick("GitHub")}
       >
         <SvgIcon name={Icons.GitHub} size={isSmall ? 24 : 27} className="icon-dark" />
@@ -34,6 +36,7 @@ const Socials:FC<Props> = ({isSmall = false}) => {
       <a
         href="/files/cv_jiri_malec.pdf"
         target="_blank"
+        aria-label="Můj životopis"
         onClick={() => onClick("CV")}
       >
         <SvgIcon name={Icons.CV} width={isSmall ? 22 : 24} height={isSmall ? 26 : 29} className="icon-dark" />

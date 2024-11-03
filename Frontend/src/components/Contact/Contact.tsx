@@ -17,7 +17,8 @@ const Contact = () => {
           <span className="contact__cities color-transition">
             Brno, Jihlava
           </span>
-          <a className="contact__email" href="mailto:jiri.malec@bizontek.cz">
+          <a className="contact__email" href="mailto:jiri.malec@bizontek.cz"
+            aria-label="Napsat e-mail">
             jiri.malec@bizontek.cz
           </a>
         </div>

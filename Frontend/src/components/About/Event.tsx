@@ -34,6 +34,7 @@ const AboutEvent: FC<Props> = ({ event, row }) => {
             <button
               className="event__detail btn btn-sm btn-animated"
               onClick={() => onShowModal(modalState)}
+              aria-label="Více"
             >
               Více
             </button>

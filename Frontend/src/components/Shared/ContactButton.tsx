@@ -8,6 +8,7 @@ type Props = {
 const ContactButton: FC<Props> = ({ isSmall = false }) => {
   return (
     <button
+      aria-label="Napište mi"
       className={`btn btn-contact ${
         isSmall ? "btn-sm" : ""
       } btn-animated appearance-color-text-dark`}

@@ -23,11 +23,11 @@ const AppearanceToggle: FC<Props> = ({ isAbsolute = false }) => {
       className={`appearance-toggle ${isAbsolute ? "absolute" : ""}`}
       onClick={onClick}
     >
-      <button className="sun">
+      <button className="sun" aria-label="Světlý mód">
       <SvgIcon name={Icons.Sun} />
         {/* <i className="fal fa-sun"></i> */}
       </button>
-      <button className="moon">
+      <button className="moon" aria-label="Tmavý mód">
       <SvgIcon name={Icons.Moon} />
         {/* <i className="fal fa-moon"></i> */}
       </button>

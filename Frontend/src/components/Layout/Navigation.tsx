@@ -32,6 +32,7 @@ const Navigation = () => {
             </div>
             <button
               className="title"
+              aria-label="Homepage"
               onClick={() => PageHelper.handleClickScroll("section-hp")}
             >
               BizonTek
@@ -40,6 +41,7 @@ const Navigation = () => {
           <div className="menu" id="menu-container">
               <button
                 id="menu-bars-toggle"
+                aria-label="Menu"
                 className="menu-bars appearance-border-text no-hover"
                 onClick={onBarsClick}
               >
@@ -55,6 +57,7 @@ const Navigation = () => {
             <div className="menu-items">
               <div>
                 <button
+                  aria-label="O mně"
                   onClick={() => PageHelper.handleClickScroll("section-about")}
                 >
                   O mně
@@ -62,6 +65,7 @@ const Navigation = () => {
               </div>
               <div>
                 <button
+                  aria-label="Co nabízím"
                   onClick={() =>
                     PageHelper.handleClickScroll("section-services")
                   }

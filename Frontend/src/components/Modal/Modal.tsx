@@ -26,6 +26,7 @@ const Modal: FC<Props> = ({ mode, onClose, model }) => {
         <button
           onClick={onClose}
           type="button"
+          aria-label="Zavřít"
           className="modal__close-button btn btn-sm shadow appearance-bg-color-reverse"
         >
           <SvgIcon name={Icons.Times} />
