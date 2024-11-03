@@ -122,12 +122,12 @@ body {
       display: none;
     }
     .sun {
-      display: block;
+      display: inline-flex;
     }
   }
   &.bright .appearance-toggle {
     .moon {
-      display: block;
+      display: inline-flex;
     }
     .sun {
       display: none;

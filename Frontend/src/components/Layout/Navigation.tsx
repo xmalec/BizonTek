@@ -38,7 +38,6 @@ const Navigation = () => {
             </button>
           </div>
           <div className="menu" id="menu-container">
-            <div className="menu-bars-container">
               <button
                 id="menu-bars-toggle"
                 className="menu-bars appearance-border-text no-hover"
@@ -53,7 +52,6 @@ const Navigation = () => {
                   <SvgIcon name={Icons.Times_Nav_Light} className="icon-bright" />
                 </span>
               </button>
-            </div>
             <div className="menu-items">
               <div>
                 <button

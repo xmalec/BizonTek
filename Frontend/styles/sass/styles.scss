@@ -174,7 +174,7 @@ body {
           .appearance-toggle {
             display: none;
             @include sm {
-              display: block;
+              display: inline-flex;
             }
           }
 
@@ -494,10 +494,10 @@ body {
     &.hide {
       bottom: -40px;
     }
-    &:hover {
-      border-color: $tag-color;
-      background-color: $bg-dark;
-    }
+    // &:hover {
+    //   border-color: $tag-color;
+    //   background-color: $bg-dark;
+    // }
     @include sm-md {
       bottom: 13px;
       right: 13px;
