@@ -41,16 +41,16 @@ const Navigation = () => {
             <div className="menu-bars-container">
               <button
                 id="menu-bars-toggle"
-                className="menu-bars appearance-border-text"
+                className="menu-bars appearance-border-text no-hover"
                 onClick={onBarsClick}
               >
                 <span className="bars">
-                  <SvgIcon name={Icons.Bars} />
-                  {/* <i className="fal fa-bars"></i> */}
+                  <SvgIcon name={Icons.Bars} height={24} width={26} className="icon-dark" />
+                  <SvgIcon name={Icons.Bars_Light} height={24} width={26} className="icon-bright" />
                 </span>
                 <span className="times">
-                  <SvgIcon name={Icons.Times} />
-                  {/* <i className="fal fa-times"></i> */}
+                  <SvgIcon name={Icons.Times_Nav} className="icon-dark" />
+                  <SvgIcon name={Icons.Times_Nav_Light} className="icon-bright" />
                 </span>
               </button>
             </div>

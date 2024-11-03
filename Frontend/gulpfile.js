@@ -31,7 +31,7 @@ gulp.task('svgSprite', function () {
     .on('end', () => {
       // Generate version based on current timestamp
       const version = { version: Date.now() };
-      fs2.writeFileSync(`${outputDir}/img/icons/version.json`, JSON.stringify(version, null, 2));
+      fs2.writeFileSync(`${publicDir}/img/icons/version.json`, JSON.stringify(version, null, 2));
     });
 });
 

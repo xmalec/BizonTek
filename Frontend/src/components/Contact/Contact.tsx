@@ -12,7 +12,7 @@ const Contact = () => {
         <ContactForm />
         <div className="contact__info-grid">
           <span className="contact__name color-transition">Jiří Malec</span>
-          <Socials />
+          <Socials isSmall={true} />
 
           <span className="contact__cities color-transition">
             Brno, Jihlava
