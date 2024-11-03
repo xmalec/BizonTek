@@ -15,4 +15,5 @@ export const Icons = {
     GitHub_Light: "github-brands-solid-light",
     LinkedIn: "linkedin-in-brands-solid",
     LinkedIn_Light: "linkedin-in-brands-solid-light",
+    Check_Simple: "check-solid"
 }

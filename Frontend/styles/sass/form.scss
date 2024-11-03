@@ -30,41 +30,42 @@
 		}
 
 		.form-checkbox {
-			display: flex;
-			align-items: center;
-			gap: 10px;
+			input {
+				display: none
+			}
 			@extend .text-sm;
+			label {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
 			.input-wrapper {
 				padding: 0;
 				border-radius: 5px;
 				input {
-					appearance: auto;
-					-webkit-appearance: none;
-					height: 25px;
-					width: 25px;
-					margin: 0;
-					cursor: pointer;
-					background-color: $bg-bright;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					transition: all ease-in-out 0.2s;
-					&:after {
-						content: "\f00c";
-						font-family: "Font Awesome 5 Pro";
-						font-weight: 900;
-						font-size: 20px;
-						color: $bg-dark-contact;
-						transition: all ease-in-out 0.2s;
-						opacity: 0;
-					}
-					&:hover {
-						background-color: $gray;
-					}
-					&:checked {
-						background-color: $text;
-					}
-					&:checked:after {
+					// appearance: auto;
+					// -webkit-appearance: none;
+					// height: 25px;
+					// width: 25px;
+					// margin: 0;
+					// cursor: pointer;
+					// background-color: $bg-bright;
+					// display: flex;
+					// justify-content: center;
+					// align-items: center;
+					// transition: all ease-in-out 0.2s;
+					// &:hover {
+					// 	background-color: $gray;
+					// }
+					// &:checked {
+					// 	background-color: $text;
+					// }
+					display: none;
+				}
+
+				.checkmark {
+					opacity: 0;
+					&.is-checked {
 						opacity: 1;
 					}
 				}

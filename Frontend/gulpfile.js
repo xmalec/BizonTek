@@ -47,4 +47,4 @@ gulp.task('copy', () => {
 
 
 // Default task: run build and then copy
-gulp.task('default', gulp.series('build', 'svgSprite', 'copy'));
+gulp.task('default', gulp.series('svgSprite', 'build', 'copy'));
