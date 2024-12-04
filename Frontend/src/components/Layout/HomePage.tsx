@@ -14,9 +14,9 @@ const HomePage = () => {
           <img src="./img/layout/profile-image.webp" alt="Profilový obrázek" fetchPriority="high" />
         </div>
 
-        <div id="title-name" className="h1 name">
+        <h1 id="title-name" className="h1 name">
           Ing. Jiří Malec
-        </div>
+        </h1>
         <div id="title-profession" className="h3 profession">
           Softwarový inženýr
         </div>
