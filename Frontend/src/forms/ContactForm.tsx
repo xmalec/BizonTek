@@ -6,6 +6,8 @@ import TextInput from "./components/TextInput";
 import CheckboxInput from "./components/CheckboxInput";
 import { useContactForm } from "../hooks/useContactForm";
 import ThankYou from "../components/Contact/ThankYou";
+import { Icons } from "../utils/Icons";
+import SvgIcon from "../components/Shared/SvgIcon";
 
 export enum Mode {
   Form,
@@ -44,13 +46,14 @@ const ContactForm: FC = () => {
                 ></TextInput>
                 <CheckboxInput name="consent" validate={checked}>
                   Souhlasím se{" "}
-                  <a href="/files/consent.pdf" target="_blank">
+                  <a href="/files/consent.pdf" target="_blank" aria-label="GDPR">
                     {" "}
                     zpracováním osobních údajů
                   </a>
                 </CheckboxInput>
                 <div className="form-control">
                   <button
+                    aria-label="Odeslat"
                     type="submit"
                     className="btn btn-contact submit-btn btn-md btn-animated"
                   >
@@ -65,13 +68,7 @@ const ContactForm: FC = () => {
       <div
         className={`contact__thank-you ${mode == Mode.ThankYou ? "show" : ""}`}
       >
-        <div className="contact__thank-you_container">
-          <div className="h2 thank-you__title">Díky za zprávu!</div>
-          <div className="text-xxl thank-you__text">Brzo se Vám ozvu.</div>
-          <div className="thank-you__icon">
-            <i className="fas fa-check-circle"></i>
-          </div>
-        </div>
+        <ThankYou />
       </div>
     </>
   );

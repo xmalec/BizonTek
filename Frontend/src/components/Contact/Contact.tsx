@@ -12,12 +12,13 @@ const Contact = () => {
         <ContactForm />
         <div className="contact__info-grid">
           <span className="contact__name color-transition">Jiří Malec</span>
-          <Socials />
+          <Socials isSmall={true} />
 
           <span className="contact__cities color-transition">
             Brno, Jihlava
           </span>
-          <a className="contact__email" href="mailto:jiri.malec@bizontek.cz">
+          <a className="contact__email" href="mailto:jiri.malec@bizontek.cz"
+            aria-label="Napsat e-mail">
             jiri.malec@bizontek.cz
           </a>
         </div>

@@ -122,12 +122,12 @@ body {
       display: none;
     }
     .sun {
-      display: block;
+      display: inline-flex;
     }
   }
   &.bright .appearance-toggle {
     .moon {
-      display: block;
+      display: inline-flex;
     }
     .sun {
       display: none;
@@ -149,6 +149,23 @@ body {
 
     .cookiebar-wrapper {
       background-color: #f5f5f5;
+    }
+  }
+
+  .icon-svg {
+    &.icon-dark {
+      display: block;
+    }
+    &.icon-bright {
+      display: none;
+    }
+  }
+  &.bright .icon-svg {
+    &.icon-dark {
+      display: none;
+    }
+    &.icon-bright {
+      display: block;
     }
   }
 }

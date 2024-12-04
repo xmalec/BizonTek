@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const svgSprite = require('gulp-svg-sprite');
 const shell = require('gulp-shell');
 const fs = require('fs-extra');
+const fs2 = require('fs');
 
 const outputDir = './out';
 const publicDir = './public';
@@ -27,6 +28,11 @@ gulp.task('svgSprite', function () {
     .pipe(svgSprite(config))
     .pipe(gulp.dest(`${outputDir}/img/icons`))
     .pipe(gulp.dest(`${publicDir}/img/icons`))
+    .on('end', () => {
+      // Generate version based on current timestamp
+      const version = { version: Date.now() };
+      fs2.writeFileSync(`${publicDir}/img/icons/version.json`, JSON.stringify(version, null, 2));
+    });
 });
 
 //-----------------
@@ -41,4 +47,4 @@ gulp.task('copy', () => {
 
 
 // Default task: run build and then copy
-gulp.task('default', gulp.series('build', 'svgSprite', 'copy'));
+gulp.task('default', gulp.series('svgSprite', 'build', 'copy'));

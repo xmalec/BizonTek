@@ -1,6 +1,8 @@
 import { FieldValidator } from "final-form";
 import { PropsWithChildren } from "react";
 import { Field, useField } from "react-final-form";
+import SvgIcon from "../../components/Shared/SvgIcon";
+import { Icons } from "../../utils/Icons";
 
 type Props = {
   name: string;
@@ -24,7 +26,7 @@ const CheckboxInput = ({ name, validate, id, children }: Props) => {
     <>
       <div className={`form-control ${hasError ? "has-error" : ""}`}>
         <div className="form-checkbox">
-          <div className="input-wrapper">
+          
             <Field
               type="checkbox"
               id={id}
@@ -32,9 +34,16 @@ const CheckboxInput = ({ name, validate, id, children }: Props) => {
               validate={validate}
               {...input}
             />
-            <span className="checkmark"></span>
-          </div>
-          <label htmlFor={id}>{children}</label>
+            
+          
+          <label htmlFor={id}>
+          <div className="input-wrapper">
+            <span className={`checkmark ${input.checked ? "is-checked" : ""}`}>
+              <SvgIcon name={Icons.Check_Simple} />
+            </span>
+            </div>
+            <div>
+            {children}</div></label>
         </div>
 
         <span className="error">

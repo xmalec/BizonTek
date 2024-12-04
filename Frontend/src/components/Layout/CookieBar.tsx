@@ -31,12 +31,14 @@ const CookieBar = () => {
             </div>
           </div>
           <div className="cookiebar-actions ">
-            <button id="cookiebar-settings-btn" onClick={rejectAll}>
+            <button id="cookiebar-settings-btn" onClick={rejectAll}
+              aria-label="Zakázat vše">
               Zakázat vše
             </button>
             <button
               id="cookiebar-allow-all-btn"
               className="btn btn-animated btn-sm btn-contact appearance-color-text-dark"
+              aria-label="Přijmout"
               onClick={acceptAll}
             >
               Přijmout

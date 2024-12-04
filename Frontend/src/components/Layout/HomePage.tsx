@@ -1,4 +1,3 @@
-import { PageHelper } from "../../utils/PageHelper";
 import ContactButton from "../Shared/ContactButton";
 import Socials from "../Shared/Socials";
 
@@ -11,7 +10,7 @@ const HomePage = () => {
       </div>
       <div className="hp-grid">
         <div className="content-logo">
-          <img src="./img/layout/profile-image.webp" alt="Profilový obrázek" fetchPriority="high" />
+          <img src="./img/layout/profile-image.webp" alt="Profilový obrázek" fetchpriority="high" />
         </div>
 
         <h1 id="title-name" className="h1 name">
@@ -32,7 +31,7 @@ const HomePage = () => {
         <Socials />
 
         <div className="contact-email">
-          <a href="mailto:jiri.malec@bizontek.cz" type="button">
+          <a href="mailto:jiri.malec@bizontek.cz" type="button" aria-label="Napsat e-mail">
             jiri.malec@bizontek.cz
           </a>
         </div>
