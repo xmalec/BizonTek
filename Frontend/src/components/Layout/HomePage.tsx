@@ -5,9 +5,6 @@ const HomePage = () => {
   return (
     <div className="hp section">
       <span className="link-anchor" id="section-hp"></span>
-      <div className="background-image">
-        {/* <img src="./img/layout/logo_stroke.webp" alt="Logo" /> */}
-      </div>
       <div className="hp-grid">
         <div className="content-logo">
           <img src="./img/layout/profile-image.webp" alt="Profilový obrázek" fetchpriority="high" />
@@ -20,13 +17,10 @@ const HomePage = () => {
           Softwarový inženýr
         </div>
         <div className="text description">
-          Vítejte na mém webu! Jmenuji se <b>Jiří Malec</b> a zde na webu bych
-          Vám chtěl představit mé dovednosti a nabídnou mé služby coby
-          softwarového fullstack vývojáře. Dovedu implementovat různé portály,
-          komerční, informační či rezervační systémy a to ve formě webové nebo
-          mobilní aplikace. Jsem otevřený zajímavým projektům a novým výzvám.{" "}
-          <br />
-          Pokud byste měli zájem o mé služby, budu moc rád, když se mi ozvete.
+        Jmenuji se <b>Jiří Malec</b> a rád bych vám představil své dovednosti a služby jako softwarový vývojář specializující se na <b>.NET</b> technologii a řešení od <b>Microsoftu</b>.
+Na mém webu najdete informace o mých zkušenostech, portfoliu a schopnostech vytvářet <b>webové aplikace</b>, včetně portálů, komerčních, informačních a rezervačních systémů na míru.
+Jsem otevřený zajímavým projektům a novým výzvám.{" "}
+<br />Pokud hledáte profesionála na <b>.NET a Microsoft technologie</b>, neváhejte mě <b>kontaktovat</b> pomocí formuláře na webu.
         </div>
         <Socials />
 

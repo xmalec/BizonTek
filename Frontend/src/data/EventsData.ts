@@ -41,83 +41,83 @@ export const EventModels: EventModel[] = [
     date: new Date("2021-01-05"),
     dateString: "2021/2022",
   },
-  {
-    tags: [".NET", "React", "Labyrinth Brno", "Azure Cognitive Search"],
-    id: "labnet",
-    images: [
-      {
-        url: `${labnetFolder}/labnet2.webp`,
-        alt: 'Fulltextový vyhledávač'
-      },
-      {
-        url: `${labnetFolder}/labnet1.webp`,
-        alt: 'Detail uživatele'
-      },
-      {
-        url: `${labnetFolder}/labnet3.webp`,
-        alt: 'Nástěnka'
-      }
-    ],
-    title: "LabNet",
-    dateString: "léto 2023",
-    description: `
-  	Labnet představuje druhou aplikaci, kterou jsem vytvořil pro soukromou školu <b>Labyrinth</b>. Tato aplikace slouží jako rodičovský portál a jako nástěnka, kde rodiče a přátelé školy mohou nabízet nebo naopak poptávat různé služby.
-  	${newLine}Pro implementaci této aplikace jsem využil <b>API</b> napsané v <b>ASP.NET</b>, zatímco frontend byl postaven na platformě <b>React</b>. Pro splnění požadavků na rychlé a přesné fulltextové vyhledávání byla v aplikaci integrována služba <b>Azure Cognitive Search</b>.
-  	${newLine} Design aplikace byl navržen <a href="https://bronislavmusil.com/cs" target="_blank">Bronislavem Musilem</a>
-    ${newLine} Link: <a href="https://www.labyrinthnet.cz" target="_blank">www.labyrinthnet.cz</a>`,
-    date: new Date("2023-08-30"),
-  },
-  {
-    images: [
-      {
-        url: `${labclubFolder}/labclub2.webp`,
-        alt: 'Ukázka aplikace – Výpis studentů'
-      },
-      {
-        url: `${labclubFolder}/labclub1.webp`,
-        alt: 'Ukázka aplikace – Výpis kroužků'
-      },
-      {
-        url: `${labclubFolder}/labclub3.webp`,
-        alt: 'Mobilní design'
-      }
-    ],
-    tags: ["JAVA", "Bakalářská práce", "Labyrinth Brno"],
-    id: "labclub",
-    title: "LabClub",
-    dateString: "léto 2020",
-    description: `Labclub je můj první samostatný ostrý projekt a je aktivně využíván do dnešního dne. Jedná se o webovou aplikaci spravující mimo-výukové aktivity soukromé školy <b>Labyrinth</b> v Brně. Aplikace je napsána v programovacím jazyce <b>Java</b> s využitím frameworku <b>Spring</b>. Jako databázový systém jsem použil <b>MySQL</b>.${newLine}
-		Aplikaci jsem vypracoval v rámci <b>bakalářské práce</b>. Závěrečná práce je k dispozici <a href="https://is.muni.cz/th/fo39c/" target="_blank">ZDE</a>.${newLine}
-		Seznam hlavních případů užití:
-		<ul>
-			<li>
-				Výpis a registrace kroužků
-			</li>
-			<li>
-				Elektronické vyplnění přihlášky do družiny
-			</li>
-			<li>
-				Rozřazení dětí do družin
-			</li>
-			<li>
-				Správa příchodů a odchodů dětí ze školy
-			</li>
-			<li>
-				Rozvrh aktivit jednotlivých dětí
-			</li>
-			<li>
-				Nástěnka a seznam aktualit
-			</li>
-			<li>
-				Omluvenky
-			</li>
-			<li>
-				Možnost vytvoření více scénářů (rozšíření vzniklo v období koronakrize)
-			</li>
-		</ul>
-    Link: <a href="https://www.labclub.cz" target="_blank">www.labclub.cz</a>`,
-    date: new Date("2020-07-21"),
-  },
+  // {
+  //   tags: [".NET", "React", "Labyrinth Brno", "Azure Cognitive Search"],
+  //   id: "labnet",
+  //   images: [
+  //     {
+  //       url: `${labnetFolder}/labnet2.webp`,
+  //       alt: 'Fulltextový vyhledávač'
+  //     },
+  //     {
+  //       url: `${labnetFolder}/labnet1.webp`,
+  //       alt: 'Detail uživatele'
+  //     },
+  //     {
+  //       url: `${labnetFolder}/labnet3.webp`,
+  //       alt: 'Nástěnka'
+  //     }
+  //   ],
+  //   title: "LabNet",
+  //   dateString: "léto 2023",
+  //   description: `
+  // 	Labnet představuje druhou aplikaci, kterou jsem vytvořil pro soukromou školu <b>Labyrinth</b>. Tato aplikace slouží jako rodičovský portál a jako nástěnka, kde rodiče a přátelé školy mohou nabízet nebo naopak poptávat různé služby.
+  // 	${newLine}Pro implementaci této aplikace jsem využil <b>API</b> napsané v <b>ASP.NET</b>, zatímco frontend byl postaven na platformě <b>React</b>. Pro splnění požadavků na rychlé a přesné fulltextové vyhledávání byla v aplikaci integrována služba <b>Azure Cognitive Search</b>.
+  // 	${newLine} Design aplikace byl navržen <a href="https://bronislavmusil.com/cs" target="_blank">Bronislavem Musilem</a>
+  //   ${newLine} Link: <a href="https://www.labyrinthnet.cz" target="_blank">www.labyrinthnet.cz</a>`,
+  //   date: new Date("2023-08-30"),
+  // },
+  // {
+  //   images: [
+  //     {
+  //       url: `${labclubFolder}/labclub2.webp`,
+  //       alt: 'Ukázka aplikace – Výpis studentů'
+  //     },
+  //     {
+  //       url: `${labclubFolder}/labclub1.webp`,
+  //       alt: 'Ukázka aplikace – Výpis kroužků'
+  //     },
+  //     {
+  //       url: `${labclubFolder}/labclub3.webp`,
+  //       alt: 'Mobilní design'
+  //     }
+  //   ],
+  //   tags: ["JAVA", "Bakalářská práce", "Labyrinth Brno"],
+  //   id: "labclub",
+  //   title: "LabClub",
+  //   dateString: "léto 2020",
+  //   description: `Labclub je můj první samostatný ostrý projekt a je aktivně využíván do dnešního dne. Jedná se o webovou aplikaci spravující mimo-výukové aktivity soukromé školy <b>Labyrinth</b> v Brně. Aplikace je napsána v programovacím jazyce <b>Java</b> s využitím frameworku <b>Spring</b>. Jako databázový systém jsem použil <b>MySQL</b>.${newLine}
+	// 	Aplikaci jsem vypracoval v rámci <b>bakalářské práce</b>. Závěrečná práce je k dispozici <a href="https://is.muni.cz/th/fo39c/" target="_blank">ZDE</a>.${newLine}
+	// 	Seznam hlavních případů užití:
+	// 	<ul>
+	// 		<li>
+	// 			Výpis a registrace kroužků
+	// 		</li>
+	// 		<li>
+	// 			Elektronické vyplnění přihlášky do družiny
+	// 		</li>
+	// 		<li>
+	// 			Rozřazení dětí do družin
+	// 		</li>
+	// 		<li>
+	// 			Správa příchodů a odchodů dětí ze školy
+	// 		</li>
+	// 		<li>
+	// 			Rozvrh aktivit jednotlivých dětí
+	// 		</li>
+	// 		<li>
+	// 			Nástěnka a seznam aktualit
+	// 		</li>
+	// 		<li>
+	// 			Omluvenky
+	// 		</li>
+	// 		<li>
+	// 			Možnost vytvoření více scénářů (rozšíření vzniklo v období koronakrize)
+	// 		</li>
+	// 	</ul>
+  //   Link: <a href="https://www.labclub.cz" target="_blank">www.labclub.cz</a>`,
+  //   date: new Date("2020-07-21"),
+  // },
   {
     images: [],
     tags: ["FI MUNI", "Bc."],

@@ -14,7 +14,7 @@ export const ServiceModels: ServiceModel[] = [
         <h3>Technologie</h3>
         <ul>
         <li>
-        Jednou z mých specializací je vývoj pomocí pomocí <b>.NET MVC</b>, který poskytuje výkonnou a flexibilní platformu pro tvorbu moderních webových aplikací.</li>
+        Jednou z mých specializací je vývoj pomocí pomocí <b>.NET ASP</b>, který poskytuje výkonnou a flexibilní platformu pro tvorbu moderních webových aplikací.</li>
         <li>Pro ukládání dat pak používám relační databázi <b>MSSQL</b>, která je jedním z předních řešení pro správu a manipulaci s daty.</li>
         <li>Během vývoje uživatelem viditelné části aplikace (tzv. frontend) se spoléhám na technologie Razor Pages, TypeScript, Next.js, Vue.js, SASS a mnoho dalších.</li>
         <li>Při vývoji pracuji s verzovacím systémem <b>GIT</b>. Nasazování a testování je plně zautomatizováno v rámci <b>CI/CD</b> (continuous integration and continuous delivery) procesů.</li>
@@ -54,21 +54,21 @@ export const ServiceModels: ServiceModel[] = [
   //   description:
   //     "Poskytuji vývoj rezervačních systémů, které umožňují jednoduchou a efektivní správu rezervací, časových plánů a kalendářů. Bez ohledu na to, zda potřebujete rezervační systém pro sportovní střediska, restaurace, salony nebo jiné služby, mohu vám pomoci vytvořit intuitivní a spolehlivé řešení. Snažím se zajistit, aby rezervační systém byl snadno použitelný pro vaše zákazníky a zároveň poskytoval vám veškerou potřebnou funkcionalitu pro řízení rezervací a správu času.",
   // },
-  {
-    id: "mobile-app",
-    title: "Mobilní aplikace",
-    order: 4,
-    thumbnail: "mobile.webp",
-    tags: ["Flutter", "Xamarin", "PWA"],
-    description: `Vytvářím přizpůsobené mobilní aplikace pro platformy Android a iOS. Mám zkušenosti s vývojem nativních aplikací, které poskytují vysokou výkonnost a optimalizovanou uživatelskou zkušenost. Snažím se porozumět vašim potřebám a cílům a navrhnout a vyvinout mobilní aplikaci, která přesně odpovídá vašim požadavkům a představám.${newLine}
-        K vývoji mobilních aplikací využívám frameworků <b>Flutter, Xamarin</b> nebo technologii <b>Progressive Web App.</b>`,
-  },
-  {
-    id: "ecommerce",
-    title: "E-commerce weby",
-    order: 5,
-    thumbnail: "e-commerce.webp",
-    tags: ["E-shopy", "Platební brána", "GA4", "Integrace CRM", "XML feedy"],
-    description: `Mám zkušenosti s vývojem a implementací robustních e-commerce platforem. Pomáhám vytvářet <b>e-shopy</b>, které nabízejí snadný a bezpečný nákupní proces, efektivní správu produktů a zákazníků, <b>platební brány</b>, intergrace s <b>CRM</b> systémem, export <b>XML feedů</b>, rychlé a pohodlné <b>full-textové vyhledávání</b> produktů, monitorovací nástroje typu <b>Google Analytics</b> a další důležité funkce.`,
-  },
+  // {
+  //   id: "mobile-app",
+  //   title: "Mobilní aplikace",
+  //   order: 4,
+  //   thumbnail: "mobile.webp",
+  //   tags: ["Flutter", "Xamarin", "PWA"],
+  //   description: `Vytvářím přizpůsobené mobilní aplikace pro platformy Android a iOS. Mám zkušenosti s vývojem nativních aplikací, které poskytují vysokou výkonnost a optimalizovanou uživatelskou zkušenost. Snažím se porozumět vašim potřebám a cílům a navrhnout a vyvinout mobilní aplikaci, která přesně odpovídá vašim požadavkům a představám.${newLine}
+  //       K vývoji mobilních aplikací využívám frameworků <b>Flutter, Xamarin</b> nebo technologii <b>Progressive Web App.</b>`,
+  // },
+  // {
+  //   id: "ecommerce",
+  //   title: "E-commerce weby",
+  //   order: 5,
+  //   thumbnail: "e-commerce.webp",
+  //   tags: ["E-shopy", "Platební brána", "GA4", "Integrace CRM", "XML feedy"],
+  //   description: `Mám zkušenosti s vývojem a implementací robustních e-commerce platforem. Pomáhám vytvářet <b>e-shopy</b>, které nabízejí snadný a bezpečný nákupní proces, efektivní správu produktů a zákazníků, <b>platební brány</b>, intergrace s <b>CRM</b> systémem, export <b>XML feedů</b>, rychlé a pohodlné <b>full-textové vyhledávání</b> produktů, monitorovací nástroje typu <b>Google Analytics</b> a další důležité funkce.`,
+  // },
 ];

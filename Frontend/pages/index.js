@@ -18,37 +18,39 @@ export default function Home() {
         <meta name="author" content="Jiří Malec" />
         <meta
           name="description"
-          content="Jiří Malec | BizonTek - Vývoj softwaru na míru pro webové aplikace, portály, informační systémy a e-shopy. Kontaktujte mě!"
+          content="Jiří Malec - Softwarový vývojář specializující se na .NET a Microsoft technologie. Zkušenosti, dovednosti, portfolio a kontakt přímo na webu."
         />
         <link rel="shortcut icon" href="./favicon.ico" />
         <link rel="icon" type="image/png" href="./logo512.webp" />
+        
+        <link rel="canonical" href="https://bizontek.cz" />
 
         <meta
           property="og:image"
-          content="https://www.bizontek.cz/img/metadata/image.webp"
+          content="https://bizontek.cz/img/metadata/image.webp"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.bizontek.cz/" />
+        <meta property="og:url" content="https://bizontek.cz/" />
         <meta property="og:title" content="BizonTek | Jiří Malec" />
         <meta
           property="og:description"
-          content="Jiří Malec | BizonTek - Vývoj softwaru na míru pro webové aplikace, portály, informační systémy a e-shopy. Kontaktujte mě!"
+          content="Jiří Malec - Vývojář v .NET a Microsoft technologiích. Prohlédněte si životopis, portfolio nebo mě kontaktujte přes webový formulář."
         />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.bizontek.cz/" />
+        <meta property="twitter:url" content="https://bizontek.cz/" />
         <meta property="twitter:title" content="BizonTek | Jiří Malec" />
         <meta
           property="twitter:description"
-          content="Jiří Malec | BizonTek - Vývoj softwaru na míru pro webové aplikace, portály, informační systémy a e-shopy. Kontaktujte mě!"
+          content="Jiří Malec - Vývojář v .NET a Microsoft technologiích. Prohlédněte si životopis, portfolio nebo mě kontaktujte přes webový formulář."
         />
         <meta
           property="twitter:image"
-          content="https://www.bizontek.cz/img/metadata/image.webp"
+          content="https://bizontek.cz/img/metadata/image.webp"
         />
         <meta name="theme-color" content="#efbe40" />
 
         <link rel="manifest" href="manifest.json" />
-        <title>BizonTek | Jiří Malec</title>
+        <title>Jiří Malec - .NET vývojář | Vývoj softwaru na míru</title>
       </Head>
       <GA4 />
       <Layout />
