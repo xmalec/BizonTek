@@ -8,6 +8,7 @@ import ScrollTopButton from "./ScrollTopButton";
 import { useEffect } from "react";
 import { ScrollHelper } from "../../utils/ScrollHelper";
 import CookieBar from "./CookieBar";
+import Skills from "../Skills/Skills";
 
 const Layout = () => {
   useEffect(() => {
@@ -23,6 +24,7 @@ const Layout = () => {
         <AppearanceToggle isAbsolute={true} />
         <HomePage />
         <About />
+        <Skills />
         <Services />
         <Contact />
         <CookieBar />

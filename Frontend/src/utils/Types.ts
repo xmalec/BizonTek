@@ -40,3 +40,11 @@ export type DataLoad = {
   data?: object[];
   loading: boolean;
 };
+
+export type SkillModel = {
+  id: string;
+  name: string;
+  level: number;
+  order: number;
+  description?: string;
+};
