@@ -10,7 +10,7 @@ const Skills = () => {
     <div className="skills section">
       <span className="link-anchor" id="section-skills"></span>
       <div className={`skills__container ${unloaded && "unloaded"}`}>
-        <h3 className="skills__title h3 m-0">Technologie a&nbsp;dovednosti</h3>
+        <h3 className="skills__title h3 m-0">Znalosti a&nbsp;dovednosti</h3>
         <div className="skills__grid-container">
         <div className="skills__grid">
           {services != undefined &&
