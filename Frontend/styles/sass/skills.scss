@@ -1,23 +1,55 @@
 @import "cookiebar";
 
 .skills {
-  margin: 20px $layout-side-padding 100px $layout-side-padding;
+  margin: 20px $layout-side-padding 50px $layout-side-padding;
   max-width: $layout-max-width;
   width: calc(min(100% - #{$layout-side-padding * 2}, #{$layout-max-width}));
 
   @include sm-md {
-    margin: 20px 0 100px 0;
+    margin: 20px 0 50px 0;
   }
 
   @include sm {
     width: calc(min(100% - #{$layout-side-padding-sm * 2}, #{$layout-max-width}));
   }
 
-  .skills__title {
-    margin-bottom: 30px;
-    text-align: center;
+  .skills__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    @include sm {
+      &.unloaded {
+        .skills__grid-container {
+          max-height: 420px;
+          overflow: hidden;
+          position: relative;
+
+
+          .skills__grid::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 50px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), $bg-dark);
+          }
+        }
+
+        .skills-load-more {
+          display: block;
+
+        }
+      }
+    }
   }
 
+  .skills-load-more {
+    display: none;
+  }
   .skills__grid {
 
     @extend .text-sm;
@@ -47,15 +79,15 @@
 
 
       &.type_back-end {
-        background-color: #002436;
+        background-color: $bg-dark-secondary;
       }
 
       &.type_front-end {
-        background-color: #200035;
+        background-color: #5f2a83;
       }
 
       &.type_other {
-        background-color: #31000b;
+        background-color: #72152b;
       }
 
       .skill-header {
@@ -96,6 +128,7 @@
           -webkit-mask: linear-gradient(#fff 0 0);
           mask: linear-gradient(#fff 0 0);
           border-radius: 5px;
+
           &.unactive {
             width: .1% !important;
           }
@@ -103,30 +136,39 @@
           &.duration-1 {
             transition: width 0.3s ease;
           }
+
           &.duration-2 {
             transition: width 0.4s ease;
           }
+
           &.duration-3 {
             transition: width 0.5s ease;
           }
+
           &.duration-4 {
             transition: width 0.6s ease;
           }
+
           &.duration-5 {
             transition: width 0.7s ease;
           }
+
           &.duration-6 {
             transition: width 0.8s ease;
           }
+
           &.duration-7 {
             transition: width 0.9s ease;
           }
+
           &.duration-8 {
             transition: width 1s ease;
           }
+
           &.duration-9 {
             transition: width 1.1s ease;
           }
+
           &.duration-10 {
             transition: width 1.2s ease;
           }

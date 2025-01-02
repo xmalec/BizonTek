@@ -170,6 +170,9 @@ body {
   }
 
   &.bright .appearance-skill {
+
+    
+
     &.type_back-end {
       background-color: #afdbf3 !important;
     }
@@ -180,6 +183,18 @@ body {
 
     &.type_other {
       background-color: #f7bdc9 !important;
+    }
+  }
+
+  &.bright .skills {
+    @include sm {
+      .unloaded {
+        .skills__grid-container {
+          .skills__grid::after {
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), $bg-bright) !important;
+          }
+        }
+      }
     }
   }
 }

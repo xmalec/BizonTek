@@ -125,7 +125,7 @@ body {
           &.collapsed {
             .menu-items {
               padding-top: 10px;
-              max-height: 150px;
+              max-height: 190px;
             }
             .bars {
               display: none;
@@ -495,10 +495,6 @@ body {
     &.hide {
       bottom: -40px;
     }
-    // &:hover {
-    //   border-color: $tag-color;
-    //   background-color: $bg-dark;
-    // }
     @include sm-md {
       bottom: 13px;
       right: 13px;

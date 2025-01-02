@@ -43,7 +43,7 @@ const ServiceBox: FC<Props> = ({ model }) => {
         </div>
         <div className="services__box_overlay"></div>
         <div className="services__box_glass">
-        <SvgIcon name={Icons.Search} />
+          <SvgIcon name={Icons.Search}  style={{position: "absolute", top: "10px", right: "10px"}}/>
           {/* <i className="far fa-search"></i> */}
         </div>
         <div className="services__box_text_container">
