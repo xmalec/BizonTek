@@ -65,6 +65,16 @@ const Navigation = () => {
               </div>
               <div>
                 <button
+                  aria-label="Dovednosti"
+                  onClick={() =>
+                    PageHelper.handleClickScroll("section-skills")
+                  }
+                >
+                  Dovednosti
+                </button>
+              </div>
+              <div>
+                <button
                   aria-label="Co nabízím"
                   onClick={() =>
                     PageHelper.handleClickScroll("section-services")

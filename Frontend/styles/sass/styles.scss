@@ -1,4 +1,4 @@
-@import "cookiebar";
+@import "skills";
 @import "image-gallery";
 @import "icons";
 body {
@@ -464,6 +464,7 @@ body {
   .about,
   .services,
   .contact,
+  .skills,
   .hp {
     position: relative;
   }
@@ -511,4 +512,8 @@ body {
 .no-hover:hover {
   color: inherit !important;
   border-color: inherit !important;
+}
+
+.m-0 {
+  margin: 0;
 }

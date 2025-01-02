@@ -47,4 +47,5 @@ export type SkillModel = {
   level: number;
   order: number;
   description?: string;
+  type: 'back-end' | 'front-end' | 'devops' | 'other';
 };

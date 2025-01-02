@@ -7,8 +7,8 @@ const Skills = () => {
   return (
     <div className="skills section">
       <span className="link-anchor" id="section-skills"></span>
-      <div className="services__title h2">Technologie a dovednosti</div>
-      <div className="services__grid">
+      <h3 className="skills__title h3 m-0">Technologie a&nbsp;dovednosti</h3>
+      <div className="skills__grid">
         {services != undefined &&
           services
             .map((x) => x as SkillModel)

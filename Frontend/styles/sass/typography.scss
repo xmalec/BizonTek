@@ -44,6 +44,14 @@ $font-family: "Inter", sans-serif;
   line-height: 135%;
 }
 
+.text-xxs {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 135%;
+}
+
 .text {
   font-family: $font-family;
   font-style: normal;

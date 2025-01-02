@@ -18,7 +18,7 @@ export default function Home() {
         <meta name="author" content="Jiří Malec" />
         <meta
           name="description"
-          content="Jiří Malec - Softwarový vývojář specializující se na .NET a Microsoft technologie. Zkušenosti, dovednosti, portfolio a kontakt přímo na webu."
+          content="Jiří Malec - Softwarový vývojář se specializací na .NET a Microsoft technologie. Zkušenosti, dovednosti, portfolio a kontakt přímo na webu."
         />
         <link rel="shortcut icon" href="./favicon.ico" />
         <link rel="icon" type="image/png" href="./logo512.webp" />

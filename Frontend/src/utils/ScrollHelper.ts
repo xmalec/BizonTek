@@ -86,11 +86,22 @@ function manageEventsOpacity(document: Document) {
   }
 }
 
+function manageSkillBars(document: Document) {
+  const events = document.getElementsByClassName("skill-bar__fill");
+  for (let i = 0; i < events.length; i++) {
+    const event = events[i];
+    if (hasClass(event, "unactive") && isElementInView(event)) {
+      removeClass(event, "unactive");
+    }
+  }
+}
+
 function registerDataLayer(document: Document) {
   var sections = [
     { name: "ABOUT", id: "section-about" },
     { name: "SERVICES", id: "section-services" },
     { name: "CONTACT", id: "section-contact" },
+    { name: "SKILLS", id: "section-skills" },
   ];
   const activeSectionClass = "active-section";
   sections.forEach((section) => {
@@ -112,6 +123,7 @@ export class ScrollHelper {
     manageNavigationBarOnScroll(document);
     manageEventsOpacity(document);
     manageScrollTop(document);
+    manageSkillBars(document);
     registerDataLayer(document);
   };
 }

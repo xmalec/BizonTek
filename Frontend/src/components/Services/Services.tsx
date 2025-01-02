@@ -9,7 +9,7 @@ const Services = () => {
   return (
     <div className="services section">
       <span className="link-anchor" id="section-services"></span>
-      <div className="services__title h2">Nabízím</div>
+      <h3 className="services__title h3 m-0">Jaké služby nabízím</h3>
       <div className="services__grid">
         {services != undefined &&
           services

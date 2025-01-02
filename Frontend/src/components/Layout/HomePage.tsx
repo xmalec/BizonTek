@@ -13,9 +13,9 @@ const HomePage = () => {
         <h1 id="title-name" className="h1 name">
           Ing. Jiří Malec
         </h1>
-        <div id="title-profession" className="h3 profession">
+        <h3 id="title-profession" className="profession h3 m-0">
           Softwarový inženýr
-        </div>
+        </h3>
         <div className="text description">
         Jmenuji se <b>Jiří Malec</b> a rád bych vám představil své dovednosti a služby jako softwarový vývojář specializující se na <b>.NET</b> technologii a řešení od <b>Microsoftu</b>.
 Na mém webu najdete informace o mých zkušenostech, portfoliu a schopnostech vytvářet <b>webové aplikace</b>, včetně portálů, komerčních, informačních a rezervačních systémů na míru.

@@ -168,4 +168,18 @@ body {
       display: block;
     }
   }
+
+  &.bright .appearance-skill {
+    &.type_back-end {
+      background-color: #afdbf3 !important;
+    }
+
+    &.type_front-end {
+      background-color: #dfc2f3 !important;
+    }
+
+    &.type_other {
+      background-color: #f7bdc9 !important;
+    }
+  }
 }
