@@ -8,19 +8,21 @@ const HomePage = () => {
       <div className="hp-grid">
         <div className="content-logo">
           <img src="./img/layout/profile-image.webp" alt="Profilový obrázek" fetchpriority="high" />
+          <div className="logo-placeholder"></div>
+
         </div>
 
         <h1 id="title-name" className="h1 name">
           Ing. Jiří Malec
         </h1>
-        <h3 id="title-profession" className="profession h3 m-0">
+        <h2 id="title-profession" className="profession h3 m-0">
           Softwarový inženýr
-        </h3>
+        </h2>
         <div className="text description">
-        Jmenuji se <b>Jiří Malec</b> a rád bych vám představil své dovednosti a služby jako softwarový vývojář specializující se na <b>.NET</b> technologii a řešení od <b>Microsoftu</b>.
-Na mém webu najdete informace o mých zkušenostech, portfoliu a schopnostech vytvářet <b>webové aplikace</b>, včetně portálů, komerčních, informačních a rezervačních systémů na míru.
-Jsem otevřený zajímavým projektům a novým výzvám.{" "}
-<br />Pokud hledáte profesionála na <b>.NET a Microsoft technologie</b>, neváhejte mě <b>kontaktovat</b> pomocí formuláře na webu.
+          Jmenuji se <b>Jiří Malec</b> a rád bych vám představil své dovednosti a služby jako softwarový vývojář specializující se na <b>.NET</b> technologii a řešení od <b>Microsoftu</b>.
+          Na mém webu najdete informace o mých zkušenostech, portfoliu a schopnostech vytvářet <b>webové aplikace</b>, včetně portálů, komerčních, informačních a rezervačních systémů na míru.
+          Jsem otevřený zajímavým projektům a novým výzvám.{" "}
+          <br />Pokud hledáte profesionála na <b>.NET a Microsoft technologie</b>, neváhejte mě <b>kontaktovat</b> pomocí formuláře na webu.
         </div>
         <Socials />
 

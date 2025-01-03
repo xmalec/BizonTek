@@ -291,6 +291,13 @@ body {
           border-radius: 50px;
           max-height: 400px;
           max-width: 500px;
+
+          .logo-placeholder {
+            width: 1000px;
+            height: 1000px;
+            background-color: $bg-dark-secondary;
+          }
+
           img {
             width: 100%;
           }
