@@ -1,3 +1,4 @@
+using Web;
 using Web.Options;
 using Web.Services;
 
@@ -5,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddHealthChecks();
-
+builder.Services.ConfigureStaticFiles();
 builder.Services.Configure<EmailSettingOptions>(builder.Configuration.GetSection(EmailSettingOptions.SectionName));
 builder.Services.AddScoped<IEmailService, EmailService>();
 
