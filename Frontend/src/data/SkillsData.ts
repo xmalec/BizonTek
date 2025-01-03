@@ -10,6 +10,7 @@ export const SkillsData: SkillModel[] = [
     level: 10,
     order: 1,
     type: "back-end",
+    description: "MVC, Razor Pages, Blazor, Identity"
   },
   {
     id: "csharp",
@@ -17,6 +18,7 @@ export const SkillsData: SkillModel[] = [
     level: 10,
     order: 2,
     type: "back-end",
+    description: "LINQ, Entity Framework"
   },
   {
     id: "sql",
@@ -117,7 +119,7 @@ export const SkillsData: SkillModel[] = [
   {
     id: "react",
     name: "React",
-    level: 6,
+    level: 7,
     order: 18,
     type: "front-end",
   },

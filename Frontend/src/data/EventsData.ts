@@ -8,11 +8,11 @@ export const EventModels: EventModel[] = [
   {
     id: "bluesoft",
     title: "Bluesoft",
-    tags: [".NET", "MVC", "Kentico", "CI/CD", "vue.js"],
+    tags: [".NET Core", "Kentico CMS", "CI/CD"],
     description: `V této firmě v současnosti pracuji jako <b>backend vývojář</b> na částečný úvazek. Během studia jsem zde absolvoval prácovní stáž.   ${newLine}
 		<b>Bluesoft</b> je středně velká společnost, která dodává projekty postavené kolem produktu <b>Kentico</b>, 
 		které se řadí mezi přední DXP (digital experience platform) na trhu. ${newLine}
-		Při vývoji se setkám s technologiemi <b>.NET MVC, MSSQL, LINQ, Razor Pages</b>. Do projektu často integrujeme služby od <b>Azure</b> nebo <b>Google Analytics</b>. Pro řízení a správu projektů pracujeme s nástrojem <b>Jira</b>.${newLine}
+		Při vývoji se setkám s technologiemi <b>ASP.NET Core, MSSQL, LINQ, Razor Pages</b>. Do projektu často integrujeme služby od <b>Microsoft Azure</b> nebo <b>Google Analytics</b>. Pro řízení a správu projektů pracujeme s nástrojem <b>Jira</b>.${newLine}
 		Mezi přední klienty firmy Bluesoft se řadí společnosti SAZKA a.s., E.ON, ORLEN Benzina a další.
 		Já jsem se osobně podílel na projektech:
 		<ul>
@@ -32,7 +32,7 @@ export const EventModels: EventModel[] = [
     title: "Optimal Program",
     tags: ["PHP", "Nette", "Optimal Program", "Full stack"],
     // images: ["/img/events/optimal/logo.svg"],
-    description: `V této firmě jsem měl příležitost pracovat na široké škále komplexních a rozmanitých projektů, které se odehrávaly v rámci malého, týmového prostředí. Jako <b>full stack</b> vývojář jsem byl plně zapojen do všech klíčových fází projektů, ať už se jednalo o sběr požadavků, návrh, implementaci, testování, nasazení či údržbu.
+    description: `Pro tuto společnost jsem měl příležitost pracovat na široké škále komplexních a rozmanitých projektů, které se odehrávaly v rámci malého, týmového prostředí. Jako <b>full stack</b> vývojář jsem byl plně zapojen do všech klíčových fází projektů, ať už se jednalo o sběr požadavků, návrh, implementaci, testování, nasazení či údržbu.
 		${newLine}
 		Hlavní zaměření spočívalo ve webových aplikacích. Spolupracoval jsem na vývoji informačních systémů, rezervačních platforem, redakčních systémů, e-shopů a také aplikací určených pro elektronické testování. Tato široká paleta projektů mi především umožnila rozvinout své dovednosti v oblasti návrhu řešení pro různorodé byznysový sektory a získat přehled o různých oblastech webového vývoje.
 		${newLine}

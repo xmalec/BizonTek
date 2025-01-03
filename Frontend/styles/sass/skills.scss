@@ -21,10 +21,19 @@
     gap: 30px;
 
     @include sm {
+      
+      .skills-load-more {
+        display: block;
+      }
+      .skills__grid-container {
+        max-height: 3000px;
+        overflow: hidden;
+        //transition: max-height 0.5s ease-in-out;
+        
+      }
       &.unloaded {
         .skills__grid-container {
           max-height: 450px;
-          overflow: hidden;
           position: relative;
 
 
@@ -37,12 +46,9 @@
             height: 50px;
             background: linear-gradient(to bottom, rgba(255, 255, 255, 0), $bg-dark);
           }
+          
         }
 
-        .skills-load-more {
-          display: block;
-
-        }
       }
     }
   }

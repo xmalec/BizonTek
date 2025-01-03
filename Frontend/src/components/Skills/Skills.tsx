@@ -2,10 +2,21 @@ import { SkillsData } from "../../data/SkillsData";
 import Skill from "./Skill";
 import { SkillModel } from "../../utils/Types";
 import { useState } from "react";
+import { ScrollHelper } from "../../utils/ScrollHelper";
+import { PageHelper } from "../../utils/PageHelper";
 
 const Skills = () => {
   const services = SkillsData;
   const [unloaded, setUnloaded] = useState<boolean>(true);
+
+  const onButtonClick = () => {
+    if (!unloaded) {
+      PageHelper.handleClickScroll("section-skills");
+    }
+    setUnloaded(!unloaded);
+
+}
+
   return (
     <div className="skills section">
       <span className="link-anchor" id="section-skills"></span>
@@ -22,8 +33,8 @@ const Skills = () => {
               ))}
         </div>
         </div>
-        <button className="skills-load-more btn btn-contact btn-sm btn-animated appearance-color-text-dark" onClick={() => setUnloaded(false)}>
-          Zobrazit více
+        <button className="skills-load-more btn btn-contact btn-sm btn-animated appearance-color-text-dark" onClick={onButtonClick}>
+          {`Zobrazit ${unloaded ? "více" : "méně"}`}
         </button>
       </div>
     </div>
