@@ -1,7 +1,7 @@
 @import "cookiebar";
 
 .skills {
-  margin: 20px $layout-side-padding 50px $layout-side-padding;
+  margin: 20px $layout-side-padding 100px $layout-side-padding;
   max-width: $layout-max-width;
   width: calc(min(100% - #{$layout-side-padding * 2}, #{$layout-max-width}));
 

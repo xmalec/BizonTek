@@ -41,7 +41,7 @@ export const SkillsData: SkillModel[] = [
     level: 8,
     order: 5,
     type: "back-end",
-    description: "Azure Functions, Azure Storage, App Service, App Insights, Key Vault, Front Door"
+    description: "Azure Functions, Azure Storage, App Service, App Insights, Key Vault, Front Door, Event Hub"
   },
   {
     id: "devops",

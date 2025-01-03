@@ -8,7 +8,7 @@ export const EventModels: EventModel[] = [
   {
     id: "bluesoft",
     title: "Bluesoft",
-    tags: [".NET Core", "Kentico CMS", "CI/CD"],
+    tags: ["ASP.NET Core", "Kentico CMS", "Microsoft Azure"],
     description: `V této firmě v současnosti pracuji jako <b>backend vývojář</b> na částečný úvazek. Během studia jsem zde absolvoval prácovní stáž.   ${newLine}
 		<b>Bluesoft</b> je středně velká společnost, která dodává projekty postavené kolem produktu <b>Kentico</b>, 
 		které se řadí mezi přední DXP (digital experience platform) na trhu. ${newLine}
@@ -30,7 +30,7 @@ export const EventModels: EventModel[] = [
   {
     id: "optimal",
     title: "Optimal Program",
-    tags: ["PHP", "Nette", "Optimal Program", "Full stack"],
+    tags: ["PHP", "Nette Framework", "Full stack"],
     // images: ["/img/events/optimal/logo.svg"],
     description: `Pro tuto společnost jsem měl příležitost pracovat na široké škále komplexních a rozmanitých projektů, které se odehrávaly v rámci malého, týmového prostředí. Jako <b>full stack</b> vývojář jsem byl plně zapojen do všech klíčových fází projektů, ať už se jednalo o sběr požadavků, návrh, implementaci, testování, nasazení či údržbu.
 		${newLine}
@@ -125,18 +125,21 @@ export const EventModels: EventModel[] = [
     title: "Bakalářský titul",
     dateString: "červen 2021",
     description: `Získaný v oboru Aplikovaná informatika na Fakultě informatiky Masarykovi univerzity. ${newLine}
-		V rámci studia jsem úspěšně absolvoval předměty specializující se:
-		<ul>
-		<li>Programováním: Python, C, C++, C#, Java, Prolog, Haskell</li>
-		<li>Návrhovými vzory aplikace, UML</li>
-		<li>Databázovými systémy: Dotazy, příkazy, joiny, agregační funkce</li>
-		<li>Operačními systémy: Správa systémů MS Windows, Unix</li>
-		<li>Algoritmizací: Řadící a prohledávací algoritmy, automaty a gramatiky, vyčíslitelnost a složitost</li>
-		<li>Základy umělé inteligence</li>
-		<li>Základy počítačových sítí</li>
-		</ul>`,
+    V rámci studia jsem úspěšně absolvoval předměty specializující se:
+    <ul>
+    <li>Programováním: Python, C, C++, C#, Java, Prolog, Haskell</li>
+    <li>Návrhovými vzory aplikace, UML</li>
+    <li>Databázovými systémy: Dotazy, příkazy, joiny, agregační funkce</li>
+    <li>Operačními systémy: Správa systémů MS Windows, Unix</li>
+    <li>Algoritmizací: Řadící a prohledávací algoritmy, automaty a gramatiky, vyčíslitelnost a složitost</li>
+    <li>Základy umělé inteligence</li>
+    <li>Základy počítačových sítí</li>
+    </ul>
+    Má bakalářská práce se zaměřovala na návrh a implementaci webové aplikace pro správu odpoledních aktivit soukromé laboratorní školy Labyrinth. 
+    Podrobnosti o práci lze nalézt na odkazu: 
+    <a href="https://is.muni.cz/th/fo39c/?lang=cs;zoomy_is=1">https://is.muni.cz/th/fo39c/</a>`,
     date: new Date("2021-06-27"),
-  },
+},
   {
     images: [],
     tags: ["Zahraniční pobyt", "Erasmus", "Ljubljana"],
@@ -172,7 +175,10 @@ export const EventModels: EventModel[] = [
       <li>Rozšíření technických zdatností nutných pro vývoj softwaru</li>
       <li>Rozšíření znalostí počítačových sítí</li>
       <li>Techniky zpracování obrazu s využitím modelů umělé inteligence</li>
-      </ul>`,
+      </ul>
+      V rámci své diplomové práce jsem se zaměřil na návrh a implementaci modulu pro integraci technologie distribuované cache paměti do platformy Kentico Xperience.
+    Podrobnosti o práci lze nalézt na odkazu: 
+    <a href="https://is.muni.cz/th/cy06n/">https://is.muni.cz/th/cy06n/</a>`,
     date: new Date("2024-02-08")
   }
 ];
