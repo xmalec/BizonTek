@@ -55,7 +55,6 @@ const Modal: FC<Props> = ({ mode, onClose, model }) => {
           {model.images && model.images?.length > 0 && (
             <div className="modal__img">
               <ModalGallery images={model.images} />
-              {/* <img src={model.images[0]} alt="Obrázek modálu" /> */}
             </div>
           )}
         </div>

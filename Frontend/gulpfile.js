@@ -9,7 +9,12 @@ const publicDir = './public';
 const destinationDir = '../Backend/src/wwwroot';
 
 // Task to run Next.js build
-gulp.task('build', shell.task('npm run build'));
+gulp.task('build', gulp.series(shell.task('npm run build'), (done) => {
+  // Generate version based on current timestamp
+  const version = { version: Date.now() };
+  fs2.writeFileSync(`${publicDir}/version.json`, JSON.stringify(version, null, 2));
+  done();
+}));
 
 //-----------------
 
@@ -28,11 +33,7 @@ gulp.task('svgSprite', function () {
     .pipe(svgSprite(config))
     .pipe(gulp.dest(`${outputDir}/img/icons`))
     .pipe(gulp.dest(`${publicDir}/img/icons`))
-    .on('end', () => {
-      // Generate version based on current timestamp
-      const version = { version: Date.now() };
-      fs2.writeFileSync(`${publicDir}/img/icons/version.json`, JSON.stringify(version, null, 2));
-    });
+    ;
 });
 
 //-----------------

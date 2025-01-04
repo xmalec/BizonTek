@@ -4,6 +4,7 @@ import Modal, { Mode } from "../Modal/Modal";
 import { useModal } from "../../hooks/useModal";
 import { Icons } from "../../utils/Icons";
 import SvgIcon from "../Shared/SvgIcon";
+import Img from "../Shared/Image";
 
 type Props = {
   model: ServiceModel;
@@ -35,9 +36,9 @@ const ServiceBox: FC<Props> = ({ model }) => {
           mode={modalState}
         />
         <div className="services__box_img">
-          <img
+          <Img
             src={`./img/services/${model.thumbnail}`}
-            alt="Thumbnail služby"
+            alt={`${model.title} – Thumbnail služby`}
             loading="lazy"
           />
         </div>

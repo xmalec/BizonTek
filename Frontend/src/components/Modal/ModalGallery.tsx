@@ -1,6 +1,7 @@
 import { FC } from "react";
 import ImageGallery from "react-image-gallery";
 import { ImageModel } from "../../utils/Types";
+import { AssetHelper } from "../../utils/AssetHelper";
 
 type Image = {
   original: string;
@@ -17,7 +18,7 @@ const ModalGallery: FC<Props> = ({ images }) => (
     showPlayButton={false}
     items={images.map((imageModel) => {
       return {
-        original: imageModel.url,
+        original: AssetHelper.getAssetUrl(imageModel.url),
         loading: "lazy",
         thumbnailHeight: "500px",
         originalAlt: imageModel.alt,

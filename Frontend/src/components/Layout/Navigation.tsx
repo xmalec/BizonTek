@@ -4,6 +4,7 @@ import AppearanceToggle from "../Shared/AppearanceToggle";
 import ContactButton from "../Shared/ContactButton";
 import SvgIcon from "../Shared/SvgIcon";
 import { Icons } from "../../utils/Icons";
+import Img from "../Shared/Image";
 
 const Navigation = () => {
   const onBarsClick = useCallback(() => {
@@ -22,21 +23,23 @@ const Navigation = () => {
         <div className="navigation">
           <div className="title-part">
             <div className="logo">
-              <img
+              <Img
                 className="logo-dark"
                 src="./img/layout/logo_dark.webp"
                 fetchpriority="high"
                 alt="Logo"
               />
-              <img src="./img/layout/logo.webp" alt="Logo" fetchpriority="high" />
+              <Img src="./img/layout/logo.webp" alt="Logo" fetchpriority="high" />
             </div>
-            <button
-              className="title"
-              aria-label="Homepage"
-              onClick={() => PageHelper.handleClickScroll("section-hp")}
-            >
-              BizonTek
-            </button>
+            <h2 className="m-0 text">
+              <button
+                className="title"
+                aria-label="Homepage"
+                onClick={() => PageHelper.handleClickScroll("section-hp")}
+              >
+                BizonTek
+              </button>
+            </h2>
           </div>
           <div className="menu" id="menu-container">
               <button

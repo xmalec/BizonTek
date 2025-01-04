@@ -6,6 +6,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  env: {
+    VERSION: require('./package.json').version,
+  },
 };
 
 module.exports = nextConfig;

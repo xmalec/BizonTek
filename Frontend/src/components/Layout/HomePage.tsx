@@ -1,4 +1,6 @@
+import { AssetHelper } from "../../utils/AssetHelper";
 import ContactButton from "../Shared/ContactButton";
+import Img from "../Shared/Image";
 import Socials from "../Shared/Socials";
 
 const HomePage = () => {
@@ -7,7 +9,7 @@ const HomePage = () => {
       <span className="link-anchor" id="section-hp"></span>
       <div className="hp-grid">
         <div className="content-logo">
-          <img src="./img/layout/profile-image.webp" alt="Profilový obrázek" fetchpriority="high" />
+          <Img src="./img/layout/profile-image.webp" alt="Jiří Malecf – Profilový obrázek" fetchpriority="high" />
         </div>
 
         <h1 id="title-name" className="h1 name">

@@ -22,7 +22,11 @@ public static class ServiceCollectionExtensions
         {
             o.OnPrepareResponse = context =>
             {
-                context.Context.Response.Headers.Append("Cache-Control", cacheControl);
+                var query = context.Context.Request.Query;
+                if (query.ContainsKey("v"))
+                {
+                    context.Context.Response.Headers.Append("Cache-Control", cacheControl);
+                }
             };
             o.ContentTypeProvider = new FileExtensionContentTypeProvider
             {

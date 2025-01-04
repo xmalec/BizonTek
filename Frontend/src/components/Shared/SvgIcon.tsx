@@ -1,5 +1,5 @@
 import { FC } from "react";
-import spriteVersion from "../../../public/img/icons/version.json";
+import spriteVersion from "../../../public/version.json";
 
 type Props = {
   name: string;

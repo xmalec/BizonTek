@@ -3,6 +3,7 @@ import Head from "next/head";
 import Layout from "../src/components/Layout/Layout";
 import GA4 from "../src/components/Layout/GA4";
 import { useEffect } from "react";
+import { AssetHelper } from "../src/utils/AssetHelper";
 
 export default function Home() {
   useEffect(() => {
@@ -20,14 +21,14 @@ export default function Home() {
           name="description"
           content="Jiří Malec - Softwarový vývojář se specializací na .NET a Microsoft technologie. Zkušenosti, dovednosti, portfolio a kontakt přímo na webu."
         />
-        <link rel="shortcut icon" href="./favicon.ico" />
-        <link rel="icon" type="image/png" href="./logo512.webp" />
+        <link rel="shortcut icon" href={`${AssetHelper.getAssetUrl("./favicon.ico")}`} />
+        <link rel="icon" type="image/png" href={`${AssetHelper.getAssetUrl("./logo512.webp")}`} />
         
         <link rel="canonical" href="https://bizontek.cz" />
 
         <meta
           property="og:image"
-          content="https://bizontek.cz/img/metadata/image.webp"
+          content={`${AssetHelper.getAssetUrl("https://bizontek.cz/img/metadata/image.webp")}`}
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://bizontek.cz/" />
@@ -45,11 +46,11 @@ export default function Home() {
         />
         <meta
           property="twitter:image"
-          content="https://bizontek.cz/img/metadata/image.webp"
+          content={`${AssetHelper.getAssetUrl("https://bizontek.cz/img/metadata/image.webp")}`}
         />
         <meta name="theme-color" content="#efbe40" />
 
-        <link rel="manifest" href="manifest.json" />
+        <link rel="manifest" href={`${AssetHelper.getAssetUrl("manifest.json")}`} />
         <title>Jiří Malec - .NET vývojář | Vývoj softwaru na míru</title>
       </Head>
       <GA4 />
