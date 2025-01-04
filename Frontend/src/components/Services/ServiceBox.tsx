@@ -49,6 +49,15 @@ const ServiceBox: FC<Props> = ({ model }) => {
         </div>
         <div className="services__box_text_container">
           <div className="services__box_title">{model.title}</div>
+          {/* {model.tags && (
+            <div className="services__tags">
+              {model.tags.map((tag, idx) => (
+                <div key={idx} className="tag">
+                  {tag}
+                </div>
+              ))}
+            </div>
+          )} */}
           <div
             className="services__box_description"
             dangerouslySetInnerHTML={{ __html: getIntro(model) }}

@@ -481,7 +481,7 @@ body {
     }
   }
 
-  .event__tags {
+  .event__tags, .services__tags {
     grid-area: tags;
     gap: 10px;
     display: flex;
