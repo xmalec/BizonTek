@@ -261,11 +261,11 @@ body {
       .hp-grid {
         display: grid;
         z-index: 2;
-
+        margin-top: 40px;
         @include lg {
           grid-template-columns: repeat(3, 1fr);
           grid-template-rows:
-            60px repeat(3, auto) 100px;
+            60px repeat(3, auto) 70px;
           grid-template-areas:
             "logo text1 text1"
             "logo text2 text2"
@@ -492,7 +492,7 @@ body {
       background-color: $tag-color;
       color: $bg-dark;
       border-radius: 20px;
-      padding: 6px 12px;
+      padding: 5px 10px;
       @extend .text-sm;
       @extend .shadow-sm;
 

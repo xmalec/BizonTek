@@ -27,7 +27,6 @@ const Skills = () => {
           {services != undefined &&
             services
               .map((x) => x as SkillModel)
-              .sort((a, b) => a.order - b.order)
               .map((serviceModel, idx) => (
                 <Skill key={idx} model={serviceModel} />
               ))}

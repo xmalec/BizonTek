@@ -8,7 +8,6 @@ export const SkillsData: SkillModel[] = [
     id: "asp-net",
     name: "ASP.NET",
     level: 10,
-    order: 1,
     type: "back-end",
     description: "MVC, Razor Pages, Blazor, Identity"
   },
@@ -16,7 +15,6 @@ export const SkillsData: SkillModel[] = [
     id: "csharp",
     name: "C#",
     level: 10,
-    order: 2,
     type: "back-end",
     description: "LINQ, Entity Framework"
   },
@@ -24,14 +22,12 @@ export const SkillsData: SkillModel[] = [
     id: "sql",
     name: "SQL (MS SQL, MySQL)",
     level: 10,
-    order: 3,
     type: "back-end",
   },
   {
     id: "restful-api",
     name: "RESTful API",
     level: 10,
-    order: 4,
     type: "back-end",
     description: "ASP.NET Web API, Swagger"
   },
@@ -39,7 +35,6 @@ export const SkillsData: SkillModel[] = [
     id: "microsoft-azure",
     name: "Microsoft Azure",
     level: 8,
-    order: 5,
     type: "back-end",
     description: "Azure Functions, Azure Storage, App Service, App Insights, Key Vault, Front Door, Event Hub"
   },
@@ -47,23 +42,20 @@ export const SkillsData: SkillModel[] = [
     id: "devops",
     name: "DevOps",
     level: 8,
-    order: 6,
     type: "back-end",
     description: "Terraform, ARM Bicep, GitHub Actions, GitLab CI/CD"
   },
   {
-    id: "iis",
-    name: "IIS",
-    level: 8,
-    order: 7,
+    id: "kentico-cms",
+    name: "Kentico CMS",
+    level: 10,
     type: "back-end",
-    description: "Hosting webových aplikací"
+    description: "Kentico Xperience, Xperience by Kentico, Kontent AI"
   },
   {
     id: "redis",
     name: "Redis",
     level: 9,
-    order: 8,
     type: "back-end",
     description: "Distribuovaná cache"
   },
@@ -71,38 +63,13 @@ export const SkillsData: SkillModel[] = [
     id: "azure-cognitive-search",
     name: "Vyhledávací enginy",
     level: 8,
-    order: 9,
     type: "back-end",
     description: "Azure Cognitive Search, ElasticSearch, Lucene"
-  },
-  {
-    id: "kentico-cms",
-    name: "Kentico CMS",
-    level: 10,
-    order: 10,
-    type: "back-end",
-    description: "Kentico Xperience, Xperience by Kentico, Kontent AI"
-  },
-  {
-    id: "saml",
-    name: "SAML",
-    level: 7,
-    order: 12,
-    type: "back-end",
-    description: "SSO integrace"
-  },
-  {
-    id: "git",
-    name: "Git",
-    level: 9,
-    order: 13,
-    type: "back-end",
   },
   {
     id: "spring-framework",
     name: "Spring Framework",
     level: 7,
-    order: 15,
     type: "back-end",
     description: "Java, Spring Boot"
   },
@@ -110,7 +77,6 @@ export const SkillsData: SkillModel[] = [
     id: "nette-framework",
     name: "Nette Framework",
     level: 8,
-    order: 17,
     type: "back-end",
     description: "PHP"
   },

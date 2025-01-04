@@ -125,9 +125,9 @@
 
       .event__name {
         grid-area: name;
-        @extend .h3;
-        @include sm {
-          font-size: 30px;
+        @extend .h4;
+        @include sm-md {
+          font-size: 25px;
         }
       }
       .event__detail {
@@ -139,10 +139,14 @@
         width: fit-content;
         height: fit-content;
         justify-self: flex-end;
+        @extend .text-xs;
       }
       .event__description {
         grid-area: description;
         padding-top: 10px;
+        @include sm-md {
+          font-size: 18px;
+        }
       }
 
       .event__date {

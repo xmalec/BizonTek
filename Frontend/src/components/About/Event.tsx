@@ -28,7 +28,7 @@ const AboutEvent: FC<Props> = ({ event, row }) => {
     <>
       <div className="event-container" style={listStylus}>
         <div className="event">
-          <div className="event__name">{event.title}</div>
+          <h4 className="event__name m-0">{event.title}</h4>
           <div className="event__date">{event.dateString}</div>
           {showModal && (
             <button

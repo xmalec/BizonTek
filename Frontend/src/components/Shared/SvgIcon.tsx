@@ -24,7 +24,6 @@ const SvgIcon: FC<Props> = ({ name,  size, className, width, height, style }) =>
   } else {
     style = {...style, height: `${height}px`, width: `${width}px`}
   }
-  console.log(style);
   return (
     <span aria-hidden="true" className={`icon-svg icon-svg--${name} ${className ? className : ""}`} style={style}>
         <svg className="icon-svg__svg" xmlnsXlink="http://www.w3.org/1999/xlink" height="100%" width="100%">

@@ -28,6 +28,15 @@ $font-family: "Inter", sans-serif;
   letter-spacing: 0.02em;
 }
 
+.h4 {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 115%;
+  letter-spacing: 0.02em;
+}
+
 .text-sm {
   font-family: $font-family;
   font-style: normal;

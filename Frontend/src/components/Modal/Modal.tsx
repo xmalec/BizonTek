@@ -34,7 +34,7 @@ const Modal: FC<Props> = ({ mode, onClose, model }) => {
         </button>
         <div className="modal__body-container">
           <div className="modal__body section">
-            <span className="modal__body_title">{model.title}</span>
+            <h2 className="modal__body_title m-0">{model.title}</h2>
 
             {model.tags && (
               <div className="event__tags">

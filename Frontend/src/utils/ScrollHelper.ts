@@ -1,4 +1,8 @@
+import { url } from "inspector";
 import GAHelper from "./GAHelper";
+import { Sections } from "./Sections";
+
+const activeSectionClass = "active-section";
 
 const isElementInView = (element: Element, fullyInView = false) => {
   const bounding = element.getBoundingClientRect();
@@ -97,27 +101,29 @@ function manageSkillBars(document: Document) {
 }
 
 function registerDataLayer(document: Document) {
-  var sections = [
-    //{ name: "HP", id: "top" },
-    { name: "ABOUT", id: "o-mne" },
-    { name: "SERVICES", id: "sluzby" },
-    { name: "CONTACT", id: "kontakt" },
-    { name: "SKILLS", id: "dovednosti" },
-  ];
-  const activeSectionClass = "active-section";
-  sections.forEach((section) => {
+
+  var activeSectionId = getActiveSectionId(document);
+  let found = false;
+  Sections.forEach((section) => {
     const element = document.getElementById(section.id);
-    if (!hasClass(element, activeSectionClass) && isElementInView(element)) {
-      GAHelper.sendScrollEvent(section.name);
-      addClass(element, activeSectionClass);
-      //setUrlHash(section.id); TODO
-    } else if (
-      hasClass(element, activeSectionClass) &&
-      !isElementInView(element)
-    ) {
+    if ((!found || activeSectionId == '') && isElementInView(element)) {
+      found = true;
+      if (activeSectionId != section.id) {
+        GAHelper.sendScrollEvent(section.code);
+        addClass(element, activeSectionClass);
+        setUrlHash(section.url);
+        activeSectionId = section.id;
+      }
+    }
+    else {
       removeClass(element, activeSectionClass);
     }
   });
+}
+
+function getActiveSectionId(document: Document) {
+  const activeSections = document.getElementsByClassName(activeSectionClass);
+  return activeSections.length > 0 ? activeSections[0].id : '';
 }
 
 export class ScrollHelper {
@@ -129,7 +135,7 @@ export class ScrollHelper {
     registerDataLayer(document);
   };
 }
-function setUrlHash(id: string) {
-  window.location.hash = id;
+function setUrlHash(url: string) {
+  window.history.replaceState(null, '', url);
 }
 
