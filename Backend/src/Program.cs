@@ -20,7 +20,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 app.UseHealthChecks("/status");
-//app.UseHttpsRedirection(); //TODO
+app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
