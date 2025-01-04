@@ -1,6 +1,4 @@
 import { ServiceModels } from "../../data/ServicesData";
-import { useServices } from "../../hooks/useDataLoadProvider";
-import useFirestoreCollection from "../../hooks/useFirestoreCollection";
 import { ServiceModel } from "../../utils/Types";
 import ServiceBox from "./ServiceBox";
 

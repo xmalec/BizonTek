@@ -1,7 +1,7 @@
 import createDecorator from "final-form-focus";
 import { useCallback, useMemo, useState } from "react";
 import useFirestoreCollection from "./useFirestoreCollection";
-import ContactForm, { Mode } from "../forms/ContactForm";
+import { Mode } from "../forms/ContactForm";
 
 export const useContactForm = () => {
   const focusOnErrors = useMemo(() => createDecorator(), []);
