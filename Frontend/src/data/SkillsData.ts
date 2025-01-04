@@ -86,76 +86,49 @@ export const SkillsData: SkillModel[] = [
     id: "react",
     name: "React",
     level: 7,
-    order: 18,
     type: "front-end",
   },
   {
     id: "typescript",
     name: "TypeScript",
     level: 8,
-    order: 19,
     type: "front-end",
   },
   {
     id: "webpack",
     name: "Webpack",
     level: 7,
-    order: 20,
-    type: "front-end",
-  },
-  {
-    id: "gulp",
-    name: "Gulp",
-    level: 8,
-    order: 21,
-    type: "front-end",
-  },
-  {
-    id: "bootstrap",
-    name: "Bootstrap",
-    level: 8,
-    order: 22,
     type: "front-end",
   },
   {
     id: "css",
     name: "CSS",
     level: 7,
-    order: 23,
     type: "front-end",
     description: "Práce s preprocesory SASS a LESS."
-  },
-  {
-    id: "html",
-    name: "HTML",
-    level: 9,
-    order: 24,
-    type: "front-end",
   },
   {
     id: "seo",
     name: "SEO optimalizace",
     level: 7,
-    order: 25,
     description: "Google Search Console, LightHouse",
     type: "front-end"
   },
-  {
-    id: "google-analytics",
-    name: "Google Analytics",
-    level: 7,
-    order: 27,
-    type: "other",
-    description: "GA4, Data layers"
-},
+
   // Other Skills
   {
     id: "english",
     name: "Angličtina",
     level: 8,
-    order: 26,
     type: "other",
     description: "B2 First (FCE) certifikát"
   },
+  {
+    id: "google-analytics",
+    name: "Google Analytics",
+    level: 7,
+    type: "other",
+    description: "GA4, Data layers"
+},
 
 ];
