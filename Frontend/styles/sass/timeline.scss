@@ -26,8 +26,10 @@
     grid-row: first-row / last-row;
     grid-column: first-col;
     .top-title {
-      @extend .h3;
+      @extend .text;
       padding-bottom: 20px;
+      text-align: center;
+      margin: 0 30px;
     }
     @include sm-md {
       position: absolute;
