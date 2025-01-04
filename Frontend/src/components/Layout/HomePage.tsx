@@ -6,7 +6,7 @@ import Socials from "../Shared/Socials";
 const HomePage = () => {
   return (
     <div className="hp section">
-      <span className="link-anchor" id="section-hp"></span>
+      <span className="link-anchor-top" id="top"></span>
       <div className="hp-grid">
         <div className="content-logo">
           <Img src="./img/layout/profile-image.webp" alt="Jiří Malecf – Profilový obrázek" fetchpriority="high" />

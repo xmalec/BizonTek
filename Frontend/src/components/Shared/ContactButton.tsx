@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { PageHelper } from "../../utils/PageHelper";
+import Link from "next/link";
 
 type Props = {
   isSmall?: boolean;
@@ -7,15 +8,15 @@ type Props = {
 
 const ContactButton: FC<Props> = ({ isSmall = false }) => {
   return (
-    <button
+    <Link href="/#kontakt"
       aria-label="Napište mi"
+      scroll={false}
       className={`btn btn-contact ${
         isSmall ? "btn-sm" : ""
       } btn-animated appearance-color-text-dark`}
-      onClick={() => PageHelper.handleClickScroll("section-contact")}
     >
       Napište mi!
-    </button>
+    </Link>
   );
 };
 

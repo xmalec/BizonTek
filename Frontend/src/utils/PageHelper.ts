@@ -79,6 +79,6 @@ export class PageHelper {
   };
 
   static scrollUp = () => {
-    this.handleClickScroll("section-hp");
+    this.handleClickScroll("top");
   };
 }

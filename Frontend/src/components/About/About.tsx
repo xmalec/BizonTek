@@ -3,7 +3,7 @@ import Timeline from "./Timeline";
 const About = () => {
   return (
     <div className="about">
-      <span className="link-anchor" id="section-about"></span>
+      <span className="link-anchor" id="o-mne"></span>
       <div className="timeline-container section">
         <div className="line-container">
           <div className="top-title">Současnost</div>

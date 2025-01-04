@@ -5,6 +5,7 @@ import ContactButton from "../Shared/ContactButton";
 import SvgIcon from "../Shared/SvgIcon";
 import { Icons } from "../../utils/Icons";
 import Img from "../Shared/Image";
+import Link from "next/link";
 
 const Navigation = () => {
   const onBarsClick = useCallback(() => {
@@ -35,7 +36,7 @@ const Navigation = () => {
               <button
                 className="title"
                 aria-label="Homepage"
-                onClick={() => PageHelper.handleClickScroll("section-hp")}
+                onClick={() => PageHelper.handleClickScroll("top")}
               >
                 BizonTek
               </button>
@@ -59,32 +60,32 @@ const Navigation = () => {
               </button>
             <div className="menu-items">
               <div>
-                <button
+                <Link
                   aria-label="O mně"
-                  onClick={() => PageHelper.handleClickScroll("section-about")}
+                   href="#o-mne"
+                  scroll={false}
                 >
                   O mně
-                </button>
+                </Link>
               </div>
               <div>
-                <button
+                <Link
+                href="#dovednosti"
                   aria-label="Dovednosti"
-                  onClick={() =>
-                    PageHelper.handleClickScroll("section-skills")
-                  }
+                  scroll={false}
                 >
                   Dovednosti
-                </button>
+                </Link>
               </div>
               <div>
-                <button
+                <Link
                   aria-label="Co nabízím"
-                  onClick={() =>
-                    PageHelper.handleClickScroll("section-services")
-                  }
+                  scroll={false}
+                     href="#sluzby"
+                  
                 >
                   Co nabízím
-                </button>
+                </Link>
               </div>
               <div className="nav-contact-btn">
                 <ContactButton isSmall={true} />

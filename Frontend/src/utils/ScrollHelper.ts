@@ -98,10 +98,11 @@ function manageSkillBars(document: Document) {
 
 function registerDataLayer(document: Document) {
   var sections = [
-    { name: "ABOUT", id: "section-about" },
-    { name: "SERVICES", id: "section-services" },
-    { name: "CONTACT", id: "section-contact" },
-    { name: "SKILLS", id: "section-skills" },
+    //{ name: "HP", id: "top" },
+    { name: "ABOUT", id: "o-mne" },
+    { name: "SERVICES", id: "sluzby" },
+    { name: "CONTACT", id: "kontakt" },
+    { name: "SKILLS", id: "dovednosti" },
   ];
   const activeSectionClass = "active-section";
   sections.forEach((section) => {
@@ -109,6 +110,7 @@ function registerDataLayer(document: Document) {
     if (!hasClass(element, activeSectionClass) && isElementInView(element)) {
       GAHelper.sendScrollEvent(section.name);
       addClass(element, activeSectionClass);
+      //setUrlHash(section.id); TODO
     } else if (
       hasClass(element, activeSectionClass) &&
       !isElementInView(element)
@@ -127,3 +129,7 @@ export class ScrollHelper {
     registerDataLayer(document);
   };
 }
+function setUrlHash(id: string) {
+  window.location.hash = id;
+}
+

@@ -23,7 +23,10 @@ public static class ServiceCollectionExtensions
             o.OnPrepareResponse = context =>
             {
                 var query = context.Context.Request.Query;
-                if (query.ContainsKey("v"))
+                var isJsOrCss = context.Context.Request.Path.HasValue && (
+                context.Context.Request.Path.Value.EndsWith(".js") || context.Context.Request.Path.Value.EndsWith(".css")
+                );
+                if (query.ContainsKey("v") || isJsOrCss )
                 {
                     context.Context.Response.Headers.Append("Cache-Control", cacheControl);
                 }

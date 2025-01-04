@@ -11,7 +11,7 @@ const Skills = () => {
 
   const onButtonClick = () => {
     if (!unloaded) {
-      PageHelper.handleClickScroll("section-skills");
+      PageHelper.handleClickScroll("dovednosti");
     }
     setUnloaded(!unloaded);
 
@@ -19,7 +19,7 @@ const Skills = () => {
 
   return (
     <div className="skills section">
-      <span className="link-anchor" id="section-skills"></span>
+      <span className="link-anchor" id="dovednosti"></span>
       <div className={`skills__container ${unloaded && "unloaded"}`}>
         <h3 className="skills__title h3 m-0">Znalosti a&nbsp;dovednosti</h3>
         <div className="skills__grid-container">
