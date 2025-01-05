@@ -49,7 +49,7 @@ export default function Home() {
           content={`${AssetHelper.getAssetUrl("https://bizontek.cz/img/metadata/image.webp")}`}
         />
         <meta name="theme-color" content="#efbe40" />
-
+        <meta name="seznam-wmt" content="IifjVWy1pXAXkd4DLrzB0KgvUJSV3nAC" />
         <link rel="manifest" href={`${AssetHelper.getAssetUrl("manifest.json")}`} />
         <title>Jiří Malec - .NET vývojář | Vývoj softwaru na míru</title>
       </Head>
