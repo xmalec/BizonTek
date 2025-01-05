@@ -7,6 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddHealthChecks();
 builder.Services.ConfigureStaticFiles();
+builder.Services.AddResponseCompression(options =>
+{
+    options.EnableForHttps = true;
+});
 builder.Services.Configure<EmailSettingOptions>(builder.Configuration.GetSection(EmailSettingOptions.SectionName));
 builder.Services.AddScoped<IEmailService, EmailService>();
 
@@ -22,6 +26,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHealthChecks("/status");
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseResponseCompression();
 
 app.UseRouting();
 app.MapControllers();
