@@ -66,7 +66,7 @@ body {
     transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
   }
   &.bright .appearance-bg-color-reverse {
-    background-color: $bg-dark;
+    background-color: lightyellow;
     color: $bg-bright;
   }
 
