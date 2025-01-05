@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { PageHelper } from "../../utils/PageHelper";
 import AppearanceToggle from "../Shared/AppearanceToggle";
 import ContactButton from "../Shared/ContactButton";
@@ -8,15 +8,15 @@ import Img from "../Shared/Image";
 import Link from "next/link";
 
 const Navigation = () => {
+
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
   const onBarsClick = useCallback(() => {
-    const container = document.getElementById("menu-container");
-    if (container != undefined) {
-      if (container.classList.contains("collapsed")) {
-        container.classList.remove("collapsed");
-      } else {
-        container.classList.add("collapsed");
-      }
-    }
+    setIsCollapsed(!isCollapsed)
+  }, [isCollapsed]);
+
+  const onLinkClick = useCallback(() => {
+    setIsCollapsed(false);
   }, []);
   return (
     <nav>
@@ -42,7 +42,7 @@ const Navigation = () => {
               </button>
             </h2>
           </div>
-          <div className="menu" id="menu-container">
+          <div className={`menu ${isCollapsed ? "collapsed" : ""}`} id="menu-container">
               <button
                 id="menu-bars-toggle"
                 aria-label="Menu"
@@ -64,6 +64,7 @@ const Navigation = () => {
                   aria-label="O mně"
                    href="#o-mne"
                   scroll={false}
+                  onClick={onLinkClick}
                 >
                   O mně
                 </Link>
@@ -73,6 +74,7 @@ const Navigation = () => {
                 href="#dovednosti"
                   aria-label="Dovednosti"
                   scroll={false}
+                  onClick={onLinkClick}
                 >
                   Dovednosti
                 </Link>
@@ -82,6 +84,7 @@ const Navigation = () => {
                   aria-label="Co nabízím"
                   scroll={false}
                      href="#sluzby"
+                  onClick={onLinkClick}
                   
                 >
                   Co nabízím

@@ -41,7 +41,7 @@ const Timeline = () => {
                 })}
                 <div
                   className="line-point appearance-bg-color-text"
-                  id="y-2022"
+                  id={`y-${year}`}
                   data-year={year}
                   style={{
                     gridRow: `${row + 1}`,
