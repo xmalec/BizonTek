@@ -1,25 +1,25 @@
 {
-	"short_name": "BizonTek",
-	"name": "BizonTek | Jiří Malec",
-	"icons": [
-		{
-			"src": "favicon.ico",
-			"sizes": "64x64 32x32 24x24 16x16",
-			"type": "image/x-icon"
-		},
-		{
-			"src": "logo192.webp",
-			"type": "image/webp",
-			"sizes": "192x192"
-		},
-		{
-			"src": "logo512.webp",
-			"type": "image/webp",
-			"sizes": "512x512"
-		}
-	],
-	"start_url": ".",
-	"display": "standalone",
-	"theme_color": "#efbe40",
-	"background_color": "#001724"
+  "short_name": "Jiří Malec",
+  "name": "Jiří Malec - Softwarový vývojář | Vývoj softwaru na míru",
+  "icons": [
+    {
+      "src": "favicon.ico?v=1735982220264",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.webp?v=1735982220264",
+      "type": "image/webp",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.webp?v=1735982220264",
+      "type": "image/webp",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#efbe40",
+  "background_color": "#001724"
 }

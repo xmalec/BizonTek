@@ -3,20 +3,31 @@ const svgSprite = require('gulp-svg-sprite');
 const shell = require('gulp-shell');
 const fs = require('fs-extra');
 const fs2 = require('fs');
+const { generateSitemap } = require('./src/metadata/generate-sitemap');
+const { generateManifest } = require('./src/metadata/generate-manifest');
 
 const outputDir = './out';
 const publicDir = './public';
 const destinationDir = '../Backend/src/wwwroot';
 
-// Task to run Next.js build
-gulp.task('build', gulp.series(shell.task('npm run build'), (done) => {
-  // Generate version based on current timestamp
+gulp.task('createVersion', (done) => {
   const version = { version: Date.now() };
   fs2.writeFileSync(`${publicDir}/version.json`, JSON.stringify(version, null, 2));
   done();
-}));
+});
 
-//-----------------
+// Sitemap generation task
+gulp.task('generateMetadata', (done) => {
+  const sitemapOutputPath = `${publicDir}/sitemap.xml`;
+  generateSitemap(sitemapOutputPath);
+  const manifestOutputPath = `${publicDir}/manifest.json`;
+  generateManifest(manifestOutputPath);
+  done();
+});
+
+// Task to run Next.js build
+gulp.task('build', gulp.series(shell.task('npm run build')));
+
 
 // SVG sprite configuration
 const config = {
@@ -48,4 +59,4 @@ gulp.task('copy', () => {
 
 
 // Default task: run build and then copy
-gulp.task('default', gulp.series('svgSprite', 'build', 'copy'));
+gulp.task('default', gulp.series('createVersion', 'generateMetadata', 'svgSprite', 'build', 'copy'));

@@ -40,3 +40,6 @@ bld/
 [Ll]og/
 [Ll]ogs/
 /WebApi/src/WebApi/appsettings.Development.json
+Frontend/public/sitemap.xml
+Frontend/public/manifest.json
+Frontend/public/version.json
