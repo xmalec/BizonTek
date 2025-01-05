@@ -44,6 +44,9 @@
       cursor: pointer;
       transition: all ease-in-out 0.2s;
       overflow: hidden;
+      @include sm {
+        padding: 55% 10px 0 10px; // Adjust height for mobile devices
+      }
       &:nth-child(4),
       &:nth-child(5) {
         @include lg {
@@ -67,19 +70,25 @@
       }
 
       .services__box_text_container {
-        position: absolute;
-        top: calc(100% - 90px);
         padding: 0 15px;
-        transition: top ease-in-out 0.2s;
-        height: 100%;
+          height: 100%;
+          position: absolute;
+        @include md-lg {
+          
+          top: calc(100% - 90px);
+          transition: top ease-in-out 0.2s;
+        }
+        @include sm {
+          top: calc(100% - 70px);
+        }
 
         .services__box_title {
           padding-bottom: 25px;
 
           @extend .text-xl;
-          font-size: 28px;
+          //font-size: 28px;
           @include sm {
-            font-size: 22px;
+            font-size: 25px;
           }
         }
         .services__box_description {
@@ -94,12 +103,14 @@
         position: absolute;
         top: 0;
         left: 0;
-        height: 100%;
-        //opacity: 0;
+        width: 100%; // Ensure the image covers the full width
+        height: 100%; // Ensure the image covers the full height
         transition: opacity ease-in-out 0.2s;
         background-color: $bg-bright;
         img {
-          height: 100%;
+          width: 100%; // Ensure the image covers the full width
+          height: 100%; // Ensure the image covers the full height
+          object-fit: cover; // Maintain aspect ratio and cover the box
         }
       }
 

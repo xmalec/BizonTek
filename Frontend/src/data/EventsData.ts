@@ -9,7 +9,7 @@ export const EventModels: EventModel[] = [
     id: "bluesoft",
     title: "Bluesoft",
     tags: ["ASP.NET Core", "Kentico CMS", "Microsoft Azure"],
-    description: `V této firmě v současnosti pracuji jako <b>backend vývojář</b> na částečný úvazek. Během studia jsem zde absolvoval prácovní stáž.   ${newLine}
+    description: `Pro tuto firmu v současné době pracuji jako <b>backend vývojář</b>. Během studia jsem zde absolvoval prácovní stáž.   ${newLine}
 		<b>Bluesoft</b> je středně velká společnost, která dodává projekty postavené kolem produktu <b>Kentico</b>, 
 		které se řadí mezi přední DXP (digital experience platform) na trhu. ${newLine}
 		Při vývoji se setkám s technologiemi <b>ASP.NET Core, MSSQL, LINQ, Razor Pages</b>. Do projektu často integrujeme služby od <b>Microsoft Azure</b> nebo <b>Google Analytics</b>. Pro řízení a správu projektů pracujeme s nástrojem <b>Jira</b>.${newLine}
